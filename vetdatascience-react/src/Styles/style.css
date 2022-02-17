@@ -339,3 +339,23 @@ flex: 100%;
 max-width: 100%;
   }
 }
+
+/* -----------------------------------Estilos J---------------------------------- */
+
+.Image_Carousel {
+  width: 60%;
+  position: relative;
+  left: 20%;
+}
+
+.videoPlayer {
+  width: 70%;
+  position: relative;
+  left: 15%;
+}
+
+.back_button {
+  display: inline-block;
+  position: relative;
+  left: 75%;
+}

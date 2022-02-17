@@ -1,3 +1,7 @@
+<!-- mover cada uno de las etiquetas del head al archivo publico de react
+de esta manera no se repite tanto codigo -->
+<!-- los estilos en react se manejan por import entonces 
+tambien los sacamos de aqui -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +12,10 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Analisis</title>
 </head>
+<!-- ----------------------------------------------------------------- -->
 <body id="home">
   <header class="hero blog">
+    <!--- Todo este bloque puede ser un componente que se coloque en cada pagina o en una layout para no repetir codigo ---> 
     <div id="navbar" class="navbar top">
       <h1 class= "logo">
         <span class="text-primary"><i class= "fas fa-book-open"></i>Blog de Ciencia de Datos </span> para el campo</h1>
@@ -24,12 +30,17 @@
     </ul>
   </nav>
 </div>
+<!-- -------------------------------------------------------------------------- -->
+
+<!-- Esto se podria comvertir en un componente con props y podriamos quitrarle la carga del fondo
+con caballos al header -->
 <div class="content">
   <h1>5- Estadística descriptiva y análisis inicial de los datos </h1>
 </div>
+<!-- ---------------------------------------------------------- -->
   </header>
   <main>
-
+<!-- esto se podria transformar en un componente generico que acepte cualquier cantidad de contenidos -->
     <section class="post">
       <div id="menu" class="container bg-light">
       <h2>Contenidos</h2>
@@ -45,7 +56,7 @@
       <li><a href="#covarianza">5.5- Relaciones entre variables </a></li>
       </ul>
     </div>
-
+<!-- -------------------------------------------------------------------------------- -->
 
 
 <!-- Categoricos -->
