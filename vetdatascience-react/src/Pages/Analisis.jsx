@@ -21,7 +21,11 @@ import histograma from "Media/analisis/histograma.png"
 import histograma2 from "Media/analisis/histogram2.png"
 import histograma3 from "Media/analisis/histogram3.png"
 import dispersion from "Media/analisis/dispersion.png"
-
+import dinamica from "Media/analisis/dinamica.png"
+import dinamica2 from "Media/analisis/dinamica2.png"
+import ImagePlus from 'Components/ImagePlus';
+import media from "Media/analisis/media.png"
+import mediana from "Media/images/formula_mediana.png"
 const Analisis = () => {
   return (
     <div>
@@ -83,6 +87,22 @@ const Analisis = () => {
               <SubTitle minititle="5.3.1- Variables cuantitativas gráficos de dispersión"/>
               <Paragraph texto="Para entender como se relacionan dos variables cuantitativas un primer paso es la visualización y para ello podemos utilizar los gráficos de dispersión, posteriormente veremos la manera de medir que tan estrechas son estas relaciones. Este tipo de gráfico es muy útil para entender si dos variables tienen algún tipo de relación. Como ejemplo, el siguiente gráfico presenta la cantidad de grasa producida (eje horizontal) y la producción de leche (eje vertical) para un grupo de vacas de 1ª lactación."/>
               <Image image={dispersion} alt="grafico de dispersion"/>
+              <Paragraph texto='Como se observa en el gráfico parece que existe una tendencia lineal entre la producción de grasa en leche y el volumen total de leche (a mayor leche mayor cantidad de grasa), sin embargo este es solo un primer ejercicio para tratar de entender los datos de que disponemos. Luego tendremos que confirmar con fórmulas de asociación como correlaciones o covarianzas. Para realizar el gráfico en Excel, necesitamos seleccionar los rangos donde se encuentran los datos y luego del menú insertar gráficos seleccionar "scatter" o dispersión.'/>
+              <SubTitle minititle="5.3.2- Variables Categóricas"/>
+              <Paragraph texto="Las tablas cruzadas o tablas de contingencia se utilizan para resumir y visualizar los datos de las variables categóricas. En la tabla cruzada un grupo de categorías va en el eje horizontal (X) y otro grupo en el eje vertical (Y). Un ejemplo lo podemos tomar por ejemplo si utilizamos una base de datos de un albergue de datos (fuente: Kaggle) y utilizamos las variables categóricas disponibles Esterilizados (Si, No) en el eje vertical y Sexo (Macho, Hembra) en el eje vertical. También es importante incluir los totales. Para este tipo de tabla es muy útil utilizar las tablas dinámicas de Excel que nos permiten no solo realizar la tabla, sino también visualizar el gráfico."/>
+              <Image image={dinamica} alt="Tabla cruzada"/>
+              <Paragraph texto="Siguiendo la metodología descrita en el enlace de como crear una tabla dinámica cruzamos los datos de sexo y esterilización. En este caso decidimos mostrar la información por totales sin embargo podemos mostrar tambien sus valores relativos. Es una de las ventajas de Excel que es muy flexible para la creación de estas tablas, ajustándolas a las necesidades del analista. De igual manera podemos seleccionar la opción de visualizar los datos en una gráfica dinámica."/>
+              <ImagePlus image={dinamica2} alt="Grafica de tabla dinamica" texto="Total de animales recibidos en el albergue clasificados por sexo (macho o hembra) y esterilización (si o no). Fuente: www.kaggle.com"/>
+              <Video id="bp5nrBUBQPI" title="Visualización de dos variables"/>
+            </SubChapter>
+            <SubChapter>
+              <SubTitle title="5.4.1 Medidas de tendencia central"/>
+              <SubTitle minititle="Media"/>
+              <Paragraph texto="La Media es la mas común de todas las medidas de tendencia central. Simplemente es el promedio de los datos. La media representa el centro físico del conjunto de datos y se define como la suma de los valores observados, dividido por el total de observaciones (Chao,1978). En Excel =AVERAGE( ) o PROMEDIO( )"/>
+              <ImagePlus image={media} alt="Formula Media" texto="Formula matematica para la media de datos"/>
+              <SubTitle minititle="Mediana"/>
+              <Paragraph texto="La Mediana es el valor que divide un conjunto de observaciones ordenadas respecto de la magnitud de los valores, de tal manera que el numero de datos por encima de la mediana sea igual al numero de datos por debajo de la misma (Chao, 1978). Si esta posición no es un número entero entonces la mediana es el promedio simple de los dos números mas cercanos a la posición calculada. Excel = MEDIAN()"/>
+              <ImagePlus image={mediana} alt="Formula Mediana" texto="Formula matematica para la mediana de datos" width="30%"/>
             </SubChapter>
           </main>
         </body>

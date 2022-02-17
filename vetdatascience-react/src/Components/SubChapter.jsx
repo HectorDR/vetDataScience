@@ -2,7 +2,7 @@ import React from 'react'
 import BackButton from './BackButton'
 const SubChapter = (props) => {
   return (
-    <div class="container bg-light">
+    <div className="container bg-light">
         {props.children}
         <BackButton/>
     </div>
