@@ -13,7 +13,15 @@ import torta from "Media/analisis/torta.png"
 import pareto from "Media/analisis/pareto.png"
 import ImageCorousel from 'Components/ImageCorousel';
 import Video from 'Components/Video';
-import BackButton from 'Components/BackButton';
+import Image from 'Components/Image';
+import formulatest from "Media/images/formula_test.png"
+import intervalo2 from "Media/analisis/intervalo2.png"
+import intervalo3 from "Media/analisis/intervalo3.png"
+import histograma from "Media/analisis/histograma.png"
+import histograma2 from "Media/analisis/histogram2.png"
+import histograma3 from "Media/analisis/histogram3.png"
+import dispersion from "Media/analisis/dispersion.png"
+
 const Analisis = () => {
   return (
     <div>
@@ -52,7 +60,29 @@ const Analisis = () => {
               <ImageCorousel images={[{image: pareto, texto: "Ejemplo 1"}]}/>
               <SubTitle title="Video Ilustrativo"/>
               <Video id="kdhWB_Px2oI" title="Información Categórica"/>
-              <BackButton/>
+            </SubChapter>
+            <SubChapter>
+              <SubTitle title="5.2 Datos cuantitativos"/>
+              <Paragraph texto="Los datos cuantitavos o sea aquellos que podemos expresar de forma númerica hay mas diversidad en la manera como podemos entender estos datos tal como vimos anteriormente . Una manera frecuente de presentar los datos cuando trabajamos con este tipo de variables es la utilización de tablas de distribución de frecuencias o histogramas. A diferencia de los nominales donde para crear el diagrama de barras básicamente cada valor que toma la variable (Caso anterior G, M, S) representa una columna, cuando trabajamos con información cuantitativa creamos intervalos del mismo tamaño que agrupan los datos. Esto nos permite presentar de manera resumida la información. En la tabla se aconseja no solo presentar la frecuencia total sino también la frecuencia relativa. Por ejemplo, vamos a presentar una tabla que resuma la producción de leche ajustada a 305 días por lactancia de una finca lechera. Lo primero que debemos hacer es decidir el número de intervalos y calcular la amplitud del intervalo con la siguiente fórmula:"/>
+              <Image image={formulatest} alt="Formula amplitud de intervalos"/>
+              <Paragraph texto="Si estamos trabajando con una tabla con muchos datos, encontrar los valores máximo y mínimo puede ser asunto complicado. Afortunadamente Excel lo hace fácil para ello en Excel utilizamos las funciones =MIN() y =MAX(), entre paréntesis seleccionamos el rango de valores de la variable, para este caso producción de leche. Reemplazando la fórmula tenemos:"/>
+              <Image image={intervalo2} alt="Formula de amplitud de intervalo resuelta"/>
+              <Paragraph texto="Esto quiere decir que vamos a construir una tabla con 10 intervalos con una amplitud de 3567 libras cada uno, comenzando con el inferior que será de 12150 + 3567, así que el primer el primer intervalo será desde 12150 hasta 15717 y así sucesivamente hasta el último mayor a 44253 hasta 47820. Excel tiene una herramienta muy práctica para la construcción del histograma de frecuencias. Para ello asegúrese de tener instalado la herramienta de análisis de datos en el menú Datos."/>
+              <Image image={intervalo3} alt="captura de opciones excel"/>
+              <Paragraph texto="Una vez que hemos definido los intervalos y sabemos la amplitud de estos hacemos una columna con ellos como se muestra en el gráfico, teniendo presente que incluimos los valores máximos de cada intervalo. Es decir, para el primero que sería de 12150 a 15717, solo digitamos el 15717, sigue 19284 y así hasta el último. Posteriomente vamos al menu datos, seleccionamos data analysis y finalmente histogram."/>
+              <Image image={histograma} alt="opcion de histogrma de excel"/>
+              <Paragraph texto="Inmediatamente se abre una hoja de diálogo y lo primero que se pide es seleccionar el rango de celdas donde están nuestros datos (Input Range). Posteriormente seleccionamos los intervalos que acabamos de construir (Bin Range). También tenemos la opción de seleccionar si queremos los datos en una nueva hoja o podemos asignar una hoja específica y finalmente podemos escoger si queremos un diagrama de Pareto, una secuencia acumulativa o simplemente el gráfico con el histograma. Damos ok y podemos ver el reporte de frecuencias y la gráfica como se muestra en el diagrama y la tabla. Existen otras alternativas en Excel de crear histogramas por ejemplo utilizando la opción CONTAR.SI y FRECUENCIA de manera que esta no es la única pero tal vez la mas rápida."/>
+              <Image image={histograma2} alt="resultados de histograma"/>
+              <Paragraph texto="Como se observa el reporte obtenido nos devuelve los invervalos con la cantidad de lactancias en cada intervalo y el porcentaje que representa cada una del total. De igual manera nos entrega el siguiente histograma de frecuencias:"/>
+              <Image image={histograma3} alt="resultados de histograma en grafica"/>
+              <SubTitle title="Video Ilustrativo"/>
+              <Video id="fxoOgwp_mFQ" title="Construcción de un histograma"/>
+            </SubChapter>
+            <SubChapter>
+              <SubTitle title="5.3 Visualización de variables cuantitativas y categóricas"/>
+              <SubTitle minititle="5.3.1- Variables cuantitativas gráficos de dispersión"/>
+              <Paragraph texto="Para entender como se relacionan dos variables cuantitativas un primer paso es la visualización y para ello podemos utilizar los gráficos de dispersión, posteriormente veremos la manera de medir que tan estrechas son estas relaciones. Este tipo de gráfico es muy útil para entender si dos variables tienen algún tipo de relación. Como ejemplo, el siguiente gráfico presenta la cantidad de grasa producida (eje horizontal) y la producción de leche (eje vertical) para un grupo de vacas de 1ª lactación."/>
+              <Image image={dispersion} alt="grafico de dispersion"/>
             </SubChapter>
           </main>
         </body>
