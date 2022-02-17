@@ -26,6 +26,22 @@ import dinamica2 from "Media/analisis/dinamica2.png"
 import ImagePlus from 'Components/ImagePlus';
 import media from "Media/analisis/media.png"
 import mediana from "Media/images/formula_mediana.png"
+import varianza_muestral from "Media/analisis/varianza.png"
+import varianza_poblacional from "Media/analisis/varianza2.png"
+import conversion from "Media/ejemcerdos/conversion.png"
+import tabla_c from "Media/ejemcerdos/tabla_c.png"
+import media_c from "Media/ejemcerdos/media_c.png"
+import desc_c from "Media/ejemcerdos/desc_c.png"
+import summary from "Media/ejemcerdos/summary.png"
+import summary2 from "Media/ejemcerdos/summary2.png"
+import covarianza from "Media/analisis/covarianza.png"
+import covarianza2 from "Media/analisis/covarianza2.png"
+import corre1 from "Media/analisis/correl.png"
+import corre2 from "Media/analisis/correl2.png"
+import cerdas from "Media/analisis/cerdas.png"
+import cerdas2 from "Media/analisis/cerdas2.png"
+import ReferencesBlock from 'Components/ReferencesBlock';
+
 const Analisis = () => {
   return (
     <div>
@@ -65,6 +81,7 @@ const Analisis = () => {
               <SubTitle title="Video Ilustrativo"/>
               <Video id="kdhWB_Px2oI" title="Información Categórica"/>
             </SubChapter>
+
             <SubChapter>
               <SubTitle title="5.2 Datos cuantitativos"/>
               <Paragraph texto="Los datos cuantitavos o sea aquellos que podemos expresar de forma númerica hay mas diversidad en la manera como podemos entender estos datos tal como vimos anteriormente . Una manera frecuente de presentar los datos cuando trabajamos con este tipo de variables es la utilización de tablas de distribución de frecuencias o histogramas. A diferencia de los nominales donde para crear el diagrama de barras básicamente cada valor que toma la variable (Caso anterior G, M, S) representa una columna, cuando trabajamos con información cuantitativa creamos intervalos del mismo tamaño que agrupan los datos. Esto nos permite presentar de manera resumida la información. En la tabla se aconseja no solo presentar la frecuencia total sino también la frecuencia relativa. Por ejemplo, vamos a presentar una tabla que resuma la producción de leche ajustada a 305 días por lactancia de una finca lechera. Lo primero que debemos hacer es decidir el número de intervalos y calcular la amplitud del intervalo con la siguiente fórmula:"/>
@@ -82,6 +99,7 @@ const Analisis = () => {
               <SubTitle title="Video Ilustrativo"/>
               <Video id="fxoOgwp_mFQ" title="Construcción de un histograma"/>
             </SubChapter>
+
             <SubChapter>
               <SubTitle title="5.3 Visualización de variables cuantitativas y categóricas"/>
               <SubTitle minititle="5.3.1- Variables cuantitativas gráficos de dispersión"/>
@@ -92,9 +110,11 @@ const Analisis = () => {
               <Paragraph texto="Las tablas cruzadas o tablas de contingencia se utilizan para resumir y visualizar los datos de las variables categóricas. En la tabla cruzada un grupo de categorías va en el eje horizontal (X) y otro grupo en el eje vertical (Y). Un ejemplo lo podemos tomar por ejemplo si utilizamos una base de datos de un albergue de datos (fuente: Kaggle) y utilizamos las variables categóricas disponibles Esterilizados (Si, No) en el eje vertical y Sexo (Macho, Hembra) en el eje vertical. También es importante incluir los totales. Para este tipo de tabla es muy útil utilizar las tablas dinámicas de Excel que nos permiten no solo realizar la tabla, sino también visualizar el gráfico."/>
               <Image image={dinamica} alt="Tabla cruzada"/>
               <Paragraph texto="Siguiendo la metodología descrita en el enlace de como crear una tabla dinámica cruzamos los datos de sexo y esterilización. En este caso decidimos mostrar la información por totales sin embargo podemos mostrar tambien sus valores relativos. Es una de las ventajas de Excel que es muy flexible para la creación de estas tablas, ajustándolas a las necesidades del analista. De igual manera podemos seleccionar la opción de visualizar los datos en una gráfica dinámica."/>
-              <ImagePlus image={dinamica2} alt="Grafica de tabla dinamica" texto="Total de animales recibidos en el albergue clasificados por sexo (macho o hembra) y esterilización (si o no). Fuente: www.kaggle.com"/>
+              <ImagePlus image={dinamica2} width="50%" alt="Grafica de tabla dinamica" texto="Total de animales recibidos en el albergue clasificados por sexo (macho o hembra) y esterilización (si o no). Fuente: www.kaggle.com"/>
+              <SubTitle title="Video Ilustrativo"/>
               <Video id="bp5nrBUBQPI" title="Visualización de dos variables"/>
             </SubChapter>
+
             <SubChapter>
               <SubTitle title="5.4.1 Medidas de tendencia central"/>
               <SubTitle minititle="Media"/>
@@ -102,8 +122,71 @@ const Analisis = () => {
               <ImagePlus image={media} alt="Formula Media" texto="Formula matematica para la media de datos"/>
               <SubTitle minititle="Mediana"/>
               <Paragraph texto="La Mediana es el valor que divide un conjunto de observaciones ordenadas respecto de la magnitud de los valores, de tal manera que el numero de datos por encima de la mediana sea igual al numero de datos por debajo de la misma (Chao, 1978). Si esta posición no es un número entero entonces la mediana es el promedio simple de los dos números mas cercanos a la posición calculada. Excel = MEDIAN()"/>
-              <ImagePlus image={mediana} alt="Formula Mediana" texto="Formula matematica para la mediana de datos" width="30%"/>
+              <ImagePlus image={mediana} alt="Formula Mediana" texto="Formula matematica para la mediana de datos"/>
+              <SubTitle minititle="Moda"/>
+              <Paragraph texto="Moda es el dato que mas se repite o se da con mayor frecuencia dentro de una sucesión de datos. La moda se halla buscando el dato que tenga la frecuencia mas alta. Excel = MODE.SNGL( ) entrega una sola moda, =MODE.MULT( ) entrega una colección de modas."/>
+              <SubTitle minititle="Sesgo"/>
+              <Paragraph texto="Sesgo es una medida de asimetría que indica si las observaciones del conjunto de datos se concentran en un lado de la distribución de los datos. Sesgo derecho indica que los datos se concentran hacia la derecha de la curva (la cola larga se ve hacia la derecha). Izquierda, indica que los datos se concentran hacia la izquierda de la curva. Cuando los resultados del sesgo son negativos, los resultados están desviados hacia la derecha. Al contrario, con son positivos los resultados están desviados hacia la izquierda. Excel = SKEW()"/>
             </SubChapter>
+
+            <SubChapter>
+              <SubTitle title="5.4.2 Medidas de dispersión o variabilidad"/>
+              <Paragraph texto="Para el análisis de datos no basta con encontrar las medidas de posición central, ya que varias muestras pueden presentar las mismas medias, sin embargo, la dispersión de los datos puede darnos claros ejemplos de el comportamiento de los mismos. Las medidas de variabilidad nos indican el grado de dispersión en un conjunto de datos. Si este valor es pequeño entonces hay uniformidad en los datos. Por el contrario habrá poca uniformidad. Si es cero entonces todos los datos son iguales. Por ejemplo, no es igual tener un lote de pollos 
+              de engorde con una media de 2.2 kgs y una desviación estándar 0.3 kgs que un lote de pollos de engorde con una media de 2.2. kgs y una desviación estándar de 0.6kgs. A pesar de que las medias son iguales los datos del segundo lote estan mucho mas dispersos, por tanto la uniformidad estaria mas comprometida. Las medidas de dispersión de mas frecuente uso son:"/>
+              <SubTitle minititle="Varianza y desviación estándar"/>
+              <Paragraph texto="La razón fundamental por la que no se toma el promedio de las desviaciones como medida de variabilidad es que la suma de las desviaciones siempre arroja 0. Esto se soluciona con la varianza elevando al cuadrado las diferencias entre los datos y la media y dividiendo por la cantidad de datos (N)si es varianza poblacional o (n-1) si es varianza 
+              muestral. En Excel usamos =VAR.S() para varianza muestral y =VAR.P() para la varianza poblacional."/>
+              <ImageCorousel images={[{image:varianza_muestral, texto:"Varianza muestral  Excel = STDEV.S()"},{image:varianza_poblacional, texto:"Varianza poblacional  Excel =STDEV.P()"}]}/>
+              <Paragraph texto={["La varianza es el promedio de los cuadrados de las desviaciones.  Al tomar el cuadrado de las desviaciones para el calculo de la varianza, las unidades en estén dados los datos también se expresarán en unidades al cuadrado.  Esto puede no tener sentido, es por ello por lo que se modificó para obtener las unidades reales y se llegó al concepto de la ", <b>Desviación Estándar</b>,". La desviación estándar, o sea la raíz cuadrada de la varianza es ", <u>la medida de variabilidad de mayor uso para calcular la dispersión de los datos.</u>]}/>
+            </SubChapter>
+
+            <SubChapter>
+              <SubTitle title="5.5 Ejemplo de estadística descriptiva"/>
+              <Paragraph texto="En una producción porcícola se obtienen los resultados de peso y consumo de alimento de los últimos 100 cerdos vendidos. Los datos se encuentran en una tabla de Excel y queremos ver que podemos obtener de ellos. La tabla que se presenta muestra un fragmento de los 10 primeros animales. Recordemos que la conversión es un dato calculado y la fórmula es:"/>
+              <ImageCorousel images={[{image:conversion,texto:"Formula de conversion"},{image:tabla_c,texto:"Fragmento de la tabla de pesos y consumos finales para un lote de 100 cerdos (n=100)"}]}/>
+              <Paragraph texto="Lo primero que vamos a hacer es el cálculo de las medias. Podemos utilizar la función =PROMEDIO o =AVERAGE y seleccionar el grupo de datos como se muestra en la tabla. La misma operación para para la mediana =MEDIAN o =MEDIANA y la moda =MODE o =MODA. Es importante anotar que MODE es considerado por Excel como una variable en modo compatibilidad. Por ello se recomienda utilizar =MODE.SNGL para el número que ocurre con mayor frecuencia o =MODE.MULT que muestra la serie de números que ocurren con mayor frecuencia. 
+              Ojo si no hay duplicados dentro de la serie de datos el resultado será “N/A”."/>
+              <ImagePlus image={media_c} texto="Funcion promedio de Excel"/>
+              <Paragraph texto="Los valores máximos y mínimos los calculamos con las funciones =MAX() y =MIN(). Para el sesgo utilizamos la función =SKEW o en español =COEFICIENTE.ASIMETRIA.P. La función de la varianza es =VAR.P o =VAR.S ya sea para una población o para una muestra respectivamente. Para Excel en español =VAR para una muestra y =VARP para la población. La desviación estándar de igual manera =STDEV.P o STDEV.S para población o muestra respectivamente, si Excel ha sido configrado en inglés (como en mi caso) o si es en español =DESVESTP para población y DESVEST para la muestra. 
+              Con todas estas variables podemos crear nuestro reporte en una tabla:"/>
+              <ImagePlus image={desc_c} texto="Reporte"/>
+              <Paragraph texto="Excel tiene incorporada una herramienta para hacer análisis descriptivo de manera rápida, para ello debemos instalar la herramienta de análisis de datos. Una vez instalada seleccionamos la opción estadística descriptiva o “descriptive statistics”, inmediatamente se abre una hoja de dialogo donde debemos seleccionar el rango de datos que deseamos incluir y aclarar si los datos están por columnas como en este caso y si las columnas tienen etiquetas (labels). Seleccionamos además la ubicación del informe
+               y finalmente que tipo de análisis estadístico deseamos ver, en este caso nos quedamos con el resumen estadístico (summary statistics)."/>
+               <ImagePlus image={summary} texto="Recuadro de Estadistica descriptiva"/>
+               <Paragraph texto="inalmente La tabla siguiente muestra los resultados del informe generado por Excel."/>
+               <ImagePlus image={summary2} texto="Tabla de resultados"/>
+               <Paragraph texto="Como se observa es un informe bastante completo que se puede generar rápidamente y permite hacer una aproximación rápida a los datos que estamos comenzando a analizar. El informe presenta en una tabla las medidas de tendencia central, las medidas de dispersión, los valores mínimos y máximos asi como la cantidad de datos para cada una de las variables seleccionadas."/>
+               <SubTitle title="Video Ilustrativo"/>
+               <Video id="KICATP9ceMY" title="Explicación de las medidas de tendencia central"/>
+            </SubChapter>
+
+            <SubChapter>
+              <SubTitle title="5.5 Relaciones entre variables"/>
+              <Paragraph texto="En la sección 5.3 vimos algunas maneras como podemos visualizar si existe alguna relación entre dos variables. Ahora veamos como se puede medir el grado de relación entre dos variables"/>
+              <SubTitle minititle="5.5.1 Covarianza"/>
+              <Paragraph texto="La covarianza es una medida de variabilidad conjunta de dos variables. Si la covarianza es positiva esto indica que las dos variables se mueven juntas en la misma dirección. Si la covarianza es negativa entonces las dos variables se mueven en direcciones opuestas. Si la covarianza es 0 las dos variables son independientes la una de la otra.
+              La covarianza puede tomar valores hasta el infinito tanto positivos como negativos. Esto es un problema porque dificulta entender que tan ligadas están las dos variables."/>
+              <Paragraph texto="En Excel: Sample covariance = COVARIANCE.S() Population covariance =COVARIANCE.P()"/>
+              <ImageCorousel images={[{image:covarianza,texto:"Fórmula de la covarianza muestral"},{image:covarianza2,texto:"Fórmula de la covarianza poblacional"}]}/>
+              <SubTitle minititle="5.5.2 Correlación"/>
+              <Paragraph texto="La correlación es una medida de variación conjunta de dos variables. La correlación busca estudiar el grado de asociación entre variables. También se conoce como correlación lineal de Pearson, es una medida de regresión lineal que pretende cuantificar el grado de variación conjunta entre dos variables. Es importante aclarar que dos variables
+              que están altamente correlacionadas no necesariamente implican que una es causal de la otra (correlación no implica causalidad)."/>
+              <Paragraph texto="A diferencia de la covarianza, es una medida estandarizada que toma medidas entre -1 y +1 de manera que es mas fácil de interpretar los resultados. Donde valores positivos indican que, si el valor de x sube, el de y sube. Al contrario, si el valor es negativo indica que si x aumenta,
+               y disminuye y un valor 0 es que no hay correlación."/>
+              <ImageCorousel images={[{image:corre1,texto:"Fórmula de la correlación muestral"},{image:corre2,texto:"Formula de la correlación poblacional"}]}/>
+              <SubTitle minititle="Ejemplo en Excel"/>
+              <Paragraph texto="Tenemos los promedios de los registros de producción de 10 granjas de cerdas de cría de una región de Caldas (Colombia) como lo muestra el registro 
+              a continuación."/>
+              <ImagePlus image={cerdas} texto="Promedios" alt="promedios de los registros de producción de 10 granjas"/>
+              <Paragraph texto="Queremos calcular la covarianza entre lechones nacidos muertos o mortinatos por parto (columna verde) y el número de partos por cerdas por año (columna naranja).
+               Podemos seguir la fórmula de la covarianza muestral y hacer los cálculos en Excel, o bien podemos utilizar la función =COVARIANCE.S (). El resultado va a ser igual como se observa."/>
+              <ImagePlus image={cerdas2} texto="Covarianza entre lechones nacidos muertos o mortinatos" alt="Formula para covarianza de una muestra"/>
+              <Paragraph texto="El resultado de la covarianza es positivo 0.0067 lo que nos indica que si hay mas animales por camada tambien hay mas mortinatos por camada. Para cuantificar que tan cercana es la relación
+               entonces acudimos a la correlación, para ello tambien podemos correr la formula o simplemente utilizar la función = CORREL de Excel como se muestra en la tabla superior."/>
+              <SubTitle title="Video Ilustrativo"/>
+              <Video id="1OqX5A-1Pgo" title="Medidas de asociación en Excel"/>
+            </SubChapter>
+            <ReferencesBlock references={["* Chao, L.L., 1978. Estadística para las ciencias administrativas. McGraw-Hill Interamericana.","* Pfaffenberger, R.C. and Patterson, J.H., 1977. Statistical methods for business and economics. Homewood, IL: Richard D. Irwin."]}/>
           </main>
         </body>
     </div>
