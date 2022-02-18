@@ -1,5 +1,4 @@
 import React from 'react'
-import BarraDeNavegacion from 'Components/BarraDeNavegacion';
 import ChapterHead from 'Components/ChapterHead';
 import caballos from "Media/images/caballos.jpg"
 import ContentsTable from 'Components/ContentsTable';
@@ -45,11 +44,8 @@ import ReferencesBlock from 'Components/ReferencesBlock';
 const Analisis = () => {
   return (
     <div>
-        <body id="home">
-        <header className="hero blog">
-          <BarraDeNavegacion/>
+        <body id="home">  
           <ChapterHead titulo="5- Estadística descriptiva y análisis inicial de los datos" background={caballos}/>
-        </header>
           <main>
             <ContentsTable
             contenidos={[{titulo: "5.1- Presentación de datos categóricos nominales", link: "#categoricos"},
@@ -61,6 +57,8 @@ const Analisis = () => {
             {titulo: "5.5- Relaciones entre variables", link: "#covarianza"},
           ]}
             />
+
+            {/* //5.1 Datos categóricos nominales */}
             <SubChapter>
               <Paragraph texto="Tal como se ha hablado anteriormente los datos que se recogen en la finca o en cualquier otro tipo de actividad que los genere, tienen diferente naturaleza. En esta sección vamos a revisar como tratar visualizar esos datos para poder entenderlos mejor y saber que nos dicen y también veremos como podemos realizar una aproximación a la estadística descriptiva utilizando herramientas sencillas en la hoja de cálculo Excel"/> 
               <SubTitle title="5.1 Datos categóricos nominales"/> 
@@ -82,6 +80,7 @@ const Analisis = () => {
               <Video id="kdhWB_Px2oI" title="Información Categórica"/>
             </SubChapter>
 
+            {/* 5.2 Datos cuantitativos */}
             <SubChapter>
               <SubTitle title="5.2 Datos cuantitativos"/>
               <Paragraph texto="Los datos cuantitavos o sea aquellos que podemos expresar de forma númerica hay mas diversidad en la manera como podemos entender estos datos tal como vimos anteriormente . Una manera frecuente de presentar los datos cuando trabajamos con este tipo de variables es la utilización de tablas de distribución de frecuencias o histogramas. A diferencia de los nominales donde para crear el diagrama de barras básicamente cada valor que toma la variable (Caso anterior G, M, S) representa una columna, cuando trabajamos con información cuantitativa creamos intervalos del mismo tamaño que agrupan los datos. Esto nos permite presentar de manera resumida la información. En la tabla se aconseja no solo presentar la frecuencia total sino también la frecuencia relativa. Por ejemplo, vamos a presentar una tabla que resuma la producción de leche ajustada a 305 días por lactancia de una finca lechera. Lo primero que debemos hacer es decidir el número de intervalos y calcular la amplitud del intervalo con la siguiente fórmula:"/>
@@ -100,6 +99,7 @@ const Analisis = () => {
               <Video id="fxoOgwp_mFQ" title="Construcción de un histograma"/>
             </SubChapter>
 
+            {/* 5.3 Visualización de variables cuantitativas y categóricas */}
             <SubChapter>
               <SubTitle title="5.3 Visualización de variables cuantitativas y categóricas"/>
               <SubTitle minititle="5.3.1- Variables cuantitativas gráficos de dispersión"/>
@@ -115,6 +115,7 @@ const Analisis = () => {
               <Video id="bp5nrBUBQPI" title="Visualización de dos variables"/>
             </SubChapter>
 
+            {/* 5.4.1 Medidas de tendencia central */}
             <SubChapter>
               <SubTitle title="5.4.1 Medidas de tendencia central"/>
               <SubTitle minititle="Media"/>
@@ -129,6 +130,7 @@ const Analisis = () => {
               <Paragraph texto="Sesgo es una medida de asimetría que indica si las observaciones del conjunto de datos se concentran en un lado de la distribución de los datos. Sesgo derecho indica que los datos se concentran hacia la derecha de la curva (la cola larga se ve hacia la derecha). Izquierda, indica que los datos se concentran hacia la izquierda de la curva. Cuando los resultados del sesgo son negativos, los resultados están desviados hacia la derecha. Al contrario, con son positivos los resultados están desviados hacia la izquierda. Excel = SKEW()"/>
             </SubChapter>
 
+            {/* 5.4.2 Medidas de dispersión o variabilidad */}
             <SubChapter>
               <SubTitle title="5.4.2 Medidas de dispersión o variabilidad"/>
               <Paragraph texto="Para el análisis de datos no basta con encontrar las medidas de posición central, ya que varias muestras pueden presentar las mismas medias, sin embargo, la dispersión de los datos puede darnos claros ejemplos de el comportamiento de los mismos. Las medidas de variabilidad nos indican el grado de dispersión en un conjunto de datos. Si este valor es pequeño entonces hay uniformidad en los datos. Por el contrario habrá poca uniformidad. Si es cero entonces todos los datos son iguales. Por ejemplo, no es igual tener un lote de pollos 
@@ -140,6 +142,7 @@ const Analisis = () => {
               <Paragraph texto={["La varianza es el promedio de los cuadrados de las desviaciones.  Al tomar el cuadrado de las desviaciones para el calculo de la varianza, las unidades en estén dados los datos también se expresarán en unidades al cuadrado.  Esto puede no tener sentido, es por ello por lo que se modificó para obtener las unidades reales y se llegó al concepto de la ", <b>Desviación Estándar</b>,". La desviación estándar, o sea la raíz cuadrada de la varianza es ", <u>la medida de variabilidad de mayor uso para calcular la dispersión de los datos.</u>]}/>
             </SubChapter>
 
+            {/* 5.5 Ejemplo de estadística descriptiva */}
             <SubChapter>
               <SubTitle title="5.5 Ejemplo de estadística descriptiva"/>
               <Paragraph texto="En una producción porcícola se obtienen los resultados de peso y consumo de alimento de los últimos 100 cerdos vendidos. Los datos se encuentran en una tabla de Excel y queremos ver que podemos obtener de ellos. La tabla que se presenta muestra un fragmento de los 10 primeros animales. Recordemos que la conversión es un dato calculado y la fórmula es:"/>
@@ -153,13 +156,14 @@ const Analisis = () => {
               <Paragraph texto="Excel tiene incorporada una herramienta para hacer análisis descriptivo de manera rápida, para ello debemos instalar la herramienta de análisis de datos. Una vez instalada seleccionamos la opción estadística descriptiva o “descriptive statistics”, inmediatamente se abre una hoja de dialogo donde debemos seleccionar el rango de datos que deseamos incluir y aclarar si los datos están por columnas como en este caso y si las columnas tienen etiquetas (labels). Seleccionamos además la ubicación del informe
                y finalmente que tipo de análisis estadístico deseamos ver, en este caso nos quedamos con el resumen estadístico (summary statistics)."/>
                <ImagePlus image={summary} texto="Recuadro de Estadistica descriptiva"/>
-               <Paragraph texto="inalmente La tabla siguiente muestra los resultados del informe generado por Excel."/>
+               <Paragraph texto="Finalmente La tabla siguiente muestra los resultados del informe generado por Excel."/>
                <ImagePlus image={summary2} texto="Tabla de resultados"/>
                <Paragraph texto="Como se observa es un informe bastante completo que se puede generar rápidamente y permite hacer una aproximación rápida a los datos que estamos comenzando a analizar. El informe presenta en una tabla las medidas de tendencia central, las medidas de dispersión, los valores mínimos y máximos asi como la cantidad de datos para cada una de las variables seleccionadas."/>
                <SubTitle title="Video Ilustrativo"/>
                <Video id="KICATP9ceMY" title="Explicación de las medidas de tendencia central"/>
             </SubChapter>
 
+            {/* 5.5 Relaciones entre variables */}
             <SubChapter>
               <SubTitle title="5.5 Relaciones entre variables"/>
               <Paragraph texto="En la sección 5.3 vimos algunas maneras como podemos visualizar si existe alguna relación entre dos variables. Ahora veamos como se puede medir el grado de relación entre dos variables"/>
