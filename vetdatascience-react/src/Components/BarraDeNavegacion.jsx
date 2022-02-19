@@ -1,10 +1,11 @@
 import React from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 const BarraDeNavegacion = () => {
   return (
     <div id="navbar" className="navbar top">
         <h1 className= "logo">
-        <span className="text-primary"><i className= "fas fa-book-open"></i>Blog de Ciencia de Datos </span> para el campo</h1>
+        <span className="text-primary"><FontAwesomeIcon icon={faBookOpen} size="1x"/> Blog de Ciencia de Datos </span> para el campo</h1>
     
     <nav>
     <ul>
