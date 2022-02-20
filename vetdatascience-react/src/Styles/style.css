@@ -348,9 +348,15 @@ max-width: 100%;
 /* -----------------------------------Estilos J---------------------------------- */
 
 .Image_Carousel {
+  transition: 1s;
   width: 60%;
   position: relative;
-  left: 20%;
+  align-self: center;
+}
+
+.Image_Carousel:hover{
+  width: 80%;
+  transition: 1s;
 }
 
 .videoPlayer {
@@ -374,6 +380,7 @@ max-width: 100%;
 
 .image_plus
 {
+  transition: 1s;
   display: inline-flex;
   position: relative;
   align-self: center;
