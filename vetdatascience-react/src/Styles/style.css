@@ -380,6 +380,11 @@ max-width: 100%;
   margin-bottom: 2%;
 }
 
+.image_plus:hover{
+  transition: 1s;
+  width:100% !important;
+}
+
 .image_bottom_block{
   align-self: flex-end;
   width: 100%;
@@ -402,4 +407,15 @@ max-width: 100%;
 .social_icon:hover{
   color: #28a745;
   cursor: pointer;
+}
+
+
+::-webkit-scrollbar {
+  width: 2vh;  /* Remove scrollbar space */
+  position: absolute;
+  background: rgba(30, 143, 33, 0.64);
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #32a852;
 }
