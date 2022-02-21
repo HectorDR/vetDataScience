@@ -166,7 +166,7 @@ img{
 
 .callback-form{
   width: 100%;
-  padding: 0 20;
+  margin-top: 10%;
 }
 .callback-form label{
   display: block;
@@ -416,6 +416,46 @@ max-width: 100%;
   cursor: pointer;
 }
 
+.chapters{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.chapter_card{
+  margin: 2vh;
+  display: flex;
+  flex-direction: column;
+  width: 17rem;
+  border: thin solid rgba(109, 96, 103, 0.38);
+  border-radius: 2%;
+  position: relative;
+}
+
+.chapter_card:hover{
+  background-color: #32a852;
+  transition: 500ms;
+  bottom: 1vh;
+  cursor: pointer;
+}
+.chapter_card:hover h3{
+  color:#f5f5f5
+}
+
+.chapter_card__image{
+  height: 10rem;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+}
+
+.chapter_card__body{
+  padding: 1rem;
+  text-align: center;
+  border-top: thin solid rgba(109, 96, 103, 0.38);
+}
+.chapter_card h3{
+  font-size: small;
+}
 
 ::-webkit-scrollbar {
   width: 2vh;  /* Remove scrollbar space */
