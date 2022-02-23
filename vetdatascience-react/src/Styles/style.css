@@ -27,7 +27,9 @@ h1, h2{
   ;
 }
 
-
+#home{
+  overflow-y: auto;
+}
 
 h3, h4{
   font-weight: bold;
@@ -407,6 +409,14 @@ max-width: 100%;
   flex-direction: column;
 }
 
+.inside_layout{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+
+
 .social_icon{
   margin: 3vh;
 }
@@ -465,4 +475,30 @@ max-width: 100%;
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
   background: #32a852;
+}
+
+.floating_hamburger{
+  background-color: #333;
+  opacity: 0.8;
+  width:auto;
+  left: 1vh;
+  padding: 2vh;
+  border-radius: 10%;
+  position: fixed;
+  top: 1vh;
+  z-index: 30;
+  color: #f5f5f5;
+}
+
+.lateral_menu{
+  height: 100%;
+  width: 20vh;
+  background-color: #333;
+  opacity: 0.9;
+  color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 1s;
 }

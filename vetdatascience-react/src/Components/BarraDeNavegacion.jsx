@@ -1,7 +1,9 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
+
 const BarraDeNavegacion = () => {
+
   return (
     <div id="navbar" className="navbar top">
         <h1 className= "logo">
