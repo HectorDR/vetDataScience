@@ -9,7 +9,7 @@ const BarraDeNavegacion = () => {
     
     <nav>
     <ul>
-      <li><a href="index.html">Bienvenidos</a></li>
+      <li><a href="/">Bienvenidos</a></li>
       <li><a href="Blog">Acerca de</a></li>
       <li><a href="contenidos.html">Contenidos</a></li>
       <li><a href="index.html#team">Blogger</a></li>
