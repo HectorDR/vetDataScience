@@ -492,13 +492,31 @@ max-width: 100%;
 
 .lateral_menu{
   height: 100%;
-  width: 20vh;
+  width: 30vh;
   background-color: #333;
   opacity: 0.9;
   color: #333;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -40vh;
   overflow-x: hidden;
+  transition: 700ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lateral_menu__logo{
+  width: 20vh;
+}
+
+.lateral_menu.active{
   transition: 1s;
+  top: 0;
+  left: 0;
+}
+
+.lateral_menu__relative_block{
+  align-self: flex-start;
+  width: 60vh;
 }
