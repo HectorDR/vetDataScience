@@ -5,7 +5,7 @@ const BarraDeNavegacion = () => {
   return (
     <div id="navbar" className="navbar top">
         <h1 className= "logo">
-        <span className="text-primary"><FontAwesomeIcon icon={faBookOpen} size="1x"/> Introducción a la Ciencia de Datos para MVZ</span> para el campo</h1>
+        <span className="text-primary"><FontAwesomeIcon icon={faBookOpen} size="1x"/> Introducción a la Ciencia de Datos para MVZ</span> </h1>
     
     <nav>
     <ul>

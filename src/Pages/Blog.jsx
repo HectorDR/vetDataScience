@@ -5,9 +5,14 @@ import SubChapter from "Components/SubChapter";
 import Paragraph from "Components/Paragraph";
 import SubTitle from "Components/SubTitle";
 import ImagePlus from "Components/ImagePlus";
-import ReferencesBlock from "Components/ReferencesBlock";
+
 import cambodia from "Media/images/cambodia.jpeg";
 import laptop from "Media/images/laptop.png"
+import excel from "Media/images/excel.jpg"
+import cat from "Media/images/cat_mac.jpg"
+import hector from "Media/images/hector.jpeg"
+
+
 const Blog =()=>{
     return(
 
@@ -36,6 +41,12 @@ const Blog =()=>{
                 link: "#metodologia",
               },
               
+              {
+                titulo:
+                  "IV- Acerca del Autor",
+                link: "#autor",
+              },
+
             ]}
           />
         </section >
@@ -60,8 +71,56 @@ const Blog =()=>{
           </SubChapter>
           </section>
 
+<section id = "objetivos">
+<SubChapter>
+<SubTitle title="Objetivos" />  
+
+        <p> El principal objetivo es entregar herramientas sencillas pero eficaces de análisis de datos para utilizar con los datos recogidos a nivel de una empresa pecuaria, permitiendo la optimización de los mismos.</p>
+       
+        <p>Simultáneamente desarrollar una comunidad de  interesados en la ciencia de los datos en la que podamos colaborar con el desarrollo del sector, y desde este ambiente poder ayudar a resolver problemas y generar alternativas de optimización en el proceso de toma de decisiones. </p>
+
+        <ImagePlus
+              image={excel}            
+              max_zoom="60%"
+            />
+
+<SubTitle title = "Requisitos" />
+
+<Paragraph texto = "los módulos que se presentan están diseñados de manera que cualquier persona con conocimientos básicos de matemática y estadística (o deseos de aprender) pueda beneficiarse de ellos.  Ojalá esté familiarizado con la hoja de cálculo Microsoft® Excel®, pues esta será la principal herramienta para desarrollar las bases.  Es importante anotar que, aunque Excel es muy útil, es tan solo una de las herramientas de las que se dispone.  Sobra decir que algo de tiempo y dedicación semanal, una buena conexión a internet y un laptop o un computador de mesa son necesarios."/>
+</SubChapter>
+</section>
+
+<section id = "metodologia">
+<SubChapter>
+<SubTitle title = "Metodología"/>
+<Paragraph texto = " los contenidos esta desarrollados de una manera práctica.  Los conceptos básicos teóricos son mencionados, sin embargo, si el lector desea profundizar o aprender mas sobre el tema se sugiere que investigue por su cuenta para lo cual se proveen enlaces a otros sitios web.  Cada concepto que se presenta tiene una aplicabilidad práctica y se ilustra con ejemplos del sector pecuario. Los datos son presentados en la hoja de cálculo y se muestra paso por paso como calcular los resultados en algunos casos se incluyen videos tutoriales. "/>
+
+<Paragraph texto = " Es importante mencionar que aunque los contenidos están desarrollados en la hoja de cálculo Excel, esta no es la única herramienta disponible, al contrario. Los invito a explorar por su propia cuenta otras herramientas y a compartirlas en esta página.  La idea es aportar y que todos podamos aprender de todos." />
+
+<Paragraph texto = "Dada mi formación académica y profesional en el sector pecuario la mayoría de los ejemplos están dados para este sector. Lectores de otros campos de formación me sabrán excusar.  Sin embargo, esta es una página dinámica y en desarrollo.  La idea es que aquellos que estén interesados en el tema de la ciencia de los datos puedan aportar nuevo material para explorar y analizar.  Debo aclarar que ningún animal ha resultado herido o dañado al recoger los datos.  La información con la que trabajo es o bien obtenida de fuentes secundarias o ha sido trabajada con datos simulados." />
+
+<ImagePlus
+              image={cat}            
+              max_zoom="60%"
+            />
+</SubChapter>
+
+</section>
 
 
+<section id = "autor">
+<SubChapter>
+<SubTitle title="Acerca del Autor" />
+<Paragraph texto = "Hector Delgado: Medico Veterinario Zootecnista, con Maestría en Administracion de Empresas y Doctorado en Ciencia Animal (ciencia de datos en ganado lechero), con mas de 25 años de experiencia en el sector pecuario trabajando en múltiples frentes como la academia, la empresa y el sector no gubernamental trabajando en temas de bienestar animal y ciencia de datos, pero sobre todo alquien con mucho interés en aprender, compartir y construir conocimiento."/>
+<ImagePlus
+              image={hector}            
+              max_zoom="20%"
+            />
+</SubChapter>
+
+
+
+</section>
 
                 </main>
             </body>
