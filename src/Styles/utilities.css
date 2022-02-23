@@ -9,7 +9,7 @@
 }
 
 .text-tertiary{
-  color:whitesmoke;
+  color:yellow;
 }
 
 /* Button */
@@ -89,6 +89,15 @@ flex: 1;
 .flex-columns .column .column-3,
 .flex-columns .column .column-4{
   height: 50vh;
+}
+
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
 }
 
 

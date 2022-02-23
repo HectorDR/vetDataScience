@@ -6,7 +6,7 @@ import Paragraph from "Components/Paragraph";
 import SubTitle from "Components/SubTitle";
 import ImagePlus from "Components/ImagePlus";
 
-import cambodia from "Media/images/cambodia.jpeg";
+import aves from "Media/photos_web/aves_sueltas.jpg";
 import laptop from "Media/images/laptop.png"
 import excel from "Media/images/excel.jpg"
 import cat from "Media/images/cat_mac.jpg"
@@ -20,7 +20,7 @@ const Blog =()=>{
             <body>
             <ChapterHead
           titulo="Porque los profesionales del campo necesitamos saber de ciencia de datos"
-          background={cambodia}
+          background={aves}
         />
                 <main> 
 
