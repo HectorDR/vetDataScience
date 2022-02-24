@@ -6,6 +6,7 @@ import Analisis from "Pages/Analisis.jsx";
 import Blog from "Pages/Blog.jsx"
 import MainLayout from 'Layouts/MainLayout';
 import Home from 'Pages/Home';
+import Contenidos from 'Pages/Contenidos';
 //importe todo lo nceesario a app los estilos, el router y las paginas
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="Analisis" element={<Analisis/>}/>
         <Route path="Blog" element={<Blog/>}/>
+        <Route path="Contenidos" element={<Contenidos/>}/>
       </Route>
     </Routes>
     </BrowserRouter>

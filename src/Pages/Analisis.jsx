@@ -44,13 +44,14 @@ import ReferencesBlock from "Components/ReferencesBlock";
 const Analisis = () => {
   return (
     <div>
-      <body id="home">
+      <body id="home" >
         <ChapterHead
           titulo="5- Estadística descriptiva y análisis inicial de los datos"
           background={caballos}
         />
         <main>
-          <section id = "tabla">
+          <section id = "tabla" className="container bg-light">
+            <h1>Contenidos</h1>
           <ContentsTable
             contenidos={[
               {

@@ -24,7 +24,8 @@ const Blog =()=>{
         />
                 <main> 
 
-                <section id = "tabla">
+                <section id = "tabla" className="container bg-light">
+              <h1>Contenidos</h1>
           <ContentsTable
             contenidos={[
               {
