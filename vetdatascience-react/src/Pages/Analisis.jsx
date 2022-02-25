@@ -214,7 +214,7 @@ const Analisis = () => {
         <Paragraph
           texto={[
             "La varianza es el promedio de los cuadrados de las desviaciones.  Al tomar el cuadrado de las desviaciones para el calculo de la varianza, las unidades en estén dados los datos también se expresarán en unidades al cuadrado.  Esto puede no tener sentido, es por ello por lo que se modificó para obtener las unidades reales y se llegó al concepto de la ",
-            <b>Desviación Estándar</b>,
+            <a href="https://www.google.com"><b>Desviación Estándar</b></a>,
             ". La desviación estándar, o sea la raíz cuadrada de la varianza es ",
             <u>
               la medida de variabilidad de mayor uso para calcular la dispersión
