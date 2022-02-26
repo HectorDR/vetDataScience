@@ -8,7 +8,7 @@ const ContentsTable = (props) => {
                 <h2>Contenidos</h2>
                 <ul>
                     {props.contenidos.map(contenido => {
-                        return <li><HashLink smooth to={contenido.link}>{contenido.titulo}</HashLink></li>
+                        return <li><HashLink smooth to={contenido.link.indexOf("#") === 0?contenido.link:`/${contenido.link}`}>{contenido.titulo}</HashLink></li>
                     })}
                 </ul>
             </div>
