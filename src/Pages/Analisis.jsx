@@ -45,6 +45,7 @@ const Analisis = () => {
       chapter_title="5- Estadística descriptiva y análisis inicial de los datos"
       chapter_image={caballos}
     >
+    <div id = "tabla">
     <ContentsTable
             contenidos={[
               {
@@ -78,7 +79,7 @@ const Analisis = () => {
               },
             ]}
           />
-
+</div>
       {/* //5.1 Datos categóricos nominales */}
       <SubChapter id="categoricos">
         <Paragraph texto="Tal como se ha hablado anteriormente los datos que se recogen en la finca o en cualquier otro tipo de actividad que los genere, tienen diferente naturaleza. En esta sección vamos a revisar como tratar visualizar esos datos para poder entenderlos mejor y saber que nos dicen y también veremos como podemos realizar una aproximación a la estadística descriptiva utilizando herramientas sencillas en la hoja de cálculo Excel" />
