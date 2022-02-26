@@ -24,15 +24,16 @@ h1, h2{
   font-weight: bold;
   line-height: 1.2;
   color: #28a745;
-  
-  
+  ;
 }
 
+#home{
+  overflow-y: auto;
+}
 
 h3, h4{
   font-weight: bold;
   color: #28a745;
-  
 }
 
 p{
@@ -92,8 +93,8 @@ img{
 .hero{
   height: 50vh;
   position: relative;
-  ;
 }
+
 .hero .content{
   display: flex;
   flex-direction: column;
@@ -210,7 +211,7 @@ img{
 
 }
 .container li :hover {
- background-color: 28a745;
+ background-color: #96be25;
 }
 
 /* // testing */
@@ -408,6 +409,14 @@ max-width: 100%;
   flex-direction: column;
 }
 
+.inside_layout{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+
+
 .social_icon{
   margin: 3vh;
 }
@@ -466,4 +475,115 @@ max-width: 100%;
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
   background: #32a852;
+}
+
+.floating_hamburger{
+  background-color: #333;
+  opacity: 0.8;
+  width:auto;
+  left: 1vh;
+  padding: 2vh;
+  border-radius: 10%;
+  position: fixed;
+  top: 1vh;
+  z-index: 30;
+  color: #f5f5f5;
+}
+
+.floating_hamburger:hover{
+  cursor: pointer;
+}
+
+.lateral_menu{
+  height: 100%;
+  width: 30vh;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: -40vh;
+  overflow-x: hidden;
+  transition: 700ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lateral_menu__logo{
+  width: 20vh;
+}
+
+.lateral_menu__exit{
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  left: 3vh;
+  top: 1vh;
+}
+
+.lateral_menu.active{
+  transition: 1s;
+  top: 0;
+  left: 0;
+}
+
+.lateral_menu__relative_block{
+  align-self: flex-start;
+  width: 60vh;
+}
+
+.chapter_accordion{
+  width: 100%;
+  padding: 2vh;
+}
+
+.chapter_accordion__title{
+  display: flex;
+  flex-direction: row;
+}
+
+.chapter_accordion__title:hover{
+  cursor: pointer;
+}
+
+.chapter_accordion__title h6{
+  font-size: small;
+  color: #32a852;
+}
+
+.chapter_accordion__title:hover > h6{
+  filter:  brightness(0) invert(1);
+}
+
+.chapter_accordion__img{
+  width: 1rem;
+  height: 1rem;
+  align-self: center;
+  transition: 700ms;
+  transform: rotate(0deg);
+  
+}
+.chapter_accordion__img.up {
+  transform: rotate(180deg);
+}
+
+.chapter_accordion__title:hover > .chapter_accordion__img{
+  filter:  brightness(0) invert(1);
+}
+
+
+
+.chapter_accordion__subchapters{
+  color: #28a745;
+  font-size: small;
+}
+
+.chapter_accordion__subchapters li{
+  border-bottom: solid rgba(232, 222, 227, 0.2) thin;
+  border-radius: 12%;
+  padding: 1vh;
+}
+
+.chapter_accordion__subchapters li:hover{
+  color: #f5f5f5;
+  cursor: pointer;
 }

@@ -15,10 +15,6 @@ const Contenidos =()=>{
         />
 
     <main>
-
-
-    <section id = "Introduccion" className="container bg-light">
-        <h1>Introducción</h1>
           <ContentsTable
             contenidos={[
               {
@@ -43,7 +39,6 @@ const Contenidos =()=>{
 
             ]}
           />
-        </section >
 
 
 

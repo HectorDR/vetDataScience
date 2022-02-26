@@ -23,9 +23,6 @@ const Blog =()=>{
           background={aves}
         />
                 <main> 
-
-                <section id = "tabla" className="container bg-light">
-              <h1>Contenidos</h1>
           <ContentsTable
             contenidos={[
               {
@@ -50,7 +47,6 @@ const Blog =()=>{
 
             ]}
           />
-        </section >
 
 <section id = "introduccion">
                 <SubChapter>

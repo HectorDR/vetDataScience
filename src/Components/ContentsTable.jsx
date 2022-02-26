@@ -1,14 +1,14 @@
 import React from 'react'
-
+import { HashLink } from "@xzar90/react-router-hash-link";
 const ContentsTable = (props) => {
   return (
     <>
         <section class="post">
-            <div id="menu" >
-                
+            <div id="menu" class="container bg-light">
+                <h2>Contenidos</h2>
                 <ul>
                     {props.contenidos.map(contenido => {
-                        return <li><a href={contenido.link}>{contenido.titulo}</a></li>
+                        return <li><HashLink smooth to={contenido.link}>{contenido.titulo}</HashLink></li>
                     })}
                 </ul>
             </div>
