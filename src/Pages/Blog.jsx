@@ -23,6 +23,7 @@ const Blog =()=>{
           background={aves}
         />
                 <main> 
+                  <section id = "tabla">
           <ContentsTable
             contenidos={[
               {
@@ -47,7 +48,7 @@ const Blog =()=>{
 
             ]}
           />
-
+</section>
 <section id = "introduccion">
                 <SubChapter>
 
@@ -72,9 +73,9 @@ const Blog =()=>{
 <SubChapter>
 <SubTitle title="Objetivos" />  
 
-        <p> El principal objetivo es entregar herramientas sencillas pero eficaces de análisis de datos para utilizar con los datos recogidos a nivel de una empresa pecuaria, permitiendo la optimización de los mismos.</p>
+        <p> El principal objetivo de este proyecto es entregar herramientas  de uso sencillo pero eficaces para realizar análisis de datos aplicados a nivel de una empresa pecuaria.</p>
        
-        <p>Simultáneamente desarrollar una comunidad de  interesados en la ciencia de los datos en la que podamos colaborar con el desarrollo del sector, y desde este ambiente poder ayudar a resolver problemas y generar alternativas de optimización en el proceso de toma de decisiones. </p>
+        <p>Simultáneamente desarrollar una comunidad de  interesados en la ciencia de los datos en la que podamos desde este ambiente aprender en comudidad, ayudar a resolver problemas específicos y generar alternativas de optimización en el proceso de toma de decisiones. </p>
 
         <ImagePlus
               image={excel}            

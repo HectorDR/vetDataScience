@@ -14,7 +14,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faYoutube} size="2x" className="social_icon"/>
             <FontAwesomeIcon icon={faLinkedin} size="2x" className="social_icon"/>
           </div>
-          <p>Copyright &copy; 2020 - DSMVZ </p>
+          <p> Introducción a la Ciencia de Datos para MVZ </p>
           </footer>
     </div>
   )

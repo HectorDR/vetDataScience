@@ -4,7 +4,7 @@ const ContentsTable = (props) => {
   return (
     <>
         <section class="post">
-            <div id="menu" class="container bg-light">
+            <div id="menu" class=" bg-light">
                 <h2>Contenidos</h2>
                 <ul>
                     {props.contenidos.map(contenido => {

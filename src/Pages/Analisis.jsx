@@ -45,7 +45,7 @@ const Analisis = () => {
       chapter_title="5- Estadística descriptiva y análisis inicial de los datos"
       chapter_image={caballos}
     >
-    <div id = "tabla">
+    <div id = "tabla" className = "container bg-light">
     <ContentsTable
             contenidos={[
               {

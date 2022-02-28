@@ -15,6 +15,7 @@ const Contenidos =()=>{
         />
 
     <main>
+      <section id = "Blog" className = "container bg-light">
           <ContentsTable
             contenidos={[
               {
@@ -40,8 +41,29 @@ const Contenidos =()=>{
             ]}
           />
 
+</section>
+<section id = "Post" className = "container bg-light">
+<h1>1- Introducción a la ciencia de los datos</h1>
+          <ContentsTable
+            contenidos={[
+              {
+                titulo: "1.1- Qué es la ciencia de los datos",
+                link: "Post#definicion",
+              },
+              {
+                titulo: "1.2- Qué son los datos crudos",
+                link: "Post#datos",
+              },
+              
+              {
+                titulo:
+                  "1.3- Clasificación de los datos según su naturaleza",
+                link: "Post#raw",
+              },
 
-
+            ]}
+          />
+        </section>
 
     <section id = "Analisis" className="container bg-light">
         <h1>5- Estadística descriptiva y análisis inicial de los datos</h1>
