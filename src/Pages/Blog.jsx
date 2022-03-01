@@ -23,7 +23,7 @@ const Blog =()=>{
           background={aves}
         />
                 <main> 
-                  <section id = "tabla">
+                  <section id = "tabla" className = "container">
           <ContentsTable
             contenidos={[
               {

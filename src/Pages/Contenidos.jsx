@@ -16,6 +16,7 @@ const Contenidos =()=>{
 
     <main>
       <section id = "Blog" className = "container bg-light">
+        <h1>Acerca de este proyecto</h1>
           <ContentsTable
             contenidos={[
               {
@@ -65,7 +66,56 @@ const Contenidos =()=>{
           />
         </section>
 
-    <section id = "Analisis" className="container bg-light">
+    
+
+        <section id = "Examples" className = "container bg-light"> 
+        <h1>2- Ejemplos prácticos para manejar los datos estructurados</h1>
+        <ContentsTable
+            contenidos={[
+              {
+                titulo: "2.1-Cómo crear campos con criterio de validación",
+                link: "Examples#fechas",
+              },
+              {
+                titulo: "2.2- Cómo crear listas desplegables",
+                link: "Examples#listas",
+              },              
+              {
+                titulo:
+                  "2.3- Cómo manejar los datos cuantitativos",
+                link: "Examples#cuantitativas",
+              },
+              {
+                titulo:
+                  "2.4- Listas dependientes de otras -Madre e hijas- ",
+                link: "Examples#madrehija",
+              },
+              {
+                titulo:
+                  "2.5- Cómo solucionar problemas con datos importados o secundarios",
+                link: "Examples#importados",
+              },
+              {
+                titulo:
+                  "2.5.1- Inconsistencia en los terminos para referirse a un evento",
+                link: "Examples#importados",
+              },
+              {
+                titulo:
+                  "2.5.2- Revisar los datos duplicados en los registros",
+                link: "Examples#duplicados",
+              },
+              {
+                titulo:
+                  "2.5.3- Que hacer cuando hacen falta datos en los registros",
+                link: "Examples#missing",
+              },
+            ]}
+          />
+
+        </section>
+
+        <section id = "Analisis" className="container bg-light">
         <h1>5- Estadística descriptiva y análisis inicial de los datos</h1>
           <ContentsTable
             contenidos={[
@@ -99,10 +149,6 @@ const Contenidos =()=>{
             ]}
           />
         </section >
-
-
-
-
 
 
 </main>

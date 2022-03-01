@@ -8,6 +8,7 @@ import MainLayout from 'Layouts/MainLayout';
 import Home from 'Pages/Home';
 import Contenidos from 'Pages/Contenidos';
 import Post from "Pages/Post";
+import Examples from "Pages/Examples";
 //importe todo lo nceesario a app los estilos, el router y las paginas
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="Blog" element={<Blog/>}/>
         <Route path="Contenidos" element={<Contenidos/>}/>
         <Route path="Post" element={<Post/>}/>
+        <Route path="Examples" element={<Examples/>}/>
       </Route>
     </Routes>
     </BrowserRouter>

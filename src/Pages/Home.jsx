@@ -9,7 +9,7 @@ import cultivo from "Media/photos_web/cultivo.jpg";
 const Home = () => {
   return (
     <div>
-      <body className = "container" >
+      <body  >
         
           <Homehead background={cultivo} titulo={[<h1 style={{color:"yellow"}}>Ciencia de Datos para el campo </h1>,<br/>,
           <h2 style={{color:"yellow"}} >Una Introducción con herramientas útiles para entender la ciencia de los datos </h2>]}/>
@@ -23,7 +23,7 @@ const Home = () => {
       <div class = "row">
            
       </div>
-      <div className = "column" >
+      <div className = "column container" >
         <Form/>
         </div>
         

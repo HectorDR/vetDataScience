@@ -12,16 +12,16 @@ import sensrum from "Media/images/sensrum1.png"
 import tipos_datos from "Media/tables/tipos_datos1.png"
 import datos_summary from "Media/tables/datos_summary.png"
 import ReferencesBlock from "Components/ReferencesBlock";
+import ChapterLayout from "Layouts/ChapterLayout";
 //import rumination from "Media/images/rumination.JPG";
 const Post = () =>{
     return(
 
 <div>
     <body>
-    <ChapterHead
-          titulo="Introducción a la Ciencia de los Datos"
-          background={hozando}
-        />
+    <ChapterLayout chapter_title="1- Introducción a la Ciencia de los Datos"
+        chapter_image={hozando}>
+    
         <main>
         <section id = "tabla" className = "container">
           <ContentsTable
@@ -44,7 +44,7 @@ const Post = () =>{
             ]}
           />
         </section>
-        </main>
+       
             <SubChapter id = "definicion">
                 <SubTitle title="1.1- Que es la Ciencia de los datos" />
                 <Paragraph
@@ -104,7 +104,7 @@ const Post = () =>{
                 />
             </SubChapter>
 
-            <SubChapter>
+            <SubChapter id = "raw">
                 <SubTitle title = "1.3-  Clasificación de los datos según su naturaleza"/>
                 <Paragraph 
                 texto= "De acuerdo con su naturaleza los datos pueden ser nominales, ordinales, de intervalos y de escala de radio. Es muy importante entender esta clasificación ya que de acuerdo con esta, sabremos que tipo de análisis es el mas indicado para los datos recogidos.  Por ejemplo datos como raza o estado reproductivo, no podran analizarse de igual manera a los datos de produccion. En la tabla que se presenta a continuación se resume esta clasificación y se presentan varios ejemplos aplicados a nuestro sector pecuario."/>
@@ -130,7 +130,8 @@ const Post = () =>{
 
             ]}
             />
-
+      </main>
+      </ChapterLayout>
     </body>
 </div>
 
