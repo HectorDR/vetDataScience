@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel'
 
 const ImageCorousel = (props) => {
   return (
-    <div className='Image_Carousel'>
+    <div className='Image_Carousel' style={{width:props.width || "60%",maxWidth:props.max_zoom || "80%"}}>
     <Carousel autoPlay={true} infiniteLoop={true}>
         {props.images.map(image =>{
             return(

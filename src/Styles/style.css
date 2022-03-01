@@ -351,14 +351,13 @@ max-width: 100%;
 
 .Image_Carousel {
   transition: 1s;
-  width: 60%;
   position: relative;
   align-self: center;
 }
 
 .Image_Carousel:hover{
-  width: 80%;
   transition: 1s;
+  width: 100% !important;
 }
 
 .videoPlayer {
@@ -468,11 +467,11 @@ max-width: 100%;
 }
 
 ::-webkit-scrollbar {
-  width: 2vh;  /* Remove scrollbar space */
+  width: 2vh;  
   position: absolute;
   background: rgba(30, 143, 33, 0.64);
 }
-/* Optional: show position indicator in red */
+
 ::-webkit-scrollbar-thumb {
   background: #32a852;
 }

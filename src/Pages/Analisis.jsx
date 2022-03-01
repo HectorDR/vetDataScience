@@ -214,6 +214,7 @@ const Analisis = () => {
         muestral. En Excel usamos =VAR.S() para varianza muestral y =VAR.P() para la varianza poblacional."
         />
         <ImageCorousel
+          width={"40%"}
           images={[
             {
               image: varianza_muestral,
