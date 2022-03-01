@@ -10,6 +10,15 @@ import ImagePlus from "Components/ImagePlus";
 import fecha1 from "Media/examples/fecha1.png"
 import fecha_error from "Media/examples/fecha_error.png"
 import ChapterLayout from "Layouts/ChapterLayout";
+import list1 from "Media/examples/list-1.png"
+import list2 from "Media/examples/list-2.png"
+import list3 from "Media/examples/list-3.png"
+import list4 from "Media/examples/list-4.png"
+import list5 from "Media/examples/list-5.png"
+
+
+
+
 
 const Examples =()=>{
     return(
@@ -148,7 +157,53 @@ const Examples =()=>{
 
             </SubChapter>
 
+        <SubChapter id = "listas">
+            <SubTitle title ="2.2- Como crear listas desplegables en Excel para seleccionar datos -Listas Desplegables-"/>
+            <Paragraph texto ="También conocidas como listas de validación, son una herramienta útil para diseñar los registros y minimizar el impacto causado por datos erroneos o espurios.  Por medio de estas listas, se generan un número limitado de opciones para introducir datos (valores que puede tomar la variable) y evitar problemas como el anteriormente mencionado con todas las posiblidades de nombrar un evento como Mastitis o tambien como vimos en la sección anterior la creación de fechas. "/>
+            
+            <Paragraph texto="Para crear una de estas listas,  lo primero que se debe hacer es identificar los posibles valores que puede tomar la variable. Para ilustrar de manera mas clara vamos a utilizar un ejemplo, en donde vamos a incluir la raza de los animales en un registro individual de novillas de levane.  También vamos a crear una lista para incluir el sexo del animal. Como se observa en los cuadros 2.3 a 2.7."/>
+            
+            <center><h4>2.3- Crear de la lista de validación</h4></center>
+                 <ImagePlus 
+                image = {list1}
+                texto = "Creación de la lista de validación"
+                />  
+            <Paragraph texto = "El primer paso consiste en generar una lista para todas las razas, esta debe ir a manera de columna y un valor por celda. Este caso creamos una lista para razas en la columba B, y otra para para en la columna C."/>
+            <center><h4>2.4- Dar un nombre a lista creada</h4></center>
+                 <ImagePlus 
+                image = {list2}
+                texto = "Nombrar la lista recién creada"
+                />  
+            <Paragraph texto = "El segundo paso es seleccionar el rango de los datos y nos ubicamos en la celda que se ubica en la parte superior izquierda de la pantalla, hacemos click y desde ahí le damos el nombre a la lista, en este caso “Razas”. Una vez cumplido este paso ya se puede utilizar en la creación de la tabla o el registro deseado."/>
+             
+            <center><h4>2.5- Utilización de la lista creada</h4></center>
+                 <ImagePlus 
+                image = {list3}
+                texto = "Utilizando la lista 'Razas'"
+                />  
 
+            <Paragraph  texto ="Para usar la lista, debe ubicarse en la celda o en el rango deseado dentro del registro, ir al menú datos (data) que se ubica en la parte superior de la hoja electrónica y seleccionar validación de datos (data validation), luego del mendu seleccionar la opción lista, y dar el nombre de la lista que acabamos de crear (=Razas)" />
+
+            <center><h4>2.6- Comprobación del funcionamiento adecuado de la lista </h4></center>
+                 <ImagePlus 
+                image = {list4}
+                texto = "Chequear si todo OK"
+                />  
+            <Paragraph texto ="Una vez terminado este paso vemos que cuando vamos a digitar una raza la hoja solo permite seleccionar una de las que hemos incluido en la lista."/>
+
+            <center><h4>2.7- Poblar las listas y crear mas </h4></center>
+                 <ImagePlus 
+                image = {list5}
+                texto = "una vez comprobado el funcionamiento adecuado podemos poblar el registro"
+                />  
+            <Paragraph texto="Finalmente, repetimos la operación para la columna donde vamos a incluir el sexo del animal y como podemos ver en la figura la lista solo nos permite seleccionar alguno de los valores incluidos en la lista. "/>
+
+            <center><h4>Video de creación de una lista desplegable en Excel para usar validación de datos</h4></center>
+                <Video
+          id="LxfaiH88x_s"
+          title="creación de una lista desplegable en Excel para usar validación de datos"
+        />
+        </SubChapter>
 
 
 
