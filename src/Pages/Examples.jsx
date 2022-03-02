@@ -1,5 +1,4 @@
 import React from "react";
-import ChapterHead from "Components/ChapterHead";
 import ContentsTable from "Components/ContentsTable";
 import SubChapter from "Components/SubChapter";
 import Paragraph from "Components/Paragraph";
@@ -21,6 +20,23 @@ import val1 from "Media/examples/val1.png"
 import val2 from "Media/examples/val2.png"
 import val3 from "Media/examples/val3.png"
 import val4 from "Media/examples/val4.png"
+import spell1 from "Media/examples/spell-1.png"
+import spell2 from "Media/examples/spell-2.png"
+import dup1 from "Media/examples/dup-1.png"
+import dup2 from "Media/examples/dup-2.png"
+import dup3 from "Media/examples/dup-3.png"
+import dup4 from "Media/examples/dup-4.png"
+import dup5 from "Media/examples/dup-5.png"
+import dup6 from "Media/examples/dup-6.png"
+import miss1 from "Media/examples/miss-1.png"
+import miss2 from "Media/examples/miss-2.png"
+import miss3 from "Media/examples/miss-3.png"
+import miss4 from "Media/examples/miss-4.png"
+import miss5 from "Media/examples/miss-5.png"
+import miss6 from "Media/examples/miss-6.png"
+import miss7 from "Media/examples/miss-7.png"
+
+
 
 
 
@@ -275,7 +291,150 @@ const Examples =()=>{
         <SubChapter id = "importados">
             <SubTitle title ="2.5- Como solucionar problemas con los datos importados o secundarios" />
             <Paragraph texto = {["Es normal que a veces tengamos que trabajar con datos provenientes de otras fuentes es decir registros que no fueron creados por nosotros o que fueron diseñados para otro propósito. Para ello lo ideal es que estos datos vengan de manera  tabular (estructurados) y sobre todo hay que conocer cuáles son las variables incluidas, cual es su ",<a href="Post#raw"><u><b>naturaleza</b></u></a>," (categórico, ordinal, etc.) y sus valores y escalas (eje: libras o kilos).  Cuando estamos trabajando con unos pocos registros posiblemente solo visualizando los datos podremos identificarlos fácilmente, sin embargo, cuando estamos trabajando con miles (o millones) de datos la situación se torna complicada y necesitaremos de varias herramientas para facilitar este proceso. En este enlace de ",<a href="https://support.microsoft.com/en-us/office/top-ten-ways-to-clean-your-data-2844b620-677c-47a7-ac3e-c2e157d1db19"><u> <b>Microsoft®</b> </u></a>,"  podemos ver algunos de los puntos clave cuando estamos trabajando con datos estructurados."]}/>
+
+            <SubTitle title = "2.5.1- Manejo de inconsistencias en los términos para referirse a un evento "/>
+            <Paragraph texto = "Uno de los casos mas comunes es la heterogeneidad en los términos para referirnos a un mismo evento. En este caso podemos acudir a Excel cuando no estamos trabajando con millones de datos. En caso de gran número de registros es mejor utilizar lenguajes de programación como SAS® o Python. Pero cuando tengamos una cantidad considerable de datos sin que sea abrumadora, Excel funciona muy bien.  Vamos a explorar las posibilidades del corrector ortográfico (Spelling), para ello vamos a revisar un registro simulado donde la actividad de inseminación ha sido digitada de multiples maneras (recuadros 2.5.1.1 y 2.5.1.2 )"/>
+
+            <center><h4>2.5.1.1- Uso del corrector ortográfico</h4></center>
+                 <ImagePlus 
+                image = {spell1}
+                texto = "Selección del corrector para estandarizar los términos"
+                />  
+            <Paragraph texto="El primer paso es seleccionar en el menu 'Revisar' (review) la opción de corrección de ortografía o spelling que se halla ubicado en la parte superior izquierda. Una vez hecho esto una hoja de diálogo permite permite editar cada uno de los términos de la columna(s) seleccionada.  Por ejemplo vamos a reemplazar 'Insem' por 'Inseminación', una vez seleccionada la primera celda, Excel lo hará en todas las celdas donde se requiera, para ello se debe presionar sobre la opción 'change all' o cambiar todas. "/>
+
+            <center><h4>2.5.1.2- Revisar que los datos fueron adecuadamente cambiados y guardados</h4></center>
+                 <ImagePlus 
+                image = {spell2}
+                texto = "Los datos han sido adecuadamente cambiados y ahora los términos son homogeneos"
+                />  
+            <Paragraph texto="Con esta opción se estandariza los datos como se muestra en el recuadro. Tanto las actividades como las observaciones ya tienen una mejor cara y será mas fácil realizar los respectivos análisis. Sin embargo, aun no está perfecto, por ejemplo en las observaciones aparece Mastitis y Mastitis g+.  Posteriormente veremos como se pueden manejar estos problemas."/>
+
+            <center><h4>Manejando las inconsistencias de los datos con el corrector ortográfico</h4></center>
+                <Video
+          id="4Lb7eBzr5a0"
+          title="Uso del corrector ortográfico" />
+
         </SubChapter>
+        <SubChapter id = "duplicados">
+          <SubTitle title="2.5.2- Que hacer cuando se presentan los datos duplicados" />
+          <Paragraph texto="Los datos duplicados pueden suceder por varias razones, entre ellas porque se digita doble cuando varias personas acceden al mismo registro, por accidente o cuando se trabaja con información secundaria (registros que han sido utilizados con otro propósito previo) y al integrar los registros no se hace de manera adecuada. Hay que diferenciar entre un registro duplicado o solo campos duplicados por ellos vamos primero a identificar los registros.  Como anteriormente lo mencionamos si se tratan de pocos registros probablemente es fácil hacerlo a ojo, sin embargo, si tenemos miles de registros debemos utilizar las herramientas tecnológicas disponibles.  Con Excel es posible identificar los duplicados. " />
+          <Paragraph texto = {["Lo primero que se debe hacer es  identificar los registros duplicados (altamente recomendado), esto para evitar remover información que a lo mejor no era un verdadero duplicado, a veces puede ser un aclaratorio y se crea como un segundo evento. ", <b>Importante nunca haga cambios en los archivos originales</b> ," en caso de un accidente es importante mantener este archivo adecuadamente guarado. Lo ideal es crear un nuevo archivo (copia) y mantener los originales tal y como estaban (siempre mantener un archivo original intacto), y continuar trabajando con la copia. "]}/>
+          <center><h4>2.5.2.1- Seleccionar los datos donde se quieren buscar los duplicados</h4></center>
+                 <ImagePlus 
+                image = {dup1}
+                texto = "Selección de los campos o de la tabla"
+                />  
+            <Paragraph texto="Una vez seleccionada la tabla o el rango que queremos revisar, desde el menú 'Inicio' (home) seleccionamos 'Formateado condicional' (conditional formatting) y de ahí la opción 'Valores duplicados' (duplicate values)  "/>
+
+            <center><h4>2.5.2.2- Seleccionar las opciones del menu de dialogo</h4></center>
+                 <ImagePlus 
+                image = {dup2}
+                texto = "Seleccionar opciones de resaltar duplicados"
+                />  
+            <Paragraph texto="En seguida se abre una hoja de diálogo en donde se da la opción para resaltar los registros duplicados y de que manera se desean resaltar.  Para este caso se seleccionó el modo estándar.  "/>
+
+            <center><h4>2.5.2.3- Revisar los duplicados visualmente</h4></center>
+                 <ImagePlus 
+                image = {dup3}
+                texto = "Revisar los duplicados"
+                />  
+            <Paragraph texto="Una vez seleccionadas las diferentes opciones que se desean utilizar se presiona “OK” y vemos como los duplicados se resaltan en la tabla.  Facilitando inmediatamente la revisión de los mismos.   "/>
+
+            <center><h4>2.5.2.4- Resaltar los duplicados a remover</h4></center>
+                 <ImagePlus 
+                image = {dup4}
+                texto = "Cuantos campos del registro estan duplicados?"
+                />  
+            <Paragraph texto="En la tabla se resaltan todos los duplicados ya sean para todos los campos del registro o parciales por ejemplo fechas, estos últimos no son nuestro objetivos, sino los duplicados del registro completo. En este caso hay dos, los  de los animales 154424 y 155539 están repetidos así que podemos remover.  Para ellos también vamos al menú 'Datos' (Data) y seleccionamos la opción 'Remover duplicados' (remove duplicates)   "/>
+
+            <center><h4>2.5.2.5- Ubicar los registros que  duplicadas</h4></center>
+                 <ImagePlus 
+                image = {dup5}
+                texto = "Solo remover aquellos que son duplicados completos"
+                />  
+            <Paragraph texto="Un menú de diálogo se abrirá pidiendo seleccionar las columnas donde se encuentran las variables duplicadas (en este caso seleccionarlas todas) y si la tabla tiene encabezados (my list has headers), lo cual en este caso es cierto.  "/>
+
+            
+            <center><h4>2.5.2.6- Está seguro de lo que va a hacer?</h4></center>
+                 <ImagePlus 
+                image = {dup6}
+                texto = "Misión cumplida los duplicados han sido removidos"
+                />  
+            <Paragraph texto="Finalmente, damos click en OK y vemos como los duplicados son removidos de la tabla, no sin antes ver un mensaje de alerta notificando que se han removido.  "/>
+
+            <center><h4> Manejo de registros duplicados</h4></center>
+                <Video
+          id="S6Eisv7QL4Y"
+          title="Selección y remoción de registros duplicados" />
+
+        </SubChapter>
+
+<SubChapter id = "missing">
+<SubTitle title ="2.5.3-	Que hacer cuando hacen falta datos (missing values)"/>
+<Paragraph texto = "Este es uno de las situaciones mas comunes que se presentan cuando se trabaja con datos de segunda mano. Es importante saber que hacer y cuando vale la pena salvar el registro o por el contrario desecharlo, pues al momento de procesar la información vamos a encontrar que no todos los registros tienen todos los datos completos y aquí hay que tomar decisiones al respecto. También es importante saber que tan crucial son los datos faltantes y si hay posibilidad de hallarlos en otra fuente. "/>
+
+<Paragraph texto = "Una vez que identificamos que hay datos faltantes, primero debemos contar los valores que hacen falta, y que porcentaje del total de la población representan, ya que no es igual que haga falta el 0.5% de los datos de pesaje de novillos en un año, a que nos haga falta el 25% de los datos en un pesaje.  Es importante saber por que faltan los datos y si algo se puede hacer para remediarlo.  Vamos a trabajar con un ejemplo de registro de pesos para un grupo de animales que se encuentran entre los  8 y 10 meses de edad. " />
+
+            <center><h4>2.5.3.1- Opción contar el total de los registros</h4></center>
+                 <ImagePlus 
+                image = {miss1}
+                texto = "Utilizar la función =count"
+                />  
+            <Paragraph texto="Lo primero que vamos a hacer es identificar el numero de animales.  En este caso con la función de Excel “contar” o “count”, seleccionamos el rango de la tabla como se muestra en la ilustración y obtendremos el total, este caso 40 observaciones en total.  "/>
+      
+            <center><h4>2.5.3.2- Contar los valores faltantes</h4></center>
+                 <ImagePlus 
+                image = {miss2}
+                texto = "Identificar cuantos valores faltantes existen en la tabla"
+                />  
+            <Paragraph texto="Para identificar el numero de observaciones faltantes podemos utilizar la función “contar.blanco” o “countblank” en Excel, simplemente escribimos la función en la celda donde queremos tener el dato y  seleccionamos el rango como se muestra en la imagen. "/>
+
+            <center><h4>2.5.3.3- Determine la proporción de valores faltantes</h4></center>
+                 <ImagePlus 
+                image = {miss3}
+                texto = "Calcule la proporción de valores faltantes"
+                />  
+            <Paragraph texto="En total faltan tres registros,  es decir el 7.5% de los pesos no aparecen.  Esto puede ser por diferentes circunstancias sin embargo al momento de llevar los controles de peso se puede o bien descartar lo registros o asignar el valor del promedio de los animales.  Para calcular la media del peso debemos utilizar la función =averageif. "/>
+
+            <Paragraph texto = "En caso de no querer descartar los registros pensando que en el futuro cuando el animal salga a la venta se puede tener una idea aproximada de la ganancia de peso para ese periodo de tiempo, podemos incluir el promedio del peso en el es campo faltante basados en el lote como control. La manera de incluir el promedio del lote en los registros sin datos es la siguiente: lo primero es obtener la media de los pesos sin los registros que estan en blanco para ello utilizamos la función “averageif” o en español “promedio.si” como se muestra en la barra de fórmulas de las imagen número 3. Es decir se calcula el promedio del lote, excluyendo aquellos que estan en blanco" />
+
+            <center><h4>2.5.3.4- Calcular la media para incluir en los valores faltantes</h4></center>
+                 <ImagePlus 
+                image = {miss4}
+                texto = "Calcule la media"
+                />  
+            <Paragraph texto="El valor que vamos a 'insertar' en las celdas en blanco es la media que obtuvimos sin los valores en blanco, este valor tiene que copiarse en una celda aparte ya que de lo contrario entraremos en un error de referencia circular.  Una vez hecho esto, desde el menú inicio ir a buscar (find) y seleccionar 'ir a especial' o 'go to special' "/>
+            
+            <center><h4>2.5.3.5- Seleccionar los espacios en blanco </h4></center>
+                 <ImagePlus 
+                image = {miss5}
+                texto = "Seleccionar los espacios en blanco donde se va a insertar la media"
+                />  
+            <Paragraph texto="En la hoja de dialogo seleccionar la opción 'blancos' (blanks) y hacer click en OK."/>
+
+            <center><h4>2.5.3.6- Señalar el valor a insertar </h4></center>
+                 <ImagePlus 
+                image = {miss6}
+                texto = "Seleccionar el valor a insertar"
+                />  
+            <Paragraph texto="Una vez seleccionados los campos en blaco, en la primera celda resaltada deberemos copiar la coordendada donde se encuentra el valor que deseamos incluir. Finalizado este paso presionar al tiempo control + enter (windows) o command + enter (si es un mac) y los valores se copiaran automáticamente. "/>
+
+            <center><h4>2.5.3.7- Revisar que el dato fue adecuadamente copiado en todas las celdas </h4></center>
+                 <ImagePlus 
+                image = {miss7}
+                texto = "Insertar el valor en los campos y revisar"
+                />  
+            <Paragraph texto="Finalmente se puede observar que ya no existen valores faltantes, sino que han sido reemplazados con la media y de esta manera no vamos a afectar este resultado. Solo se recomienda hacer esto cuando no hacen falta muchos datos y por alguna razon es mejor no borrar los registros de lo contrario no incluir estos registros si hacen parte de otro análisis ya que esto tendría alguna incidencia sobre los resultados. "/>
+
+            <center><h4>Como trabajar cuando hay datos faltantes</h4></center>
+                <Video
+          id="Ohr0g3zHJNw"
+          title="manejo de datos faltanets" />
+
+     
+</SubChapter>
+
+
 
     </main>
 </body>
