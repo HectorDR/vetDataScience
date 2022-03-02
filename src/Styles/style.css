@@ -586,3 +586,47 @@ max-width: 100%;
   color: #f5f5f5;
   cursor: pointer;
 }
+
+.access_denied_page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.access_denied_page__content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15%;
+}
+
+.access_denied_page__title{
+  font-size: x-large;
+  color: #32a852;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  align-self: center;
+}
+
+.access_denied_page__signin_button{
+  margin: 2vh;
+}
+
+.logout_button{
+  padding-left: 2vh;
+  padding-right: 2vh;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  color: whitesmoke;
+  background-color: #333;
+  border: solid #32a852 0.2vh;
+  border-radius: 10%;
+  position: relative;
+  bottom: 12%;
+  font-family: 'Open Sans',sans-serif;
+  font-size: medium;
+}
+
+.logout_button:hover{
+  background-color: #32a852;
+  cursor: pointer;
+}
