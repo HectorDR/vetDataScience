@@ -12,7 +12,6 @@ const BarraDeNavegacion = () => {
       <li><a href="/">Bienvenidos</a></li>
       <li><a href="Blog">Acerca de</a></li>
       <li><a href="Contenidos">Contenidos</a></li>
-      <li><a href="index.html#team">Blogger</a></li>
       <li><a href="/#contact">Contacto</a></li>
     </ul>
     </nav>

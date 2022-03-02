@@ -9,6 +9,7 @@ import ImagePlus from "Components/ImagePlus";
 import fecha1 from "Media/examples/fecha1.png"
 import fecha_error from "Media/examples/fecha_error.png"
 import ChapterLayout from "Layouts/ChapterLayout";
+import ReferencesBlock from "Components/ReferencesBlock";
 import list1 from "Media/examples/list-1.png"
 import list2 from "Media/examples/list-2.png"
 import list3 from "Media/examples/list-3.png"
@@ -105,7 +106,7 @@ const Examples =()=>{
             <SubChapter id = "Definiciones">
                 <SubTitle title="II- Definiciones importantes"/>
 
-                <p> Revisemos algunas definiciones importantes (Chao y Castaño, 1993) dentro del proceso del manejo de datos. </p>
+                <p> Revisemos algunas definiciones importantes (Chao, 1978) dentro del proceso del manejo de datos. </p>
                 <br />
                    <ul>
                    <li> - <b>Variable</b>: Es toda característica que toma diferentes valores en distintas especies, lugares o cosas. Por ejemplo, peso, sexo, edad al 1er parto, raza etc.</li>
@@ -433,7 +434,14 @@ const Examples =()=>{
 
      
 </SubChapter>
+<ReferencesBlock references ={[
+ "* Chao, L.L., 1978. Estadística para las ciencias administrativas. McGraw-Hill Interamericana.",
+ "* Guerrero, H., 2010. Excel data analysis: modeling and simulation. Springer Science & Business Media.",
+ "* Pfaffenberger, R.C. and Patterson, J.H., 1977. Statistical methods for business and economics. Homewood, IL: Richard D. Irwin.",
+ <a href="https://www.guru99.com/business-intelligence-definition-example.html">* <u>What is Business Intelligence, Definition and Example</u>. Taylor D., Octubre 7 2021 </a>
+]}
 
+/>
 
 
     </main>
