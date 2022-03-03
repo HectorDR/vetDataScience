@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { HashLink } from '@xzar90/react-router-hash-link';
-import LogoutButton from './LogoutButton';
 const BarraDeNavegacion = () => {
   return (
     <div id="navbar" className="navbar top">
@@ -16,7 +15,6 @@ const BarraDeNavegacion = () => {
       <li><Link to={"/Blog"}>Acerca de</Link></li>
       <li><Link to={"/Contenidos"}>Contenidos</Link></li>
       <li><HashLink smooth to={"/#contact"}>Contacto</HashLink></li>
-      <li><LogoutButton/></li>
     </ul>
     </nav>
     </div>
