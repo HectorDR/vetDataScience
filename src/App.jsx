@@ -9,7 +9,7 @@ import Home from 'Pages/Home';
 import Contenidos from 'Pages/Contenidos';
 import Post from "Pages/Post";
 import Examples from "Pages/Examples";
-import DeniedPage from 'Pages/DeniedPage';
+import ProtectedRoute from 'Components/ProtectedRoute';
 //importe todo lo nceesario a app los estilos, el router y las paginas
 function App() {
   return (
@@ -19,8 +19,7 @@ function App() {
       redirectUri={window.location.origin}>
       <BrowserRouter>
         <Routes>
-          <Route path="/AccesoDenegado" element={<DeniedPage/>}/>
-          <Route path="/" element={<MainLayout/>}>
+          <Route path="/" element={<ProtectedRoute page={<MainLayout/>}/>}>
             <Route path="/" element={<Home/>}/>
             <Route path="Analisis" element={<Analisis/>}/>
             <Route path="Blog" element={<Blog/>}/>

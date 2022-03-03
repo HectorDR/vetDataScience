@@ -2,22 +2,10 @@ import React from 'react'
 import BarraDeNavegacion from 'Components/BarraDeNavegacion'
 import Footer from 'Components/Footer'
 import { Outlet } from 'react-router-dom'
-import { useState, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
+import { useState, useRef, useEffect } from 'react'
 export const scrollContext = React.createContext();
 
 const MainLayout = () => {
-
-  //manejo de rutas con autenticado
-  const navigate = useNavigate()
-  const {isAuthenticated} = useAuth0()
-
-  if(isAuthenticated === false)
-  {
-    navigate("/AccesoDenegado")
-  }
-
   // scroll control
   const page = useRef()
   const [scrollPosition,setScrollPosition] = useState(0);

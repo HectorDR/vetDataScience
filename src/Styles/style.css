@@ -597,7 +597,7 @@ max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15%;
+  margin-top: 10%;
 }
 
 .access_denied_page__title{
@@ -605,10 +605,6 @@ max-width: 100%;
   color: #32a852;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   align-self: center;
-}
-
-.access_denied_page__signin_button{
-  margin: 2vh;
 }
 
 .logout_button{
@@ -629,4 +625,16 @@ max-width: 100%;
 .logout_button:hover{
   background-color: #32a852;
   cursor: pointer;
+}
+
+.loading_img {
+  width: 40%;
+  align-self: center;
+  animation: mymove 1000ms infinite;
+  margin-top: 2vh;
+}
+
+/* // es la primera vez que hago esto que chevere */
+@keyframes mymove {
+  100% {transform: rotate(360deg);}
 }
