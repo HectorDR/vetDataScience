@@ -9,7 +9,7 @@ import Contenidos from 'Pages/Contenidos';
 import Post from "Pages/Post";
 import Examples from "Pages/Examples";
 import Probabilidades from "Pages/Probabilidades";
-
+import ProbabilidadesII from "Pages/ProbabilidadesII";
 //importe todo lo nceesario a app los estilos, el router y las paginas
 function App() {
   return (
@@ -23,6 +23,8 @@ function App() {
               <Route path="Post" element={<Post/>}/>
               <Route path="Examples" element={<Examples/>}/>
               <Route path="Probabilidades" element={<Probabilidades/>}/>
+              <Route path="ProbabilidadesII" element={<ProbabilidadesII/>}/>
+
             </Route>
           </Routes>
       </BrowserRouter>

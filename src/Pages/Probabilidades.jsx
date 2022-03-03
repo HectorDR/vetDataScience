@@ -136,6 +136,8 @@ const Probabilidades =()=>{
             <Paragraph texto = "Dos eventos son dependientes si el resultado del primer evento afecta la probabilidad del segundo evento así que la probabilidad cambia. Sin embargo al igual que en las proabilidades independientes, la probabilidad de que ambos eventos ocurran es el producto de las probabilidades de los eventos individuales."/>
             <Paragraph texto = "Por ejemplo, estamos trabajando en otro corral y tenemos 10 novillas, 6 blancas y 4 negras. ¿Si la primera novilla en salir es negra, cual es la probabilidad de que la segunda novilla sea blanca? La probabilidad de que la primera novilla sea negra era 4/10 (cuatro novillas negras de un total de 10 novillas). Sin embargo, para el segundo animal ya las probabilidades han cambiado pues no tenemos 10 sino 9 animales en total, por tanto, el segundo evento es dependiente del primero. Como la primera novilla fue negra, todas las novillas blancas aun se encuentran en el corral, pero tenemos una novilla menos en total, entonces, la probabilidad de que la segunda novilla sea blanca es 6/9 o seis novillas blancas de un total de 9 novillas restantes "/>
             <ImagePlus 
+                width ="30%"
+                max_zoom = "50%"
                 image = {probdep}
                 texto = "Probabilidad de seleccionar de un total de 10 novillas primero una novilla negra, seguida de una novilla blanca"
                 />  
@@ -193,6 +195,7 @@ const Probabilidades =()=>{
           <Paragraph texto = "En las variaciones con repetición, tenemos diferentes agrupaciones con n elementos que pueden repetirse, es decir tenemos n opciones para el primer elemento p, y para el segundo elemento p también tenemos n opciones (a diferencia de n-1) y asi para cada elemento que se necesite organizar. A nivel de producción podemos pensar en la asginación de los registros a los animales.  Si tenemos los 10 dígitos del 0 al 9 y queremos asignar 6 digitos por animal registrado, hasta cuantas combinaciones podremos tener?"/>
          <center><h4>Fórmula general para las variaciones con repeticion</h4></center>
          <ImagePlus 
+                width = "30%"
                 image = {varconrep}
                 texto = "Seleccionar 4 novillas de 10 posibles teniendo en cuenta el orden"
                 />  
@@ -206,6 +209,7 @@ const Probabilidades =()=>{
           <Paragraph texto = {["Las ", <b>combinaciones representan el numero de diferentes maneras posibles como se pueden escoger un numero de elementos</b>, ". En las combinaciones el orden de selección no es importante a diferencia de las variaciones y no es posible la repetición (es igual seleccionar ABC que CBA o BAC)."]}/>
           <center><h4>Fórmula general de las combinaciones</h4></center>
           <ImagePlus 
+                width ="25%"
                 image = {comb}
                 texto = "Fórmula de las combinaciones"
                 />  

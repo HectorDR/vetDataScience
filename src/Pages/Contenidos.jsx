@@ -142,7 +142,7 @@ const Contenidos =()=>{
                         { titulo:"3.11- Regla de la multiplicación",
                         link: "ProbabilidadesII#multiplicacion"},
                         { titulo:"3.12- El teorema de bayes ",
-                        link: "Probabilidades#bayes"},
+                        link: "ProbabilidadesII#bayes"},
                         { titulo:"3.13- Probabilidades en genética cualitativa",
                         link: "Probgen"}
 
