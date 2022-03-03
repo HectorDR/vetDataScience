@@ -1,6 +1,5 @@
 import React from "react";
 import Form from "Components/Form";
-import Image from "Components/Image";
 import Chapters from "Components/Chapters";
 import Homehead from "Components/HomeHead";
 import cultivo from "Media/photos_web/cultivo.jpg";
@@ -22,7 +21,7 @@ const Home = () => {
            <h1>info de usuario</h1>
            <h2>{user.name}</h2>
            <h2>{user.email}</h2>
-           <img src={user.picture} style={{width: "120px"}}/>
+           <img alt="foto perfil" src={user.picture} style={{width: "120px"}}/>
            </div>}
           <section id = "contents" class = "container">
 

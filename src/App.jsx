@@ -1,8 +1,7 @@
-import logo from 'logo.svg';
 import 'Styles/style.css';
 import "Styles/utilities.css";
 import {BrowserRouter, Routes,Route} from "react-router-dom";
-import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
+import { Auth0Provider} from '@auth0/auth0-react';
 import Analisis from "Pages/Analisis.jsx";
 import Blog from "Pages/Blog.jsx"
 import MainLayout from 'Layouts/MainLayout';
@@ -15,8 +14,8 @@ import DeniedPage from 'Pages/DeniedPage';
 function App() {
   return (
     <Auth0Provider
-      domain='dev-sl45luzg.us.auth0.com'
-      clientId='zjMjAj68SnvB0C1It8bNAtXJlaDUJZI0'
+      domain={process.env.REACT_APP_AUTH0DOMAIN}
+      clientId={process.env.REACT_APP_AUTH0CLIENTID}
       redirectUri={window.location.origin}>
       <BrowserRouter>
         <Routes>
