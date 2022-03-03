@@ -16,9 +16,13 @@ import probind4 from "Media/photos_probs/prob_indIV.png";
 import probind5 from "Media/photos_probs/prob_indV.png";
 import probdep from "Media/photos_probs/prob_dep.png";
 import perm from "Media/photos_probs/perm.png";
-
-
-
+import varnorep from "Media/photos_probs/var_no_rep.png"
+import varnorepII from "Media/photos_probs/var_no_repII.png"
+import varnorepIII from "Media/photos_probs/var_no_repIII.png"
+import varconrep from "Media/photos_probs/var_con_rep.png"
+import comb from "Media/photos_probs/comb.png"
+import combII from "Media/photos_probs/combII.png"
+import combIII from "Media/photos_probs/combIII.png"
 
 const Probabilidades =()=>{
     return(
@@ -151,11 +155,93 @@ const Probabilidades =()=>{
                 />  
           <Paragraph texto ="Entonces, existen 120 posibles maneras de organizar los caballos en los establos. Es importante tener en cuenta que en las permutaciones todos los elementos están organizados en el mismo espacio  y que no existen repeticiones (no se puede acomodar el mismo animal en dos pesebreras al mismo tiempo). Entonces en la permutación estamos organizando un numero n de elementos en un determinado numero de espacios y ni los elementos, ni los espacios son repetibles. En las permutaciones se organizan todos los elementos que hay disponibles."/>
 
-
-
         </SubChapter>
 
+        <SubChapter id = "variaciones">
+          <SubTitle title ="3.6- Que son las variaciones y como se calculan"/>  
+          <Paragraph texto = "Las variaciones representan el numero de las diferentes posibles maneras en que se pueden seleccionar un p número de elementos que pertenecen a un grupo n.  En las variaciones ordinarias a diferencia de las permutaciones, no entran todos los elementos, solo se selecciona un p número de un total n. Si importa el orden y no hay repetición del mismo elemento (la vaca no vuelve al corral), aunque también existe un tipo de variaciones con repetición como veremos mas adelante. "/>
 
+          <SubTitle title ="3.6.1- Variaciones sin repeticiones"/>
+          <Paragraph text = {["Se da cuando tenemos determinado número de elementos n y un número limitado de posiciones p para asignar. ", <b>Ojo en este caso no puede haber repeticiones</b>,". Por ejemplo tenemos 3 elementos A, B y C y deseamos seleccionar solamente 2, de cuantas maneras podremos seleccionar ", <b>solo dos de los tres elementos disponibles? </b>, " Las combinaciones que serían posibles son:  AB AC BA BC CA CB es decir tenemos seis posibles maneras de combinar dos extracciones (n) de tres posibles diferentes elementos (M)."]}/>
+
+          <center><h4>Fórmula general de las variaciones sin repecicion es:</h4></center>
+          <ImageCorousel
+          width={"40%"}
+          images={[
+            {
+              image: varnorep,
+              texto: "Variaciones sin repeticiones",
+            },
+            {
+              image: varnorepII,
+              texto: "Variaciones para dos posiciones con tres elementos sin repetición",
+            },
+          ]}
+        />
+         
+          <Paragraph texto ="Donde V son las variaciones, n es el numero total de elementos en el espacio muestral y p es el número de elementos que necesitamos disponibles a seleccionar.  Entonces  para extraer el primer elemento tenemos 3 opciones (n), mientras que para el segundo elemento las opciones se reducen a 2 (n-1)  porque no podemos repetir la unidad con la cual iniciamos. Tenemos cada vez menos opciones por cada elemento adicional.  "/>
+          <Paragraph texto = "Ejemplo:  Deseamos escoger 4 novillas de 10 disponibles para una exhibición. Los diez animales tienen características fenotípicas y genotípicas muy similares entre ellas, razón por la que la selección se hace difícil. Entonces, cuantas son las posibles variaciones que tenemos, seleccionando solo 4 (p) de las 10 (n)?  Como es una exhibición, el orden de selección es importante."/>
+
+          <ImagePlus 
+                image = {varnorepIII}
+                texto = "Seleccionar 4 novillas de 10 posibles teniendo en cuenta el orden"
+                />  
+             <Paragraph texto ="Entonces, tendremos 5039 diferentes maneras de seleccionar los 4 animales dentro de los 10 disponibles, esto siempre y cuando el orden asignado sea de importancia.  "/>
+
+
+          <SubTitle  title= "3.6.2- Variaciones con repeticiones"/>
+          <Paragraph texto = "En las variaciones con repetición, tenemos diferentes agrupaciones con n elementos que pueden repetirse, es decir tenemos n opciones para el primer elemento p, y para el segundo elemento p también tenemos n opciones (a diferencia de n-1) y asi para cada elemento que se necesite organizar. A nivel de producción podemos pensar en la asginación de los registros a los animales.  Si tenemos los 10 dígitos del 0 al 9 y queremos asignar 6 digitos por animal registrado, hasta cuantas combinaciones podremos tener?"/>
+         <center><h4>Fórmula general para las variaciones con repeticion</h4></center>
+         <ImagePlus 
+                image = {varconrep}
+                texto = "Seleccionar 4 novillas de 10 posibles teniendo en cuenta el orden"
+                />  
+             <Paragraph texto = {["Donde V representa las variaciones  con repetición, n es el número de elementos disponibles y p es el numero de elementos que estamos organizando.  Entonces en este caso n serian los 10 dígitos del 0 al 9 y p serían los 6 dígitos a seleccionar.  Entonces tendremos 10",<sup>6</sup>," = 1'000.000 de variaciones. Para el efecto de los registros no importa que los números se repitan, es decir podemos tener un registro 111111 y es perfectamente válido por eso utilizamos la formula con repetición, mientras que con animales por ejemplo, no podemos utilizar la repetición como en el ejemplo anterior"
+
+             ]}/>
+        </SubChapter>
+
+        <SubChapter id = "combinaciones">
+          <SubTitle title="3.7- Que son las combinaciones"/>
+          <Paragraph texto = {["Las ", <b>combinaciones representan el numero de diferentes maneras posibles como se pueden escoger un numero de elementos</b>, ". En las combinaciones el orden de selección no es importante a diferencia de las variaciones y no es posible la repetición (es igual seleccionar ABC que CBA o BAC)."]}/>
+          <center><h4>Fórmula general de las combinaciones</h4></center>
+          <ImagePlus 
+                image = {comb}
+                texto = "Fórmula de las combinaciones"
+                />  
+             <Paragraph texto ="Donde C son las combinaciones, n es el numero total de elementos en el espacio muestral y p ese es el numero de elementos que necesitamos seleccionar. "/>
+
+          <Paragraph texto = {[" Si se van a seleccionar 4 novillas de las 10 disponibles para la feria de exhibición, (siguiendo el ejemplo que hicimos en la sección de ",<a href="#variaciones"><u>variaciones sin repetición</u></a>," pero en este caso el orden no es importante, entonces, cuantas posibles combinaciones existen?. " ]}/>
+
+          <ImagePlus 
+                image = {combII}
+                texto = "Selección de animales sin importar el orden de salida"
+                />  
+             <Paragraph texto ="Entonces despejando la fórmula, tendriamos un total de 210 combinaciones diferentes para seleccionar las 4 novillas. Un número inferior si comparamos con las 5039 variaciones cuando importa la posición. "/>
+         <h2>3.7.1- Combinaciones con espacios muestrales diferentes</h2>
+        
+        <Paragraph texto = "Este tipo de combinaciones representa el numero de diferentes posibles combinaciones en que podemos escoger un determinado numero de elementos de dos o mas espacios muestrales. Ejemplo, si continuamos con nuestro ejemplo de los registros, donde encontramos 1'000.000 de posibles variaciones, que pasa si decidimos agregar 3 letras seleccionadas entre la A hasta la J (10 letras)? "/>
+        <center><h4>Fórmula para combinaciones con espacios muestrales diferentes</h4></center>
+        <ImagePlus 
+                image = {combIII}
+                texto = "Fórmula para espacios muestrales diferentes"
+                />  
+             <Paragraph texto ="Donde C representa las combinaciones, n1 es el tamaño del primer espacio muestral, n2 es el segundo espacio muestral etc. Es importante que la opción que escogemos en un espacion muestral no afecta el numero de opciones de los otros espacios. El orden en el que escogemos el elemento individual es arbitrario y necesitamos conocer el tamaño del espacio muestral para cada elemento individual  "/>
+
+        <Paragraph texto= {["Entonces despejando la fórmula para continuar con nuestro ejemplo de registos con números y letras, la primera parte es 10",<sup>6</sup>, " * 10",<sup>3</sup>, " = 10", <sup>9</sup>, " posibles combinaciones. Si no necesitamos tantos registros, creo que deberiamos considerar reducir el número de cifras en el primer espacio muestral!"]}/>
+        </SubChapter>
+
+        <ReferencesBlock 
+         references={[
+          "* Chao, L.L., 1978. Estadística para las ciencias administrativas. McGraw-Hill Interamericana.",
+
+          <a href="https://www.smartick.es/blog/matematicas/probabilidad-y-estadistica/probabilidad-que-es/">* Molina Susana, 2021, <u> La Probabilidad que es y cómo la utilizamos el día a día</u>. en portal Smartick.</a>, 
+
+          "* Pfaffenberger, R.C. and Patterson, J.H., 1977. Statistical methods for business and economics. Homewood, IL: Richard D. Irwin.",
+           <a href="https://towardsdatascience.com/basic-probability-theory-and-statistics-3105ab637213">* Radke Paraga, 2017, <u>Basic Probability Theory and Statistics</u> , en portal Towards Data Science. </a>,
+          
+          
+        ]}/>
         </ChapterLayout>
 
     );
