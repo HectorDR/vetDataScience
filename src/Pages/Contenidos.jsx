@@ -2,6 +2,7 @@ import React from "react";
 import ChapterHead from "Components/ChapterHead";
 import ContentsTable from "Components/ContentsTable";
 import perrito from "Media/photos_web/perrito.jpeg"
+import ReferencesBlock from "Components/ReferencesBlock";
 
 
 const Contenidos =()=>{
@@ -115,6 +116,43 @@ const Contenidos =()=>{
 
         </section>
 
+        <section id = "Probabilidades" className ="container bg-light">
+        <h1>3- Principios generales de las probabilidades</h1>
+        <ContentsTable contenidos ={[
+                       { titulo:"3.1-¿Qué es una probabilidad y para que nos sirve?",
+                        link: "Probabilidades#definicion"},
+                        { titulo:"3.2- Veamos algunos términos importantes",
+                        link: "Probabilidades#glosario"},
+                        { titulo:"3.3- Probabilidad de eventos independientes",
+                        link: "Probabilidades#independientes"},
+                        { titulo:"3.4- Probabilidad de eventos dependientes",
+                        link: "Probabilidades#dependientes"},
+                        { titulo:"3.5- Que son las permutaciones y como se calculan",
+                        link: "Probabilidades#permutaciones"},
+                        { titulo:"3.6- Que son las variaciones y como se diferencian de las permutaciones",
+                        link: "Probabilidades#variaciones"},
+                        { titulo:"3.7- Que son las combinaciones",
+                        link: "Probabilidades#combinaciones"},
+                        { titulo:"3.8- que es una probabilidad condicional",
+                        link: "ProbabilidadesII#condicional"},
+                        { titulo:"3.9- Regla de la probabilidad total",
+                        link: "ProbabilidadesII#total"},
+                        { titulo:"3.10- Regla de la adición",
+                        link: "ProbabilidadesII#adicion"},
+                        { titulo:"3.11- Regla de la multiplicación",
+                        link: "ProbabilidadesII#multiplicacion"},
+                        { titulo:"3.12- El teorema de bayes ",
+                        link: "Probabilidades#bayes"},
+                        { titulo:"3.13- Probabilidades en genética cualitativa",
+                        link: "Probgen"}
+
+                    ]}/>
+
+
+        </section>
+
+
+
         <section id = "Analisis" className="container bg-light">
         <h1>5- Estadística descriptiva y análisis inicial de los datos</h1>
           <ContentsTable
@@ -149,6 +187,7 @@ const Contenidos =()=>{
             ]}
           />
         </section >
+
 
 
 </main>

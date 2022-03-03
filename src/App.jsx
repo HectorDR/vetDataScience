@@ -9,7 +9,9 @@ import Home from 'Pages/Home';
 import Contenidos from 'Pages/Contenidos';
 import Post from "Pages/Post";
 import Examples from "Pages/Examples";
+import Probabilidades from "Pages/Probabilidades";
 import DeniedPage from 'Pages/DeniedPage';
+
 //importe todo lo nceesario a app los estilos, el router y las paginas
 function App() {
   return (
@@ -20,17 +22,18 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/AccesoDenegado" element={<DeniedPage/>}/>
-          <Route path="/" element={<MainLayout/>}>
-            <Route path="/" element={<Home/>}/>
-            <Route path="Analisis" element={<Analisis/>}/>
-            <Route path="Blog" element={<Blog/>}/>
-            <Route path="Contenidos" element={<Contenidos/>}/>
-            <Route path="Post" element={<Post/>}/>
-            <Route path="Examples" element={<Examples/>}/>
-          </Route>
-        </Routes>
+            <Route path="/" element={<MainLayout/>}>
+              <Route path="/" element={<Home/>}/>
+              <Route path="Analisis" element={<Analisis/>}/>
+              <Route path="Blog" element={<Blog/>}/>
+              <Route path="Contenidos" element={<Contenidos/>}/>
+              <Route path="Post" element={<Post/>}/>
+              <Route path="Examples" element={<Examples/>}/>
+              <Route path="Probabilidades" element={<Probabilidades/>}/>
+            </Route>
+          </Routes>
       </BrowserRouter>
-    </Auth0Provider>
+      </Auth0Provider>
   );
 }
 
