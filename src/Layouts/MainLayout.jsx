@@ -12,7 +12,7 @@ const MainLayout = () => {
   //manejo de rutas con autenticado
   const navigate = useNavigate()
   const {isAuthenticated} = useAuth0()
-
+  console.log("estado de autenticacion: " , isAuthenticated)
   if(isAuthenticated === false)
   {
     navigate("/AccesoDenegado")
