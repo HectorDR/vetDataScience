@@ -21,7 +21,7 @@ const Home = () => {
             <h1 >User Info</h1>
           <h1 >{user.name}</h1>
           <h2>{user.email}</h2>
-          <img src={user.picture}/>
+          <img style={{width: "200px"}} src={user.picture}/>
           </div>}
           <section id = "contents" class = "container">
           <Chapters/>
