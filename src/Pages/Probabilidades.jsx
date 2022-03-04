@@ -54,16 +54,19 @@ const Probabilidades =()=>{
                         { titulo:"3.11- Regla de la multiplicación",
                         link: "ProbabilidadesII#multiplicacion"},
                         { titulo:"3.12- El teorema de bayes ",
-                        link: "Probabilidades#bayes"},
+                        link: "ProbabilidadesII#bayes"},
                         { titulo:"3.13- Probabilidades en genética cualitativa",
-                        link: "Probgen"}
+                        link: "ProbabilidadesIII#general"}
 
                     ]}/>
                 </section>
 
-            
+                
+               
                 <SubChapter id ="definicion">
                     <SubTitle title = "3.1- ¿Qué es una probabilidad y para que nos sirve?"/>
+                    <Paragraph texto = "En la tercera sección de este proyecto, he decidido enfocarme un poco en probabilidades.  Se podría pensar cual es la necesidad de revisar las probabilidades, si estamos buscando enfocarnos en una introducción a la ciencia de los datos.  Pues precisamente, necesitamos entender que son y como se aplican para poder tomar decisiones. Con los datos que obtenemos al transformarlos en información podremos encontrar explicaciones a situaciones de la finca y de igual manera podemos ser realistas en cuanto a las expectativas en los proyectos que emprendamos.  Por eso las probabilidades son una perfecta introducción al análisis de datos. " />
+
                     <Paragraph texto = {["Podríamos definir una probabilidad como la medición de la posibilidad de que un evento ocurra en una situación cuyo resultado no se puede predecir hasta que sea observado (experimento aleatorio). La probabilidad se cuantifica como un número entre 0 y 1, donde 0 indica imposibilidad y 1 certitud",<a href="https://towardsdatascience.com/basic-probability-theory-and-statistics-3105ab637213"><u>(Radke, 2017)</u></a>,". Un ejemplo típico sería el sexo al nacer (XX o XY).  En teoría la probabilidad debería ser 50% de que nazca macho y 50% de que sea hembra.  Pero el clásico ejemplo de una probabilidad es tirar al tirar una moneda al aire cuales son las probabilidades de tener car o sello. En otras palabras la probabilidad es un cálculo matemático que evalúa las posibilidades de que una cosa suceda cuando interviene el azar",<a href="https://www.smartick.es/blog/matematicas/probabilidad-y-estadistica/probabilidad-que-es/"> <u>(Molina, 2021)</u> .</a> 
 
                     ]}/>
