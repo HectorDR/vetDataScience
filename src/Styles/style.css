@@ -622,6 +622,10 @@ max-width: 100%;
   font-size: medium;
 }
 
+.navbar__user_message{
+  margin: 0vh 1vh;
+}
+
 .logout_button:hover{
   background-color: #32a852;
   cursor: pointer;

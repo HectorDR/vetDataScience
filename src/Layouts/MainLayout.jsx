@@ -2,10 +2,11 @@ import React from 'react'
 import BarraDeNavegacion from 'Components/BarraDeNavegacion'
 import Footer from 'Components/Footer'
 import { Outlet } from 'react-router-dom'
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 export const scrollContext = React.createContext();
 
 const MainLayout = () => {
+
   // scroll control
   const page = useRef()
   const [scrollPosition,setScrollPosition] = useState(0);
