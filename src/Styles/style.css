@@ -56,36 +56,102 @@ img{
 .navbar{
   display: flex;
   align-items: center;
-  justify-content: space-between;
   background-color: #333;
   color: #fff;
   opacity: 0.8;
   width: 100%;
-  height: 70px;
+  height: auto;
   position: fixed;
-  top: 0px;
-  padding: 0 30px;
+  top: 0%;
+  padding: 0.5% 1%;
   transition: 0.5s ;
   z-index: 10;
+  list-style: none;
+  justify-content: space-between;
  }
  
 /* .navbar.top{
   transform: translateY(0px);
 } */
 
-.navbar.top a{
+.navbar_container {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+.navbar_links {
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar_links li {
+  white-space: nowrap;
+  margin: 0% 2%;
+}
+.navbar a{
   color: #fff;
-  padding: 10px 20px;
-  margin: 0 5px;
 }
 .navbar a:hover{
   border-bottom: #28a745 2px solid;
 }
-.navbar ul{
-  display:flex
-}
-.navbar .logo{
+
+.logo{
+  white-space: nowrap;
   font-weight: 400;
+  width: 40%;
+  font-size: xx-large;
+}
+ /* responsive pantallas emdaianas y tablets */
+@media only screen and (max-width: 1284px) {
+  [class*="navbar"] {
+    flex-direction: column;
+  }
+  [class*="navbar_container"] {
+    flex-direction: row;
+  } 
+  [class*="logo"] {
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+  }
+  [class*="navbar_links"] {
+    flex-direction: row;
+    font-size: medium;
+  }
+}
+/* responsive panatallas pequeñas / smartphones */
+@media only screen and (max-width: 786px) {
+  [class*="navbar"] {
+    padding: 0px;
+    flex-direction: column;
+  }
+  [class*="navbar_container"] {
+    left: 0;
+    flex-direction: row;
+    width: 100%;
+  }
+  [class*="logo"] {
+    font-size: large;
+    width: 100%;
+    text-align: center;
+  }
+  [class*="navbar_links"] {
+    font-size: medium;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+
+    justify-content: center;
+    margin: 1% 0%;
+  }
+  [class*="logout_button"] {
+    font-size: small;
+    width: 20%;
+    height: 20%;
+    padding: 0.5vh;
+    align-self: flex-end;
+    margin: 0.5vh;
+  }
 }
 
 /* Header */
@@ -324,28 +390,6 @@ font-weight: 100
   margin-right: 30px;
 } */
 
-
-
-/* Mobile */
-@media(max-width:760px){
-  .navbar{
-    flex-direction: column;
-    height: 120px;
-    padding: 20px;
-  }
-  .navbar a{
-    padding: 10px 10px;
-    margin: 3px;
-  }
-  .flex-items{
-    flex-direction: column;
-  }
-  .flex-columns .column,
-  .flex-grid .column{
-flex: 100%;
-max-width: 100%;
-  }
-}
 
 /* -----------------------------------Estilos J---------------------------------- */
 
@@ -617,7 +661,7 @@ max-width: 100%;
   border: solid #32a852 0.2vh;
   border-radius: 10%;
   position: relative;
-  bottom: 12%;
+  bottom: 0.5vh;
   font-family: 'Open Sans',sans-serif;
   font-size: medium;
 }
