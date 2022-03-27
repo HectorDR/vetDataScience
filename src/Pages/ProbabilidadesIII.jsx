@@ -114,8 +114,7 @@ const ProbabilidadesIII =()=>{
          references={[
           
           <a href="http://www.ainfo.inia.uy/digital/bitstream/item/14026/1/st-253-p163.pdf">* Federici M.T. et al., 2019, <u>* Identificación de bovinos Holando portadores de mutaciones asociadas al síndrome Sindactilia utilizando el panel Arbos1</u> en portal del Instituto Nacional de Investigación, Uruguay </a> ,
-          <a href="http://www.holsteinfoundation.org/pdf_doc/workbooks/Gen_Sire_WKBK.pdf">* Holstein foundation, 2021.
-          <u>Understanding Genetics and the Sire Summaries </u>,en PDF en línea </a>,
+          <a href="http://www.holsteinfoundation.org/pdf_doc/workbooks/Gen_Sire_WKBK.pdf">* Holstein foundation, 2021. <u>Understanding Genetics and the Sire Summaries </u>,en PDF en línea </a>,
 
          
           

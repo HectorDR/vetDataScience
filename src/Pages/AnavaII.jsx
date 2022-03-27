@@ -331,18 +331,18 @@ const AnavaII = () => {
       </SubChapter>
 
       <ReferencesBlock references = {[
-        <ul>
-    <li><a href="https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Multivariable/BS704_Multivariable7.html"><u>* Boston University School of Public Health. Multivariable Regression.Content ©2013. All Rights Reserved. Date last modified: January 17, 2013. </u></a></li>
-  <li>* Chao, L.L., 1978. Estadística para las ciencias administrativas. McGraw-Hill Interamericana.</li>
-  <li> <a href="http://animsci.agrenv.mcgill.ca/StatisticalMethodsII/"><u>* Cue Roger, 2019 Statistical MethodsII, McGill University.</u></a> </li> 
-  <li> <a href="https://www.statology.org/linear-regression-real-life-examples/"><u>* Examples of using linear regression in linear life May 2020.</u> </a></li>
-  <li>* Guerrero, H., 2010. Excel data analysis: modeling and simulation. Springer Science & Business Media.</li>
-  <li> <a href="https://mattchoward.com/quadratic-regression-in-excel/"><u>* Howard Matt. Quadratic Regression in Excel.</u></a>   </li>
-  <li>* McDonald, J.H., 2009. Handbook of biological statistics (Vol. 2, pp. 6-59). Baltimore, MD: sparky house publishing.</li>
-   <li>* Pfaffenberger, R.C. and Patterson, J.H., 1977. Statistical methods for business and economics. Homewood, IL: Richard D. Irwin.</li>
-  <li>* Sellam, V. and Poovammal, E., 2016. Prediction of crop yield using regression analysis. Indian Journal of Science and Technology, 9(38), pp.1-5.</li> 
-   <li><a href="https://www.real-statistics.com/multiple-regression/interaction/"></a>* Zaiontz Charles. Real Statistics using Excel. Interaction. </li> 
-  </ul>
+        
+    <a href="https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Multivariable/BS704_Multivariable7.html"><u>* Boston University School of Public Health. 2013, Multivariable Regression. </u></a>,
+  "* Chao, L.L., 1978. Estadística para las ciencias administrativas. McGraw-Hill Interamericana.",
+   <a href="http://animsci.agrenv.mcgill.ca/StatisticalMethodsII/"><u>* Cue R., 2019  Course of Statistical MethodsII, McGill University.</u></a> ,
+   <a href="https://www.statology.org/linear-regression-real-life-examples/"><u>* Zach, 2020.  Examples of using linear regression in linear life. En portal Statology.com</u> </a>,
+ " * Guerrero, H., 2010. Excel data analysis: modeling and simulation. Springer Science & Business Media.",
+  <a href="https://mattchoward.com/quadratic-regression-in-excel/"><u>* Howard M., Consultado Junio 2021. Quadratic Regression in Excel. En portal Mattchoward.com/</u></a> ,
+  "* McDonald, J.H., 2009. Handbook of biological statistics (Vol. 2, pp. 6-59). Baltimore, MD: sparky house publishing.",
+ " * Pfaffenberger, R.C. and Patterson, J.H., 1977. Statistical methods for business and economics. Homewood, IL: Richard D. Irwin.",
+  "* Sellam, V. and Poovammal, E., 2016. Prediction of crop yield using regression analysis. Indian Journal of Science and Technology, 9(38), pp.1-5.",
+  <a href="https://www.real-statistics.com/multiple-regression/interaction/"><u>* Zaiontz C., Consultado Junio 2021. Interaction. En portal Real Statistics using Excel. </u></a>
+  
       ]}/>
 
         </ChapterLayout>

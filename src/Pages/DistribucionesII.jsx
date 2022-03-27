@@ -349,11 +349,11 @@ const DistribucionesII =()=>{
 
 
 <ReferencesBlock references ={[
-<a href= "https://psicolearning.files.wordpress.com/2014/10/d-normal-estc3a1ndar-apunte-alumnos.pdf"> <u> * Distribución normal estándar, PDF. (Consultado 15 de marzo, 2021). Portal psicolearning</u></a>,
-<a href="https://www.statisticshowto.com/probability-and-statistics/chi-square/"><u> * Glen Stephanie. "Chi-Square Statistic: How to Calculate It / Distribution" From StatisticsHowTo.com: Elementary Statistics for the rest of us!</u></a>,
-<a href="https://www.medwave.cl/link.cgi/Medwave/Series/MBE04/5033"> <u>* Ricardi Fernando, (Mayo, 2011). Distribución Normal.</u> </a> ,
+<a href= "https://psicolearning.files.wordpress.com/2014/10/d-normal-estc3a1ndar-apunte-alumnos.pdf"> <u> * Dzib J. A., Consultado 15 de marzo, 2021,Distribución normal estándar, PDF. Portal psicolearning</u></a>,
+<a href="https://www.statisticshowto.com/probability-and-statistics/chi-square/"><u> * Glen Stephanie. Consultado 20 de marzo, 2021, "Chi-Square Statistic: How to Calculate It / Distribution" From StatisticsHowTo.com: Elementary Statistics for the rest of us!</u></a>,
+<a href="https://www.medwave.cl/link.cgi/Medwave/Series/MBE04/5033"> <u>* Ricardi Fernando, (Mayo, 2011). Distribución Normal.</u> En Portal Medwave, revista biomédica </a> ,
 <a href="https://economipedia.com/definiciones/distribucion-t-de-student.html"><u>* Rodó Paula ,(05 de noviembre, 2019). Distribución t de Student en portal Economipedia.com </u></a> ,
-<a href="https://economipedia.com/definiciones/distribucion-normal.html"><u>* Rodó Paula  (10 de noviembre, 2019). Distribución normal. </u></a> ,
+<a href="https://economipedia.com/definiciones/distribucion-normal.html"><u>* Rodó Paula  (10 de noviembre, 2019). Distribución normal. Economipedia.com </u></a> ,
 <a href="https://www.real-statistics.com/chi-square-and-f-distributions/independence-testing/"><u>* Zaiontz Charles. Independence Testing. Real Statistics Using Excel. </u></a> 
   
  

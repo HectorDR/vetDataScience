@@ -337,9 +337,9 @@ const Distribuciones =()=>{
 
 <ReferencesBlock references ={[
  "* Chao, L.L., 1978. Estadística para las ciencias administrativas. McGraw-Hill Interamericana.",
- "* Marco Sanjuán, F.J. 2017. Distribución binomial. Economipedia.com",
+ <a href="https://economipedia.com/definiciones/distribucion-binomial.html">* Marco Sanjuán, F.J. 2017. <u>Distribución binomial.</u>  Economipedia.com</a>,
  "* Pfaffenberger, R.C. and Patterson, J.H., 1977. Statistical methods for business and economics. Homewood, IL: Richard D. Irwin.",
- "* Young Julie, 2021. Discrete Distribution. Investopedia.com",
+ <a href="https://www.investopedia.com/terms/d/discrete-distribution.asp">* Young Julie, 2021. <u>Discrete Distribution</u>. Investopedia.com </a>
  
 ]}
 

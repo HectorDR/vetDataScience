@@ -16,6 +16,7 @@ import DistribucionesII from 'Pages/DistribucionesII';
 import AnalisisII from "Pages/AnalisisII.jsx";
 import Anava from "Pages/Anava.jsx";
 import AnavaII from "Pages/AnavaII.jsx";
+import Referencias from 'Pages/Referencias';
 //importe todo lo nceesario a app los estilos, el router y las paginas
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
               <Route path = "AnalisisII" element = {<AnalisisII/>}></Route>
               <Route path = "Anava" element = {<Anava/>}></Route>
               <Route path = "AnavaII" element = {<AnavaII/>}></Route>
+              <Route path = "Referencias" element = {<Referencias/>}></Route>
             </Route>
           </Routes>
       </BrowserRouter>

@@ -437,9 +437,9 @@ const Analisis = () => {
           <a href="http://cidecame.uaeh.edu.mx/lcc/mapa/PROYECTO/libro19/71de_una_o_dos_colas.html"><u>* Benitez Morales A., Probabilidad y Estadistica -Apuntes Digitales-, Universidad Autónoma del Estado Hidalgo , Consultado 2020</u>)</a>,
           <a href="https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_confidence_intervals/bs704_confidence_intervals5.html">* Boston University School of Public Health, 2017. <u> Confidence intervals for two independent outcomes, Continuous Outcome</u> </a>,
           "* Chao, L.L., 1978. Estadística para las ciencias administrativas. McGraw-Hill Interamericana.",
-          <a href="https://www.greelane.com/es/ciencia-tecnolog%C3%ADa-matemáticas/mates/hypothesis-tests-z-test-function-excel-3126622"><u>*Greelane.com,2018. Z.Test cómo utilizar la funcion en Excel</u> </a>,
+          <a href="https://www.greelane.com/es/ciencia-tecnolog%C3%ADa-matemáticas/mates/hypothesis-tests-z-test-function-excel-3126622"><u>* Portal Greelane.com,2018. Z.Test cómo utilizar la funcion en Excel</u> </a>,
           "* Pfaffenberger, R.C. and Patterson, J.H., 1977. Statistical methods for business and economics. Homewood, IL: Richard D. Irwin.",
-          <a href="http://lcolladotor.github.io/courses/Courses/MEyAdDG/day2/Pruebas%20de%20Hipótesis.pdf"><u>* Rohen v.Presentación de pruebas de hipótesis, PDF</u> </a>
+          <a href="http://lcolladotor.github.io/courses/Courses/MEyAdDG/day2/Pruebas%20de%20Hipótesis.pdf"><u>* Rohen V. Consultado Junio 2021, Presentación de pruebas de hipótesis, PDF</u> </a>
         ]}/>
 
 </ChapterLayout>

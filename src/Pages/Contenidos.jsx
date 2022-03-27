@@ -264,6 +264,19 @@ const Contenidos =()=>{
           }
 
             ]}
+
+            
+          />
+          </section>
+ <section id = "Referencias" className = "container bg-light">
+        <h1>Referencias</h1>
+<ContentsTable
+            contenidos={[
+              {titulo: "Referencias",
+                link: "Referencias#referencias",  },
+              
+
+            ]}
           />
         </section>
 </main>
