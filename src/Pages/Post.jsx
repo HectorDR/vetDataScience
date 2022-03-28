@@ -18,7 +18,6 @@ const Post = () =>{
     return(
 
 <div>
-    <body>
     <ChapterLayout chapter_title="1- Introducción a la Ciencia de los Datos"
         chapter_image={hozando}>
     
@@ -132,7 +131,6 @@ const Post = () =>{
             />
       </main>
       </ChapterLayout>
-    </body>
 </div>
 
     );

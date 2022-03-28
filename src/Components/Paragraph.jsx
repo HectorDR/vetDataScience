@@ -1,14 +1,40 @@
 import React from 'react'
-
-// este componente asi queda listo para modificar cada subtitulo con tailwind
-// o si en algun futuro le queremos añadir cualquier cosa a todos los titulos
+import { nanoid } from 'nanoid'
+import { Fragment } from 'react'
 const Paragraph = (props) => {
+  if(typeof(props.texto) === "string")
+  {
   return (
     <>
     <p>{props.texto}</p>
     <br></br>
     </>
   )
+  }
+  else
+  {
+    console.log(props.texto)
+    return(
+      <>
+    {props.texto.map(item => {
+      if(typeof(item) === "string")
+      {
+        return(
+          <p key={nanoid()}>{item}</p>
+        )
+      }
+      else
+      {
+        return(
+        <Fragment>{item}</Fragment>
+        )
+      }
+    })}
+    </>
+    )
+  }
 }
+
+
 
 export default Paragraph

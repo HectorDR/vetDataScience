@@ -35,17 +35,17 @@ const Form = () => {
         <h2>Si desea ponerse en contacto</h2>
         <form onSubmit={sendEmail} ref={form} className="callback-form">
           <div className="form-control">
-            <label for="user_name"></label>
+            <label htmlFor="user_name"></label>
             <input type="text" name="user_name" id="name" required
             placeholder="Su nombre" />
           </div>
           <div className="form-control">
-            <label for="user_email"></label>
+            <label htmlFor="user_email"></label>
             <input type="email" name="user_email" id="email" required
             placeholder="Su correo electronico" />
           </div>
           <div className="form-control">
-            <label for="comment"></label>
+            <label htmlFor="comment"></label>
             <input type="text" name="message" id="comment" required
             placeholder="Escriba su comentario" />
           </div>

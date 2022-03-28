@@ -8,23 +8,16 @@ const Home = () => {
  
   return (
     <div>
-      <body  >
-          
           <Homehead background={cultivo} titulo={[<h1 style={{color:"yellow"}}>Ciencia de Datos para el campo </h1>,<br/>,
           <h2 style={{color:"yellow"}} >Una Introducción con herramientas útiles para entender la ciencia de los datos </h2>]}/>
-          <section id = "contents" class = "container">
-          <Chapters/>
+          <section id = "contents" className = "container">
+            <Chapters/>
           </section>
-          <section id = "contact" class = "container" >
-      <div class = "row">
-           
-      </div>
-      <div className = "column container" >
-        <Form/>
-        </div>
-        
-        </section>
-      </body>
+          <section id = "contact" className = "container" >
+            <div className = "column container" >
+              <Form/>
+            </div>
+          </section>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { nanoid } from 'nanoid'
 const ReferencesBlock = (props) => {
   return (
     <div className="container bg-light">
@@ -7,7 +7,7 @@ const ReferencesBlock = (props) => {
         <ul>
         {props.references.map(reference => {
             return(
-                <li>{reference}</li>
+                <li key={nanoid()}>{reference}</li>
             )
         })}
         </ul>
