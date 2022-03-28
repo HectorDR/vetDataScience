@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import accordionarrow from "Media/images/accordion_arrow.svg"
 import useCollapse from 'react-collapsed'
+import { nanoid } from 'nanoid'
 const ChapterAccordion = (props) => {
     
     const [arrowDown,setArrowDown] = useState(true)
@@ -19,7 +20,7 @@ const ChapterAccordion = (props) => {
         <ul className='chapter_accordion__subchapters' {...getCollapseProps()}>
         {props.subchapters.map(subchapter => {
             return (
-                <li>{subchapter}</li>
+                <li key={nanoid()}>{subchapter}</li>
             )
         })}
         </ul>

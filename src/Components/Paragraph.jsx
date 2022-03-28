@@ -1,6 +1,4 @@
 import React from 'react'
-import { nanoid } from 'nanoid'
-import { Fragment } from 'react'
 const Paragraph = (props) => {
   if(typeof(props.texto) === "string")
   {
@@ -11,30 +9,14 @@ const Paragraph = (props) => {
     </>
   )
   }
-  else
-  {
-    console.log(props.texto)
+  else{
     return(
       <>
-    {props.texto.map(item => {
-      if(typeof(item) === "string")
-      {
-        return(
-          <p key={nanoid()}>{item}</p>
-        )
-      }
-      else
-      {
-        return(
-        <Fragment>{item}</Fragment>
-        )
-      }
-    })}
-    </>
+      {props.texto}
+      <br></br>
+      </>
     )
   }
 }
-
-
 
 export default Paragraph
