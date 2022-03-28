@@ -2,7 +2,7 @@ import React from "react";
 import ChapterHead from "Components/ChapterHead";
 import ContentsTable from "Components/ContentsTable";
 import perrito from "Media/photos_web/perrito.jpeg"
-import ReferencesBlock from "Components/ReferencesBlock";
+
 
 
 const Contenidos =()=>{
@@ -268,17 +268,7 @@ const Contenidos =()=>{
             
           />
           </section>
- <section id = "Referencias" className = "container bg-light">
-        <h1>Referencias</h1>
-<ContentsTable
-            contenidos={[
-              {titulo: "Referencias",
-                link: "Referencias#referencias",  },
-              
-
-            ]}
-          />
-        </section>
+ 
 </main>
 </body>
 </div>

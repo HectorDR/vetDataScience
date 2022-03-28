@@ -58,7 +58,7 @@ const Blog =()=>{
             <Paragraph texto="El mundo de hoy se maneja con los datos que se obtienen y el sector agropecuario no es la excepción.  Ya sea que usted trabaje en una empresa agrícola o como clínico en un consultorio.  Los datos se generan constantemente, por ejemplo los registros de peso corporal y consumo de alimentos, los registros de reproducción, las historias clínicas son tal vez los mas comunes. Estos registros usualmente se observan de una manera unidireccional, sin embargo, la integración de estos y su adecuado análisis puede generar perspectivas diferentes para el proceso de toma de decisiones y es aquí donde la ciencia de datos entra en juego." />
             <Paragraph texto="Con las adecuadas técnicas, con unos datos de buena calidad y con tecnologías no muy sofisticadas, podemos calcular con precisión el peso esperado de un lote de ganado de ceba en un determinado periódo de tiempo, o podemos explicar las causas de porque no se alcanzo el mismo peso.  También podemos calcular la probabilidad de alcanzar las metas de postura en un lote de ponedoras o evaluar si las mejoras implementadas en el manejo o instalaciones de los animales han traído una mejora significativa en producción. La ciencia de los datos está aquí para ayudarnos a evaluar estrategias y tomar decisiones. " />
 
-            <Paragraph texto="Con esta introduccion al manejo de la ciencia de los datos no se pretende reemplazar los conocimientos básicos de matemáticas ni estadística que deben ser adquiridos durante el pregrado, pero si busca partir de estos conocimientos (si ya no recuerda encontrará links para revisar los conceptos) y generardar una visión mas amplia  sobre la utilidad de los registros y datos ya que a veces se subutilizan por desconocimiento.  El proyecto ha sido creado de una manera practica, con ejemplos reales y con el objetivo de que el lector pueda de manera sencilla entender la aplicabilidad y sobre todo desarrolle las habilidades para poner en practica los contenidos. Ya sea que usted sea experimentado en la materia puede seleccionar el módulo que desee revisar o si quiere aprender puede comenzar desde el principio y familiarizarse con los conceptos teóricos.  "/>
+            <Paragraph texto="Con esta introduccion al manejo de la ciencia de los datos no se pretende reemplazar los conocimientos básicos de matemáticas ni estadística que deben ser adquiridos durante el pregrado, pero si busca partir de estos conocimientos (si ya no recuerda encontrará links para revisar los conceptos) y generardar una visión mas amplia  sobre la utilidad de los registros y datos ya que a veces se subutilizan por desconocimiento.  El proyecto ha sido creado de una manera práctica, con ejemplos reales y con el objetivo de que el lector pueda de manera sencilla entender la aplicabilidad y sobre todo desarrolle las habilidades para poner en practica los contenidos. Ya sea que usted sea experimentado en la materia puede seleccionar el módulo que desee revisar o si quiere aprender puede comenzar desde el principio y familiarizarse con los conceptos teóricos.  "/>
 
             <ImagePlus
               image={laptop}
@@ -73,9 +73,9 @@ const Blog =()=>{
 <SubChapter>
 <SubTitle title="Objetivos" />  
 
-        <p> El principal objetivo de este proyecto es entregar herramientas  de uso sencillo pero eficaces para realizar análisis de datos aplicados a nivel de una empresa pecuaria.</p>
+        <p> El principal objetivo de este proyecto es entregar herramientas de uso sencillo pero eficaces a la hora de realizar análisis de datos aplicados a nivel de una empresa pecuaria.</p>
        
-        <p>Simultáneamente desarrollar una comunidad de  interesados en la ciencia de los datos en la que podamos desde este ambiente aprender en comudidad, ayudar a resolver problemas específicos y generar alternativas de optimización en el proceso de toma de decisiones. </p>
+        <p>Simultáneamente desarrollar una comunidad de  interesados en la ciencia de los datos en la que podamos desde este ambiente aprender en comunidad, ayudar a resolver problemas específicos y generar alternativas de optimización en el proceso de toma de decisiones. </p>
 <br />
         <ImagePlus
               image={excel}   
@@ -111,7 +111,7 @@ const Blog =()=>{
 <section id = "autor">
 <SubChapter>
 <SubTitle title="Acerca del Autor" />
-<Paragraph texto = "Hector Delgado: Medico Veterinario Zootecnista, con Maestría en Administracion de Empresas y Doctorado en Ciencia Animal (ciencia de datos en ganado lechero), con mas de 25 años de experiencia en el sector pecuario trabajando en múltiples frentes como la academia, la empresa y el sector no gubernamental trabajando en temas de bienestar animal y ciencia de datos, pero sobre todo alquien con mucho interés en aprender, compartir y construir conocimiento."/>
+<Paragraph texto = "Hector Delgado: Medico Veterinario Zootecnista, con Maestría en Administracion de Empresas y Doctorado en Ciencia Animal (ciencia de datos en ganado lechero), con mas de 25 años de experiencia en el sector pecuario trabajando en múltiples frentes como la academia, la empresa y el sector no gubernamental trabajando en temas de bienestar animal y ciencia de datos, pero sobre todo alquien con mucho interés en aprender, compartir y construir conocimiento.  "/>
 <ImagePlus
               image={hector}            
               max_zoom="20%"
