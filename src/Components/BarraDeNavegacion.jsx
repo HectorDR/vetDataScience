@@ -17,6 +17,7 @@ const BarraDeNavegacion = () => {
             <li><Link to={"/"}>Bienvenidos</Link></li>
             <li><Link to={"/Blog"}>Acerca de</Link></li>
             <li><Link to={"/Contenidos"}>Contenidos</Link></li>
+            <li><Link to = {"/Referencias"}>Referencias</Link></li>
             <li><HashLink smooth to={"/#contact"}>Contacto</HashLink></li>
             <li className='navbar__user_message'>Hola {user.given_name}!</li>
           </ul>
