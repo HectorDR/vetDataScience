@@ -19,14 +19,23 @@ import AnalisisII from "Pages/AnalisisII.jsx";
 import Anava from "Pages/Anava.jsx";
 import AnavaII from "Pages/AnavaII.jsx";
 import Referencias from 'Pages/Referencias';
+import {Helmet} from "react-helmet"
 //importe todo lo nceesario a app los estilos, el router y las paginas
 function App() {
   return (
     <Auth0Provider
       domain={process.env.REACT_APP_AUTH0DOMAIN}
       clientId={process.env.REACT_APP_AUTH0CLIENTID}
-      redirectUri={window.location.origin}>
+      redirectUri={window.location.origin}>   
       <BrowserRouter>
+      <Helmet>
+          <title>VetDataScience</title>
+          <meta name="description"
+          content="Ciencia de datos para profesionales y estudiantes del sector pecuario"/>
+          <meta name='keywords'
+          content='Ciencia, Datos, Data, Science, Veterinaria, Zootecnia, Probabilidad, Análisis, Pecuario'
+          />
+      </Helmet> 
         <Routes>
           <Route path="/" element={<ProtectedRoute page={<MainLayout/>}/>}>
             <Route path="/" element={<Home/>}/>
