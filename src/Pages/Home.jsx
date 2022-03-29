@@ -8,9 +8,9 @@ const Home = () => {
  
   return (
     <div>
-          <Homehead background={cultivo} titulo={[<h1 style={{color:"yellow"}}>Ciencia de Datos para el campo </h1>,<br/>,
-          <h2 style={{color:"yellow"}} >Una Introducción con herramientas útiles para entender la ciencia de los datos </h2>]}/>
-          <section id ="introduccion" class = "container">
+          <Homehead background={cultivo} titulo={<><h1 style={{color:"yellow"}}>Ciencia de Datos para el campo </h1>,<br/>,
+          <h2 style={{color:"yellow"}} >Una Introducción con herramientas útiles para entender la ciencia de los datos </h2></>}/>
+          <section id ="introduccion" className = "container">
            <center> <h1>Bienvenidos a esta Introducción a la ciencia de los datos para Medicos Veterinarios y Zootecnistas</h1></center>
            <br />
          
@@ -20,11 +20,11 @@ const Home = () => {
          </p>
 
           </section>
-          <section id = "contents" class = "container">
+          <section id = "contents" className = "container">
           <Chapters/>
           </section>
-          <section id = "contact" class = "container" >
-      <div class = "row">
+          <section id = "contact" className = "container" >
+      <div className = "row">
            
       </div>
       <div className = "column container" >

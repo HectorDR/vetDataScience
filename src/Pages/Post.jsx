@@ -13,7 +13,7 @@ import tipos_datos from "Media/tables/tipos_datos1.png"
 import datos_summary from "Media/tables/datos_summary.png"
 import ReferencesBlock from "Components/ReferencesBlock";
 import ChapterLayout from "Layouts/ChapterLayout";
-import {Helmet} from "react-helmet";
+import {Helmet} from "react-helmet-async";
 //import rumination from "Media/images/rumination.JPG";
 const Post = () =>{
     return(

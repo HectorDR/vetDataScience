@@ -95,15 +95,19 @@ const Examples =()=>{
             <SubChapter id ="introduccion">
             <SubTitle title= "I- Introducción"/>
             <Paragraph texto = {<><p>La manera mas común como se colectan los datos utilizados en producción son los, 
-            <HashLink smooth to={"/Post#datos"}><u><b> datos estructurados</b></u></HashLink>. La principal estrategia para que los datos crudos sean
+            <HashLink smooth to={"/Post#datos"}><u><b>datos estructurados</b></u></HashLink>. La principal estrategia para que los datos crudos sean
              de buena calidad radica en el diseño de los registros, pues estos deben ser lo más sencillos y claros posibles. Ademas de la manera como se
               llevan los registros y la calidad en la recolección de datos.  Por ejemplo los pesajes de ganado bovino deben hacerse muy temprano en la mañana
                una vez al mes y la báscula debe estar adecuadamente calibrada.  Esto asegura datos que permitan se analizados adecuadamente.</p></> }/>
             <Paragraph texto = "Una vez que tenemos recogidos los datos crudos y estamos listos para su procesamiento, podemos enfrentar diversos problemas, especialmente si las tablas no han sido bien diseñadas y las variables o los datos no son claros.  Un caso típico, es la falta de estandarización en los registros de actividades y producción.  Cuando las variables no están bien definidas o no se han estandarizado los valores y términos que pueden tomar las variables se va a generar un caos en el manejo de los registros. Esto es porque cada quien va a utilizarlos como mejor le parece y vamos a encontrar muchas versiones de como incluir un evento. Supongamos que hay una vaca enferma con mastitis, sino existe un código para este evento, bajo la columna de 'Observaciones' el funcionario puede escribir Mast, Mastitis, M, Mgram+ etc. y todos serán válidos pero esto va a generar un dolor de cabeza a la hora de compilar los datos."/>
             <Paragraph texto = "Una forma de solucionar esta situación es conocer claramente cuales son nuestras variables y el tipo de información con la cual vamos a alimentar los registros. Por ejemplo, para datos datos nominales como raza o problemas de salud, es adecuado de antemano delimitar la entrada de los datos.  Por ejemplo si vamos a registrar un caso de mastitis clínica, en el registo debería solo existir la opcion 'Mastitis' o cualquiera que sea el código asignado y podemos luego generar otra variable explicativa que dé un poco mas de detalle.  "/>
-            <Paragraph texto = {["Finalmente podemos asegurar que unos datos adecuadamente procesados y analizados son fundamentales para una adecuada ", <a href="https://www.guru99.com/business-intelligence-definition-example.html"> <b><u>Inteligencia de negocios</u></b> </a>, ". Esta la podemos interpretar como la capacidad de transformar los datos crudos para convertirlos en información oportuna que pueda generar herramientas útiles en la gerencia de la finca tratando de incluir tantos aspectos como sea posible (nutrición, producción, costos, mercadeo, etc.) para asegurar su sostenibilidad y rentabilidad. Con la Inteligencia de negocios podemos encontrar cuellos de botella en el sistema (eje: donde están los problemas que afectan mi rentabilidad), evaluación de los recursos que existen dentro de la empresa y también  como se afecta la producción cuando generamos cambios en la empresa (eje: invertir en un nuevo equipo de ordeño vale la pena?)."
-        
-        ]}/>
+            <Paragraph texto = {<><p>Finalmente podemos asegurar que unos datos adecuadamente procesados y analizados son fundamentales para una adecuada
+              <a href="https://www.guru99.com/business-intelligence-definition-example.html"><b><u>Inteligencia de negocios</u></b></a>
+              . Esta la podemos interpretar como la capacidad de transformar los datos crudos para convertirlos en información oportuna que pueda generar
+               herramientas útiles en la gerencia de la finca tratando de incluir tantos aspectos como sea posible (nutrición, producción, costos, mercadeo, etc.)
+                para asegurar su sostenibilidad y rentabilidad. Con la Inteligencia de negocios podemos encontrar cuellos de botella en el sistema (eje: donde
+                 están los problemas que afectan mi rentabilidad), evaluación de los recursos que existen dentro de la empresa y también  como se afecta la
+                  producción cuando generamos cambios en la empresa (eje: invertir en un nuevo equipo de ordeño vale la pena?).</p></>}/>
             </SubChapter>
 
             <SubChapter id = "Definiciones">
@@ -134,8 +138,8 @@ const Examples =()=>{
                 <p>Cuando estamos trabajando con datos y registros, debemos tener en cuenta varios puntos simples pero muy efectivos para que nos ayudaran a optimizar la colección y el manejo de los mismos (adaptado de Guerrero, 2010).  Los mas importantes son: </p>
                 <br />
                 <ul>
-                <li>- No todos los datos son creados de la misma manera. Es importante primero analizar los datos, como se colectan y a que <a href="Post#raw"><u> <b>categoría</b>  </u> </a> pertenecen. Una vez hecho esto tener claridad sobre su necesidad y uso. </li> 
-                <li>- Mantenenga las tablas simples y de forma columnar para las variables y las filas para los eventos u observaciones. Tal como se mostró en la sección anterior con el registro de <a href="Post#datos"> <u> <b>gallinas ponedoras</b> </u> </a>  </li>
+                <li>- No todos los datos son creados de la misma manera. Es importante primero analizar los datos, como se colectan y a que <HashLink smooth to={"/Post#raw"}><u><b>categoría</b></u></HashLink> pertenecen. Una vez hecho esto tener claridad sobre su necesidad y uso. </li>                                            
+                <li>- Mantenenga las tablas simples y de forma columnar para las variables y las filas para los eventos u observaciones. Tal como se mostró en la sección anterior con el registro de <HashLink smooth to={"/Post#datos"}><u><b>gallinas ponedoras</b></u></HashLink> </li>
                 <li>- No colecte mas datos de los que se necesitan, pero que tampoco menos. </li>
                 <li>-Haga comentarios sobre que es que, trate de ser explicativo porque a lo mejor usted entiende, pero si alguien va a analizar los datos va a entender. </li>
                 <li>- Sea consistente con los títulos y los nombres de las variables. Si una variable se repite en varios registros, siempre llamela de la misma manera, esto ahorrará dolores de cabeza</li>
@@ -147,19 +151,21 @@ const Examples =()=>{
 
             <SubChapter id ="fechas">
                 <SubTitle title= "2.1- Como crear campos con criterios de validación en Excel"/>
-                <Paragraph  texto = {["Los criterios de validación se utilizan para evitar que al ingresar los datos en los campos, se incurra en datos espurios o erroneos.  Para ello Excel nos permite ", <b>validar los datos</b>, " o solo permitir la entrada de ciertos valores asignados a los campos. Para entender de manera mas clara  vamos a crear un registro de control de nacimientos de terneros en la hoja electrónica." ]}    />
+                <Paragraph  texto = {<><p>Los criterios de validación se utilizan para evitar que al ingresar los datos en los campos, se incurra en datos
+                 espurios o erroneos.  Para ello Excel nos permite <b>validar los datos</b> o solo permitir la entrada de ciertos valores asignados a los campos.
+                Para entender de manera mas clara  vamos a crear un registro de control de nacimientos de terneros en la hoja electrónica.</p></>}/>
                 
                 <Paragraph texto =
                 "El primer paso es crear el campo donde va la fecha de nacimiento del ternero. Entonces para evitar errores diferentes formatos (día-mes-año) o datos que no sean una fecha, Excel permite asignar primero la exclusividad de introducir solo fechas en los campos deseados y en el formato deseado. Para hacer esto entonces,"/>
                 
-                <Paragraph texto = {[ <ul>
+                <Paragraph texto = {<> 
+                <ul>
                     <li>1- Identifique el rango de las celdas donde se van a digitar las fechas.</li>
                     <li>2-Vaya al menú datos ubicado en la parte superior de la hoja electrónica y seleccione la opción 'validación de datos'. </li>
                     <li> 3- En el menú criterio de validación (validation criteria) se muestra una lista que ofrece varias opciones y de ahí seleccione 'fecha' como se muestra en el cuadro 2.1.  Esto hace que no se pueda introducir ningún otro tipo de datos diferente a una fecha. </li>
                     <li> 4- Para determinar el rango de fechas, podemos seleccionar de una mínima a una máxima o solo una mínima, para este caso se ha seleccionado  la posibilidad de introducir fechas superiores a Enero 1 del 2021, como se muestra en el cuadro 2.1.1.  Finalizado este paso ya se puede seleccionar la fecha.  Al tratar de digitar  una fecha anterior al 2021  o un valor diferente a una fecha, se activará una señal de error como se muestra en en el recuadro 2.1.2."  </li>
                 </ul>
-
-                ]}/>
+                </>}/>
                 
                  <center><h4>2.1.1- Validación de criterios, selección del criterio por fecha</h4></center>
                  <ImagePlus 
@@ -258,7 +264,12 @@ const Examples =()=>{
         <SubChapter id ="madrehija">
             <SubTitle title ="2.4- Creación de una lista de variables que son dependientes de otra variable -Madre e hija-"/>
             <Paragraph texto = "Es muy común encontrar en nuestros registros un campo para aclarar o ampliar información sobre un evento. Por ejemplo, en un campo que por lo general se llama 'Observaciones' vamos a encontrar una variedad increible de comentarios y a veces resulta imposible entender y sobre todo cuantificar.  Esto sucede en registros de actividad diaria, en el caso de animales enfermos donde se pregunta la enfermada y el tipo de tratamiento que se aplicó o la evoulición del paciente. Una alternativa para tener los datos de manera sencilla para su tabulación y análisis es crear listas de validación hijas dependientes de una lista madre.  Por ejemplo, si en la actividad del día se registra una actividad reproductiva, lo ideal es crear una lista que se despliegue en la siguiente celda mostrandonos que tipo de actividad puede ser por ejemplo detección de calor, inseminación, palpación etc."/>
-            <Paragraph texto = {["Es muy común  que cuando estamos creando un registro de actividades diarias que se realizan en una finca lechera, lo primero que vamos a hacer es clasificar las actividades según su naturaleza. Entonces creamos una lista de la misma manera como lo hicimos anteriormente con ",<a href="#listas"><u>raza y sexo</u>.</a> , "Para este caso, vamos a dividir las actividades en 4 principales tareas: manejo, salud, reproducción y producción y cada una de ellas a su vez tendrá sus propias actividades o listas hijas. Por ejemplo, para salud vamos a crear la lista con los problemas de salud mas comunes que se presentan en la finca como mastitis, cetosis, hipocalcemia etc.  Para orientarnos observemos los cuadros enumerados entre el  2.4.1 al 2.4.4"]}/>
+            <Paragraph texto = {<><p>Es muy común  que cuando estamos creando un registro de actividades diarias que se realizan en una finca lechera,
+              lo primero que vamos a hacer es clasificar las actividades según su naturaleza. Entonces creamos una lista de la misma manera como lo
+              hicimos anteriormente con<HashLink smooth to={"#listas"}><u>raza y sexo</u></HashLink>. Para este caso, vamos a dividir las actividades en 4 principales
+              tareas: manejo, salud, reproducción y producción y cada una de ellas a su vez tendrá sus propias actividades o listas hijas. 
+              Por ejemplo, para salud vamos a crear la lista con los problemas de salud mas comunes que se presentan en la finca como mastitis, 
+              cetosis, hipocalcemia etc. Para orientarnos observemos los cuadros enumerados entre el  2.4.1 al 2.4.4</p></>}/>
             <center><h4>2.4.1- Creación de la lista madre y darle su respectivo nombre</h4></center>
                  <ImagePlus 
                 image = {val1}
@@ -294,7 +305,15 @@ const Examples =()=>{
 
         <SubChapter id = "importados">
             <SubTitle title ="2.5- Como solucionar problemas con los datos importados o secundarios" />
-            <Paragraph texto = {["Es normal que a veces tengamos que trabajar con datos provenientes de otras fuentes es decir registros que no fueron creados por nosotros o que fueron diseñados para otro propósito. Para ello lo ideal es que estos datos vengan de manera  tabular (estructurados) y sobre todo hay que conocer cuáles son las variables incluidas, cual es su ",<a href="Post#raw"><u><b>naturaleza</b></u></a>," (categórico, ordinal, etc.) y sus valores y escalas (eje: libras o kilos).  Cuando estamos trabajando con unos pocos registros posiblemente solo visualizando los datos podremos identificarlos fácilmente, sin embargo, cuando estamos trabajando con miles (o millones) de datos la situación se torna complicada y necesitaremos de varias herramientas para facilitar este proceso. En este enlace de ",<a href="https://support.microsoft.com/en-us/office/top-ten-ways-to-clean-your-data-2844b620-677c-47a7-ac3e-c2e157d1db19"><u> <b>Microsoft®</b> </u></a>,"  podemos ver algunos de los puntos clave cuando estamos trabajando con datos estructurados."]}/>
+            <Paragraph texto = {<><p>Es normal que a veces tengamos que trabajar con datos provenientes de otras fuentes es decir registros que no 
+              fueron creados por nosotros o que fueron diseñados para otro propósito. Para ello lo ideal es que estos datos vengan de manera 
+              tabular (estructurados) y sobre todo hay que conocer cuáles son las variables incluidas, cual es su
+              <HashLink smooth to={"/Post#raw"}><u><b>naturaleza</b></u></HashLink> (categórico, ordinal, etc.) y sus valores y escalas (eje: libras o kilos). 
+              Cuando estamos trabajando con unos pocos registros posiblemente solo visualizando los datos podremos identificarlos fácilmente,
+              sin embargo, cuando estamos trabajando con miles (o millones) de datos la situación se torna complicada y necesitaremos de varias
+              herramientas para facilitar este proceso. En este enlace de
+              <a href="https://support.microsoft.com/en-us/office/top-ten-ways-to-clean-your-data-2844b620-677c-47a7-ac3e-c2e157d1db19"><u>
+              <b>Microsoft®</b></u></a> podemos ver algunos de los puntos clave cuando estamos trabajando con datos estructurados.</p></>}/>
 
             <SubTitle title = "2.5.1- Manejo de inconsistencias en los términos para referirse a un evento "/>
             <Paragraph texto = "Uno de los casos mas comunes es la heterogeneidad en los términos para referirnos a un mismo evento. En este caso podemos acudir a Excel cuando no estamos trabajando con millones de datos. En caso de gran número de registros es mejor utilizar lenguajes de programación como SAS® o Python. Pero cuando tengamos una cantidad considerable de datos sin que sea abrumadora, Excel funciona muy bien.  Vamos a explorar las posibilidades del corrector ortográfico (Spelling), para ello vamos a revisar un registro simulado donde la actividad de inseminación ha sido digitada de multiples maneras (recuadros 2.5.1.1 y 2.5.1.2 )"/>
@@ -322,7 +341,11 @@ const Examples =()=>{
         <SubChapter id = "duplicados">
           <SubTitle title="2.5.2- Que hacer cuando se presentan los datos duplicados" />
           <Paragraph texto="Los datos duplicados pueden suceder por varias razones, entre ellas porque se digita doble cuando varias personas acceden al mismo registro, por accidente o cuando se trabaja con información secundaria (registros que han sido utilizados con otro propósito previo) y al integrar los registros no se hace de manera adecuada. Hay que diferenciar entre un registro duplicado o solo campos duplicados por ellos vamos primero a identificar los registros.  Como anteriormente lo mencionamos si se tratan de pocos registros probablemente es fácil hacerlo a ojo, sin embargo, si tenemos miles de registros debemos utilizar las herramientas tecnológicas disponibles.  Con Excel es posible identificar los duplicados. " />
-          <Paragraph texto = {["Lo primero que se debe hacer es  identificar los registros duplicados (altamente recomendado), esto para evitar remover información que a lo mejor no era un verdadero duplicado, a veces puede ser un aclaratorio y se crea como un segundo evento. ", <b>Importante nunca haga cambios en los archivos originales</b> ," en caso de un accidente es importante mantener este archivo adecuadamente guarado. Lo ideal es crear un nuevo archivo (copia) y mantener los originales tal y como estaban (siempre mantener un archivo original intacto), y continuar trabajando con la copia. "]}/>
+          <Paragraph texto = {<><p>Lo primero que se debe hacer es  identificar los registros duplicados (altamente recomendado), esto para evitar
+            remover información que a lo mejor no era un verdadero duplicado, a veces puede ser un aclaratorio y se crea como un segundo evento. 
+            <b> Importante nunca haga cambios en los archivos originales</b> en caso de un accidente es importante mantener este archivo adecuadamente
+             guardado. Lo ideal es crear un nuevo archivo (copia) y mantener los originales tal y como estaban (siempre mantener un archivo original
+              intacto), y continuar trabajando con la copia.</p></>}/>
           <center><h4>2.5.2.1- Seleccionar los datos donde se quieren buscar los duplicados</h4></center>
                  <ImagePlus 
                 image = {dup1}
@@ -443,10 +466,7 @@ const Examples =()=>{
  "* Pfaffenberger, R.C. and Patterson, J.H., 1977. Statistical methods for business and economics. Homewood, IL: Richard D. Irwin.",
  <a href="https://www.guru99.com/business-intelligence-definition-example.html">* <u>What is Business Intelligence, Definition and Example</u>. Taylor D., Octubre 7 2021 </a>
 ]}
-
 />
-
-
     </main>
 </div>
 </ChapterLayout>
