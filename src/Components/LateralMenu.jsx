@@ -31,7 +31,8 @@ const LateralMenu = () => {
       setMenuClass('lateral_menu')}}/>
     </div> 
     <h3>VetDataScience</h3>
-    <ChapterAccordion title="1- Definiciónes generales de la ciencia de los datos" subchapters={["1.1-Qué es la ciencia de los datos","1.2- Qué son los datos crudos","1.3- Clasificación de los datos según su naturaleza"]}/>
+    <ChapterAccordion chapter={{texto:"1- Definiciónes generales de la ciencia de los datos",link:"/Post"}}
+    subchapters={[{texto:"1.1-Qué es la ciencia de los datos",link:"#definicion"},{texto:"1.2- Qué son los datos crudos",link:"#datos"},{texto:"1.3- Clasificación de los datos según su naturaleza",link:"#raw"}]}/>
     </div>
     </>
   )

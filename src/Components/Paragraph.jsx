@@ -11,7 +11,6 @@ const Paragraph = (props) => {
   }
   else{
     // quitar etiqueta p al haber refactorizado todo
-    console.log(props.texto)
     return(
       <>
       <p>{props.texto}</p>
