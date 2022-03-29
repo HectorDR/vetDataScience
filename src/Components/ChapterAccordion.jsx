@@ -15,7 +15,7 @@ const ChapterAccordion = (props) => {
   return (
     <div className='chapter_accordion'>
         <div className='chapter_accordion__title'>
-        <Link to={props.chapter.link}><h6>{props.chapter.texto}</h6></Link><img src={accordionarrow} className={arrowDown===true?"chapter_accordion__img":"chapter_accordion__img up"}
+        <Link to={props.chapter.link}><h6 onClick={() => window.scrollTo(0, 0)}>{props.chapter.texto}</h6></Link><img src={accordionarrow} className={arrowDown===true?"chapter_accordion__img":"chapter_accordion__img up"}
         {...getToggleProps({onClick: () => setArrowDown(!arrowDown)})}/>
         </div>
 
