@@ -46,7 +46,6 @@ const Examples =()=>{
         <ChapterLayout chapter_title="2- Ejemplos prácticos para manejar los datos estructurados"
         chapter_image={novillas}>
 <div>
-<body>
     <main>
     <section id = "tabla" className = "container">
           <ContentsTable
@@ -445,8 +444,6 @@ const Examples =()=>{
 
 
     </main>
-</body>
-
 </div>
 </ChapterLayout>
 

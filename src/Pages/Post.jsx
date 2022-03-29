@@ -81,7 +81,7 @@ const Post = () =>{
                 <Paragraph
                 texto = {<><p>Los datos que se generan a todo nivel tanto dentro de la empresa como por fuera de la operación y aun no han sido editados,
                  los podemos denominar datos crudos o datos primarios. Estos datos se caracterizan porque no han sido manipulados ni tabulados.
-                  Según el <a href="https://www.statista.com/statistics-glossary/definition/351/raw_data/"><u>Statista</u> </a> una vez que los
+                  Según el <a target="_blank" href="https://www.statista.com/statistics-glossary/definition/351/raw_data/"><u>Statista</u> </a> una vez que los
                    diferentes datos han sido procesados es decir integrados, normalizados o agregados podríamos hablar de datos secundarios y 
                    estos datos se caracterizan porque no necesariamente contienen los datos originales sino que tienen algún tipo de valor agregado 
                    o información.</p></>}/>
