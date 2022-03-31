@@ -23,6 +23,7 @@ import pois2 from "Media/photo_dist/form_poisson2.png";
 import pois3 from "Media/photo_dist/pois_excel.png";
 import pois4 from "Media/photo_dist/pois_excel2.png";
 import pois5 from "Media/photo_dist/pois_curve.png";
+import { HashLink } from "@xzar90/react-router-hash-link";
 
 const Distribuciones =()=>{
     return(
@@ -78,36 +79,41 @@ const Distribuciones =()=>{
         </SubChapter>
 
         <SubChapter id ="glosario">
-        <h2>4.2- Repasemos algunas definiciones</h2>
-
-        <Paragraph texto = {[ <ul>
+        <SubTitle title="4.2- Repasemos algunas definiciones"/>
+        <Paragraph texto = {<>
+        <ul>
             <li><b>- Frecuencia</b>: es el número de veces en que un valor determinado o un resultado se repite durante el experimento o aparece en el espacio muestral.  Normalmente se representa por medio de un histograma. </li>
             <li><b>- Probabilidad de una distribución de frecuencia</b>: es una colección de las probabilidades de los posibles resultados de un evento. </li>
             <li><b>- Función de la probabilidad</b>: es una función que asigna una probabilidad a cada distinto resultado en el espacio muestral.  Donde: Y = resultado actual,  y = es uno de los posibles resultados de Y o sea uno de los valores dentro de la distribución. Entonces, <h4>P(Y = y) = p(y)</h4> </li>
             <li><b>- Población</b>: es el conjunto formado  por todos los valores posibles que puede asumir la variable objeto de estudio.  Ejemplo: la producción de leche de todas las vacas de la región lechera de un país. </li>
             <li><b>- Muestra</b>: es cualquier subconjunto de la población escogido al seguir ciertos criterios de selección. Ejemplo: La producción de leche de las vacas del 10% de las fincas de la región lechera.</li>
         </ul>
-        ]}/>
+        </>}/>
           
         </SubChapter >
 
         <SubChapter id = "discretas">
-            <h2>4.3- Distribuciones discretas</h2>
-            <Paragraph texto = {[
-            "Una distribución discreta es un una distribución de probabilidad que muestra la ocurrencia de resultados que se pueden contar",<a href="https://www.investopedia.com/terms/d/discrete-distribution.asp"><u> (Young, 2021)</u> </a>, " por ejemplo el total de animales nacidos vivos en una camada de cerdos (1,2,3...14) o la probabilidad de una cerda vacía o preñada (0 o 1). Las probabilidades discretas tienen un número finito de resultados, los valores que toma la variable son unidades (1 caballo por pesebrera, 50000 células somáticas por mililitro de leche). Los resultados de la distribución discreta se visualizan en forma tabular en barras alineadas una después de la otra."
-            ]}/>
+            <SubTitle title="4.3- Distribuciones discretas"/>
+            <Paragraph texto = {<><p>
+            Una distribución discreta es un una distribución de probabilidad que muestra la ocurrencia de resultados que se pueden contar
+            (<a href="https://www.investopedia.com/terms/d/discrete-distribution.asp"><u>Young, 2021</u></a>) por ejemplo el total de animales nacidos
+             vivos en una camada de cerdos (1,2,3...14) o la probabilidad de una cerda vacía o preñada (0 o 1). Las probabilidades discretas tienen un
+              número finito de resultados, los valores que toma la variable son unidades (1 caballo por pesebrera, 50000 células somáticas por mililitro
+               de leche). Los resultados de la distribución discreta se visualizan en forma tabular en barras alineadas una después de la otra
+            </p></>}/>
 
-            <h2 >4.3.1- Distribuciones discretas - Uniforme</h2>
+            <SubTitle title="4.3.1- Distribuciones discretas - Uniforme"/>
 
             <Paragraph texto = "Es tal vez la distribución discreta mas simple, ya que cada variable tiene las mismas probabilidades de ocurrir."/>
-            <Paragraph texto ={["Las principales propiedades de la distribución uniforme son:", <ul>
-                <li>*	Todos los resultados tienen la misma probabilidad.</li>
-                <li>*	Todas las barras en el gráfico tienen la misma altura.</li>
-                <li>*	El valor esperado y la varianza no tienen poder predictivo.</li> </ul>,
-                <br></br>,
-                "Ejemplo: si tenemos en un corral 4 novillas cada una de color diferente (blanca, negra, parda, roja), ¿Cual es la probabilidad de que salga la novilla blanca?"
-
-            ]}/>
+            <Paragraph texto ={<><p>Las principales propiedades de la distribución uniforme son:</p>
+                <ul>
+                    <li>*	Todos los resultados tienen la misma probabilidad.</li>
+                    <li>*	Todas las barras en el gráfico tienen la misma altura.</li>
+                    <li>*	El valor esperado y la varianza no tienen poder predictivo.</li>
+                </ul>
+                <br></br>
+                <p>Ejemplo: si tenemos en un corral 4 novillas cada una de color diferente (blanca, negra, parda, roja), ¿Cual es la probabilidad de
+                 que salga la novilla blanca?</p></>}/>
              <ImagePlus 
                 width = "30%"
                 max_zoom = "50%"
@@ -145,14 +151,16 @@ const Distribuciones =()=>{
 
         <SubChapter id = "binomial">
             <SubTitle title = "4.3.3- Distribuciones discretas-Binomial"/>
-            <Paragraph  texto = {[
-                "La distribución binomial es una secuencia de eventos Bernoulli (éxito-fracaso) de la misma naturaleza. Es decir la distribucion binomial repite un experimento n veces y cuantifica los éxitos y los fracasos.", <br></br>, <b>Características:</b>,
+            <Paragraph  texto = {<>
+                <p>La distribución binomial es una secuencia de eventos Bernoulli (éxito-fracaso) de la misma naturaleza. Es decir la distribucion
+                 binomial repite un experimento n veces y cuantifica los éxitos y los fracasos.</p>
+                 <b>Características:</b>
                 <ul>
                     <li>* Mide la frecuencia de ocurrencia de uno de los posibles resultados sobre los n ensayos.  Para cada ensayo solo son posibles dos resultados (éxito o fracaso).</li>
                     <li>* La probabilidad de éxito debe ser constante (p) y la probabilidad de fracaso igualmente es constante y se representa por 1-p.</li>
                     <li>* Cada experimento es independiente del anterior, lo que ocurre en uno no afecta el resultado del otro.</li>
                 </ul>
-            ]}/>
+            </>}/>
             <p>La fórmula de la distribución binaria es:</p>
 
              <ImagePlus 
@@ -161,16 +169,17 @@ const Distribuciones =()=>{
                 image = {bin1}
                 texto = "Fórmula de la distribución Binomial "
                 />  
-            <Paragraph texto = {["Donde:", <ul>
+            <Paragraph texto = {<>Donde:
+             <ul>
                 <li>n = número de ensayos/experimentos</li>
                 <li>x = número de éxitos</li>
                 <li>p= probabilidad de éxito</li>
                 <li> (1-p) = probabilidad de fracaso</li>
              
-            </ul>,
-            <br />,
-            "El resultado entre paréntesis es el resultado de una combinación sin repetición Cn,x donde:"
-        ]}/>
+            </ul>
+            <br />
+            El resultado entre paréntesis es el resultado de una combinación sin repetición Cn,x donde:
+            </>}/>
 
                 <ImagePlus 
                 width = "30%"
@@ -178,12 +187,16 @@ const Distribuciones =()=>{
                 image = {bin2}
                 texto = " "
                 /> 
-        <Paragraph texto = {["Ejemplo, En una finca porcicola la actividad reproductiva se realiza por inseminación artificial. Actualmente La tasa de prenez es del 65%. Si tenemos un lote de 6 cerdas para inseminar. ¿Cuál es la probabilidad de que 4 de estas cerdas queden preñadas? Entonces,", <ul>
-        <li>n = 6</li>
-        <li>x = 4</li>
-        <li>p = 65%</li>
-        <li>entonces 1 - p = 35%</li>
-        </ul>]}/>
+        <Paragraph texto = {<><p>Ejemplo, En una finca porcicola la actividad reproductiva se realiza por inseminación artificial. Actualmente 
+            La tasa de prenez es del 65%. Si tenemos un lote de 6 cerdas para inseminar. ¿Cuál es la probabilidad de que 4 de estas cerdas queden
+             preñadas? Entonces:</p> <br/>
+        <ul>
+            <li>n = 6</li>
+            <li>x = 4</li>
+            <li>p = 65%</li>
+            <li>entonces 1 - p = 35%</li>
+        </ul>
+        </>}/>
 
        
 
@@ -219,14 +232,21 @@ const Distribuciones =()=>{
                 texto = "Tabla de éxitos y fracasos para preñeces "
                 /> 
 
-    <Paragraph texto = {["La función de Excel para calcular la distribución binomial se usa la función ",<b>DISTR.BINOM o BINOM.DIST</b>, "en inglés.  Nos ubicamos en la celda donde deseamos ver el valor, escribimos la función y la fórmula nos solicita el número de éxitos, luego los ensayos, seguido la probabilidad y finalmente la opción verdadero (true) si queremos la función acumulada o falso(para el valor específico), en este caso decidimos falso. "]}/>
+    <Paragraph texto = {<><p>La función de Excel para calcular la distribución binomial se usa la función <b>DISTR.BINOM o BINOM.DIST</b> en inglés. 
+    Nos ubicamos en la celda donde deseamos ver el valor, escribimos la función y la fórmula nos solicita el número de éxitos, luego los ensayos, 
+    seguido la probabilidad y finalmente la opción verdadero (true) si queremos la función acumulada o falso(para el valor específico), en este 
+    caso decidimos falso.</p></>}/>
     <ImagePlus 
                 width = "40%"
                 max_zoom = "60%"
                 image = {binex2}
                 texto = "Asignación de valores en excel (ubicando las celdas) para calcular el resultado de la distribución binomial "
                 /> 
-    <Paragraph texto = {["Una vez tenemos los valores asignados damos enter y corremos la función para todas las posibilidades que deseamos calcular sin olvidar asegurar los valores del número de experimentos y probabilidad de éxito (animales preñados). Por ejemplo, para la celda C5 donde se ubica el numero de experimentos, la aseguramos con la opción ",<b>command + t</b>," en una Mac u ", <b>option + 4</b> ," desde un equipo que corra en ambiente Windows. El signo $ debe aparecer antes de las coordenadas de la celda como se observa en la barra de visualización en el recuadro superior."]}/>
+    <Paragraph texto = {<><p>Una vez tenemos los valores asignados damos enter y corremos la función para todas las posibilidades que deseamos 
+        calcular sin olvidar asegurar los valores del número de experimentos y probabilidad de éxito (animales preñados). Por ejemplo, para la celda C5
+         donde se ubica el numero de experimentos, la aseguramos con la opción <b>command + t</b> en una Mac u <b>option + 4</b> desde un 
+         equipo que corra en ambiente Windows. El signo $ debe aparecer antes de las coordenadas de la celda como se observa en la barra de 
+         visualización en el recuadro superior.</p></>}/>
 
     <ImagePlus 
                 width = "40%"
@@ -252,14 +272,14 @@ const Distribuciones =()=>{
     <br/>
     <Paragraph texto = "La distribución de Poisson solamente depende de un parámetro μ.  Tanto la media como la varianza de esta distribución son siempre positivas.  Se utiliza para determinar que tan posible es un resultado específico, conociendo con que frecuencia este evento ocurre usualmente. Con la distribución de Poisson podemos hacer planificación de espacios, tiempos, áreas o cualquier otro aspecto que implique un evento que ocurra en un espacio/tiempo/área determinada. "/>
 
-    <Paragraph texto = {[
+    <Paragraph texto = {<>
         <ul>
             <li>- Número de pacientes para cirugía en una clínica veterinaria por día (planeación de quirófano).</li>
             <li>-	Número células somáticas por ml en leche (identificación de problemas de mastitis clínica).</li>
             <li> -	Número de partos en una piara por mes (planificación de número de parideras en la finca).</li>
 
         </ul>
-    ]}/>
+    </>}/>
 <p> La fórmula de la distribución de Poisson es: </p>
     <ImagePlus 
      width = "30%"
@@ -269,22 +289,24 @@ const Distribuciones =()=>{
      />  
         
 
-    <Paragraph texto = {[
-    "donde: ",
-    <br/>,
+    <Paragraph texto = {<>
+    donde:
+    <br/>
     <ul>
-    <li>  P(Y=y) es la probabilidad de y en el intervalo definido </li>
+    <li>P(Y=y) es la probabilidad de y en el intervalo definido</li>
     <li>μ es el valor esperado o media de y</li>
     <li>e es la base de los logaritmos naturales (2.71828)</li>
-    </ul>,
-     <br/>,
-    "Ejemplo: en una producción porcina el promedio de partos a la semana es de 8 (tasa de partos del 85% y 2.4 camadas/año) si se mantienen los mismos índices cual es la probabilidad de tener 12 partos en una semana sabiendo que en este momento la máxima capacidad planeada de parideras es de hasta 11 partos?", <br />,
+    </ul>
+     <br/>
+    Ejemplo: en una producción porcina el promedio de partos a la semana es de 8 (tasa de partos del 85% y 2.4 camadas/año) si se mantienen los 
+    mismos índices cual es la probabilidad de tener 12 partos en una semana sabiendo que en este momento la máxima capacidad planeada de parideras es 
+    de hasta 11 partos?<br/>
     <ul>
         <li>y= 12 partos/s</li>
         <li>μ = 8 partos/s</li>
         <li>Reemplazando la fórmula tenemos: </li>
     </ul>
-    ]}/>
+    </>}/>
 
     <ImagePlus 
      width = "40%"
@@ -294,9 +316,11 @@ const Distribuciones =()=>{
      />  
 
     <Paragraph texto ="A pesar de que la probabilidad no es tan alta (~5%), si proyectamos esa probabilidad a un año es posible que en aproximadamente 3 semanas al año (2.6) se nos presente este problema y si se incrementa la tasa de partos, pues seguramente el propietario se verá forzado a incrementar la capacidad instalada. Pero por ahora tal vez no haya necesidad de ampliar si existen otras prioridades."/>
-    <Paragraph texto = {["Al igual que con la distribución Binomial, Excel nos permite calcular las probabilidades de esta distribución utilizando la función ", <b>DISTR.POISSON o POISSON.DIST</b>, " en inglés. Entonces si queremos construir este tipo de distribución en Excel, lo mas práctico es hacer una tabla con los valores para los cuales deseamos calcular la probabilidad e incluir la media. Como se muestra en la ilustración, nos ubicamos en la celda donde deseamos ubicar la probabilidad, se escribe la función ", <b>POISSON.DIST</b>, " y ubicamos la celda del valor para el cual deseamos calcular la probabilidad, la media y si no queremos acumulados finalmente seleccionar la opción FALSO"
-
-    ]}/>
+    <Paragraph texto = {<><p>Al igual que con la distribución Binomial, Excel nos permite calcular las probabilidades de esta distribución utilizando la
+      función <b>DISTR.POISSON o POISSON.DIST</b> en inglés. Entonces si queremos construir este tipo de distribución en Excel, lo mas práctico es
+       hacer una tabla con los valores para los cuales deseamos calcular la probabilidad e incluir la media. Como se muestra en la ilustración, nos
+        ubicamos en la celda donde deseamos ubicar la probabilidad, se escribe la función <b>POISSON.DIST</b> y ubicamos la celda del valor para 
+        el cual deseamos calcular la probabilidad, la media y si no queremos acumulados finalmente seleccionar la opción FALSO.</p></>}/>
 
     <ImagePlus 
      width = "40%"
@@ -305,9 +329,11 @@ const Distribuciones =()=>{
     texto = "Poisson en Excel "
      /> 
 
-     <Paragraph texto = {[
-         "Realizamos el mismo procedimiento para los demás valores (estiramos la celda) tal como hicimos con la distribución ", <a href="#binexcel"><u>Binomial</u></a>," y de esta manera obtenemos nuestra tabla con las probabilidades de partos a la semana."
-     ]}/>
+     <Paragraph texto = {<><p>
+         Realizamos el mismo procedimiento para los demás valores (estiramos la celda) tal como hicimos con la distribución
+         <HashLink smooth  to={"/Distribuciones#binexcel"}><u>Binomial</u></HashLink> y de esta manera obtenemos nuestra tabla con las
+         probabilidades de partos a la semana:
+     </p></>}/>
 
     <ImagePlus 
      width = "40%"

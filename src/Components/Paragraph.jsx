@@ -13,7 +13,7 @@ const Paragraph = (props) => {
     // quitar etiqueta p al haber refactorizado todo
     return(
       <>
-      <p>{props.texto}</p>
+      {props.texto}
       <br></br>
       </>
     )
