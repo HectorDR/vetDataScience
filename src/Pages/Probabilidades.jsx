@@ -23,7 +23,7 @@ import varconrep from "Media/photos_probs/var_con_rep.png"
 import comb from "Media/photos_probs/comb.png"
 import combII from "Media/photos_probs/combII.png"
 import combIII from "Media/photos_probs/combIII.png"
-
+import { HashLink } from "@xzar90/react-router-hash-link";
 const Probabilidades =()=>{
     return(
         <ChapterLayout chapter_title ="3- Principios generales de probabilidades"
@@ -67,9 +67,14 @@ const Probabilidades =()=>{
                     <SubTitle title = "3.1- ¿Qué es una probabilidad y para que nos sirve?"/>
                     <Paragraph texto = "En la tercera sección de este proyecto, he decidido enfocarme un poco en probabilidades.  Se podría pensar cual es la necesidad de revisar las probabilidades, si estamos buscando enfocarnos en una introducción a la ciencia de los datos.  Pues precisamente, necesitamos entender que son y como se aplican para poder tomar decisiones. Con los datos que obtenemos al transformarlos en información podremos encontrar explicaciones a situaciones de la finca y de igual manera podemos ser realistas en cuanto a las expectativas en los proyectos que emprendamos.  Por eso las probabilidades son una perfecta introducción al análisis de datos. " />
 
-                    <Paragraph texto = {["Podríamos definir una probabilidad como la medición de la posibilidad de que un evento ocurra en una situación cuyo resultado no se puede predecir hasta que sea observado (experimento aleatorio). La probabilidad se cuantifica como un número entre 0 y 1, donde 0 indica imposibilidad y 1 certitud",<a href="https://towardsdatascience.com/basic-probability-theory-and-statistics-3105ab637213"><u>(Radke, 2017)</u></a>,". Un ejemplo típico sería el sexo al nacer (XX o XY).  En teoría la probabilidad debería ser 50% de que nazca macho y 50% de que sea hembra.  Pero el clásico ejemplo de una probabilidad es tirar al tirar una moneda al aire cuales son las probabilidades de tener car o sello. En otras palabras la probabilidad es un cálculo matemático que evalúa las posibilidades de que una cosa suceda cuando interviene el azar",<a href="https://www.smartick.es/blog/matematicas/probabilidad-y-estadistica/probabilidad-que-es/"> <u>(Molina, 2021)</u> .</a> 
-
-                    ]}/>
+                    <Paragraph texto = {<><p>Podríamos definir una probabilidad como la medición de la posibilidad de que un evento ocurra en una situación
+                      cuyo resultado no se puede predecir hasta que sea observado (experimento aleatorio). La probabilidad se cuantifica como un número entre
+                      0 y 1, donde 0 indica imposibilidad y 1 certitud
+                      <a href="https://towardsdatascience.com/basic-probability-theory-and-statistics-3105ab637213"><u>(Radke, 2017)</u></a>. Un ejemplo típico
+                       sería el sexo al nacer (XX o XY).  En teoría la probabilidad debería ser 50% de que nazca macho y 50% de que sea hembra.  Pero el clásico 
+                       ejemplo de una probabilidad es tirar al tirar una moneda al aire cuales son las probabilidades de tener car o sello. En otras palabras la
+                        probabilidad es un cálculo matemático que evalúa las posibilidades de que una cosa suceda cuando interviene el azar
+                        <a href="https://www.smartick.es/blog/matematicas/probabilidad-y-estadistica/probabilidad-que-es/"><u>(Molina, 2021)</u></a>.</p></>}/>
                     <Paragraph texto = "Conocer de probabilidades nos ayuda a entender cuales son las reales posibilidades de que un evento suceda de una manera calculada y evitar o reducir el riesgo.  Por ejemplo, suponga que se desea analizar si debe cambiar el técnico inseminador de sus vacas, para ello uno de los criterios mas importantes seria calcular el porcentaje de éxito del  técnico actual (animales preñados/animales inseminados) frente a los posibles candidatos. Además habria que ver el valor adicional que se estaría dispuesto a pagar por los servicios del nuevo técnico.  Si el técnico A tiene un record del 60%, el B tiene un record del 58% y el C del 65% seria fácil escoger el C.  Sin embargo, hay que tener aquí en cuenta otros factores, como las instalaciones de la finca, la calidad del semen utilizado y la condición de las vacas entre otras. Recapitulando entonces, la probabilidad es medir la posibilidad de que un evento ocurra. Para el evento aún no conocemos el resultado, pero basados en la información previa podemos determinar cual es la posibilidad real que tenemos de obtener el resultado esperado."/>
 
                    <center><h4>La fórmula general de la probabilidad es:</h4></center>
@@ -149,7 +154,11 @@ const Probabilidades =()=>{
 
         <SubChapter id = "permutaciones">
           <SubTitle title ="3.5- Que son las permutaciones y como se calculan"/>
-          <Paragraph texto = {["Las permutaciones hacen referencia al número total de las diferentes posibles maneras en que podemos organizar un determinado número de elementos. Las permutaciones siempre se representan por los números factoriales. ", <b>En las permutaciones SI importa el orden ya que el intercambio entre dos elementos distintos genera una nueva permutación.  En las permutaciones NO se repiten los elementos, ya que de repetirse o ser iguales entre si, no se genera una nueva permutación.</b>, " En las permutaciones simpre tenemos igual número de espacios para igual número de elementos." ]} />
+          <Paragraph texto = {<><p>Las permutaciones hacen referencia al número total de las diferentes posibles maneras en que podemos organizar un
+            determinado número de elementos. Las permutaciones siempre se representan por los números factoriales.
+            <b> En las permutaciones SI importa el orden ya que el intercambio entre dos elementos distintos genera una nueva permutación. 
+            En las permutaciones NO se repiten los elementos, ya que de repetirse o ser iguales entre si, no se genera una nueva permutación. </b>
+            En las permutaciones simpre tenemos igual número de espacios para igual número de elementos.</p></>}/>
           <center><h4>La fórmula para representar las permutaciones es:</h4></center>
           <br />
           <center><h2> Pn = n!</h2></center>
@@ -167,8 +176,10 @@ const Probabilidades =()=>{
           <Paragraph texto = "Las variaciones representan el numero de las diferentes posibles maneras en que se pueden seleccionar un p número de elementos que pertenecen a un grupo n.  En las variaciones ordinarias a diferencia de las permutaciones, no entran todos los elementos, solo se selecciona un p número de un total n. Si importa el orden y no hay repetición del mismo elemento (la vaca no vuelve al corral), aunque también existe un tipo de variaciones con repetición como veremos mas adelante. "/>
 
           <SubTitle title ="3.6.1- Variaciones sin repeticiones"/>
-          <Paragraph text = {["Se da cuando tenemos determinado número de elementos n y un número limitado de posiciones p para asignar. ", <b>Ojo en este caso no puede haber repeticiones</b>,". Por ejemplo tenemos 3 elementos A, B y C y deseamos seleccionar solamente 2, de cuantas maneras podremos seleccionar ", <b>solo dos de los tres elementos disponibles? </b>, " Las combinaciones que serían posibles son:  AB AC BA BC CA CB es decir tenemos seis posibles maneras de combinar dos extracciones (n) de tres posibles diferentes elementos (M)."]}/>
-
+          <Paragraph texto = {<><p>Se da cuando tenemos determinado número de elementos n y un número limitado de posiciones p para asignar.
+            <b> Ojo en este caso no puede haber repeticiones.</b> Por ejemplo tenemos 3 elementos A, B y C y deseamos seleccionar solamente 2, 
+            de cuantas maneras podremos seleccionar<b> solo dos de los tres elementos disponibles?. </b> Las combinaciones que serían posibles son:
+              AB AC BA BC CA CB es decir tenemos seis posibles maneras de combinar dos extracciones (n) de tres posibles diferentes elementos (M).</p></>}/>
           <center><h4>Fórmula general de las variaciones sin repecicion es:</h4></center>
           <ImageCorousel
           width={"30%"}
@@ -206,14 +217,18 @@ const Probabilidades =()=>{
                 image = {varconrep}
                 texto = "Seleccionar 4 novillas de 10 posibles teniendo en cuenta el orden"
                 />  
-             <Paragraph texto = {["Donde V representa las variaciones  con repetición, n es el número de elementos disponibles y p es el numero de elementos que estamos organizando.  Entonces en este caso n serian los 10 dígitos del 0 al 9 y p serían los 6 dígitos a seleccionar.  Entonces tendremos 10",<sup>6</sup>," = 1'000.000 de variaciones. Para el efecto de los registros no importa que los números se repitan, es decir podemos tener un registro 111111 y es perfectamente válido por eso utilizamos la formula con repetición, mientras que con animales por ejemplo, no podemos utilizar la repetición como en el ejemplo anterior"
-
-             ]}/>
+             <Paragraph texto = {<><p>Donde V representa las variaciones  con repetición, n es el número de elementos disponibles y p es el numero de
+                elementos que estamos organizando.  Entonces en este caso n serian los 10 dígitos del 0 al 9 y p serían los 6 dígitos a seleccionar. 
+                Entonces tendremos 10<sup>6</sup> = 1'000.000 de variaciones. Para el efecto de los registros no importa que los números se repitan, 
+                es decir podemos tener un registro 111111 y es perfectamente válido por eso utilizamos la formula con repetición, mientras que con 
+                animales por ejemplo, no podemos utilizar la repetición como en el ejemplo anterior.</p></>}/>
         </SubChapter>
 
         <SubChapter id = "combinaciones">
           <SubTitle title="3.7- Que son las combinaciones"/>
-          <Paragraph texto = {["Las ", <b>combinaciones representan el numero de diferentes maneras posibles como se pueden escoger un numero de elementos</b>, ". En las combinaciones el orden de selección no es importante a diferencia de las variaciones y no es posible la repetición (es igual seleccionar ABC que CBA o BAC)."]}/>
+          <Paragraph texto = {<><p>Las<b> combinaciones representan el numero de diferentes maneras posibles como se pueden escoger un numero de 
+            elementos</b>. En las combinaciones el orden de selección no es importante a diferencia de las variaciones y no es posible la repetición
+             (es igual seleccionar ABC que CBA o BAC).</p></>}/>
           <center><h4>Fórmula general de las combinaciones</h4></center>
           <ImagePlus 
                 width ="25%"
@@ -222,16 +237,18 @@ const Probabilidades =()=>{
                 />  
              <Paragraph texto ="Donde C son las combinaciones, n es el numero total de elementos en el espacio muestral y p ese es el numero de elementos que necesitamos seleccionar. "/>
 
-          <Paragraph texto = {[" Si se van a seleccionar 4 novillas de las 10 disponibles para la feria de exhibición, (siguiendo el ejemplo que hicimos en la sección de ",<a href="#variaciones"><u>variaciones sin repetición</u></a>," pero en este caso el orden no es importante, entonces, cuantas posibles combinaciones existen?. " ]}/>
+          <Paragraph texto = {<><p>Si se van a seleccionar 4 novillas de las 10 disponibles para la feria de exhibición,
+            (siguiendo el ejemplo que hicimos en la sección de<HashLink smooth to={"/Probabilidades#variaciones"}><u>variaciones sin repetición</u></HashLink> pero en este caso el
+             orden no es importante, entonces cuantas posibles combinaciones existen?.</p></>}/>
 
           <ImagePlus 
                 image = {combII}
                 texto = "Selección de animales sin importar el orden de salida"
                 />  
              <Paragraph texto ="Entonces despejando la fórmula, tendriamos un total de 210 combinaciones diferentes para seleccionar las 4 novillas. Un número inferior si comparamos con las 5039 variaciones cuando importa la posición. "/>
-         <h2>3.7.1- Combinaciones con espacios muestrales diferentes</h2>
-        
-        <Paragraph texto = "Este tipo de combinaciones representa el numero de diferentes posibles combinaciones en que podemos escoger un determinado numero de elementos de dos o mas espacios muestrales. Ejemplo, si continuamos con nuestro ejemplo de los registros, donde encontramos 1'000.000 de posibles variaciones, que pasa si decidimos agregar 3 letras seleccionadas entre la A hasta la J (10 letras)? "/>
+
+         <SubTitle title="3.7.1- Combinaciones con espacios muestrales diferentes"/>
+        <Paragraph texto = "Este tipo de combinaciones representa el numero de diferentes posibles combinaciones en que podemos escoger un determinado numero de elementos de dos o mas espacios muestrales. Ejemplo, si continuamos con nuestro ejemplo de los registros, donde encontramos 1'000.000 de posibles variaciones, que pasa si decidimos agregar 3 letras seleccionadas entre la A hasta la J (10 letras)?."/>
         <center><h4>Fórmula para combinaciones con espacios muestrales diferentes</h4></center>
         <ImagePlus 
                 image = {combIII}
@@ -239,7 +256,9 @@ const Probabilidades =()=>{
                 />  
              <Paragraph texto ="Donde C representa las combinaciones, n1 es el tamaño del primer espacio muestral, n2 es el segundo espacio muestral etc. Es importante que la opción que escogemos en un espacion muestral no afecta el numero de opciones de los otros espacios. El orden en el que escogemos el elemento individual es arbitrario y necesitamos conocer el tamaño del espacio muestral para cada elemento individual  "/>
 
-        <Paragraph texto= {["Entonces despejando la fórmula para continuar con nuestro ejemplo de registos con números y letras, la primera parte es 10",<sup>6</sup>, " * 10",<sup>3</sup>, " = 10", <sup>9</sup>, " posibles combinaciones. Si no necesitamos tantos registros, creo que deberiamos considerar reducir el número de cifras en el primer espacio muestral!"]}/>
+        <Paragraph texto= {<><p>Entonces despejando la fórmula para continuar con nuestro ejemplo de registos con números y letras, la primera parte es
+           10<sup>6</sup> * 10<sup>3</sup> = 10<sup>9</sup> posibles combinaciones. Si no necesitamos tantos registros, creo que 
+           deberiamos considerar reducir el número de cifras en el primer espacio muestral!.</p></>}/>
         </SubChapter>
 
         <ReferencesBlock 
