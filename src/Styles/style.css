@@ -71,11 +71,32 @@ img{
   z-index: 10;
   list-style: none;
   justify-content: space-between;
+  animation-duration: 2s;
+  animation-name: navdown;
  }
- 
-/* .navbar.top{
-  transform: translateY(0px);
-} */
+
+ @keyframes navdown {
+   0% {
+     top: -20vh;
+   }
+   100% {
+     top: 0%;
+   }
+ }
+.navbar.hidden{
+  top: -20vh;
+  animation-duration: 2s;
+  animation-name: navup;
+}
+
+@keyframes navup {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: -20vh;
+  }
+}
 
 .navbar_container {
   display: flex;

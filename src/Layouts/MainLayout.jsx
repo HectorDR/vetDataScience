@@ -9,13 +9,12 @@ const MainLayout = () => {
 
   // scroll control
   const page = useRef()
-  const [scrollPosition,setScrollPosition] = useState(0);
-  window.addEventListener('scroll',() => setScrollPosition(window.scrollY))
+  const [headerVisible,setheaderVisible] = useState(true);
 
   return (
     <div className='main_layout' ref={page}>
-      <scrollContext.Provider value={scrollPosition}>
-        {scrollPosition<400?<BarraDeNavegacion/>:null}
+      <scrollContext.Provider value={{headerVisible: headerVisible, setHeader: setheaderVisible}}>
+        <BarraDeNavegacion/>
         <Outlet/>
         <Footer/>
       </scrollContext.Provider>

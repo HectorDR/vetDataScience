@@ -5,10 +5,27 @@ import { Link } from 'react-router-dom';
 import { HashLink } from '@xzar90/react-router-hash-link';
 import LogoutButton from './LogoutButton';
 import { useAuth0 } from '@auth0/auth0-react';
+import { scrollContext } from 'Layouts/MainLayout'
+import { useContext } from 'react'
+import { useEffect, useState } from 'react';
 const BarraDeNavegacion = () => {
+
   const {user} = useAuth0();
+  const [navClass, setNavClass] = useState("navbar")
+  const header = useContext(scrollContext)
+  useEffect(() =>{
+    if(header.headerVisible)
+    {
+      setNavClass("navbar")
+    }
+    else
+    {
+      setNavClass("navbar hidden")
+    }
+  },[header.headerVisible])
+
   return (
-    <div id="navbar" className="navbar">
+    <div id="navbar" className={navClass}>
         <div className= "logo">
         <span className="text-primary"><FontAwesomeIcon icon={faBookOpen} size="1x"/> Introducción a la Ciencia de Datos para MVZ</span>
         </div>

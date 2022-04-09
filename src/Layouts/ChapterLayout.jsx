@@ -5,7 +5,6 @@ import { scrollContext } from './MainLayout'
 import { useContext } from 'react'
 const ChapterLayout = (props) => {
   
-  const scrollPosition = useContext(scrollContext)
   return (
     <div id="home">
         <ChapterHead
@@ -13,7 +12,7 @@ const ChapterLayout = (props) => {
           background={props.chapter_image}
         />
          <main className="inside_layout">
-          {scrollPosition >500?<LateralMenu/>:null}
+          <LateralMenu/>
           <div className="main_content">
               {props.children}
           </div>
