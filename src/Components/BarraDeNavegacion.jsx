@@ -11,6 +11,8 @@ import { useEffect, useState } from 'react';
 const BarraDeNavegacion = () => {
 
   const {user} = useAuth0();
+
+  // manejo de navbar por contexto compartido con el header de la web
   const [navClass, setNavClass] = useState("navbar")
   const header = useContext(scrollContext)
   useEffect(() =>{

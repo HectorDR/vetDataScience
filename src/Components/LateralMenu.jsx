@@ -1,14 +1,32 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import cowLogo from "Media/images/cow_logo.svg"
 import ChapterAccordion from './ChapterAccordion';
 import menuexit from "Media/images/menuexit.svg"
+import { scrollContext } from 'Layouts/MainLayout'
+import { useContext } from 'react'
 const LateralMenu = () => {
 
     const [open,setOpen] = useState(false);
-    const [menuClass,setMenuClass] = useState('lateral_menu')
+    const [menuClass,setMenuClass] = useState("lateral_menu")
+
+  // manejo de menulateral por contexto compartido con el header de la web
+  const [visibleHamburguer, setVisibleHamburguer] = useState("floating_hamburger")
+  const header = useContext(scrollContext)
+  useEffect(() =>{
+    if(header.headerVisible && visibleHamburguer == "floating_hamburger visible")
+    {
+      setVisibleHamburguer("floating_hamburger hidden")
+      setOpen(false)
+    }
+    else if(header.headerVisible == false && (visibleHamburguer == "floating_hamburger" || visibleHamburguer == "floating_hamburger hidden"))
+    {
+      setVisibleHamburguer("floating_hamburger visible")
+    }
+    else{}
+  },[header.headerVisible])
 
   return (
     <>
@@ -16,7 +34,7 @@ const LateralMenu = () => {
     {open===true?<div className='lateral_menu__relative_block'/>:null}
 
     {/* // boton flotante hamburguesa */}
-    {open===false?<div className='floating_hamburger' onClick={() => {
+    {open===false?<div className={visibleHamburguer} onClick={() => {
           setOpen(true)
           setMenuClass('lateral_menu active')}}>
             <FontAwesomeIcon icon={faBars} size="3x"/>
