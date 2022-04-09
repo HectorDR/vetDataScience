@@ -624,6 +624,10 @@ font-weight: 100
   left: 6vh;
   top: 1vh;
 }
+.lateral_menu__exit:hover{
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+}
 
 .lateral_menu.active{
   transition: 1s;
