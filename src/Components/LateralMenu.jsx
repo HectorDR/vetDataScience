@@ -19,6 +19,7 @@ const LateralMenu = () => {
     if(header.headerVisible && visibleHamburguer == "floating_hamburger visible")
     {
       setVisibleHamburguer("floating_hamburger hidden")
+      setMenuClass('lateral_menu')
       setOpen(false)
     }
     else if(header.headerVisible == false && (visibleHamburguer == "floating_hamburger" || visibleHamburguer == "floating_hamburger hidden"))
@@ -48,7 +49,7 @@ const LateralMenu = () => {
       setOpen(false)
       setMenuClass('lateral_menu')}}/>
     </div> 
-    <h3>VetDataScience</h3>
+    <h3 className='lateral_menu__titulo'>VetDataScience</h3>
     <ChapterAccordion chapter={{texto:"1- Definiciónes generales de la ciencia de los datos",link:"/Post"}}
     subchapters={[{texto:"1.1-Qué es la ciencia de los datos",link:"#definicion"},{texto:"1.2- Qué son los datos crudos",link:"#datos"},{texto:"1.3- Clasificación de los datos según su naturaleza",link:"#raw"}]}/>
     </div>
