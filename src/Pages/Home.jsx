@@ -14,24 +14,19 @@ const Home = () => {
            <center> <h1>Bienvenidos a esta Introducción a la ciencia de los datos para Medicos Veterinarios y Zootecnistas</h1></center>
            <br />
          
-          <p>Esta página ha sido creada pensando en los profesionales y estudiantes del sector pecuario que tienen la necesidad de trabajar con datos. Existe hoy en día la necesidad de entender los datos que se generan al interior y al exterior de la empresa pecuaria e ir un poco mas allá en la interpretación de los mismos para convertirlos en información valiosa. Es por ello, que si usted es un profesional Medico Veterinario, Zootecnista, estudiante o alguien interesado en el sector pecuario, que aqui va a encontrar algunas bases fundamentales sobre el manejo de los datos que se recojen en el diario vivir de nuestras empresas y muchos ejemplos aplicados que le permitiran entender su utilidad y aplicabilidad. A la vez espero que pueda implementarlos en su proceso de toma de decisiones.  Los temas a tratar son los siguientes:
+          <p>Esta página ha sido creada pensando en los profesionales y estudiantes del sector pecuario que tienen la necesidad de trabajar con datos. Existe hoy en día la necesidad de entender los datos que se generan al interior y al exterior de la empresa pecuaria e ir un poco mas allá en la interpretación de los mismos para convertirlos en información valiosa. Es por ello, que si usted es un profesional Medico Veterinario, Zootecnista, estudiante o alguien interesado en el sector pecuario, que aqui va a encontrar algunas bases fundamentales sobre el manejo de los datos que se recojen en el diario vivir de nuestras empresas y muchos ejemplos aplicados que le permitiran entender su utilidad y aplicabilidad. A la vez espero que pueda implementarlos en su proceso de toma de decisiones.
+            <br/>Los temas a tratar son los siguientes:
           
           
          </p>
 
           </section>
-          <section id = "contents" className = "container">
+          <section id = "contents">
           <Chapters/>
           </section>
-          <section id = "contact" className = "container" >
-      <div className = "row">
-           
-      </div>
-      <div className = "column container" >
-        <Form/>
-        </div>
-        
-        </section>
+          <section id = "contact" style={{margin : "2vh 0"}}>
+            <Form/>
+          </section>
     </div>
   );
 };

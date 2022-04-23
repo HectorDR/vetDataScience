@@ -258,7 +258,7 @@ img{
 
 .callback-form{
   width: 100%;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 .callback-form label{
   display: block;
@@ -493,14 +493,16 @@ font-weight: 100
   cursor: pointer;
 }
 
+
 .chapters{
-  display: flex;
+  margin: 0 25vh;
+  display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 12px;
 }
 
 .chapter_card{
-  margin: 2vh;
   display: flex;
   flex-direction: column;
   width: 17rem;
