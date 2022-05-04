@@ -10,7 +10,7 @@ import anava from "Media/images/anavapic.png"
 const Chapters = () => {
   return (
     <div className='chapters'>
-        <ChapterCard imagen={data} link = "Post" titulo="1- Introducción a la ciencia de los datos"/>
+        <ChapterCard imagen={data} link = "Post" titulo="1- Introducción al análisis de los datos"/>
         <ChapterCard imagen={dataprocess} link = "Examples" titulo="2- Cuáles son los datos estructurados y como se deben alistar para su procesamiento."/>
         <ChapterCard imagen={probability} link = "Probabilidades" titulo="3- Que son las probabilidades y cómo nos pueden ayudar a tomar decisiones."/>
         <ChapterCard imagen={analisisgrafica} link ="Distribuciones" titulo="4- Como se distribuyen los datos y que análisis hacer de acuerdo a esto."/>

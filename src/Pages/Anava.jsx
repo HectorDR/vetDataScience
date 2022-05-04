@@ -75,7 +75,7 @@ const Anava = () => {
         Excel permite realizar varios tipos de ANAVAS, sin embargo, para realizarlo es necesario activar la aplicación <b>Data Analysis</b> que 
         viene incorporada con el software. Esta aplicacion permite realizar análisis de varianza de un solo factor, de doble factor, sin replicación y 
         dos factores con replicación. Para saber como activar la herramienta en su software Excel le recomiendo revisar el enlace
-        <a href="https://support.microsoft.com/es-es/office/cargar-herramientas-de-análisis-en-excel-6a63e598-cd6d-42e3-9317-6b40ba1a66b4">
+        <a href="https://support.microsoft.com/es-es/office/cargar-herramientas-de-análisis-en-excel-6a63e598-cd6d-42e3-9317-6b40ba1a66b4" target = "_blank">
         <u>cargar herramienta de análisis en Excel</u>.</a>
       </p></>}/>
       
@@ -149,8 +149,8 @@ const Anava = () => {
         encuentran encasetadas. <br/><br/>Este ANAVA comprueba dos tipos de H<sub>0</sub>:<br/> 1- Que las medias de las variables medidas son iguales
         para los diferentes valores de la primera variable nominal;<br/> 2- Que las medias son iguales para los diferentes valores de la segunda variable.<br/><br/>
         Es decir, se busca comprobar que las medias de las observaciones agrupadas por el factor A son nulas, y que las medias agrupadas por el
-        factor B son nulas.  No es imposible probar la interacción (AxB) la interacción pero  para ello son necesarias las repeticiones lo cual
-        veremos mas adelante.<br/>
+        factor B son nulas.  No es imposible probar la interacción (AxB) pero para ello son necesarias las repeticiones lo cual
+        veremos mas adelante. En este caso no se puede hacer pues no hay repeticiones<br/>
         En otro ejemplo, deseamos conocer si los promedios de producción lechera en kg ajustada a 305 dias en 12 regiones obtenidos a partir de muestras
         de 12 hatos lecheros representativos en Canadá y discriminados por lactancias de la 1ª a la 5ª son diferentes entre ellos o no.<br/><br/>
         Cuando tenemos dos factores entonces podremos calcular dos hipótesis nulas H<sub>0</sub>:</p>
@@ -313,13 +313,12 @@ const Anava = () => {
         La regresión lineal es una de las multiples pruebas que se utilizan para identificar si una variable independiente afecta una variable 
         dependiente y poder medir la fuerza de esa asociación utilizamos el R<sup>2</sup>. R<sup>2</sup> representa la proporción de la
         <HashLink smooth to={"/Analisis#dispersion"}><u>varianza</u></HashLink> que es explicada por el modelo, en este caso la variable independiente y sus valores 
-        oscilan entre 0 y 1, siendo 1 el valor dado a un ajusto perfecto, es decir no habría residuales, es decir, la diferencia entre Y y los valores 
-        predichos de Y seria 0 (Macdonald, 2009) es decir un modelo perfecto (un unicornio) <br/> A pesar de que la regresión lineal ha sido 
-        múltiplemente explicada y todo estudiante que haya pasado por estadística I la conoce, es importante revisarla pues muchas veces contituye 
-        la base fundamental de cualquier análisis y teniendo los datos como recurso principal vale la pena explorar, sin embargo no vamos a entrar en
+        oscilan entre 0 y 1, siendo 1 el valor dado a un ajuste perfecto, es decir no habría residuales, es decir, la diferencia entre Y y los valores 
+        predichos de Y seria igual a 0 (Macdonald, 2009) es decir un modelo perfecto (un unicornio). <br/> A pesar de que la regresión lineal ha sido explicada y todo estudiante que haya pasado por estadística I la conoce, es importante revisarla pues muchas veces contituye 
+        la base fundamental de cualquier análisis y teniendo los datos como recurso principal vale la pena explorar su utilidad, sin embargo no vamos a entrar en
         detalles de como se construye, lo que estamos buscando es su aplicabilidad en nuestra profesión. <br/> En general la regresión lineal es
-        una aproximación que describe un respuesta cuantitativa de Y (variable dependiente) basada en los valores un solo predictor X 
-        (variable independiente). Asume que hay una relación lineal entre X y Y y describe una función de una línea diagonal (James et al., 2013). 
+        una aproximación que describe una respuesta cuantitativa de Y (variable dependiente) basada en los valores un solo predictor X 
+        (variable independiente). Asume que hay una relación lineal entre X y Y y describe una función de una línea diagonal (James et al., 2013). <br/>
         Matemáticamente se describe como:
         </p></>}/>
 

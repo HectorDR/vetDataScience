@@ -29,7 +29,7 @@ const BarraDeNavegacion = () => {
   return (
     <div id="navbar" className={navClass}>
         <div className= "logo">
-        <span className="text-primary"><FontAwesomeIcon icon={faBookOpen} size="1x"/> Introducción a la Ciencia de Datos para MVZ</span>
+        <span className="text-primary"><FontAwesomeIcon icon={faBookOpen} size="1x"/> Introducción al Análisis de Datos para MVZ</span>
         </div>
         <div className='navbar_container'>
           <ul className='navbar_links'>
@@ -38,7 +38,7 @@ const BarraDeNavegacion = () => {
             <li><Link to={"/Contenidos"}>Contenidos</Link></li>
             <li><Link to = {"/Referencias"}>Referencias</Link></li>
             <li><HashLink smooth to={"/#contact"}>Contacto</HashLink></li>
-            <li className='navbar__user_message'>Hola {user.given_name}!</li>
+            {/* <li className='navbar__user_message'>Hola {user.given_name}!</li> */}
           </ul>
           <LogoutButton/>
         </div>

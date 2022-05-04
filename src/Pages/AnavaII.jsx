@@ -26,7 +26,7 @@ import inter3 from "Media/anovas_excel/factor_reg3.png";
 import dummy from "Media/anovas_excel/dummy1.png";
 import dummy2 from "Media/anovas_excel/dummy2.png";
 import dummy3 from "Media/anovas_excel/dummy3.png";
-
+import { HashLink } from "@xzar90/react-router-hash-link";
 
 
 
@@ -66,7 +66,7 @@ const AnavaII = () => {
         </div>
         <SubChapter id = "reglinex">
             <SubTitle title = "7.6- Regresión lineal simple en Excel"/>
-            <Paragraph texto = {["En La tabla inferior podemos observar la producción de arroz en toneladas por hectárea/año y el régimen de lluvias en la India, referenciados en el paper de Sellam y Poovammal (2016).  Como vimos en el gráfico presentado en la ", <a href="Anava#linearreg"><u>sección anterior</u></a>, ", parece existir una relación lineal donde a mayor cantidad de lluvia, existe una disminución de la cosecha (relación inversa). Entonces, vamos a utilizar la herramienta ", <b>Data Analysis</b>, " de Excel y generar un modelo sencillo donde el predictor será el regimen de lluvias y la variable dependiente la producción de arroz." ]}/>
+            <Paragraph texto = {<><p>En La tabla inferior podemos observar la producción de arroz en toneladas por hectárea/año y el régimen de lluvias en la India referenciados en el paper de Sellam y Poovammal (2016).  Como vimos en el gráfico presentado en la <HashLink smooth to ={"/Anava#linearreg"}><u>sección anterior</u></HashLink>, parece existir una relación lineal donde a mayor cantidad de lluvia, existe una disminución de la cosecha (relación inversa). Entonces, vamos a utilizar la herramienta  <b>Data Analysis</b> de Excel para generar un modelo sencillo donde el predictor será el regimen de lluvias y la variable dependiente la producción de arroz. </p></>}/>
 
         <ImagePlus
           image={simplr}
@@ -74,10 +74,10 @@ const AnavaII = () => {
           width="35%"
           max_zoom = "60%"
         />
-        <Paragraph texto = {[
-            <center> <h4>La tabla presenta el volumen de lluvias anual, la producción total de arroz en toneladas y el rendimiento por ha en India enttre los años 2000 a 2010.</h4> </center>, <br/>, <br />,
-            "Una vez que los datos están ubicados en una tabla simple como la que se muestra arriba, del menú datos, seleccionamos ", <b>Data Analysis</b> ," y la opción regresión y de ahí se desprende la siguiente hoja de diálogo:"
-        ]}/>
+        <Paragraph texto = {<><p>
+            <center> <h4>La tabla presenta el volumen de lluvias anual, la producción total de arroz en toneladas y el rendimiento por ha en India enttre los años 2000 a 2010.</h4> </center> <br/>
+            Una vez que los datos están ubicados en una tabla simple como la que se muestra arriba, del menú datos, seleccionamos  <b>Data Analysis</b> y la opción regresión y de ahí se desprende la siguiente hoja de diálogo:
+            </p></>}/>
         <ImagePlus
           image={simplr2}
           texto="Menú de diálogo para seleccionar opciones"
@@ -85,8 +85,8 @@ const AnavaII = () => {
           max_zoom = "60%"
         />
 
-        <Paragraph texto = {["La el menú que se aprecia el recuadro superior nos pide seleccionar el rango donde se encuentra la variable Y (dependiente), luego la variable X (predictiva), el nivel de Confianza (para este caso  por defecto vamos a dejar el 95% o sea una significancia del 5%) y finalmente seleccionamos la ubicación para la generación del reporte. Hacemos click en OK para obtener un reporte con tres tablas como el que se observa a continuación."]}/>
-
+        <Paragraph texto = {["El menú que se aprecia en el recuadro superior nos pide seleccionar el rango donde se encuentra la variable Y (dependiente), luego la variable X (predictiva), el nivel de Confianza (para este caso  por defecto vamos a dejar el 95% o sea una significancia del 5%) y finalmente seleccionamos la ubicación para la generación del reporte. Hacemos click en OK para obtener un reporte con tres tablas como el que se observa a continuación:"]}/>
+<br/>
         <ImagePlus
           image={simplr3}
           texto="Reporte generado por Excel"
@@ -94,11 +94,11 @@ const AnavaII = () => {
           max_zoom = "60%"
         />
 
-        <Paragraph texto = {[
-            "La primera tabla del reporte de Excel (cuadro superior) nos muestra varios resultados. El valor que mas nos interesa aquí es el R",<sup>2</sup>, "como hemos visto anteriormente este valor  mide hasta que nivel las variables utilizadas para predecir explican la variación en los resultados de la variable dependiente. En este caso el R",<sup>2</sup>," es de 0.61, entonces esto significa que el 61 de la variación se explica por el régimen de lluvias. Entre mas alto sea el valor de R",<sup>2</sup>,"  mejor será el ajuste del modelo.  Una forma sencilla de comprobar un R",<sup>2</sup> ,"es que en el gráfico de dispersión los puntos están cercanos a la línea diagonal, o en otras palabras casi que los puntos arman la línea.  Es lógico que la lluvia no explique toda la variabilidad en los resultados, sin embargo, como vemos lleva una parte alta en la responsabilidad. Parece que un exceso en el régimen de lluvias va a causar una disminución en la cosecha. ",<br/>,
-            "La segunda tabla corresponde al análisis de varianza. En esta parte es donde vamos a comprobar nuestra hipótesis nula  (H",<sub>0</sub>,"), que para la regresión simple seria que la diagonal de la línea de mejor ajuste es igual a cero. Es decir, no hay ningún efecto de la variable independiente sobre la variable dependiente. De esta tabla debemos sobre todo fijarnos en el valor de F y su significancia.  En este caso la significancia de F (0.0046) es inferior al nivel de significancia seleccionado (0.05) por tanto tenemos que rechazar la H",<sub>0</sub>,"y aceptar la H",<sub>1</sub>, ", es decir el régimen de lluvias tiene una afectación sobre la producción anual de arroz/ha.",<br/>,
-            "La tercera tabla del análisis de varianza nos presenta los coeficientes y errores estándar tanto del intercepto y del valor de X o sea la lluvia anual.  Estos coeficientes son los que podremos utilizar para estimar los valores de Y reemplazandolos en la ecuación de ",<a href="anava.html#linearreg"><u>la regresión simple</u></a>,". Es importante que cuando se haga predicción la realicemos dentro del rango de los valores de X hallados en los datos originales (interpolación).  Predecir valores de Y fuera de este rango de valores observados (extrapolación) puede dar resultados inesperados pues no sabemos como se comportan los datos por fuera de del rango establecido. "
-        ]}/>
+        <Paragraph texto = {<><p>
+            La primera tabla del reporte de Excel (cuadro superior) nos muestra varios resultados. El valor que mas nos interesa aquí es el R<sup>2</sup>. Como hemos visto anteriormente este valor  mide hasta que nivel las variables utilizadas para predecir explican la variación en los resultados de la variable dependiente. En este caso el R<sup>2</sup> es de 0.61, entonces esto significa que el 61% de la variación se explica por el régimen de lluvias. Entre mas alto sea el valor de R<sup>2</sup>  mejor será el ajuste del modelo.  Una forma sencilla de comprobar un R<sup>2</sup> es que en el gráfico de dispersión los puntos están cercanos a la línea diagonal, o en otras palabras casi que los puntos arman la línea.  Es lógico que la lluvia no explique toda la variabilidad en los resultados, sin embargo, como vemos lleva una parte alta en la responsabilidad. Parece que un exceso en el régimen de lluvias va a causar una disminución en la cosecha. <br/>
+            La segunda tabla corresponde al análisis de varianza. En esta parte es donde vamos a comprobar nuestra hipótesis nula  (H<sub>0</sub>), que para la regresión simple seria que la diagonal de la línea de mejor ajuste es igual a cero. Es decir, no hay ningún efecto de la variable independiente sobre la variable dependiente. De esta tabla debemos sobre todo fijarnos en el valor de F y su significancia.  En este caso la significancia de F (0.0046) es inferior al nivel de significancia seleccionado (0.05) por tanto tenemos que rechazar la H<sub>0</sub> y aceptar la H<sub>1</sub>, es decir el régimen de lluvias tiene una afectación sobre la producción anual de arroz/ha.<br/>
+            La tercera tabla del análisis de varianza nos presenta los coeficientes y errores estándar tanto del intercepto y del valor de X o sea la lluvia anual.  Estos coeficientes son los que podremos utilizar para estimar los valores de Y reemplazandolos en la ecuación de <HashLink smooth to ={"anava.html#linearreg"}><u>la regresión simple</u></HashLink>. Es importante que cuando se haga predicción la realicemos dentro del rango de los valores de X hallados en los datos originales (interpolación).  Predecir valores de Y fuera de este rango de valores observados (extrapolación) puede dar resultados inesperados pues no sabemos como se comportan los datos por fuera de del rango establecido. 
+            </p></>}/>
 
         <ImagePlus
           image={simplr4}
@@ -107,22 +107,22 @@ const AnavaII = () => {
           max_zoom = "60%"
         />
 
-        <Paragraph texto = {[
-            <center> <h4> Gráfico de dispersión que muestra los valores de Y (azul) frente a los valores estimados y por el modelo de regresión lineal simple </h4> </center>, <br />, "Al seleccionar la opción de Regresión en la herramienta de análisis de datos, La hoja de diálogo nos permite seleccionar la opción de graficar los resultados del modelo y comparar con los resultados de la tabla como se observa en el gráfico superior.  Esto nos permite ver el ajuste y visualizar que tan preciso puede ser el modelo al utilizarlo en la práctica."
-        ]}/>
+        <Paragraph texto = {<><p>
+            <center> <h4> Gráfico de dispersión que muestra los valores de Y (azul) frente a los valores estimados y por el modelo de regresión lineal simple </h4> </center> <br /> Al seleccionar la opción de Regresión en la herramienta de análisis de datos, la hoja de diálogo nos permite seleccionar la opción de graficar los resultados del modelo y comparar con los resultados de la tabla como se observa en el gráfico superior. Esto nos permite ver el ajuste y visualizar que tan preciso puede ser el modelo al utilizarlo en la práctica."
+            </p></>}/>
 
         <center><SubTitle title = "Regresión lineal simple en Excel"/></center>
       
-      <Video id="K5cBjru20RU" title="Regresión lineal simple en Excel" />
+      <Video id="WalnDYHmi5I" title="Regresión lineal simple en Excel" />
       </SubChapter>
 
     <SubChapter id = "regmult">
         <SubTitle title = "7.7- Regresión múltliple en Excel"/>
-        <Paragraph texto = {[
+        <Paragraph texto = {<><p>
             
-            "Cuando estamos buscando medir el impacto de varias variables idependientes sobre una dependiente, una alternativa sería crear un modelo de regresión lineal simple para cada predictor, pero esto no sería acertado ya que no está claro como hacer una sola predicción para dos o mas variables y cada uno de los modelos simples estaría ignorando el efecto de las otras variables (Macdondald 2009). Como alternativa se utiliza un modelo similar al de la regresión lineal simple pero cada uno de los predictores tiene un coeficiente de inclinación diferente.", <br />,
-            "La regresión múltiple no es muy diferente de la regresión simple.  Esta se utiliza cuando existe mas de un predictor o variable independiente (variable X). Generalmente este modelo es mucho mas común que la regresión simple. La diferencia está en que esta tiene mas elementos independientes (al menos dos) y a la vez es  mas compleja de visualizar ya que no podríamos manejar el gráfico sobre un plano cartesiano sino al menos en un cubo tridimensional. Por tanto, visualizar el impacto de una variable sobre el resultado no es tan obvio ya que medimos el impacto de multiples variables independientes sobre una variable dependiente. Sin embargo, las herramientas de análisis nos permiten entender los resultados.", 
-        ]}/>
+            Cuando estamos buscando medir el impacto de varias variables idependientes sobre una dependiente, una alternativa sería crear un modelo de regresión lineal simple para cada predictor, pero esto no sería acertado ya que no está claro como hacer una sola predicción para dos o mas variables y cada uno de los modelos simples estaría ignorando el efecto de las otras variables (Macdondald 2009). Como alternativa se utiliza un modelo similar al de la regresión lineal simple pero cada uno de los predictores tiene un coeficiente de inclinación diferente. <br />
+            La regresión múltiple no es muy diferente de la regresión simple.  Esta se utiliza cuando existe mas de un predictor o variable independiente (variable X). Generalmente este modelo es mucho mas común que la regresión simple. La diferencia está en que esta tiene mas elementos independientes (al menos dos) y a la vez es  mas compleja de visualizar ya que no podríamos manejar el gráfico sobre un plano cartesiano sino al menos en un cubo tridimensional. Por tanto, visualizar el impacto de una variable sobre el resultado no es tan obvio ya que medimos el impacto de multiples variables independientes sobre una variable dependiente. Sin embargo, las herramientas de análisis nos permiten entender los resultados. 
+            </p></>}/>
 
         <ImagePlus
           image={multr}
@@ -131,32 +131,32 @@ const AnavaII = () => {
           max_zoom = "60%"
         />
 
-        <Paragraph texto = {[
-            "En la ecuación superior el valor de Y esta dado por 𝛃", <sub>0</sub>," que es el intercepto o el valor de Y cuando X vale 0 y los valores de 𝛃",<sub>n</sub>," representan cada una de las constantes para las pendiente de los multiples valores de X",<sub>n</sub> ,"cuando los demás predictores se mantienen fijos y 𝛆 es el error. Típicamente se asume que el error es independiente de X." ,<br/>,
-            "Entonces resumiendo el propósito de una regresión múltiple es encontrar una ecuación que prediga el valor mas ajustado de Y como una función lineal de múltiples variables X. La regresión múltiple puede ser utilizada bien para predicción o para entender las relaciones funcionales entre las variables dependientes e independientes, o sea para entender como se afecta la variable dependiente cuando se realizan cambios en los predictores. Como saber si el modelo tiene un buen ajuste de los datos? Por el R",<sup>2</sup>," , el coeficiente de múltiple determinación. ", <br />,
-            "Para ilustrar la regresión múltiple tomemos un ejemplo del curso de métodos estadísticos II de la Universidad de McGill (Roger Cue,20?). Para ello tenemos la información de un grupo de 50 vacas que fue alimentado con diferentes dietas utilizando diferentes niveles de alimentación (50 hasta 140 lb de henolaje) y con varias densidades de energía (0.8 hasta 1.6). El rendimiento de leche para la lactación medido en kgs se muestra en la siguiente tabla"
-        ]}/>
+        <Paragraph texto = {<><p>
+            En la ecuación superior el valor de Y esta dado por 𝛃<sub>0</sub> que es el intercepto o el valor de Y cuando X vale 0 y los valores de 𝛃<sub>n</sub> representan cada una de las constantes para las pendiente de los multiples valores de X<sub>n</sub> cuando los demás predictores se mantienen fijos y 𝛆 es el error. Típicamente se asume que el error es independiente de X.<br/>
+            Entonces resumiendo el propósito de una regresión múltiple es encontrar una ecuación que prediga el valor mas ajustado de Y como una función lineal de múltiples variables X. La regresión múltiple puede ser utilizada bien para predicción o para entender las relaciones funcionales entre las variables dependientes e independientes, o sea para entender como se afecta la variable dependiente cuando se realizan cambios en los predictores. Como saber si el modelo tiene un buen ajuste de los datos? Por el R<sup>2</sup> , el coeficiente de múltiple determinación. <br />
+            Para ilustrar la regresión múltiple tomemos un ejemplo del curso de métodos estadísticos II de la Universidad de McGill (Cue, 2019). Para ello tenemos la información de un grupo de 50 vacas que fue alimentado con diferentes dietas utilizando diferentes niveles de alimentación (50 hasta 140 lb de henolaje) y con varias densidades de energía (0.8 hasta 1.6). El rendimiento de leche para la lactación medido en kgs se muestra en la siguiente tabla
+            </p></>}/>
         <ImagePlus
           image={multr2}
           texto="Fragmento de la tabla que presenta Densidad de Energia, Cantidad de Alimento y Producción de leche en 50 vacas de ordeño (fuente: Cue, 2019)"
           width="40%"
           max_zoom = "60%"
         />
-        <Paragraph texto = {[
-            <center> <h4> Fragmento de la tabla que presenta Densidad de Energia, Cantidad de Alimento y Producción de leche en 50 vacas de ordeño (fuente: Cue, 2019)</h4></center>, <br />,
-            "Una vez tenemos los datos en una tabla como se presenta en la parte superior, nos ubicamos en la herramienta ",  <b>Data Analysis</b> ,  ",  de Excel y seleccionamos la opción ", <b>regression</b> , " o regresión y en la hoja de diálogo seguimos los mismos pasos que para la regresión simple, solo que para las variables independientes X, el rango no es de una sola columna sino dos o mas dependiendo del módelo, en este caso nuestras variables independientes son la cantidad de alimento y la densidad de la energía.  Una vez que damos OK obtendremos el siguiente reporte:",
-        ]}/>
+        <Paragraph texto = {<><p>
+            <center> <h4> Fragmento de la tabla que presenta Densidad de Energia, Cantidad de Alimento y Producción de leche en 50 vacas de ordeño (Cue, 2019)</h4></center> <br />
+            Una vez tenemos los datos en una tabla como se presenta en la parte superior, nos ubicamos en la herramienta,  <b>Data Analysis</b> de Excel y seleccionamos la opción <b>regression</b> o regresión y en la hoja de diálogo seguimos los mismos pasos que para la regresión simple, solo que para las variables independientes X, el rango no es de una sola columna sino dos o mas dependiendo del módelo, en este caso nuestras variables independientes son la cantidad de alimento y la densidad de la energía.  Una vez que damos OK obtendremos el siguiente reporte:",
+            </p></>}/>
         <ImagePlus
           image={multr3}
           texto=" Informe de regresión múltple generado por Excel Data Analysis"
           width="50%"
           max_zoom = "60%"
         />
-        <Paragraph texto = {[ "El informe que presenta Excel esta dividido en tres tablas, En la primera nos presenta el valor de R",<sup>2</sup>," que para este caso es del 84%. También podemos conocer el valor del R Multiple este valor mide la cantidad de variación en la respuesta variable que puede ser explicada por las variables usadas para predecir el valor de Y.  Cuando se incrementan las variables como resultado R", <sup>2</sup> ," siempre va a aumentar, teniendo presente que un predictor siempre va a explicar alguna proporción de la varianza. El R", <sup>2</sup>," ajustado se usa como un control contra el incremento de variables predictivas (independientes) y genera una penalidad para el numero de predictores en el modelo. Si existe mucha diferencia entre el R",  <sup>2</sup>, " ajustado y el R" , <sup>2</sup>, " significa que el modelo esta sobre ajustado (hay demasiadas variables).", <br />,
-        "La segunda tabla nos presenta el análisis de varianza como tal y como podemos ver en este caso la significancia de F es inferior 0.0001 por tanto el modelo es estadisticamente significativo.  Finalmente, la tercera tabla detalla los componentes del modelo. Los valores de P para ambos coponentes son inferiores a 0.0001 por lo tanto son estadisticamente significativos y podemos incluirlos en el modelo. ",
-        <br />,
+        <Paragraph texto = {<><p> El informe que presenta Excel esta dividido en tres tablas, En la primera nos presenta el valor de R<sup>2</sup> que para este caso es del 84%. También podemos conocer el valor del R Multiple este valor mide la cantidad de variación en la respuesta variable que puede ser explicada por las variables usadas para predecir el valor de Y. Cuando se incrementan las variables como resultado R <sup>2</sup> siempre va a aumentar, teniendo presente que un predictor siempre va a explicar alguna proporción de la varianza. El R<sup>2</sup> ajustado se usa como un control contra el incremento de variables predictivas (independientes) y genera una penalidad para el numero de predictores en el modelo. Si existe mucha diferencia entre el R<sup>2</sup> ajustado y el R<sup>2</sup> significa que el modelo esta sobre ajustado (hay demasiadas variables). <br />
+        La segunda tabla nos presenta el análisis de varianza como tal y como podemos ver en este caso la significancia de F es inferior 0.0001 por tanto el modelo es estadisticamente significativo.  Finalmente, la tercera tabla detalla los componentes del modelo. Los valores de P para ambos coponentes son inferiores a 0.0001 por lo tanto son estadisticamente significativos y podemos incluirlos en el modelo. 
+        <br />
         <h4> <center>Regresión con multiples variables independientes </center></h4>
-        ]}/>
+        </p></>}/>
 
       
       <Video id="PtucNTB4-1w" title="Regresión con multiples variables independientes " />
@@ -179,19 +179,18 @@ const AnavaII = () => {
           width="30%"
           max_zoom = "50%"
         />
-        <Paragraph texto = {[
-          "Donde Y es la variable dependiente, µ es el intercepto, 𝛃", <sub>1</sub>," es el coeficiente de inclinación de la diagonal, X", <sub>i</sub>,
-          " es la variable independiente, 𝛃", <sub>2</sub>, "es el coeficiente de la variable X", <sub>i</sub>, "elevada al cuadrado, X", <sup>2</sup>, "es el cuadrado de la variable independiente y 𝜀 representa el error.", <br/>, "Para este ejemplo vamos a seguir con los datos tomados de Cue (2019) donde un grupo de 50 vacas fue alimentado con dietas utilizando varios niveles de alimentación (50 hasta 140 lb de henolaje) con varias densidades de energía (0.8 hasta 1.6).", <br />,
-          "Cuando hacemos un gráfico de dispersión de los resultados de leche (Y) obtenidos por el valor cuadrático de la dieta podemos observar que a pesar de que hay una tendencia creciente en la producción, en cierto punto parece que hay una meseta y luego una cierta inflexión. Es por ello vamos a ensayar este valor cuadrático en el modelo."
-        ]}/>
+        <Paragraph texto = {<><p>
+          "Donde Y es la variable dependiente, µ es el intercepto, 𝛃<sub>1</sub> es el coeficiente de inclinación de la diagonal, X<sub>i</sub> 
+          es la variable independiente, 𝛃<sub>2</sub>es el coeficiente de la variable X<sub>i</sub> elevada al cuadrado, X<sup>2</sup> es el cuadrado de la variable independiente y 𝜀 representa el error.<br/>Para este ejemplo vamos a seguir con los datos tomados de Cue (2019) donde un grupo de 50 vacas fue alimentado con dietas utilizando varios niveles de alimentación (50 hasta 140 lb de henolaje) con varias densidades de energía (0.8 hasta 1.6).<br />
+          Cuando hacemos un gráfico de dispersión de los resultados de leche (Y) obtenidos por el valor cuadrático de la dieta podemos observar que a pesar de que hay una tendencia creciente en la producción, en cierto punto parece que hay una meseta y luego una cierta inflexión. Es por ello vamos a ensayar este valor cuadrático en el modelo."
+          </p></>}/>
      
+        <Paragraph texto = {<><p>
+          <center> <h4>Gráfico de dispersión que muestra la ingesta de alimento(X) por la producción de leche (Y)</h4></center>
+          <br/>
+          La tabla inferior presenta un fragmento de la información donde se incluye el valor de la densidad de la energía y la ingesta de alimento por vaca según el tratamiento asignado y la producción de leche.  Se incluye también el valor cuadrático de la dieta, para ello en Excel se inserta una columna y simplemente se eleva el valor al cuadrado como se observa en la barra de fórmulas de Excel en la tabla.
 
-        <Paragraph texto = {[
-          <center> <h4>Gráfico de dispersión que muestra la ingesta de alimento(X) por la producción de leche (Y)</h4></center>,
-          <br/>,
-          "La tabla inferior presenta un fragmento de la información donde se incluye el valor de la densidad de la energía y la ingesta de alimento por vaca según el tratamiento asignado y la producción de leche.  Se incluyo también el valor cuadrático de la dieta, para ello en Excel se inserta una columna y simplemente se eleva el valor al cuadrado como se observa en la barra de fórmulas de Excel en la tabla."
-
-        ]}/>
+          </p></>}/>
 
         <ImagePlus
           image={regq3}
@@ -200,9 +199,9 @@ const AnavaII = () => {
           max_zoom = "60%"
         />
 
-        <Paragraph texto = {[
+        <Paragraph texto = {<><p>
           "Entonces para realizar la regresión en Excel, una vez que hemos incluido el elemento cuadrático, vamos a la sección datos y seleccionamos la herramienta ", <b>Data Analysis</b> ,"tal como lo hemos hecho anteriormente.  Seleccionamos la opción Regresión y en la hoja de dialogo seleccionamos el Y (producción de leche), y las variables predictivas o X, este caso Densidad de Energia, Volumen de Dieta y el Factor Cuadrático. Ojo, siempre que incluyamos un valor cuadrático, es necesario incluir el valor original. "
-        ]}/>
+          </p></>}/>
         <ImagePlus
           image={regq4}
           texto="Cuadro de diálogo "
@@ -220,10 +219,10 @@ const AnavaII = () => {
           max_zoom = "60%"
         />
 
-      <Paragraph texto = {[
-         <center><h4>Reporte generado por Excel, listo para ser interpretado</h4></center> ,"La tabla superior nos presenta el R",<sup>2</sup>,
-         "del modelo es del 0.87 o en otras palabras las variables independientes determinan el valor de la variable independiente en un 87% lo cual es muy bueno y esto se confirma con el R",<sup>2</sup>," ajustado ya que estan muy cercanos el uno del otro. Vemos que este modelo ajusta mejor que el modelo de regresión múltiple sin el componente cuadrático ya que el valor R",<sup>2</sup>,"para este modelo fuel del 84%. En la segunda tabla vemos que el modelo es significativo (p < 0.0001) y en la tercera tabla cada uno de los elementos del modelo son tambien significativos (P-value < 0.0001) incluido el efecto cuadrático de la dieta, por tanto, no podemos descartarlo del modelo.  Cuando el valor cuadrático es significativo este es el que se considera significativo, sin embargo el valor simple no se debe eliminar del modelo, simplemente se asume como significativo el valor cuadrático. También en la tercera tabla podemos ver los coeficientes de variación para cada uno de los elementos del modelo con sus errores estándar."
-        ]}/>
+      <Paragraph texto = {<><p>
+         <center><h4>Reporte generado por Excel, listo para ser interpretado</h4></center> La tabla superior nos presenta el R<sup>2</sup>
+         del modelo es del 0.87 o en otras palabras las variables independientes determinan el valor de la variable independiente en un 87% lo cual es muy bueno y esto se confirma con el R<sup>2</sup> ajustado ya que estan muy cercanos el uno del otro. Vemos que este modelo ajusta mejor que el modelo de regresión múltiple sin el componente cuadrático ya que el valor R<sup>2</sup> para este modelo fuel del 84%. En la segunda tabla vemos que el modelo es significativo y en la tercera tabla cada uno de los elementos del modelo son tambien significativos incluido el efecto cuadrático de la dieta, por tanto, no podemos descartarlo del modelo.  Cuando el valor cuadrático es significativo este es el que se considera significativo, sin embargo el valor simple no se debe eliminar del modelo, simplemente se asume como significativo el valor cuadrático. También en la tercera tabla podemos ver los coeficientes de variación para cada uno de los elementos del modelo con sus errores estándar."
+         </p></>}/>
 
       <center><SubTitle title = "Modelo de Regresión cuadrática"/></center>
       
@@ -236,7 +235,7 @@ const AnavaII = () => {
         <Paragraph texto = {[
           "Algunas veces la variable dependiente depende no solo de las variables independientes sino de la interacción entre las variables el modelo. Por ejemplo, si estamos evaluando la producción de leche y en nuestro modelo estamos incluyendo el efecto de la dieta y la ingesta del alimento (Cue, 2019), es posible que exista una interacción entre la dieta y el lote, por ello debemos incluir esta interacción en nuestro modelo. La ecuación entonces se representaría de la siguiente manera:"
         ]}/>
-
+<br/>
       <ImagePlus
           image={inter}
           texto="Módelo con interacción"
@@ -244,10 +243,9 @@ const AnavaII = () => {
           max_zoom = "50%"
         />
 
-        <Paragraph texto = {[
-          "Donde Y es la variable dependiente, 𝝁 es el intercepto, 𝜷", <sub>1</sub>," es el coeficiente de inclinación de la variable independiente X",
-          <sub>1</sub>," (igual para β",<sub>2</sub>, " X",<sub>2</sub>,"), 𝜷",<sub>3</sub>," es el coeficiente de la inclinación de la interacción entre X", <sub>1</sub>, " y X", <sub>2</sub>, " y 𝝐 representa el error." , <br/>, "Supongamos que queremos continuar con el ejemplo anterior y deseamos saber si existe interacción entre la cantidad de alimento ingerido y la densidad de la energía afectando la producción de leche. Entonces para capturar la interacción entre ingesta alimentaria y densidad de la energía, insertamos una variable independiente que llamaremos “interacción” como se observa en la tabla. La interacción simplemente es el producto de ingesta alimentaria y densidad de la energía para cada una de las observaciones. En la barra de operaciones se observa la fórmula de la multiplicación."
-        ]}/>
+        <Paragraph texto = {<><p>
+          Donde Y es la variable dependiente, 𝝁 es el intercepto, 𝜷<sub>1</sub> es el coeficiente de inclinación de la variable independiente X<sub>1</sub> (igual para β<sub>2</sub> X<sub>2</sub>, 𝜷<sub>3</sub> es el coeficiente de la inclinación de la interacción entre X<sub>1</sub> y X<sub>2</sub> y 𝝐 representa el error. <br/>Supongamos que queremos continuar con el ejemplo anterior y deseamos saber si existe interacción entre la cantidad de alimento ingerido y la densidad de la energía afectando la producción de leche. Entonces para capturar la interacción entre ingesta alimentaria y densidad de la energía, insertamos una variable independiente que llamaremos “interacción” como se observa en la tabla. La interacción simplemente es el producto de ingesta alimentaria y densidad de la energía para cada una de las observaciones. En la barra de operaciones se observa la fórmula de la multiplicación.
+          </p></>}/>
 
       <ImagePlus
           image={inter2}
@@ -261,6 +259,7 @@ const AnavaII = () => {
           <br />,
           "Una vez hemos hecho la interacción para cada observación, vamos a la herramienta “Data Analysis” de Excel y seleccionamos la opción Regresión tal como lo hemos visto anteriormente. Una vez que damos OK, podemos ver el reporte de Excel que se presenta a continuación:"
         ]}/>
+        <br/>
       <ImagePlus
           image={inter3}
           texto="Reporte generado por Excel"
@@ -268,11 +267,11 @@ const AnavaII = () => {
           max_zoom = "80%"
         />
 
-      <Paragraph texto = {[
-          <center><h4> Reporte generado por Excel </h4></center>,
-          <br />,
-          "Como vemos el reporte generado por Excel es similar al de todas las anteriorers regresiones, por ello no vamos a entrar en detalle, solo vemos que el R", <sup>2</sup>," es inferior al modelo con el componente cuadrático, por tanto sabemos que este módelo seguramente no será el modelo a escoger.  Al observar el análisis de varianza vemos que la interacción entre la Energía y la Dieta no son significativas (P-value = 0.43) por tanto debemos descartar la interacción, mientras que las demás variables si son significativas. En caso de que la interacción fuera significativa (P-value < 0.05) al describir el modelo, el efecto significativo a describir es la interacción y no los factores de esta así estos fueran significativos."
-        ]}/>  
+      <Paragraph texto = {<><p>
+          <center><h4> Reporte generado por Excel </h4></center>
+          <br />
+          Como vemos el reporte generado por Excel es similar al de todas las anteriores regresiones, por ello no vamos a entrar en detalle, solo vemos que el R<sup>2</sup>es inferior al modelo con el componente cuadrático visto en el <HashLink smooth to ={"#regquad"}><u>módulo anterior</u></HashLink> , por tanto sabemos que este módelo seguramente no será el modelo a escoger.  Al observar el análisis de varianza vemos que la interacción entre la Energía y la Dieta no son significativas (P-value = 0.43) por tanto debemos descartar la interacción, mientras que las demás variables si son significativas. En caso de que la interacción fuera significativa  el efecto significativo a describir es la interacción y no los factores de esta así estos fueran significativos. Sin embargo las variables que constituyen la interacción deben mantenerse en el modelo"
+          </p></>}/>  
 
     
     <center><SubTitle title = "Regresión con interacción de dos variables independientes (factorial)"/></center>
@@ -282,13 +281,13 @@ const AnavaII = () => {
 
       <SubChapter id = "dummyvars">
       <SubTitle title = "7.10- Variables nominales y construcción de variables ficticias"/>
-      <Paragraph texto = {[
-      "Como hemos visto en los casos anteriores, en las regresiones lineales utilizamos variables continuas.  De acuerdo con el efecto que tienen estos predictores pueden haber interacciones o efectos cuadraticos (tambien pueden haber efectos cúbicos pero no seran tratados aquí. También es posible utilizar variable s", <a href="Post#raw"> <u>nominales</u> </a>, " en el análisis de regresión múltiple. Por ejemplo, variables nominales como el número de la lactancia en ganado vacuno o el número del parto en cerdas de cría. También dicótomas como el sexo en ganado de ceba que pueden jugar un importante papel en consumo de alimento o la ganancia de peso, por tanto no pueden ser excluidas.  Estas variables siempre se deben tratar como como un código binario 0 y 1 y para ello se crean las variables ficticias (dummy variables en inglés).", <br />,
-      "Como el modelo solo acepta valores de 0 y 1, cuando tenemos variables con mas de una categoría debemos crear variables ficticas que representen las comparaciones entre los diferentes grupos (razas, región etc.). El grupo de variables ficticias son consideradas en el modelo de regresión simultáneamente como un conjunto de variables independientes.  Suponga que queremos medir en una granja de cerdos los niveles en hormonas de la reproducción en las diferentes hembras que hay en la granja. Actualmente en la granja hay cerdas de las razas Pietrain, Landrace, Duroc y Poland-China. Esta variable tendría 4 categórias pero se construyen solo tres variables ficticias.  Para considerar entonces raza como predictor en un modelo de regresión, se deben crear tres variables indicadoras (una menos que el total) para representar los cuatro diferentes grupos. Para crear el conjunto de variables, primero entonces hay que decidir un grupo referencia o categoría, es decir en este caso una raza que se comparara contra los otros grupos. Es por esto que se construye una una menos ya que si todas las demas variables independientes son 0, se entiende entonces que los individuos pertenecen a la categoria base. Las variables ficticias son creadas para los demás grupos y se codifica con 1 para los participantes que pertenecen a ese grupo y todos los demás son código 0.  En el modelo de regresión múltiple, los coeficientes de regresión asociados con cada una de las variables “dummy” son interpretadas como la diferencia esperada entre la media esperada de ese grupo comparada con el grupo de referencia, cuando todos los otros predictores se mantienen constantes. ", <br/>,
-      "Para variables dicótomas como sexo bastaría crear una sola variable por ejemplo la variable “Hembra” entonces asignamos el valor 1 en caso de que sea hembra y 0 para macho.  No es necesario crear la variable “Macho” pues ya sabemos que si es 0 en la variable “Hembra” es macho y entonces en el modelo estaríamos utilizando como grupo referencia la variable macho y comparando en cuanto difiere la hembra. ", <br />,
-      "Ejemplo en Excel: Tenemos 1657 registros de vacas lecheras de un solo hato, y deseamos establecer cual es la diferencia entre lactancias de la 1ª a la 3ª, también tenemos el promedio logarítmico del recuento de células somáticas para cada lactación.  Entonces queremos establecer un modelo donde se incluya la lactancia como variable ficticia donde el grupo base seria la 1ª lactación y crearíamos las variables dummy para la 2ª y 3ª lactancias. También incluiremos el efecto de las células somáticas para ver si tienen alguno valor predictivo sobre la producción de leche."
+      <Paragraph texto = {<><p>
+      Como hemos visto en los casos anteriores, en las regresiones lineales utilizamos variables continuas.  De acuerdo con el efecto que tienen estos predictores pueden haber interacciones o efectos cuadraticos (tambien pueden haber efectos cúbicos pero no serán tratados aquí. También es posible utilizar variables <HashLink smooth to ={"/Post#raw"}> <u>nominales</u> </HashLink> en el análisis de regresión múltiple. Por ejemplo, variables nominales como el número de la lactancia en ganado vacuno o el número del partos en cerdas de cría. También dicótomas como el sexo en ganado de ceba que pueden jugar un importante papel en consumo de alimento o la ganancia de peso, por tanto no pueden ser excluidas.  Estas variables siempre se deben tratar como como un código binario 0 y 1 y para ello se crean las variables ficticias (dummy variables en inglés). <br />
+      Como el modelo solo acepta valores de 0 y 1, cuando tenemos variables con mas de una categoría debemos crear variables ficticas que representen las comparaciones entre los diferentes grupos (razas, región etc.). El grupo de variables ficticias son consideradas en el modelo de regresión simultáneamente como un conjunto de variables independientes.  Suponga que queremos medir en una granja de cerdos los niveles en hormonas de la reproducción en las diferentes hembras que hay en la granja. Actualmente en la granja hay cerdas de las razas Pietrain, Landrace, Duroc y Poland-China. Esta variable tendría 4 categórias pero se construyen solo tres variables ficticias.  Para considerar entonces raza como predictor en un modelo de regresión, se deben crear tres variables indicadoras (una menos que el total) para representar los cuatro diferentes grupos. Para crear el conjunto de variables, primero entonces hay que decidir un grupo referencia o categoría, es decir en este caso una raza que se comparara contra los otros grupos. Es por esto que se construye una una menos ya que si todas las demas variables independientes son 0, se entiende entonces que los individuos pertenecen a la categoria base. Las variables ficticias son creadas para los demás grupos y se codifica con 1 para los participantes que pertenecen a ese grupo y todos los demás son código 0.  En el modelo de regresión múltiple, los coeficientes de regresión asociados con cada una de las variables “dummy” son interpretadas como la diferencia esperada entre la media esperada de ese grupo comparada con el grupo de referencia, cuando todos los otros predictores se mantienen constantes.  <br/>
+      Para variables dicótomas como sexo bastaría crear una sola variable por ejemplo la variable “Hembra” entonces asignamos el valor 1 en caso de que sea hembra y 0 para macho.  No es necesario crear la variable “Macho” pues ya sabemos que si es 0 en la variable “Hembra” es macho y entonces en el modelo estaríamos utilizando como grupo referencia la variable macho y comparando en cuanto difiere la hembra.  <br />
+      Ejemplo en Excel: Tenemos 1657 registros de vacas lecheras de un solo hato, y deseamos establecer cual es la diferencia entre lactancias de la 1ª a la 3ª, también tenemos el promedio logarítmico del recuento de células somáticas para cada lactación.  Entonces queremos establecer un modelo donde se incluya la lactancia como variable ficticia donde el grupo base seria la 1ª lactación y crearíamos las variables dummy para la 2ª y 3ª lactancias. También incluiremos el efecto de las células somáticas para ver si tienen alguno valor predictivo sobre la producción de leche."
 
-      ]}/>
+      </p></>}/>
       <ImagePlus
           image={dummy}
           texto="Fragmento de la tabla  de datos de producción lechera, lactancias y promedio 
@@ -297,10 +296,10 @@ const AnavaII = () => {
           max_zoom = "80%"
         />
 
-      <Paragraph texto = {[
-        <center> <h4> Fragmento de la tabla  de datos de producción lechera, lactancias y promedio logarítmico de recuento de células somáticas.</h4> </center>, <br />,
-        "El primer paso es insertar dos columnas para incluir las variables ficticias. Para crearlas en Excel básicamente podemos utilizar la función =IF, para la lactancia 2 entonces nos ubicamos en la celda insertada para este propósito y escribimos la función tal como se presenta en la siguiente tabla, donde si B2 (celda donde esta la lactancia) = 2, entonces asigne valor 1, de lo contrario asigne valor 0.  Copiamos la fórmula en la columna y repetimos para lactancia 3.  "
-      ]}/>
+      <Paragraph texto = {<><p>
+        <center> <h4> Fragmento de la tabla  de datos de producción lechera, lactancias y promedio logarítmico de recuento de células somáticas.</h4> </center> <br />
+        El primer paso es insertar dos columnas para incluir las variables ficticias. Para crearlas en Excel básicamente podemos utilizar la función =IF, para la lactancia 2 entonces nos ubicamos en la celda insertada para este propósito y escribimos la función tal como se presenta en la siguiente tabla, donde si B2 (celda donde esta la lactancia) = 2, entonces asigne valor 1, de lo contrario asigne valor 0.  Copiamos la fórmula en la columna y repetimos para lactancia 3.  
+        </p></>}/>
 
         <ImagePlus
           image={dummy2}
@@ -308,10 +307,10 @@ const AnavaII = () => {
           width="40%"
           max_zoom = "80%"
         />
-      <Paragraph texto = {[
-       <center> <h4>construcción de las variables ficticias para la 2<sup>a</sup> y 3<sup>a</sup> lactación.</h4></center>, <br />,
-        "Una vez que tenemos las variables construidas, seleccionamos la herramienta “Data Analysis” del menú datos de Excel y de ahí seleccionamos Regresión.  Seleccionamos el rango de la variable dependiente Y que en este caso es la producción de leche y seleccionamos las variables independientes X que son las variables ficticias que acabamos de constuir y el conteo de células somáticas, sin olvidar que los datos tienen etiquetas y finalmente asignamos donde queremos que se genere el reporte.  "
-      ]}/>
+      <Paragraph texto = {<><p>
+       <center> <h4>construcción de las variables ficticias para la 2<sup>a</sup> y 3<sup>a</sup> lactación.</h4></center> <br />
+        Una vez que tenemos las variables construidas, seleccionamos la herramienta “Data Analysis” del menú datos de Excel y de ahí seleccionamos Regresión.  Seleccionamos el rango de la variable dependiente Y que en este caso es la producción de leche y seleccionamos las variables independientes X que son las variables ficticias que acabamos de constuir y el conteo de células somáticas, sin olvidar que los datos tienen etiquetas y finalmente asignamos donde queremos que se genere el reporte.  
+        </p></>}/>
 
       <ImagePlus
           image={dummy3}
@@ -319,11 +318,11 @@ const AnavaII = () => {
           width="60%"
           max_zoom = "80%"
         />
-       <Paragraph texto = {[
-       <center> <h4>Reporte generado por Excel </h4></center>, <br />,
-        "El reporte generado por Excel nos presenta las tres tablas que ya conocemos.  En la tabla superior podemos ver el valor de R",<sup>2</sup>,
-        "que en este caso es de 0.368 es decir, las variables independientes describen en un 37% el resultado de la variable independiente.  No es muy alto pero solo queríamos conocer el peso de las lactancias así como el impacto de las de células somáticas.   La tabla 2 nos muestra el ANAVA aquí podemos ver que el modelo es significativo, si vemos la última columna de la derecha, el valor  de F es de 2.47 exponente -164, por tanto es muy pero muy inferior al 0.05% establecido como significancia (recordemos que si la confianza seleccionada es del 95% entonces la significancia será del 5% o 0.05). Finalmente, en la tercera tabla podemos observar los coeficientes. Entonces para el intercepto que seria un animal de 1", <sup>a</sup>, " lactancia la producción de leche estaría en 8310 kg con un error estándar de 82.  Si el animal es de lactancia 2 entonces se adicionaría 1755 kg de leche con un error estándar de 78 kg y si el animal es de lactancia 3 entonces al intercepto se le adicionan 2472 kg con un error estándar de 91. Las dos variables dummy (lact 2 y lact 3) son significativas con P - values muy inferiores a 0.05.  En cuanto al valor logarítmico del recuento de células somáticas vemos que también tiene un efecto significativo, pero este es negativo sobre la producción de leche. Como vemos cada punto en que aumentan las células somáticas, disminuye en 224 kg la producción de leche. "
-      ]}/>
+       <Paragraph texto = {<><p>
+       <center> <h4>Reporte generado por Excel </h4></center> <br />
+        El reporte generado por Excel nos presenta las tres tablas que ya conocemos.  En la tabla superior podemos ver el valor de R<sup>2</sup> que en este caso es de 0.368 es decir, las variables independientes describen en un 37% el resultado de la variable independiente. No es muy alto pero solo queríamos conocer el peso de las lactancias así como el impacto de las de células somáticas. La tabla 2 nos muestra el ANAVA aquí podemos ver que el modelo es significativo, si vemos la última columna de la derecha, el valor  de F es de 2.47 exponente -164, por tanto es muy pero muy inferior al 0.05% establecido como significancia (recordemos que si la confianza seleccionada es del 95% entonces la significancia será del 5% o 0.05). Finalmente, en la tercera tabla podemos observar los coeficientes. Entonces para el intercepto que seria un animal de 1 <sup>a</sup> lactancia la producción de leche estaría en 8310 kg con un error estándar de 82.  Si el animal es de lactancia 2 entonces se adicionaría 1755 kg de leche con un error estándar de 78 kg y si el animal es de lactancia 3 entonces al intercepto se le adicionan 2472 kg con un error estándar de 91. Las dos variables dummy (lact 2 y lact 3) son significativas con P - values muy inferiores a 0.05.  En cuanto al valor logarítmico del recuento de células somáticas vemos que también tiene un efecto significativo, pero este es negativo sobre la producción de leche. Como vemos cada punto en que aumentan las células somáticas, disminuye en 224 kg la producción de leche. <br />
+        
+        </p></>}/>
     <center><SubTitle title = "Construcción de variables tipo dummy en Excel"/></center>
       
       <Video id="Wr4vK5yB4Bw" title="Construcción de variables tipo dummy en Excel" />

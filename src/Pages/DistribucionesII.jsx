@@ -7,6 +7,7 @@ import Video from "Components/Video";
 import ImagePlus from "Components/ImagePlus";
 import ChapterLayout from "Layouts/ChapterLayout";
 import ReferencesBlock from "Components/ReferencesBlock";
+import { HashLink } from "@xzar90/react-router-hash-link";
 import estanques from "Media/photos_web/estanques.JPG";
 import curva from "Media/photo_dist/norm_dist.png";
 import mastitis from "Media/photo_dist/milk_normal.png";
@@ -62,7 +63,7 @@ const DistribucionesII =()=>{
                 </section>
         <SubChapter id = "continuas">
             <SubTitle title = "4.4 Distribuciones continuas"/>
-            <Paragraph texto = "En este tipo de distribuciones los valores posibles que una variable aleatoria puede tomar son una secuencia de muchos valores infinitamente consecutivos. Es decir no hay pausa entre uno y otro. Por ejemplo: peso corporal de los animales, el consumo de alimento (en kgs, lbs etc), los tiempos laborales de los operarios (horas, minutos, segundos)."/>
+            <Paragraph texto = { <><p>"En este tipo de distribuciones los valores posibles que una variable aleatoria puede tomar son una secuencia de muchos valores infinitamente consecutivos. Es decir no hay pausa entre uno y otro. Por ejemplo: peso corporal de los animales, el consumo de alimento (en kgs, lbs etc), los tiempos laborales de los operarios (horas, minutos, segundos)."</p></>}/>
 
             <Paragraph texto = {[
                 "Las principales características de las distribuciones continuas son:",
@@ -77,7 +78,7 @@ const DistribucionesII =()=>{
                 </ul>
             ]}/>
 
-            <Paragraph texto = {[ <center><h2>P(Y=y) = 0 </h2></center>, <br/>,"para cualquier valor individual -porque los valores son consecutivos-" ]}/>
+            <Paragraph texto = {[ <center><h2>P(Y=y) = 0 </h2></center>, <br/>, <center>"Para cualquier valor individual -porque los valores son consecutivos-"</center>  ]}/>
     
 
 
@@ -92,7 +93,7 @@ const DistribucionesII =()=>{
         <Paragraph texto = "Es la distribución mas común dentro de los eventos naturales y se caracteriza por que los datos se distribuyen en forma acampanada (campana de Gauss), la función de la distribución es:"/>
         <center><h2>Y ~ N (μ,σ)</h2></center>
          
-        <Paragraph texto ={["Donde la variable aleatoria Y toma valores aproximados  a una distribución normal. Los parámetros de la distribución son, ",<a href="Analisis#central"><u>la media o valor central (μ)</u></a>, " y la ",  <a href="Analisis#dispersion"><u>la desviación típica o estandar (σ)</u> </a> ]}/>
+        <Paragraph texto ={<><p> <center> Donde la variable aleatoria Y toma valores aproximados  a una distribución normal. Los parámetros de la distribución son,  <HashLink smooth to = {"/Analisis#central"}><u>la media o valor central (μ)</u> </HashLink> y la   <HashLink smooth to = {"/Analisis#dispersion"}><u>la desviación típica o estandar (σ).</u> </HashLink> </center> </p></>} />
         
         <Paragraph texto = "La distribución normal adapta una variable aleatoria a una función que depende de la media y la distribución estándar. Una variable aleatoria continua puede tomar cualquier número real. La distribución normal es simétrica es decir el valor de la mediana, la media y la moda coinciden matemáticamente.  La distribución normal tiene forma de campana y los valores que están alrededor de la media son los que tienen mayor probabilidad de aparecer. El 68% de los valores deberían estar dentro del intervalo: "/>
         <h1><center>μ-σ y μ+σ</center> </h1>
@@ -131,7 +132,7 @@ const DistribucionesII =()=>{
              texto = "Cálculo de la distribución Normal en Excel  "
              /> 
 
-    <Paragraph texto = {["La función para calcular la distribución Normal en Excel es ",<b>DISTR.NORM o NORM.DIST en inglés</b>, ". Primero se debe incluir el valor x o sea el valor en el cual estamos interesados en conocer su ubicación, la media que ya conocemos, la distribución estándar que también conocemos y finalmente la función cumulativa a los cual escribimos verdadero o true si estamos trabajando con un Excel en inglés."]}/>
+    <Paragraph texto = {<><p>La función para calcular la distribución Normal en Excel es <b>=DISTR.NORM o =NORM.DIST en inglés</b>. Primero se debe incluir el valor x o sea el valor en el cual estamos interesados en conocer su ubicación, la media que ya conocemos, la distribución estándar que también conocemos y finalmente la función cumulativa a los cual escribimos verdadero o true si estamos trabajando con un Excel en inglés.</p></>} />
 
             <ImagePlus 
             width = "30%"
@@ -141,7 +142,7 @@ const DistribucionesII =()=>{
              /> 
     <Paragraph texto ="Como vemos en el recuadro, el resultado es 0.958 esto quiere decir la probabilidad de tener valores iguales o menores a 38000 libras es del 95.8%. Esto es muy útil a la hora de tomar decisiones.  Supongamos que deseamos seleccionar animales cuya producción esté por encima del 95% de la población.  Entonces el criterio en este caso sería lactancias iguales o superiores a 38000 libras de leche. "/>
 
-    <Paragraph texto = "Ahora, si por el contrario queremos saber cual es la probabilidad de una lactancia igual o inferior a 19000 libras en la misma población (misma media y desviación estándar). Seguimos los mismos pasos previamente descritos y encontramos que el resultado es 7.6%.  Esto significa que la probabilidad es inferior al 7.6%. Si hacemos el cálculo oara 30088 libras, vamos a ver que el resultado es justo el 50%. Es decir la media, porque hay 50% de probabilidad de que el valor sea superior o inferior. "/>
+    <Paragraph texto = "Ahora, si por el contrario queremos saber cual es la probabilidad de una lactancia igual o inferior a 19000 libras en la misma población (misma media y desviación estándar). Seguimos los mismos pasos previamente descritos y encontramos que el resultado es 7.6%.  Esto significa que la probabilidad es inferior al 7.6%. Si hacemos el cálculo para 30088 libras, vamos a ver que el resultado es justo el 50%. Es decir la media, porque hay 50% de probabilidad de que el valor sea superior o inferior. "/>
 
     <center><h2>La distribución Normal y un ejemplo en Excel</h2></center>
     <br />
@@ -152,9 +153,9 @@ const DistribucionesII =()=>{
 
 <SubChapter id = "normal-estandar">
     <SubTitle title = "4.4.2- Distribución Normal Estándarizada"/>
-    <Paragraph texto = {[
-        "Dado que la distribución normal no es una sola sino un grupo de distribuciones con una ",<a href="Analisis#central"><u>media</u></a>, " μ y una ", <a href="Analisis#dispersion"><u></u>desviación estándar</a>, " σ  diferentes y por ello podrían existir un numero variado de distribuciones normales.  La solución para ello es entonces estandarizar transformando cualquier distribución normal de manera que μ sea 0 y σ sea 1. Todas las distribuciones pueden convertirse a la estándar restando la media de cada observación y dividendo por la desviación estándar:"
-    ]}/>
+    <Paragraph texto = {<><p>
+        Dado que la distribución normal no es una sola sino un grupo de distribuciones con una <a href="Analisis#central"><u>media</u></a> μ y una <a href="Analisis#dispersion"><u>desviación estándar σ</u> </a> diferentes y por ello podrían existir un numero variado de distribuciones normales.  La solución para ello es entonces estandarizar transformando cualquier distribución normal de manera que μ sea 0 y σ sea 1. Todas las distribuciones pueden convertirse a la estándar restando la media de cada observación y dividendo por la desviación estándar:"
+        </p></>}/>
     <h2><center>z= (y-μ)/σ</center></h2>
 
     <Paragraph texto = {[
@@ -167,9 +168,13 @@ const DistribucionesII =()=>{
         </ul>, <br />,
         "Si continuamos con el ejemplo de las lactancias, el valor de 38000 libras estandarizado seria:"
     ]}/>
-
+<br />
     <h2><center>z = (38000-30088)/4571=1.73</center></h2>
-    <Paragraph texto = {["Esto significa que 38000 lb por lactancia está 1.73 desviaciones estándar por encima de la media. Si hacemos el mismo ejercicio con 19000 entonces el valor z es de -2.42. Es decir que 19000 esta - 2.42 desviaciones estándar por debajo de la media.  La estandarización será de mucha utilidad como veremos mas adelante pero es muy conveniente para poder utilizar una tabla conocida por sus valores cumulativos de distribución llamada la tabla Z o tabla de la ", <a href="https://www.medwave.cl/link.cgi/Medwave/Series/MBE04/5033"><u>distribución normal.</u></a>,  <br />,
+    <br />
+    <Paragraph texto = {<><p>Esto significa que 38000 lb de leche por lactancia está 1.73 desviaciones estándar por encima de la media. Si hacemos el mismo ejercicio con 19000 lb entonces el valor z es de -2.42. Es decir que 19000 esta - 2.42 desviaciones estándar por debajo de la media.  La estandarización será de mucha utilidad como veremos mas adelante pero es muy conveniente para poder utilizar una tabla conocida por sus valores cumulativos de distribución llamada la tabla Z o tabla de la <HashLink smooth to = {"https://www.medwave.cl/link.cgi/Medwave/Series/MBE04/5033"}><u>distribución normal.</u></HashLink>  </p> </> } />
+    
+   
+    <Paragraph texto = {[
     "Razones para estandarizar los valores:", <br />,
     <ul>
         <li> -	Comparar grupos de datos con diferente distribución normal.</li>
@@ -190,11 +195,12 @@ const DistribucionesII =()=>{
 </SubChapter>
 <SubChapter id = "t-student">
     <SubTitle title = "4.4.3- Distribución continua t-Student"/>
-    <Paragraph texto = {["La Distribución ", <a href="https://economipedia.com/definiciones/distribucion-t-de-student.html"><u> T Student</u></a>,
-                        " es una distribución normal que representa una pequeña muestra con una distribución normal y se desconoce la desviación típica.  Estima el valor de la media de una muestra pequeña extraída de una población que sigue una población normal, donde La variable aleatoria Y sigue una distribución t con k grados de libertad:"
-                        ]}/>
+    <Paragraph texto = {<><p> La Distribución <a href="https://economipedia.com/definiciones/distribucion-t-de-student.html" target="_blank"><u>T Student</u></a>,
+                        es una distribución normal que representa una pequeña muestra con una distribución normal y se desconoce la desviación típica.  Esta distribución estima el valor de la media de una muestra pequeña extraída de una población que sigue una población normal, donde La variable aleatoria Y sigue una distribución t con k grados de libertad:
+                        </p></>} />
 
     <h2> <center> Y∼t(k) </center></h2>
+    <br />
     <Paragraph texto = "La distribución t sigue el modelo de una gráfica con forma de campana (similar al de la distribución estándar), pero los extremos son mas gruesos que la distribución normal. Se utiliza comunmente cuando se examina una pequeña muestra de datos que sigue una distribución normal. Especialmente menor a 30. Un ejemplo de la utilidad de la distribución t-Student es si queremos comparar si hay diferencia significativa en el pesajde de bovinos que se han alimentado con diferentes dietas. No debemos olvidar que esta distribución la usamos cuando tenemos solo unos pocos datos especialmente en experimentos donde la cantidad de muestras son limitadas."/>
     <Paragraph texto = "Por ejemplo de la totalidad de lactancias que utilizamos para trabajar con la distribución normal (n= 18640), seleccionamos completamente al azar 29 muestras de la variable aleatoria Y (lactación en lb) que sigue la distribución t-student con 28 grados de libertad. Los grados de libertad se calculan restando 1 del tamaño de la muestra (29 – 1 = 28).  El gráfico muestra el histograma de frecuencias de las 29 muestras. Como vemos similar a la distribución normal las observaciones con mayores frecuencias están hacia el centro, al contrario de los que tienen menos frecuencias que se encuentran hacia los extremos. "/>
 
@@ -210,29 +216,32 @@ const DistribucionesII =()=>{
 
 <SubChapter id = "chi-cuadrado">
     <SubTitle title = "4.4.4- - Continuas-Distribución Chi-Cuadrado "/>
-    <Paragraph texto = {["La distribución X", <sup>2</sup>," se usa para dos tipos de pruebas: primero para determinar si los datos de la muestra se ajustan a los de la población. Segundo, se usa la prueba de independencia Chi cuadrado  cuando se comparan dos variables categóricas en una tabla de contingencia para ver si están relacionadas o no. La distribución de X", <sup>2</sup>, " al igual que la distribución t-student depende del tamaño de la muestra. Cuanto mas grande sea el tamaño de la muestra mas se asemejara a la distribución normal.  Sin embargo esta curva se caracteriza por ser asimétrica y sesgada hacia un lado (izquierda o derecha).  Los valores tabulados de la distribución chi-cuadrado se basan en los grados de libertad (df = n-1), tal como se hace con la distribución de valores de la tabla t-student. ", <br/>,
-    "Los valores de Y siguen aproximadamente la distribución Chi-cuadrado χ^(2 ) con k grados de libertad."
-    ]}/>
+    <Paragraph texto = {<><p> La distribución X<sup>2</sup> se usa para dos tipos de pruebas: primero para determinar si los datos de la muestra se ajustan a los de la población. Segundo, se usa la prueba de independencia Chi cuadrado  cuando se comparan dos variables categóricas en una tabla de contingencia para ver si están relacionadas o no. La distribución de X<sup>2</sup> al igual que la distribución t-student depende del tamaño de la muestra. Cuanto mas grande sea el tamaño de la muestra mas se asemejara a la distribución normal.  Sin embargo esta curva se caracteriza por ser asimétrica y sesgada hacia un lado (izquierda o derecha).  Los valores tabulados de la distribución chi-cuadrado se basan en los grados de libertad (df = n-1), tal como se hace con la distribución de valores de la tabla t-student.
+    Los valores de Y siguen aproximadamente la distribución Chi-cuadrado χ<sup>2</sup> con k grados de libertad.
+    </p></>}/>
+    
+
     <h1><center>Y~χ<sup>2</sup>(k)</center></h1>
-    <Paragraph title = {[
-        "La fórmula usada en la prueba ", <a href="https://www.statisticshowto.com/probability-and-statistics/chi-square/"><u>Chi-cuadrado es</u></a>, " es:"
-    ]}/>
+
+<br />
+<Paragraph texto = {<><p>La fórmula usada en la prueba  <a href="https://www.statisticshowto.com/probability-and-statistics/chi-square/" target="_blank"><u>Chi-cuadrado es</u></a> es:</p></>}/>
+    <br />
 
         <ImagePlus 
             width = "30%"
-             max_zoom = "70%"
+             max_zoom = "50%"
              image = {chi}
              texto = "Fórmula Chi cuadrado "
              /> 
-<Paragraph texto= {["Donde ", <sub>c</sub>, "son los grados de libertad. O es el valor observado, E es el valor esperado, i es la iésima posición en la tabla de contingencia"
-]}/>
-<Paragraph texto = {[
-    "Básicamente lo que hace X",<sup>2</sup>, " es mostrar la diferencia existente entre un valor observado y un valor esperado con un solo número si no hubiera ninguna relación en la población.  Un valor de X", <sup>2</sup>," bajo significa una alta correlación entre los dos grupos de datos (observados y esperados).  El proceso para determinar si hay una diferencia significativa básicamente se hace de manera similar que con la distribución de t-student. Si el valor de X", <sup>2</sup>, " es mayor que el valor crítico entonces hay un valor significativo. Importante tener en cuenta que esta prueba ", <b>solo puede ser usada con valores reales</b>  , " no en porcentajes ni en proporciones.  Es importante anotar que esta es una fórmula si no dificil si es larga de calcular por la sumatoria de cada uno de los valores críticos de X ",<sup>2</sup>,", sin embargo la tecnología existente nos facilita estos cálculos.  En este caso seguiremos utilizando la hoja electrónica Excel."
-]}/>
+<Paragraph texto= {<><p> Donde <sub>c</sub> son los grados de libertad. O es el valor observado, E es el valor esperado, i es la iésima posición en la tabla de contingencia
+</p></>}/>
+<Paragraph texto = {<><p>
+    Básicamente lo que hace X<sup>2</sup>  es mostrar la diferencia existente entre un valor observado y un valor esperado con un solo número si no hubiera ninguna relación en la población.  Un valor de X<sup>2</sup>  bajo significa una alta correlación entre los dos grupos de datos (observados y esperados).  El proceso para determinar si hay una diferencia significativa básicamente se hace de manera similar que con la distribución de t-student. Si el valor de X<sup>2</sup>, es mayor que el valor crítico entonces hay un valor significativo. Importante tener en cuenta que esta prueba  <b>solo puede ser usada con valores reales</b> no en porcentajes ni en proporciones.  Es importante anotar que esta es una fórmula si no dificil si es larga de calcular por la sumatoria de cada uno de los valores críticos de X<sup>2</sup>, sin embargo la tecnología existente nos facilita estos cálculos.  En este caso seguiremos utilizando la hoja electrónica Excel.
+    </p></>}/>
 <h4>- Bondad del ajuste usando la prueba chi-cuadrado:</h4>
-<Paragraph texto = {[
-"Se usa para saber si la muestra se ajusta a los valores esperados.  Por ejemplo, si vamos a comprar un lote de 20 novillas al ojo y el vendedor nos asegura que los animales han sido todos inseminados. Basados en información previa se tiene estimada una tasa de preñez del 65% en esa finca, por lo cual podriamos esperar aproximadamente 13 novillas preñadas.  Sin embargo, al hacer la palpación encontramos que solo 9 de las 20 novillas resultaron preñadas.  El comprador desea estimar si fue engañado o puede ser normal teniendo en cuenta la tasa de preñez. Para ello vamos a comparar el valor obtenido con el valor esperado usando la distribucion chi-cuadrado con un 𝝰 del 5%.  Para este caso vemos que la variable X sigue una distribución binomial ya que están o vacías o preñadas (fracaso - éxito) y el valor calculado z",<sup>2</sup>,"se aproxima a x",<sup>2</sup>,". La fórmula para calcular z<sup>2</sup> es:"
-]}/>
+<Paragraph texto = {<><p>
+Se usa para saber si la muestra se ajusta a los valores esperados.  Por ejemplo, si vamos a comprar un lote de 20 novillas al ojo y el vendedor nos asegura que los animales han sido todos inseminados. Basados en información previa se tiene estimada una tasa de preñez del 65% en esa finca, por lo cual podriamos esperar aproximadamente 13 novillas preñadas.  Sin embargo, al hacer la palpación encontramos que solo 9 de las 20 novillas resultaron preñadas.  El comprador desea estimar si fue engañado o puede ser normal teniendo en cuenta la tasa de preñez. Para ello vamos a comparar el valor obtenido con el valor esperado usando la distribucion chi-cuadrado con un 𝝰 del 5%.  Para este caso vemos que la variable X sigue una distribución binomial ya que están o vacías o preñadas (fracaso - éxito) y el valor calculado z<sup>2</sup> se aproxima a x<sup>2</sup>. La fórmula para calcular z<sup>2</sup> es:
+</p></>}/>
  <ImagePlus 
             width = "20%"
              max_zoom = "40%"
@@ -244,7 +253,7 @@ const DistribucionesII =()=>{
 
 <ImagePlus 
             width = "30%"
-             max_zoom = "70%"
+             max_zoom = "50%"
              image = {chi3}
              texto = "Fórmula de z cuadrado "
              />
@@ -252,13 +261,13 @@ const DistribucionesII =()=>{
 <Paragraph texto = "En Excel lo podemos calcular de la siguiente manera:"/>
 <ImagePlus 
             width = "40%"
-             max_zoom = "70%"
+             max_zoom = "60%"
              image = {chi4}
              texto = "Fórmula de z cuadrado en Excel"
              />
 
-<Paragraph texto = {["El valor de z",<sup>2</sup>," lo podemos calcular en Excel siguiendo la fórmula descrita anteriormente y que se muestra en la celda D8 del recuadro. El valor de chi-cuadrado de la tabla lo obtenemos con la función", <b>=CHISQ.DIST.RT</b> ," se incluye el valor calculado de z",<sup>2</sup>," y los grados de libertad, que en este caso es 1 (2-1). Como vemos el valor calculado es superior al valor de la tabla, por tanto podemos decir con 95% de confianza que el numero esperado de novillas preñadas es muy inferior al esperado y el vendedor no cumplió con lo prometido, por tanto hay que investigar que sucedió. "
-]}/>
+<Paragraph texto = {<><p>El valor de z<sup>2</sup> lo podemos calcular en Excel siguiendo la fórmula descrita anteriormente y que se muestra en la celda D8 del recuadro. El valor de X<sup>2</sup> de la tabla lo obtenemos con la función <b>=CHISQ.DIST.RT</b>. Para ello se debe seleccionar el  valor calculado de z<sup>2</sup> (3.52 en este caso) y los grados de libertad, que en este caso es 1 grado de libertad (2-1). Como vemos el valor calculado (0.06) es superior al valor de la tabla, por tanto podemos decir con 95% de confianza que el numero esperado de novillas preñadas es muy inferior al esperado y el vendedor no cumplió con lo prometido, por tanto hay que investigar que sucedió. 
+</p></>}/>
 
 <h2> <center>Explicación de la bondad del ajuste X<sup>2</sup></center></h2>
 <br />
@@ -278,8 +287,8 @@ const DistribucionesII =()=>{
              texto = "Prueba de independencia"
              />
 
-<Paragraph texto = {["Nuestra hipótesis nula es: H",<sub>0</sub>,": El nivel de educación de los tenedores no tiene nada que ver con el que las mascotas estén esterilizadas o no."
-]}/>
+<Paragraph texto = {<><p>Nuestra hipótesis nula (H<sub>0</sub>): El nivel de educación de los tenedores no tiene nada que ver con el que la esterilización de las mascotas.
+</p></>}/>
 <Paragraph texto = " El siguiente paso es calcular los valores esperados para cada una de las casillas presentadas en la tabla de contingencia.  Esto lo realizamos para cada categoría multiplicando el total de observaciones de la columna por el total de la fila y dividiendo por el total de observaciones. Por ejemplo el valor esperado para mascotas esterilizadas en el grupo que alcanzó solo hasta educación primaria seria el total de mascotas esterilizadas por el total de personas con educación primaria dividido por el total de observaciones =  153 * 79/284 = 42.55, calculamos entonces los valores esperados para cada casilla.  Las sumatorias de las filas y las columnas deben ser iguales a los valores observados en la tabla de contingencia como se observa a continuación: "/>
 
 <ImagePlus 
@@ -306,7 +315,7 @@ const DistribucionesII =()=>{
              texto = "Paso a paso para construir la tabla"
              />
 
-<Paragraph texto = {["El nivel de significancia es de 𝛼 = 5%, los grados de libertad se calculan: (numero de filas – 1)(numero de columnas - 1) = (2-1)(4-1) = 3.   El valor de p lo calculamos utilizando la función de Excel ", <b>=CHISQ.TEST</b>, " y seleccionamos para R1 = el conjunto de datos observados y para R2 = el conjunto de datos esperados. Los rangos de R1 y R2 deben tener el mismo tamaño y forma y solo pueden contener valores numéricos. Este valor también lo podemos obtener con la función " , <b>=CHISQ.DIST.RT</b>, ", para ello incluimos el valor de X2 y los grados de libertad."]}/>
+<Paragraph texto = {<><p>El nivel de significancia es de 𝛼 = 5%, los grados de libertad se calculan: (numero de filas – 1)(numero de columnas - 1) = (2-1)(4-1) = 3. El valor de p lo calculamos utilizando la función de Excel  <b>=CHISQ.TEST</b> y seleccionamos para R1 = el conjunto de datos observados y para R2 = el conjunto de datos esperados. Los rangos de R1 y R2 deben tener el mismo tamaño y forma y solo pueden contener valores numéricos. Este valor también lo podemos obtener con la función  <b>=CHISQ.DIST.RT</b>, para ello incluimos el valor de X2 y los grados de libertad."</p></>}/>
 <ImagePlus 
             width = "20%"
              max_zoom = "70%"
@@ -314,12 +323,12 @@ const DistribucionesII =()=>{
              texto = "Cálculos en Excel "
              />
 
-<Paragraph texto = "El valor de significancia p 0.908 es mayor al alfa 0.05 por tanto no podemos rechazar la H<sub>0</sub> , es decir con un 95% de confianza no existe diferencia en el nivel educativo para esterilizar las mascotas en esta zona de Cali. "/>
+<Paragraph texto = {<><p>El valor de significancia p = 0.908 es mayor al alfa 0.05 por tanto no podemos rechazar la H<sub>0</sub> , es decir con un 95% de confianza no existen diferencias en la cantidad de animales esterlizadas dado el nivel educativo de los tenedores en esta zona de Cali. </p></>}/>
 
 <h2><center>Explicación de la prueba de independencia de la distribución X<sup>2</sup></center></h2>
 <br />
 <Video
-          id="Taj9W2Mlt_U"
+          id="B2Z6315SXgI"
           title="Prueba de independencia con Chi cuadrado" /> 
 </SubChapter>
 
@@ -349,12 +358,12 @@ const DistribucionesII =()=>{
 
 
 <ReferencesBlock references ={[
-<a href= "https://psicolearning.files.wordpress.com/2014/10/d-normal-estc3a1ndar-apunte-alumnos.pdf"> <u> * Dzib J. A., Consultado 15 de marzo, 2021,Distribución normal estándar, PDF. Portal psicolearning</u></a>,
-<a href="https://www.statisticshowto.com/probability-and-statistics/chi-square/"><u> * Glen Stephanie. Consultado 20 de marzo, 2021, "Chi-Square Statistic: How to Calculate It / Distribution" From StatisticsHowTo.com: Elementary Statistics for the rest of us!</u></a>,
-<a href="https://www.medwave.cl/link.cgi/Medwave/Series/MBE04/5033"> <u>* Ricardi Fernando, (Mayo, 2011). Distribución Normal.</u> En Portal Medwave, revista biomédica </a> ,
-<a href="https://economipedia.com/definiciones/distribucion-t-de-student.html"><u>* Rodó Paula ,(05 de noviembre, 2019). Distribución t de Student en portal Economipedia.com </u></a> ,
-<a href="https://economipedia.com/definiciones/distribucion-normal.html"><u>* Rodó Paula  (10 de noviembre, 2019). Distribución normal. Economipedia.com </u></a> ,
-<a href="https://www.real-statistics.com/chi-square-and-f-distributions/independence-testing/"><u>* Zaiontz Charles. Independence Testing. Real Statistics Using Excel. </u></a> 
+<a href= "https://psicolearning.files.wordpress.com/2014/10/d-normal-estc3a1ndar-apunte-alumnos.pdf" target="_blank" > <u> * Dzib J. A., Consultado 15 de marzo, 2021,Distribución normal estándar, PDF. Portal psicolearning</u></a>,
+<a href="https://www.statisticshowto.com/probability-and-statistics/chi-square/" target="_blank"><u> * Glen Stephanie. Consultado 20 de marzo, 2021, "Chi-Square Statistic: How to Calculate It / Distribution" From StatisticsHowTo.com: Elementary Statistics for the rest of us!</u></a>,
+<a href="https://www.medwave.cl/link.cgi/Medwave/Series/MBE04/5033" target="_blank"> <u>* Ricardi Fernando, (Mayo, 2011). Distribución Normal.</u> En Portal Medwave, revista biomédica </a> ,
+<a href="https://economipedia.com/definiciones/distribucion-t-de-student.html" target="_blank"><u>* Rodó Paula ,(05 de noviembre, 2019). Distribución t de Student en portal Economipedia.com </u></a> ,
+<a href="https://economipedia.com/definiciones/distribucion-normal.html" target="_blank"><u>* Rodó Paula  (10 de noviembre, 2019). Distribución normal. Economipedia.com </u></a> ,
+<a href="https://www.real-statistics.com/chi-square-and-f-distributions/independence-testing/" target="_blank"><u>* Zaiontz Charles. Independence Testing. Real Statistics Using Excel. </u></a> 
   
  
 ]}

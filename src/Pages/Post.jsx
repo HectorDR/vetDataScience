@@ -56,7 +56,7 @@ const Post = () =>{
                 <Paragraph
                     texto ={<><p>La ciencia de los datos abarca un amplio espectro de habilidades que se requieren para analizar los datos obtenidos
                      de diferentes fuentes tanto dentro de la finca como por fuera.  De acuerdo con 
-                     <a href="https://www.oracle.com/ca-en/data-science/what-is-data-science.html"> <u>Oracle </u></a>
+                     <a href="https://www.oracle.com/ca-en/data-science/what-is-data-science.html" target="_blank"> <u>Oracle </u></a>
                      la ciencia de los datos es una combinación de varios campos como la estadística, el método científico y el análisis de datos
                       que se usan para extraer valor de los datos, o en otras palabras obtener información útil.</p></>}
                 
@@ -65,7 +65,7 @@ const Post = () =>{
                   <><p>El manejo y análisis de los datos requiere de ciertos conocimientos, experiencia y algunas habilidades de programación que se puede
                    aprender,  pero fundamentalmente se necesita curiosidad, interés y unas buenas bases de matemáticas y estadística que permitan dar 
                    respuesta adecuada a las preguntas planteadas. Esto se resume en un artículo de 
-                    <a href="https://ischoolonline.berkeley.edu/data-science/what-is-data-science/"><u> McKinsey&Company</u></a>. Este artículo retoma 
+                    <a href="https://ischoolonline.berkeley.edu/data-science/what-is-data-science/" target="_blank"><u> McKinsey&Company</u></a>. Este artículo retoma 
                    las palabras de  Hal Varian antiguo ecomista en jefe de Google quien manifiesta que para hacer  ciencia de los datos  se requiere: 
                    1- identificar preguntas relevantes, 2- recolectar datos de múltiples fuentes, 3- organizar la información, 4- traducir los 
                    resultados en soluciones y 5- comunicar los hallazgos en una manera que afecte positivamente la decisión.</p></>}
@@ -76,8 +76,10 @@ const Post = () =>{
 
                 <ImagePlus 
                 image = {rumination}
-                texto = "Créditos: Animal Behavior in a Fully Automatically Controlled Dairy Farm, Gräph et al. 2015"
+                max_zoom ={"60%"}
+                texto = "Sensores de ruminación, frecuencia cardiaca y podómetro"
                 />
+                <Paragraph texto = {<center>Créditos: Animal Behavior in a Fully Automatically Controlled Dairy Farm, Gräph et al. 2015</center>}/>
                 <Paragraph
                 texto= "Como profesionales del campo, seguramente no nos vamos a convertir en científicos de datos, Pues ya tenemos suficientes responsabilidades clínicas, administrativas o de producción. Pero si es necesario entender los datos que se generan tanto adentro como afuera de la granja, y que información podemos obtener a partir de ellos transformandolos en información valiosa que nos ayude a identificar riesgos y oportunidades. "
                 />
@@ -88,14 +90,11 @@ const Post = () =>{
                 <Paragraph
                 texto = {<><p>Los datos que se generan a todo nivel tanto dentro de la empresa como por fuera de la operación y aun no han sido editados,
                  los podemos denominar datos crudos o datos primarios. Estos datos se caracterizan porque no han sido manipulados ni tabulados.
-                  Según el <a target="_blank" href="https://www.statista.com/statistics-glossary/definition/351/raw_data/"><u>Statista</u> </a> una vez que los
-                   diferentes datos han sido procesados es decir integrados, normalizados o agregados podríamos hablar de datos secundarios y 
-                   estos datos se caracterizan porque no necesariamente contienen los datos originales sino que tienen algún tipo de valor agregado 
+                  Según el <a target="_blank" href="https://www.statista.com/statistics-glossary/definition/351/raw_data/" ><u>Statista</u> </a> una vez que los diferentes datos han sido procesados es decir integrados, normalizados o agregados podríamos hablar de datos secundarios y estos datos se caracterizan porque no necesariamente contienen los datos originales sino que tienen algún tipo de valor agregado 
                    o información.</p></>}/>
 
                <Paragraph
-               texto= {<><p>Desde el punto de vista práctico, los datos crudos se refieren a tablas de datos donde cada fila contiene una observación
-                y cada columna representa una variable <a href="https://www.displayr.com/what-is-raw-data/"><u>(Bock, 2018)</u></a>. Entonces, 
+               texto= {<><p>Desde el punto de vista práctico, los datos crudos se refieren a tablas de datos donde cada fila contiene una observación y cada columna representa una variable <a href="https://www.displayr.com/what-is-raw-data/" target="_blank"><u>(Bock, 2018)</u></a>. Entonces, 
                 lo mas importante es tener en cuenta que la data cruda es esa data que no ha sido procesada. Un ejemplo claro son los datos de 
                 producción que se recogen a diario en un galpón de ponedoras (ver la tabla inferior). Estos registros solo contiene la producción del 
                 día, el consumo de alimento y la variación en la población de aves, que sería la materia prima para comenzar a realizar los análisis,
@@ -106,9 +105,10 @@ const Post = () =>{
                 <ImagePlus 
                 image = {reg_aves}
                 texto = {"Registro de producción de huevos y carne (gallinas adultas)"}
+                max_zoom = {"70%"}
                 />
                 <Paragraph
-                texto= {<><a href="http://repositorio.bibliotecaorton.catie.ac.cr/bitstream/handle/11554/8001/Manual_de_producion_manejo_aves_de_patio.pdf">
+                texto= {<><a href="http://repositorio.bibliotecaorton.catie.ac.cr/bitstream/handle/11554/8001/Manual_de_producion_manejo_aves_de_patio.pdf" target="_blank">
                    <center> <p>Fuente: <u>Manual de producción, manejo de aves de patio</u></p></center> </a></>}
                 />
 
@@ -116,17 +116,11 @@ const Post = () =>{
                 texto ="Los registros como el de producción de ponedoras (tabla superior) son la base para la recolección de datos y representan nuestra materia prima. Sin embargo, para un adecuado análisis hay que tabularlos en un medio digital. Siempre hay que tener claro cuales son las variables que queremos obtener y esto sin caer ni en excesos ni en defectos (muchos datos innecesarios o repetidos o por el contrario escasez de datos que no permitan hacer el análisis).  Es clave diseñar registros efectivos que nos permita introducir los datos de la manera mas rápida y evitando comenter errores en la digitación que posteriormente conduzcan a errores en la interpretación de resultados. "
                 />
                 <Paragraph 
-                texto= {<><p>La <em>estructura del registro</em> hace referencia a la manera como los datos se recogen y pueden clasificarse como datos estructurados
-                 o desestructurados. Los primeros normalmente vienen en forma tabular es decir filas y columnas, por ejemplo el registro de postura presentado
-                  el cuadro superior. Usualmente, las columnas (eje vertical) hacen referencia a las variables y las filas (eje horizontal) hacen referencia a
-                   las observaciones o datos registrados para cada una de las variables. Mientras que los datos desestructurados son los que no vienen organizados
-                    de una manera predefinida.  La información puede venir de manera textual, números, fechas u objetos binarios (Blobs).  Hoy en día a nivel de
-                     las fincas este tipo de datos se hacen mas frecuentes pues las cámaras de video o térmicas al igual que los sensores como los podómetros o los
-                      sensores de ruminación generan este tipo de datos. La gráfica inferior muestra información de aceleración reticulo-ruminal colectada en vacas
-                       Jersey con bolos sensores como ejemplo de datos no estructurados.</p></>}
+                texto= {<><p>La <em>estructura del registro</em> hace referencia a la manera como los datos se recogen y pueden clasificarse como datos estructurados o desestructurados. Los primeros normalmente vienen en forma tabular es decir filas y columnas, por ejemplo el registro de postura presentado el cuadro superior. Usualmente, las columnas (eje vertical) hacen referencia a las variables y las filas (eje horizontal) hacen referencia a las observaciones o datos registrados para cada una de las variables. Mientras que los datos desestructurados son los que no vienen organizados de una manera predefinida.  La información puede venir de manera textual, números, fechas u objetos binarios (Blobs).  Hoy en día a nivel de las fincas este tipo de datos se hacen mas frecuentes pues las cámaras de video o térmicas al igual que los sensores como los podómetros o los sensores de ruminación generan este tipo de datos. La gráfica inferior muestra información de aceleración reticulo-ruminal colectada en vacas Jersey con bolos sensores como ejemplo de datos no estructurados.</p></>}
                 />
                 <ImagePlus
                 image = {sensrum}
+                max_zoom = {"70%"}
                 texto ={"información de medidas de aceleración enviada por un bolo sensor en una vaca Jersey"}
                 />
                 <Paragraph
@@ -134,10 +128,10 @@ const Post = () =>{
                    Hamilton et al. 2019</p></center></>}
                 />
                 <Paragraph
-                texto = {<>Finalmente, existe una tercera categoría que es la data semi-estructurada. La principal característica es que tiene algo de estructura,
+                texto = { <><p> Finalmente, existe una tercera categoría que es la data semi-estructurada. La principal característica es que tiene algo de estructura,
                  pero no toda la estructura requerida para ajustarse a los requerimientos de una base de datos.  La data semi-estructurada posee algunos 
                  atributos para separar varias entidades dentro de la data. Algunos ejemplos son XML, JSON, Emails, NoSQL DBs, seguimiento de eventos, y páginas web
-                 <a href="https://www.sisense.com/blog/understanding-structured-and-unstructured-data/"><u>(De Couto, 2020).</u></a></>}
+                 <a href="https://www.sisense.com/blog/understanding-structured-and-unstructured-data/" target="_blank"><u>(De Couto, 2020).</u></a></p> </>}
                 />
             </SubChapter>
 
@@ -150,6 +144,7 @@ const Post = () =>{
                 <ImagePlus
                 image = {tipos_datos}
                 texto= {"Tipos de datos de acuerdo con su naturaleza"}
+                max_zoom = {"70%"}
                 />
                 <Paragraph
                 texto = {<><center><p> Tabla adaptada del libro Excel data analysis (Guerrero, H., 2019).</p></center></>}

@@ -83,12 +83,9 @@ const Analisis = () => {
 </div>
       {/* //5.1 Datos categóricos nominales */}
       <SubChapter id="categoricos">
-        <Paragraph texto={<><p>Tal como se ha hablado anteriormente los datos que se recogen en la finca o en cualquier otro tipo de actividad que los
-           genere, tienen diferente<HashLink smooth to={"/Post#raw"}><u>naturaleza</u></HashLink>. En esta sección vamos a revisar como tratar visualizar esos datos para
-            poder entenderlos mejor y saber que nos dicen y también veremos como podemos realizar una aproximación a la estadística descriptiva
-             utilizando herramientas sencillas en la hoja de cálculo Excel.</p></>} />
+        <Paragraph texto={<><p>Tal como se ha hablado anteriormente los datos que se recogen en la finca o en cualquier otro tipo de actividad que los genere, tienen diferente<HashLink smooth to={"/Post#raw"}><u>naturaleza</u></HashLink>. En esta sección vamos a revisar como  visualizar estos datos para poder entenderlos mejor y saber que nos dicen y también veremos como podemos realizar una aproximación a la estadística descriptiva utilizando herramientas sencillas en la hoja de cálculo Excel.</p></>} />
         <SubTitle title="5.1 Datos categóricos nominales" />
-        <Paragraph texto="Los datos categóricos son datos que se dividen en grupos como por ejemplo sexo, raza, tamaño etc. Veamos rápidamente como podemos mostrar y resumir los datos categóricos con un ejemplo práctico. De una clínica veterinaria obtenemos una lista de historias clínicas de perros (n= 89). Queremos clasificar los animales por su tamaño, para ellos los hemos dividimos en tres categorias; grande, mediano y pequeño (datos nominales). De esta manera ya podremos cuantificar cuantos animales pertenecen a cada categoría y comenzar a entender por ejemplo que tipo de paciente es el que mas viene a la clínica y como debemos preparanos mejor." />
+        <Paragraph texto="Los datos categóricos son datos que se dividen en grupos como por ejemplo sexo, raza, tamaño etc. Veamos rápidamente como podemos mostrar y resumir los datos categóricos con un ejemplo práctico. De una clínica veterinaria obtenemos una lista de historias clínicas de perros (n= 89). Queremos clasificar los animales por su tamaño, para ellos los hemos dividimos en tres categorias: grande, mediano y pequeño (datos nominales). De esta manera ya podremos cuantificar cuantos animales pertenecen a cada categoría y comenzar a entender por ejemplo que tipo de paciente es el que mas viene a la clínica y como debemos preparanos mejor." />
         <Paragraph texto={<><p>Para cuantificar en Excel podemos utilizar varias alternativas, una son las tablas pivotantes (pivot tables) estas 
           tablas son una herramienta muy practica y flexible para resumir información y nos dan la opción de contar elementos. Otro recurso del que 
           vamos a hablar aquí es utilizar la función <b>=CONTAR.SI o =COUNTIF</b> en inglés. Para ello nos ubicamos en la celda donde queremos 
@@ -98,13 +95,13 @@ const Analisis = () => {
         width = "30%"
           image={categoricos}
           texto="Uso de la función =CONTAR.SI"
-          max_zoom="60%"
+          max_zoom="50%"
         />
         <Paragraph texto="Completamos la información para cada una de las categorias y de esta manera obtenemos la tabla que resume el numero de animales por categoría." />
         <ImagePlus image={categoricos2} 
         texto="Tabla Completa"
         width = "30%"
-        max_zoom = "60%" />
+        max_zoom = "50%" />
        <h2>Diagrama de Barras</h2> 
         <Paragraph texto="Es uno de las mas comunes para la visualización de datos categóricos ya que permite visualizar la información de manera  sencilla. Como se observa en el diagrama inferior este gráfico es una representación  de la tabla presentada en el cuadro superior.  Cada barra representa una categoría y en el eje vertical se presenta la distribución absoluta (conteo).  Para hacerlo en Excel simplemente seleccione sus datos, ubíquese en el menú Insertar y de ahí seleccione las gráficas de la opción (columnas), el menú de opciones es amplio por lo que hay mucha flexibilidad en el diseño." />
 
@@ -135,6 +132,7 @@ const Analisis = () => {
           image={formulatest}
           texto="Formula amplitud de intervalos"
           width="50%"
+          max_zoom = "70%"
         />
         <Paragraph texto={<><p>Si estamos trabajando con una tabla con muchos datos, encontrar los valores máximo y mínimo puede ser asunto complicado.
            Afortunadamente Excel lo hace fácil para ello en Excel utilizamos las funciones <b> =MIN() y =MAX()</b> entre paréntesis seleccionamos
@@ -143,12 +141,14 @@ const Analisis = () => {
           image={intervalo2}
           texto="Formula de amplitud de intervalo resuelta"
           width="50%"
+          max_zoom = "70%"
         />
         <Paragraph texto="Esto quiere decir que vamos a construir una tabla con 10 intervalos con una amplitud de 3567 libras cada uno, comenzando con el inferior que será de 12150 + 3567, así que el primer el primer intervalo será desde 12150 hasta 15717 y así sucesivamente hasta el último mayor a 44253 hasta 47820. Excel tiene una herramienta muy práctica para la construcción del histograma de frecuencias. Para ello asegúrese de tener instalado la herramienta de análisis de datos en el menú Datos." />
         <ImagePlus
           image={intervalo3}
           texto="Opción de analisis de datos"
-          width="70%"
+          width="60%"
+          max_zoom = "80%"
         />
         <Paragraph texto="Una vez que hemos definido los intervalos y sabemos la amplitud de estos hacemos una columna con ellos como se muestra en el gráfico, teniendo presente que incluimos los valores máximos de cada intervalo. Es decir, para el primero que sería de 12150 a 15717, solo digitamos el 15717, sigue 19284 y así hasta el último. Posteriomente vamos al menu datos, seleccionamos data analysis y finalmente histogram." />
         <ImagePlus
@@ -187,13 +187,13 @@ const Analisis = () => {
         />
         <Paragraph texto='Como se observa en el gráfico parece que existe una tendencia lineal entre la producción de grasa en leche y el volumen total de leche (a mayor leche mayor cantidad de grasa), sin embargo este es solo un primer ejercicio para tratar de entender los datos de que disponemos. Luego tendremos que confirmar con fórmulas de asociación como correlaciones o covarianzas. Para realizar el gráfico en Excel, necesitamos seleccionar los rangos donde se encuentran los datos y luego del menú insertar gráficos seleccionar "scatter" o dispersión.' />
         <SubTitle minititle="5.3.2- Variables Categóricas" />
-        <Paragraph texto={<><p>Las tablas cruzadas o tablas de contingencia se utilizan para resumir y visualizar los datos de las variables categóricas.
+        <Paragraph texto={<><p>Las tablas cruzadas o tablas de contingencia son ideales para resumir y visualizar los datos de las variables categóricas.
           En la tabla cruzada un grupo de categorías va en el eje horizontal (X) y otro grupo en el eje vertical (Y). Un ejemplo lo podemos tomar por 
-          ejemplo si utilizamos una base de datos de un albergue de datos (datos obtenidos de<a href="https://www.kaggle.com"><u>Kaggle</u></a>)
-          y utilizamos las variables categóricas disponibles Esterilizados (Si, No) en el eje vertical y Sexo (Macho, Hembra) en el eje vertical.
+          ejemplo si utilizamos una base de datos de un albergue de datos (datos obtenidos de<a href="https://www.kaggle.com" target="_blank"><u>Kaggle</u></a>)
+          y seleccionamos las dos variables categóricas disponibles que son  animales esterilizados, cuyas categorias (si, no) ubicamos en el eje horizontal y para la variable sexo, ubicamos sus categorias (Macho, Hembra) en el eje vertical.
           También es importante incluir los totales. Para este tipo de tabla es muy útil utilizar las tablas dinámicas de Excel que nos permiten no
           solo realizar la tabla, sino también visualizar el gráfico.</p></>} />
-        <ImagePlus image={dinamica} texto="Tabla cruzada" width="35%" max_zoom = "70%" />
+        <ImagePlus image={dinamica} texto="Tabla cruzada" width="35%" max_zoom = "60%" />
         <Paragraph texto="Siguiendo la metodología descrita en el enlace de como crear una tabla dinámica cruzamos los datos de sexo y esterilización. En este caso decidimos mostrar la información por totales sin embargo podemos mostrar tambien sus valores relativos. Es una de las ventajas de Excel que es muy flexible para la creación de estas tablas, ajustándolas a las necesidades del analista. De igual manera podemos seleccionar la opción de visualizar los datos en una gráfica dinámica." />
         <ImagePlus
           image={dinamica2}
@@ -283,7 +283,7 @@ const Analisis = () => {
             La varianza es el promedio de los cuadrados de las desviaciones. Al tomar el cuadrado de las desviaciones para el calculo de la varianza, 
             las unidades en estén dados los datos también se expresarán en unidades al cuadrado.  Esto puede no tener sentido, es por ello por lo que se 
             modificó para obtener las unidades reales y se llegó al concepto de la
-            <a href="https://www.investopedia.com/terms/s/standarddeviation.asp"><u>Desviación Estándar</u></a>. 
+            <a href="https://www.investopedia.com/terms/s/standarddeviation.asp" target="_blank"><u>Desviación Estándar</u></a>. 
             La desviación estándar, o sea la raíz cuadrada de la varianza es <b>la medida de variabilidad de mayor uso para calcular la dispersión
             de los datos.
             </b>
@@ -352,6 +352,7 @@ const Analisis = () => {
 
         <ImagePlus 
         width = "70%"
+        max_zoom = "90%"
         image={summary2} 
         texto="Tabla de resultados" />
         <Paragraph texto="Como se observa es un informe bastante completo que se puede generar rápidamente y permite hacer una aproximación rápida a los datos que estamos comenzando a analizar. El informe presenta en una tabla las medidas de tendencia central, las medidas de dispersión, los valores mínimos y máximos asi como la cantidad de datos para cada una de las variables seleccionadas." />
@@ -370,21 +371,16 @@ const Analisis = () => {
         <Paragraph
           texto="La covarianza es una medida de variabilidad conjunta de dos variables. Si la covarianza es positiva esto indica que las dos variables se mueven juntas en la misma dirección. Si la covarianza es negativa entonces las dos variables se mueven en direcciones opuestas. Si la covarianza es 0 las dos variables son independientes la una de la otra. La covarianza puede tomar valores hasta el infinito tanto positivos como negativos. Esto es un problema porque dificulta entender que tan ligadas están las dos variables."
         />
-         <SubTitle minititle="Las fórmulas de la covarianza muestral y poblacional son: " />
-         <ImageCorousel
-         width = {"40%"}
-         max_zoom ={"60%"}
+         <SubTitle minititle="Fórmula de la covarianza muestral" />
 
-          images={[
-            {
-              image: covarianza,
-              texto: "Covarianza muestral",
-            },
-            {
-              image: covarianza2,
-              texto: "Covarianza poblacional",
-            },
-          ]}
+         <ImagePlus 
+        width = "40%"
+        max_zoom = "60%"
+        image={covarianza} 
+        texto="Covarianza muestral" />
+         
+      <Paragraph
+          texto={<><p>Para la covarianza muestral tenemos que  X es la media de la variable X, x <sub>i</sub> es la "iesima" posición de esta variable, mientras que Y representa la media de la variable Y, y<sub>i</sub> representa la "iesima" posición de la variable y. Finalmente n representa el número total de observaciones (suma de observaciones de X y Y).</p></>}
         />
 
 
@@ -397,19 +393,26 @@ const Analisis = () => {
         <Paragraph
           texto="A diferencia de la covarianza, es una medida estandarizada que toma medidas entre -1 y +1 de manera que es mas fácil de interpretar los resultados. Donde valores positivos indican que, si el valor de x sube, el de y sube. Al contrario, si el valor es negativo indica que si x aumenta, y disminuye y un valor 0 es que no hay correlación."
         />
-        <SubTitle minititle ="Fórmulas de la correlación muestral y poblacional"/>
-        <ImageCorousel
-         width = {"20%"}
-         max_zoom ={"60%"}
 
-          images={[
-            { image: corre1, texto: "Correlación muestral" },
-            {
-              image: corre2,
-              texto: "Correlación poblacional",
-            },
-          ]}
+<Paragraph
+          texto={<><p>En Excel para la correlación la función <b> =CORREL</b> tanto en español como en inglés</p></>}/>
+      
+      <SubTitle minititle ="Fórmula de la correlación"/>
+      <ImagePlus 
+        width = "20%"
+        max_zoom = "40%"
+        image={corre1} 
+        texto="Correlación" />
+
+<Paragraph
+          texto={<><p> Donde  S<sub>xy</sub>  representa la covarianza entre las variables X y Y (ver fórmula anterior), σ<sub>x</sub> es la desviación típica de X y σ<sub>y</sub> es la desviación típica de Y.</p></>}
         />
+      
+         <SubTitle minititle="Ejemplo en Excel" />
+        <Paragraph
+          texto="Tenemos los promedios de los registros de producción de 10 granjas de cerdas de cría de una región de Caldas (Colombia) como lo muestra el registro a continuación."
+        />
+
         <SubTitle minititle="Ejemplo en Excel" />
         <Paragraph
           texto="Tenemos los promedios de los registros de producción de 10 granjas de cerdas de cría de una región de Caldas (Colombia) como lo muestra el registro a continuación."
@@ -442,7 +445,7 @@ const Analisis = () => {
       <ReferencesBlock
         references={[
           "* Chao, L.L., 1978. Estadística para las ciencias administrativas. McGraw-Hill Interamericana.",
-          <a href="https://www.investopedia.com/terms/s/standarddeviation.asp">* Hargrave, M., 2021. <u> Standard Deviation </u> en portal Investopedia.com</a>,
+          <a href="https://www.investopedia.com/terms/s/standarddeviation.asp" target="_blank">* Hargrave, M., 2021. <u> Standard Deviation </u> en portal Investopedia.com</a>,
           "* Pfaffenberger, R.C. and Patterson, J.H., 1977. Statistical methods for business and economics. Homewood, IL: Richard D. Irwin.",
         ]}
       />

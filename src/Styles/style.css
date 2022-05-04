@@ -71,7 +71,7 @@ img{
   z-index: 10;
   list-style: none;
   justify-content: space-between;
-  animation-duration: 2s;
+  animation-duration: 0.5s;
   animation-name: navdown;
  }
 
@@ -602,10 +602,15 @@ font-weight: 100
   top: 0;
   left: -40vh;
   overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   transition: 700ms;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.lateral_menu::-webkit-scrollbar{
+  display: none;
 }
 
 .lateral_menu__logo{

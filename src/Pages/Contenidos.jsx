@@ -44,11 +44,11 @@ const Contenidos =()=>{
 
 </section>
 <section id = "Post" className = "container bg-light">
-<h1>1- Introducción a la ciencia de los datos</h1>
+<h1>1- Introducción al análisis de los datos</h1>
           <ContentsTable
             contenidos={[
               {
-                titulo: "1.1- Qué es la ciencia de los datos",
+                titulo: "1.1- Qué es el análisis y la ciencia de los datos",
                 link: "Post#definicion",
               },
               {
@@ -198,7 +198,8 @@ const Contenidos =()=>{
               { titulo: "5.3- Visualización de variables cuantitativas y categóricas",
                 link: "Analisis#visualizacion",
               },
-              { titulo: "5.4- Estadística descriptiva", link: "Analisis#descriptiva" },
+              { titulo: "5.4- Estadística descriptiva", 
+              link: "Analisis#descriptiva" },
               { titulo: "5.4.1- Medidas de tendencia central",
                 link: "Analisis#central", },
               { titulo: "5.4.2- Medidas de dispersión", link: "Analisis#dispersion" },
@@ -221,10 +222,11 @@ const Contenidos =()=>{
                 link: "AnalisisII#tests",  },
               { titulo: "6.3- Intervalos de confianza - varianza conocida",
                 link: "AnalisisII#intervalo", },
-              { titulo: "6.3.1- Intervalos de confianza - varianza conocida", link: "AnalisisII#intervalo" },
+              { titulo: "6.3.1- Intervalos de confianza - varianza conocida", 
+              link: "AnalisisII#intervalo" },
               { titulo: "6.3.2- Intervalos de confianza - varianza desconocida",
                 link: "AnalisisII#intervalo2", },
-              { titulo: "6.3.2- Intervalos de confianza - varianza desconocida", link: "AnalisisII#intervalo2" },
+             
               {titulo: "6.4- Intervalo de confianza para la diferencia de dos medias en poblaciones normales independientes",
                 link: "AnalisisII#intervalo3",
               },
@@ -245,10 +247,12 @@ const Contenidos =()=>{
                 link: "Anava#unianova",  },
               { titulo: "7.3- El ANAVA de dos factores sin replicación",
                 link: "Anava#twoanova", },
-              { titulo: "7.4- El ANAVA de dos factores con replicación", link: "Anava#twoanovarep" },
+              { titulo: "7.4- El ANAVA de dos factores con replicación", 
+              link: "Anava#twoanovarep" },
               { titulo: "7.5- La regresión lineal",
                 link: "Anava#linearreg", },
-              { titulo: "7.6- La regresión lineal simple en Excel", link: "#AnavaII#reglinex" },
+              { titulo: "7.6- La regresión lineal simple en Excel", 
+              link: "AnavaII#reglinex" },
               {titulo: "7.7- La regresión múltiple en Excel ",
                 link: "AnavaII#regmult",
               },

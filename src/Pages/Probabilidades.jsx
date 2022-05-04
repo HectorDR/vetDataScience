@@ -70,16 +70,17 @@ const Probabilidades =()=>{
                     <Paragraph texto = {<><p>Podríamos definir una probabilidad como la medición de la posibilidad de que un evento ocurra en una situación
                       cuyo resultado no se puede predecir hasta que sea observado (experimento aleatorio). La probabilidad se cuantifica como un número entre
                       0 y 1, donde 0 indica imposibilidad y 1 certitud
-                      <a href="https://towardsdatascience.com/basic-probability-theory-and-statistics-3105ab637213"><u>(Radke, 2017)</u></a>. Un ejemplo típico
+                      <a href="https://towardsdatascience.com/basic-probability-theory-and-statistics-3105ab637213" target="_blank"><u>(Radke, 2017)</u></a>. Un ejemplo típico
                        sería el sexo al nacer (XX o XY).  En teoría la probabilidad debería ser 50% de que nazca macho y 50% de que sea hembra.  Pero el clásico 
                        ejemplo de una probabilidad es tirar al tirar una moneda al aire cuales son las probabilidades de tener car o sello. En otras palabras la
                         probabilidad es un cálculo matemático que evalúa las posibilidades de que una cosa suceda cuando interviene el azar
-                        <a href="https://www.smartick.es/blog/matematicas/probabilidad-y-estadistica/probabilidad-que-es/"><u>(Molina, 2021)</u></a>.</p></>}/>
+                        <a href="https://www.smartick.es/blog/matematicas/probabilidad-y-estadistica/probabilidad-que-es/" target="_blank"><u>(Molina, 2021)</u></a>.</p></>}/>
                     <Paragraph texto = "Conocer de probabilidades nos ayuda a entender cuales son las reales posibilidades de que un evento suceda de una manera calculada y evitar o reducir el riesgo.  Por ejemplo, suponga que se desea analizar si debe cambiar el técnico inseminador de sus vacas, para ello uno de los criterios mas importantes seria calcular el porcentaje de éxito del  técnico actual (animales preñados/animales inseminados) frente a los posibles candidatos. Además habria que ver el valor adicional que se estaría dispuesto a pagar por los servicios del nuevo técnico.  Si el técnico A tiene un record del 60%, el B tiene un record del 58% y el C del 65% seria fácil escoger el C.  Sin embargo, hay que tener aquí en cuenta otros factores, como las instalaciones de la finca, la calidad del semen utilizado y la condición de las vacas entre otras. Recapitulando entonces, la probabilidad es medir la posibilidad de que un evento ocurra. Para el evento aún no conocemos el resultado, pero basados en la información previa podemos determinar cual es la posibilidad real que tenemos de obtener el resultado esperado."/>
 
                    <center><h4>La fórmula general de la probabilidad es:</h4></center>
                    <ImagePlus 
                 image = {probgral}
+                max_zoom ={"60%"}
                 texto = "Fórmula general de la probalidad"
                 />  
                 <Paragraph texto ="Donde la probabilidad de que ocurra el evento X es igual al número de veces en que ocurrió el evento que esperábamos (X) sobre el total de veces en que se intentó el ensayo o experimento (espacio muestral). "/>
@@ -104,6 +105,7 @@ const Probabilidades =()=>{
             <center><h4>Función de dos eventos independientes</h4></center>
             <ImagePlus 
                 image = {probind}
+                max_zoom = {"60%"}
                 texto = "Eventos independientes"
                 />  
                 <Paragraph texto =" Donde la probabilidad de A dado B es igual a la probabilidad de A y la probabilidad de B dado A es igual a la probabilidad de B "/>
@@ -112,6 +114,7 @@ const Probabilidades =()=>{
                 <center><h4>Fórmula para calcular la probabilidad de dos eventos independientes</h4></center>
                 <ImageCorousel
           width={"40%"}
+          max_zoom = {"60%"}
           images={[
             {
               image: probind2,
@@ -141,7 +144,7 @@ const Probabilidades =()=>{
         </SubChapter>
         <SubChapter id = "dependientes">
             <SubTitle title = "3.4- Probabilidades de dos eventos Dependientes"/>
-            <Paragraph texto = "Dos eventos son dependientes si el resultado del primer evento afecta la probabilidad del segundo evento así que la probabilidad cambia. Sin embargo al igual que en las proabilidades independientes, la probabilidad de que ambos eventos ocurran es el producto de las probabilidades de los eventos individuales."/>
+            <Paragraph texto = "Dos eventos son dependientes si el resultado del primer evento afecta la probabilidad del segundo evento así que la probabilidad cambia. Sin embargo al igual que en las probabilidades independientes, la probabilidad de que ambos eventos ocurran es el producto de las probabilidades de los eventos individuales."/>
             <Paragraph texto = "Por ejemplo, estamos trabajando en otro corral y tenemos 10 novillas, 6 blancas y 4 negras. ¿Si la primera novilla en salir es negra, cual es la probabilidad de que la segunda novilla sea blanca? La probabilidad de que la primera novilla sea negra era 4/10 (cuatro novillas negras de un total de 10 novillas). Sin embargo, para el segundo animal ya las probabilidades han cambiado pues no tenemos 10 sino 9 animales en total, por tanto, el segundo evento es dependiente del primero. Como la primera novilla fue negra, todas las novillas blancas aun se encuentran en el corral, pero tenemos una novilla menos en total, entonces, la probabilidad de que la segunda novilla sea blanca es 6/9 o seis novillas blancas de un total de 9 novillas restantes "/>
             <ImagePlus 
                 width ="30%"
@@ -265,10 +268,10 @@ const Probabilidades =()=>{
          references={[
           "* Chao, L.L., 1978. Estadística para las ciencias administrativas. McGraw-Hill Interamericana.",
 
-          <a href="https://www.smartick.es/blog/matematicas/probabilidad-y-estadistica/probabilidad-que-es/">* Molina Susana, 2021, <u> La Probabilidad que es y cómo la utilizamos el día a día</u>. en portal Smartick.</a>, 
+          <a href="https://www.smartick.es/blog/matematicas/probabilidad-y-estadistica/probabilidad-que-es/" target="_blank">* Molina Susana, 2021, <u> La Probabilidad que es y cómo la utilizamos el día a día</u>. en portal Smartick.</a>, 
 
           "* Pfaffenberger, R.C. and Patterson, J.H., 1977. Statistical methods for business and economics. Homewood, IL: Richard D. Irwin.",
-           <a href="https://towardsdatascience.com/basic-probability-theory-and-statistics-3105ab637213">* Radke Paraga, 2017, <u>Basic Probability Theory and Statistics</u> , en portal Towards Data Science. </a>,
+           <a href="https://towardsdatascience.com/basic-probability-theory-and-statistics-3105ab637213" target="_blank">* Radke Paraga, 2017, <u>Basic Probability Theory and Statistics</u> , en portal Towards Data Science. </a>,
           
           
         ]}/>

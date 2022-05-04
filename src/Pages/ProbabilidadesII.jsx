@@ -3,7 +3,7 @@ import ContentsTable from "Components/ContentsTable";
 import SubChapter from "Components/SubChapter";
 import Paragraph from "Components/Paragraph";
 import SubTitle from "Components/SubTitle";
-import ImageCorousel from "Components/ImageCorousel";
+import { HashLink } from "@xzar90/react-router-hash-link"; 
 import ImagePlus from "Components/ImagePlus";
 import ChapterLayout from "Layouts/ChapterLayout";
 import ReferencesBlock from "Components/ReferencesBlock";
@@ -55,7 +55,7 @@ const ProbabilidadesII =()=>{
 
             <SubChapter id = "condicional">
                 <SubTitle title ="3.8- Qué es una probabilidad condicional"/>
-                <Paragraph texto = {["Anteriormente revisamos que cuando trabajamos con probabilidades estas pueden darse para",<a href="Probabilidades#dependientes"><u> eventos dependientes</u></a>," y para ", <a href="probabs.html#independientes"><u> eventos independientes</u></a>, "La probabilidad condicional es la probabilidad de que un evento suceda dado que otro evento ya ocurrió. Si el evento en el que estamos interesados es A y el evento B es conocido, la probabilidad condicional se denota como P(A|B) es decir la probabilidad de A dado B. Esta probabilidad se da cuando dos eventos son dependientes de manera que la P(A ∩ B) = P(A) * P (B).  Si los eventos son independientes entonces la P(A|B) = P(A)." ]}/>
+                <Paragraph texto = {<><p>Anteriormente revisamos que cuando trabajamos con probabilidades estas pueden darse para,<HashLink smooth to ={"/Probabilidades#dependientes"}><u> eventos dependientes</u></HashLink>, y para  <HashLink smooth to ={"/Probabilidades#independientes"}><u> eventos independientes</u></HashLink>, La probabilidad condicional es la probabilidad de que un evento suceda dado que otro evento ya ocurrió. Si el evento en el que estamos interesados es A y el evento B es conocido, la probabilidad condicional se denota como P(A|B) es decir la probabilidad de A dado B ya ocurrió. Esta probabilidad se da cuando dos eventos son dependientes de manera que la P(A ∩ B) = P(A) * P (B).  Si los eventos son independientes entonces la P(A|B) = P(A). </p></>}/>
                 <center><h4>Fórmula de la probabilidad condicional</h4></center>
                 <ImagePlus 
                 width = "20%"
@@ -64,7 +64,8 @@ const ProbabilidadesII =()=>{
                 texto = "Probabilidad condicional"
                 />  
                 <Paragraph texto ="Donde P(A│B) representa la probabilidad de A dado que B ha ocurrido. P(A∩B) Representa la probabilidad de la intersección y P(B) Representa la probabilidad del evento B.  "/>
-                <Paragraph texto = {[ <b>Solo es de interés el resultado si se cumple B y la P(B) debe ser mayor que 0</b>,  ". Únicamente los elementos de la intersección podrían hacer que se cumpla B, por tanto deben haber elementos en común. Ojo aquí el orden es importante, la P(A|B) no es igual que la P(B|A) ",<a href="https://definicion.de/probabilidad-condicional/"> <u>(porto y gardey, 2019)</u> (porto y gardey, 2019)</a>,". Es importante aclarar que en la probabilidad condicional no necesariamente puede haber una relación temporal o causal entre los dos componentes, esto quiere decir que A puede producirse antes que B, después o al mismo tiempo y que A puede ser el origen de B o viceversa o no tener ningún tipo de relación." ]} />
+                <Paragraph texto = {<><p> <b>Solo es de interés el resultado si se cumple B y la P(B) debe ser mayor que 0</b>. Únicamente los elementos de la intersección podrían hacer que se cumpla B, por tanto deben haber elementos en común. Ojo aquí el orden es importante, la P(A|B) no es igual que la P(B|A) <a href="https://definicion.de/probabilidad-condicional/" target="_blank"> <u>(Porto y Gardey, 2019)</u></a>. Es importante aclarar que en la probabilidad condicional no necesariamente puede haber una relación temporal o causal entre los dos componentes, esto quiere decir que A puede producirse antes que B, después o al mismo tiempo y que A puede ser el origen de B o viceversa o no tener ningún tipo de relación." </p></>} />
+
                 <Paragraph texto = "Por ejemplo, un investigador toma una muestra de 100 fincas de una región de la costa colombiana.  De esas 100 fincas 80 tienen producción ganadera y 45 tienen producción ganadera y reforestadora a la vez (doble propósito) y solo 20 son de orientación exclusivamente reforestadoras.  ¿Cual será la probabilidad de encontrar una finca que tenga actividad  reforestadora cuando en principio ha sido seleccionada una finca de orientación ganadera?"/>
                 <Paragraph texto ={[<ul>
                     <center><li>Espacio muestral: 100 fincas de la costa colombiana</li></center>
@@ -84,15 +85,16 @@ const ProbabilidadesII =()=>{
                 image = {total}
                 texto = "Probabilidad total"
                 />  
-                <Paragraph texto = {["Donde P(A) es la probabilidad de que ocurra el evento A, P(A│B",<sub>1</sub>,")es la probabilidad condicional de A dado que B",<sub>1</sub>,"ha ocurrido, P(B",<sub>1</sub>,") es la probabilidad de que B",<sub>1</sub>," ocurra. P(A│B",<sub>n</sub>,") es la probabilidad condicional de A dado que B",<sub>n</sub>," ha ocurrido. P(B", <sub>n</sub>, ") es la probabilidad de que B",<sub>n</sub>," ocurra." ]}/>
+                <Paragraph texto = {<><p>Donde P(A) es la probabilidad de que ocurra el evento A, P(A│B<sub>1</sub>) es la probabilidad condicional de A dado que B<sub>1</sub>ha ocurrido, P(B<sub>1</sub>) es la probabilidad de que B<sub>1</sub> ocurra. P(A│B<sub>n</sub>) es la probabilidad condicional de A dado que B<sub>n</sub>ha ocurrido. P(B<sub>n</sub>) es la probabilidad de que B<sub>n</sub> ocurra.</p></>}/>
                 <Paragraph texto ="Ejemplo, en un estudio epidemiológico se encuentra que de una muestra aleatoria de 100 hatos, al realizar el conteo de células somáticas en leche, el 60% tienen niveles adecuados de CCS (≦4), mientras que el 40% restantes tiene niveles superiores a 4 por tanto muy elevados. De los hatos con adecuados niveles de CCS la prevalencia de Mastitis Clínica es del 15%, mientras que en los hatos con altos niveles de CCS la mastitis clínica esta presente en un 33%.  ¿Si seleccionamos al azar en estos hatos cual es la probabilidad de escoger un animal positivo para mastitis clínica?"/>
 
                 <Paragraph texto ={[
                     <ul>
-                      <center><li>Probabilidad de Mastitis = P (mastitis|bajo SCS) * P(bajo SCS) + P(mastisis|alto SCS) * P(alto SCS)</li></center>  
-                      <center><li>Probabilidad de Mastitis= (0.15*0.60)+(0.33*0.40)</li></center>
+                      <center><li>Probabilidad vaca con MC = P (mastitis|bajo SCS) * P(bajo SCS) + P(mastisis|alto SCS) * P(alto SCS)</li></center>  
                       <br />
-                      <center><li><b>Probabilidad de Mastitis= 0.09+0.132= 0.22</b></li></center>
+                      <center><li>Probabilidad vaca con MC= (0.15*0.60)+(0.33*0.40)</li></center>
+                      <br />
+                      <center><li><b>Probabilidad vaca con MC= 0.09+0.132= 0.22</b></li></center>
                     </ul>,
                     <br />,
                     <center>Entonces, hay una probabilidad del 22% de que el un animal seleccionado dentro de los 100 hatos de la muetra esté afectado con mastitis clínica.</center>
@@ -104,7 +106,8 @@ const ProbabilidadesII =()=>{
                 <SubTitle title ="3.10- Regla de la adición de las probabilidades"/>
                 <Paragraph texto = "Esta regla calcula la probabilidad de la unión de un evento A y un evento B y está basada en la probabilidad de los conjuntos individuales, calculando el tamaño de la unión y descontando el tamaño de la intersección."/>
 
-            <Paragraph texto ={[ <br/>, <h3> <center>P(A∪B) =P(A) +P(B) -P(A∩B)</center></h3>, <br/>, "Donde P(A∪B) = Probabilidad de la Unión y P(A∩B) = Probabilidad de la Intersección."]}/>
+            <Paragraph texto ={[ <br/>, <h3> <center>P(A∪B) =P(A) +P(B) -P(A∩B)</center></h3>, <br/>, <center> Donde P(A∪B) = Probabilidad de la Unión y P(A∩B) = Probabilidad de la Intersección.</center>]}/>
+            <br />
             <Paragraph texto = {["Ejemplo, en un análisis de casos en una clínica veterinaria se encontró que el 15% de los pacientes caninos que atendieron consulta el año anterior eran hipertensos. El 6% de los pacientes fueron pacientes con fallo renal y el 3% de los casos atendidos presentaron ambas situacion (hipertensión y falla renal).  ¿Que probabilidad existe de que se seleccione un paciente que sea hipertenso o con fallo renal?", <b/>, <ul>
                 <center><li>P(Hipertenso ∪ Fallo Renal) = 0.15 + 0.06 – 0.03</li></center>
                 <center><li><b>P(Hipertenso ∪ Fallo Renal) = 0.18%</b></li></center> </ul>, <br/>,"Entonces la probabilidad de encontrar un paciente ya sea hipertenso o con fallo renal en análisis es del 18%."
@@ -139,7 +142,8 @@ const ProbabilidadesII =()=>{
 
         <SubChapter id = "bayes">
         <SubTitle title ="3.12- El teorema de Bayes"/>
-           <Paragraph texto = {["El teorema de Bayes es utilizado para calcular la probabilidad de un suceso, teniendo información que  de antemano se conoce sobre ese suceso ", <a href="https://economipedia.com/definiciones/teorema-de-bayes.html"><u>(Lopez,2018)</u></a>,". Es de mucha utilidad para ayudarnos a encontrar una relación causal entre dos eventos, es decir nos ayuda a buscar argumentos mas razonables acerca de que evento puede causar el otro."]}/>
+           <Paragraph texto = {<><p>El teorema de Bayes es utilizado para calcular la probabilidad de un suceso, teniendo información que de antemano se conoce sobre ese suceso <a href="https://economipedia.com/definiciones/teorema-de-bayes.html" target = "_blank"><u>(Lopez,2018)</u></a>. Es de mucha utilidad para ayudarnos a encontrar una relación causal entre dos eventos, es decir nos ayuda a buscar argumentos mas razonables acerca de que evento puede causar el otro.</p></>}/>
+           <br />
            <center><h4>La forma simple del teorema de Bayes es: </h4></center>
            <ImagePlus 
                 width = "25%"
@@ -167,8 +171,8 @@ const ProbabilidadesII =()=>{
             <ReferencesBlock 
          references={[
           "* Chao, L.L., 1978. Estadística para las ciencias administrativas. McGraw-Hill Interamericana.",
-          <a href="https://economipedia.com/definiciones/teorema-de-bayes.html">* López J., 2018, <u>Teorema de Bayes</u> en Economipedia.com </a> ,
-          <a href="https://definicion.de/probabilidad-condicional/">* Pérez Porto J. y Gardey A., 2021.
+          <a href="https://economipedia.com/definiciones/teorema-de-bayes.html" target = "_blank">* López J., 2018, <u>Teorema de Bayes</u> en Economipedia.com </a> ,
+          <a href="https://definicion.de/probabilidad-condicional/" target = "_blank">* Pérez Porto J. y Gardey A., 2021.
           <u>Definición de probabilidad condicional </u>,en portal defición.de </a>,
 
           "* Pfaffenberger, R.C. and Patterson, J.H., 1977. Statistical methods for business and economics. Homewood, IL: Richard D. Irwin.",

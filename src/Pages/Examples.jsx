@@ -102,12 +102,7 @@ const Examples =()=>{
             <Paragraph texto = "Una vez que tenemos recogidos los datos crudos y estamos listos para su procesamiento, podemos enfrentar diversos problemas, especialmente si las tablas no han sido bien diseñadas y las variables o los datos no son claros.  Un caso típico, es la falta de estandarización en los registros de actividades y producción.  Cuando las variables no están bien definidas o no se han estandarizado los valores y términos que pueden tomar las variables se va a generar un caos en el manejo de los registros. Esto es porque cada quien va a utilizarlos como mejor le parece y vamos a encontrar muchas versiones de como incluir un evento. Supongamos que hay una vaca enferma con mastitis, sino existe un código para este evento, bajo la columna de 'Observaciones' el funcionario puede escribir Mast, Mastitis, M, Mgram+ etc. y todos serán válidos pero esto va a generar un dolor de cabeza a la hora de compilar los datos."/>
             <Paragraph texto = "Una forma de solucionar esta situación es conocer claramente cuales son nuestras variables y el tipo de información con la cual vamos a alimentar los registros. Por ejemplo, para datos datos nominales como raza o problemas de salud, es adecuado de antemano delimitar la entrada de los datos.  Por ejemplo si vamos a registrar un caso de mastitis clínica, en el registo debería solo existir la opcion 'Mastitis' o cualquiera que sea el código asignado y podemos luego generar otra variable explicativa que dé un poco mas de detalle.  "/>
             <Paragraph texto = {<><p>Finalmente podemos asegurar que unos datos adecuadamente procesados y analizados son fundamentales para una adecuada
-              <a href="https://www.guru99.com/business-intelligence-definition-example.html"><b><u>Inteligencia de negocios</u></b></a>
-              . Esta la podemos interpretar como la capacidad de transformar los datos crudos para convertirlos en información oportuna que pueda generar
-               herramientas útiles en la gerencia de la finca tratando de incluir tantos aspectos como sea posible (nutrición, producción, costos, mercadeo, etc.)
-                para asegurar su sostenibilidad y rentabilidad. Con la Inteligencia de negocios podemos encontrar cuellos de botella en el sistema (eje: donde
-                 están los problemas que afectan mi rentabilidad), evaluación de los recursos que existen dentro de la empresa y también  como se afecta la
-                  producción cuando generamos cambios en la empresa (eje: invertir en un nuevo equipo de ordeño vale la pena?).</p></>}/>
+              <a href="https://www.guru99.com/business-intelligence-definition-example.html" target="_blank"><b><u>Inteligencia de negocios</u></b></a> que la podemos interpretar como la capacidad de transformar los datos crudos para convertirlos en información oportuna. Esta información es de utilidad para generar herramientas útiles en la gerencia de la finca y busca integrar tantos aspectos como sea posible (nutrición, producción, costos, mercadeo, etc.) para asegurar la sostenibilidad y rentabilidad de la empresa. Con la Inteligencia de negocios podemos encontrar cuellos de botella en el sistema (eje: donde están los problemas que afectan mi rentabilidad), evaluación de los recursos que existen dentro de la empresa y también  como se afecta la producción cuando generamos cambios en la empresa (eje: invertir en un nuevo equipo de ordeño vale la pena?).</p></>}/>
             </SubChapter>
 
             <SubChapter id = "Definiciones">
@@ -141,7 +136,7 @@ const Examples =()=>{
                 <li>- No todos los datos son creados de la misma manera. Es importante primero analizar los datos, como se colectan y a que <HashLink smooth to={"/Post#raw"}><u><b>categoría</b></u></HashLink> pertenecen. Una vez hecho esto tener claridad sobre su necesidad y uso. </li>                                            
                 <li>- Mantenenga las tablas simples y de forma columnar para las variables y las filas para los eventos u observaciones. Tal como se mostró en la sección anterior con el registro de <HashLink smooth to={"/Post#datos"}><u><b>gallinas ponedoras</b></u></HashLink> </li>
                 <li>- No colecte mas datos de los que se necesitan, pero que tampoco menos. </li>
-                <li>-Haga comentarios sobre que es que, trate de ser explicativo porque a lo mejor usted entiende, pero si alguien va a analizar los datos va a entender. </li>
+                <li>- Haga comentarios sobre las variables y sus valores, trate de ser explicativo porque a lo mejor usted entiende, pero si alguien va a analizar los datos a lo mejor no va a entender. </li>
                 <li>- Sea consistente con los títulos y los nombres de las variables. Si una variable se repite en varios registros, siempre llamela de la misma manera, esto ahorrará dolores de cabeza</li>
                 <li>- Sea consistente con la forma de los registros y la frecuencia para recoger los datos. De esta manera se facilitará la comparación, el análisis y por tanto la toma de decisiones</li>
                 </ul>
@@ -151,9 +146,7 @@ const Examples =()=>{
 
             <SubChapter id ="fechas">
                 <SubTitle title= "2.1- Como crear campos con criterios de validación en Excel"/>
-                <Paragraph  texto = {<><p>Los criterios de validación se utilizan para evitar que al ingresar los datos en los campos, se incurra en datos
-                 espurios o erroneos.  Para ello Excel nos permite <b>validar los datos</b> o solo permitir la entrada de ciertos valores asignados a los campos.
-                Para entender de manera mas clara  vamos a crear un registro de control de nacimientos de terneros en la hoja electrónica.</p></>}/>
+                <Paragraph  texto = {<><p>Los criterios de validación se utilizan para evitar que al ingresar los datos en los campos, se incurra en datos espurios o erroneos.  Para ello Excel nos permite <b>validar los datos</b> o solo permitir la entrada de ciertos valores asignados a los campos. Para entender de manera mas clara  vamos a crear un registro de control de nacimientos de terneros en la hoja electrónica.</p></>}/>
                 
                 <Paragraph texto =
                 "El primer paso es crear el campo donde va la fecha de nacimiento del ternero. Entonces para evitar errores diferentes formatos (día-mes-año) o datos que no sean una fecha, Excel permite asignar primero la exclusividad de introducir solo fechas en los campos deseados y en el formato deseado. Para hacer esto entonces,"/>
@@ -161,7 +154,7 @@ const Examples =()=>{
                 <Paragraph texto = {<> 
                 <ul>
                     <li>1- Identifique el rango de las celdas donde se van a digitar las fechas.</li>
-                    <li>2-Vaya al menú datos ubicado en la parte superior de la hoja electrónica y seleccione la opción 'validación de datos'. </li>
+                    <li>2- Vaya al menú datos ubicado en la parte superior de la hoja electrónica y seleccione la opción 'validación de datos'. </li>
                     <li> 3- En el menú criterio de validación (validation criteria) se muestra una lista que ofrece varias opciones y de ahí seleccione 'fecha' como se muestra en el cuadro 2.1.  Esto hace que no se pueda introducir ningún otro tipo de datos diferente a una fecha. </li>
                     <li> 4- Para determinar el rango de fechas, podemos seleccionar de una mínima a una máxima o solo una mínima, para este caso se ha seleccionado  la posibilidad de introducir fechas superiores a Enero 1 del 2021, como se muestra en el cuadro 2.1.1.  Finalizado este paso ya se puede seleccionar la fecha.  Al tratar de digitar  una fecha anterior al 2021  o un valor diferente a una fecha, se activará una señal de error como se muestra en en el recuadro 2.1.2."  </li>
                 </ul>
@@ -170,18 +163,20 @@ const Examples =()=>{
                  <center><h4>2.1.1- Validación de criterios, selección del criterio por fecha</h4></center>
                  <ImagePlus 
                 image = {fecha1}
+                max_zoom ={"70%"}
                 texto = "Selección de los criterios para la validación de los datos"
                 />  
                 <br />
                 <center><h4>2.1.2- Alerta de error al tratar de digitar un dato diferente a una fecha</h4></center>
                  <ImagePlus 
                 image = {fecha_error}
+                max_zoom ={"70%"}
                 texto = "Si se intruce un dato erroneo el sistema de validación de datos lo rechaza"
                 />  
                 <br />
                 <center><h4>Creación de un campo de fecha para la construcción de un registro con Validación de datos</h4></center>
                 <Video
-          id="c2O-O9MAOB4"
+          id="petINsj_2wo"
           title="Creación de un campo de fecha para la construcción de un registro con Validación de datos "
         />
 
@@ -196,12 +191,14 @@ const Examples =()=>{
             <center><h4>2.2.1- Crear de la lista de validación</h4></center>
                  <ImagePlus 
                 image = {list1}
+                max_zoom ={"70%"}
                 texto = "Creación de la lista de validación"
                 />  
             <Paragraph texto = "El primer paso consiste en generar una lista para todas las razas, esta debe ir a manera de columna y un valor por celda. Este caso creamos una lista para razas en la columba B, y otra para para en la columna C."/>
             <center><h4>2.2.2- Dar un nombre a lista creada</h4></center>
                  <ImagePlus 
                 image = {list2}
+                max_zoom ={"70%"}
                 texto = "Nombrar la lista recién creada"
                 />  
             <Paragraph texto = "El segundo paso es seleccionar el rango de los datos y nos ubicamos en la celda que se ubica en la parte superior izquierda de la pantalla, hacemos click y desde ahí le damos el nombre a la lista, en este caso “Razas”. Una vez cumplido este paso ya se puede utilizar en la creación de la tabla o el registro deseado."/>
@@ -209,6 +206,7 @@ const Examples =()=>{
             <center><h4>2.2.3- Utilización de la lista creada</h4></center>
                  <ImagePlus 
                 image = {list3}
+                max_zoom ={"70%"}
                 texto = "Utilizando la lista 'Razas'"
                 />  
 
@@ -217,6 +215,7 @@ const Examples =()=>{
             <center><h4>2.2.4- Comprobación del funcionamiento adecuado de la lista </h4></center>
                  <ImagePlus 
                 image = {list4}
+                max_zoom ={"70%"}
                 texto = "Chequear si todo OK"
                 />  
             <Paragraph texto ="Una vez terminado este paso vemos que cuando vamos a digitar una raza la hoja solo permite seleccionar una de las que hemos incluido en la lista."/>
@@ -224,6 +223,7 @@ const Examples =()=>{
             <center><h4>2.2.5- Poblar las listas y crear mas </h4></center>
                  <ImagePlus 
                 image = {list5}
+                max_zoom ={"70%"}
                 texto = "una vez comprobado el funcionamiento adecuado podemos poblar el registro"
                 />  
             <Paragraph texto="Finalmente, repetimos la operación para la columna donde vamos a incluir el sexo del animal y como podemos ver en la figura la lista solo nos permite seleccionar alguno de los valores incluidos en la lista. "/>
@@ -242,6 +242,7 @@ const Examples =()=>{
             <center><h4>2.3.1- Selección de los criterios para usar para la validación de datos numéricos</h4></center>
                  <ImagePlus 
                 image = {num1}
+                max_zoom ={"70%"}
                 texto = "Tabla de diálogo para la validación de los datos"
                 />  
             <Paragraph texto="Primero desde el menú de datos vamos a la opción validación de datos o 'Data Validation' y vamos a seleccionar el criterio de número completo o 'Whole number' y de la lista 'Datos' seleccionamos la opción 'inferior' a (less than) y digitamos el número que deseamos, en este caso 55 y seleccionamos OK."/>
@@ -249,6 +250,7 @@ const Examples =()=>{
             <center><h4>2.3.2- Poblar los registros con los criterios de validación </h4></center>
                  <ImagePlus 
                 image = {num2}
+                max_zoom ={"70%"}
                 texto = "Los datos se pueden introducir de manera mas confiable"
                 />  
             <Paragraph texto="Una vez asignado el rango de datos en el menú de validacion, ya se puede poblar el registro de una manera mas confiable. Como vemos al tratar de digitar un numero superior a 55, inmediatamente tenemos un mensaje de alerta indicándonos el error. "/>
@@ -273,24 +275,28 @@ const Examples =()=>{
             <center><h4>2.4.1- Creación de la lista madre y darle su respectivo nombre</h4></center>
                  <ImagePlus 
                 image = {val1}
+                max_zoom ={"70%"}
                 texto = "Creación de la lista 'madre'"
                 />  
             <Paragraph texto="En la misma hoja electrónica podemos crear todas las listas (aconsejable), primero la lista 'madre' en este caso la que llamamos 'Actividades' y luego las hijas.  Una vez que han sido digitados todos las variables (una por celda) de la lista 'Actividades' seleccionamos todo el rango de la lista  y le damos el nombre en la celda que se ubica en la parte superior izquierda y repetimos con las hijas"/>
             <center><h4>2.4.2- Implementación de las listas en el registro a crear</h4></center>
                  <ImagePlus 
                 image = {val2}
+                max_zoom ={"70%"}
                 texto = "Implementación de la lista madre en el registro"
                 />  
             <Paragraph texto="Una vez creadas las lista madre, podemos ir al registro que estamos creando y nos ubicamos en el rango en el que deseamos asignar los eventos de la lista madre o principal que en este caso es la lista 'Actividad'. Una vez seleccionado el rango vamos al menú de validación de datos y seleccionamos la opción de listas de validación como lo hemos desarrollado previamente y asignamos a este rango el nombre de la lista 'Actividad' para que no se acepten valores diferentes."/>
             <center><h4>2.4.3- Implementación de la lista hija</h4></center>
                  <ImagePlus 
                 image = {val3}
+                max_zoom ={"70%"}
                 texto = "Asignar la ubiciación de las lista hijas"
                 />  
             <Paragraph texto="Una vez activada la lista madre en el registro y seleccionada una de las actividades (salud, reproducción, etc.) en uno de los campos, seleccionamos el rango donde queremos ubicar la lista hija y volvemos a validación de datos y seleccionamos lista.  En la misma hoja de diálogo vamos a seleccionar la función 'indirect' y asignamos la celda donde está ubicada la actividad en este caso la D4. Es importante asegurarse que se remuevan los signos $ que son automáticamente asignados. También es muy importante que las listas secundarias o hijas tengan exactamente el mismo nombre como aparecen en la lista principal, de lo contrario habrá un error. "/>
             <center><h4>2.4.4- Probar la relación condicional</h4></center>
                  <ImagePlus 
                 image = {val4}
+                max_zoom ={"70%"}
                 texto = "Comprobación de que la relacion madre-hija funciona OK"
                 />  
             <Paragraph texto="Finalmente, cuando seleccionemos por ejemplo la actividad reproducción, en la celda de la siguiente columna se va a desplegar unicamente lista con las actividades incluidas en reproducción.  "/>
@@ -312,8 +318,7 @@ const Examples =()=>{
               Cuando estamos trabajando con unos pocos registros posiblemente solo visualizando los datos podremos identificarlos fácilmente,
               sin embargo, cuando estamos trabajando con miles (o millones) de datos la situación se torna complicada y necesitaremos de varias
               herramientas para facilitar este proceso. En este enlace de
-              <a href="https://support.microsoft.com/en-us/office/top-ten-ways-to-clean-your-data-2844b620-677c-47a7-ac3e-c2e157d1db19"><u>
-              <b>Microsoft®</b></u></a> podemos ver algunos de los puntos clave cuando estamos trabajando con datos estructurados.</p></>}/>
+              <a href="https://support.microsoft.com/en-us/office/top-ten-ways-to-clean-your-data-2844b620-677c-47a7-ac3e-c2e157d1db19" target="_blank" ><u><b>Microsoft®</b></u></a> podemos ver algunos de los puntos clave cuando estamos trabajando con datos estructurados.</p></>}/>
 
             <SubTitle title = "2.5.1- Manejo de inconsistencias en los términos para referirse a un evento "/>
             <Paragraph texto = "Uno de los casos mas comunes es la heterogeneidad en los términos para referirnos a un mismo evento. En este caso podemos acudir a Excel cuando no estamos trabajando con millones de datos. En caso de gran número de registros es mejor utilizar lenguajes de programación como SAS® o Python. Pero cuando tengamos una cantidad considerable de datos sin que sea abrumadora, Excel funciona muy bien.  Vamos a explorar las posibilidades del corrector ortográfico (Spelling), para ello vamos a revisar un registro simulado donde la actividad de inseminación ha sido digitada de multiples maneras (recuadros 2.5.1.1 y 2.5.1.2 )"/>
@@ -321,6 +326,7 @@ const Examples =()=>{
             <center><h4>2.5.1.1- Uso del corrector ortográfico</h4></center>
                  <ImagePlus 
                 image = {spell1}
+                max_zoom ={"70%"}
                 texto = "Selección del corrector para estandarizar los términos"
                 />  
             <Paragraph texto="El primer paso es seleccionar en el menu 'Revisar' (review) la opción de corrección de ortografía o spelling que se halla ubicado en la parte superior izquierda. Una vez hecho esto una hoja de diálogo permite permite editar cada uno de los términos de la columna(s) seleccionada.  Por ejemplo vamos a reemplazar 'Insem' por 'Inseminación', una vez seleccionada la primera celda, Excel lo hará en todas las celdas donde se requiera, para ello se debe presionar sobre la opción 'change all' o cambiar todas. "/>
@@ -328,6 +334,7 @@ const Examples =()=>{
             <center><h4>2.5.1.2- Revisar que los datos fueron adecuadamente cambiados y guardados</h4></center>
                  <ImagePlus 
                 image = {spell2}
+                max_zoom ={"70%"}
                 texto = "Los datos han sido adecuadamente cambiados y ahora los términos son homogeneos"
                 />  
             <Paragraph texto="Con esta opción se estandariza los datos como se muestra en el recuadro. Tanto las actividades como las observaciones ya tienen una mejor cara y será mas fácil realizar los respectivos análisis. Sin embargo, aun no está perfecto, por ejemplo en las observaciones aparece Mastitis y Mastitis g+.  Posteriormente veremos como se pueden manejar estos problemas."/>
@@ -349,6 +356,7 @@ const Examples =()=>{
           <center><h4>2.5.2.1- Seleccionar los datos donde se quieren buscar los duplicados</h4></center>
                  <ImagePlus 
                 image = {dup1}
+                max_zoom = {"70%"}
                 texto = "Selección de los campos o de la tabla"
                 />  
             <Paragraph texto="Una vez seleccionada la tabla o el rango que queremos revisar, desde el menú 'Inicio' (home) seleccionamos 'Formateado condicional' (conditional formatting) y de ahí la opción 'Valores duplicados' (duplicate values)  "/>
@@ -356,6 +364,7 @@ const Examples =()=>{
             <center><h4>2.5.2.2- Seleccionar las opciones del menu de dialogo</h4></center>
                  <ImagePlus 
                 image = {dup2}
+                max_zoom ={"70%"}
                 texto = "Seleccionar opciones de resaltar duplicados"
                 />  
             <Paragraph texto="En seguida se abre una hoja de diálogo en donde se da la opción para resaltar los registros duplicados y de que manera se desean resaltar.  Para este caso se seleccionó el modo estándar.  "/>
@@ -363,6 +372,7 @@ const Examples =()=>{
             <center><h4>2.5.2.3- Revisar los duplicados visualmente</h4></center>
                  <ImagePlus 
                 image = {dup3}
+                max_zoom ={"70%"}
                 texto = "Revisar los duplicados"
                 />  
             <Paragraph texto="Una vez seleccionadas las diferentes opciones que se desean utilizar se presiona “OK” y vemos como los duplicados se resaltan en la tabla.  Facilitando inmediatamente la revisión de los mismos.   "/>
@@ -370,13 +380,15 @@ const Examples =()=>{
             <center><h4>2.5.2.4- Resaltar los duplicados a remover</h4></center>
                  <ImagePlus 
                 image = {dup4}
+                max_zoom ={"70%"}
                 texto = "Cuantos campos del registro estan duplicados?"
                 />  
             <Paragraph texto="En la tabla se resaltan todos los duplicados ya sean para todos los campos del registro o parciales por ejemplo fechas, estos últimos no son nuestro objetivos, sino los duplicados del registro completo. En este caso hay dos, los  de los animales 154424 y 155539 están repetidos así que podemos remover.  Para ellos también vamos al menú 'Datos' (Data) y seleccionamos la opción 'Remover duplicados' (remove duplicates)   "/>
 
-            <center><h4>2.5.2.5- Ubicar los registros que  duplicadas</h4></center>
+            <center><h4>2.5.2.5- Ubicar los registros que están duplicados</h4></center>
                  <ImagePlus 
                 image = {dup5}
+                max_zoom ={"70%"}
                 texto = "Solo remover aquellos que son duplicados completos"
                 />  
             <Paragraph texto="Un menú de diálogo se abrirá pidiendo seleccionar las columnas donde se encuentran las variables duplicadas (en este caso seleccionarlas todas) y si la tabla tiene encabezados (my list has headers), lo cual en este caso es cierto.  "/>
@@ -385,6 +397,7 @@ const Examples =()=>{
             <center><h4>2.5.2.6- Está seguro de lo que va a hacer?</h4></center>
                  <ImagePlus 
                 image = {dup6}
+                max_zoom = {"70%"}
                 texto = "Misión cumplida los duplicados han sido removidos"
                 />  
             <Paragraph texto="Finalmente, damos click en OK y vemos como los duplicados son removidos de la tabla, no sin antes ver un mensaje de alerta notificando que se han removido.  "/>
@@ -405,6 +418,7 @@ const Examples =()=>{
             <center><h4>2.5.3.1- Opción contar el total de los registros</h4></center>
                  <ImagePlus 
                 image = {miss1}
+                max_zoom = {"70%"}
                 texto = "Utilizar la función =count"
                 />  
             <Paragraph texto="Lo primero que vamos a hacer es identificar el numero de animales.  En este caso con la función de Excel “contar” o “count”, seleccionamos el rango de la tabla como se muestra en la ilustración y obtendremos el total, este caso 40 observaciones en total.  "/>
@@ -412,6 +426,7 @@ const Examples =()=>{
             <center><h4>2.5.3.2- Contar los valores faltantes</h4></center>
                  <ImagePlus 
                 image = {miss2}
+                max_zoom ={"70%"}
                 texto = "Identificar cuantos valores faltantes existen en la tabla"
                 />  
             <Paragraph texto="Para identificar el numero de observaciones faltantes podemos utilizar la función “contar.blanco” o “countblank” en Excel, simplemente escribimos la función en la celda donde queremos tener el dato y  seleccionamos el rango como se muestra en la imagen. "/>
@@ -419,6 +434,7 @@ const Examples =()=>{
             <center><h4>2.5.3.3- Determine la proporción de valores faltantes</h4></center>
                  <ImagePlus 
                 image = {miss3}
+                max_zoom ={"70%"}
                 texto = "Calcule la proporción de valores faltantes"
                 />  
             <Paragraph texto="En total faltan tres registros,  es decir el 7.5% de los pesos no aparecen.  Esto puede ser por diferentes circunstancias sin embargo al momento de llevar los controles de peso se puede o bien descartar lo registros o asignar el valor del promedio de los animales.  Para calcular la media del peso debemos utilizar la función =averageif. "/>
@@ -428,6 +444,7 @@ const Examples =()=>{
             <center><h4>2.5.3.4- Calcular la media para incluir en los valores faltantes</h4></center>
                  <ImagePlus 
                 image = {miss4}
+                max_zoom ={"70%"}
                 texto = "Calcule la media"
                 />  
             <Paragraph texto="El valor que vamos a 'insertar' en las celdas en blanco es la media que obtuvimos sin los valores en blanco, este valor tiene que copiarse en una celda aparte ya que de lo contrario entraremos en un error de referencia circular.  Una vez hecho esto, desde el menú inicio ir a buscar (find) y seleccionar 'ir a especial' o 'go to special' "/>
@@ -435,6 +452,7 @@ const Examples =()=>{
             <center><h4>2.5.3.5- Seleccionar los espacios en blanco </h4></center>
                  <ImagePlus 
                 image = {miss5}
+                max_zoom = {"70%"}
                 texto = "Seleccionar los espacios en blanco donde se va a insertar la media"
                 />  
             <Paragraph texto="En la hoja de dialogo seleccionar la opción 'blancos' (blanks) y hacer click en OK."/>
@@ -442,6 +460,7 @@ const Examples =()=>{
             <center><h4>2.5.3.6- Señalar el valor a insertar </h4></center>
                  <ImagePlus 
                 image = {miss6}
+                max_zoom = {"70%"}
                 texto = "Seleccionar el valor a insertar"
                 />  
             <Paragraph texto="Una vez seleccionados los campos en blaco, en la primera celda resaltada deberemos copiar la coordendada donde se encuentra el valor que deseamos incluir. Finalizado este paso presionar al tiempo control + enter (windows) o command + enter (si es un mac) y los valores se copiaran automáticamente. "/>
@@ -449,6 +468,7 @@ const Examples =()=>{
             <center><h4>2.5.3.7- Revisar que el dato fue adecuadamente copiado en todas las celdas </h4></center>
                  <ImagePlus 
                 image = {miss7}
+                max_zoom = {"70%"}
                 texto = "Insertar el valor en los campos y revisar"
                 />  
             <Paragraph texto="Finalmente se puede observar que ya no existen valores faltantes, sino que han sido reemplazados con la media y de esta manera no vamos a afectar este resultado. Solo se recomienda hacer esto cuando no hacen falta muchos datos y por alguna razon es mejor no borrar los registros de lo contrario no incluir estos registros si hacen parte de otro análisis ya que esto tendría alguna incidencia sobre los resultados. "/>
@@ -464,7 +484,7 @@ const Examples =()=>{
  "* Chao, L.L., 1978. Estadística para las ciencias administrativas. McGraw-Hill Interamericana.",
  "* Guerrero, H., 2010. Excel data analysis: modeling and simulation. Springer Science & Business Media.",
  "* Pfaffenberger, R.C. and Patterson, J.H., 1977. Statistical methods for business and economics. Homewood, IL: Richard D. Irwin.",
- <a href="https://www.guru99.com/business-intelligence-definition-example.html">* <u>What is Business Intelligence, Definition and Example</u>. Taylor D., Octubre 7 2021 </a>
+ <a href="https://www.guru99.com/business-intelligence-definition-example.html" target="_blank">* <u>What is Business Intelligence, Definition and Example</u>. Taylor D., Octubre 7 2021 </a>
 ]}
 />
     </main>
