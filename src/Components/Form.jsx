@@ -10,12 +10,11 @@ const Form = () => {
     e.preventDefault()
     // se envia todo lo que necesita el servicio de emailjs incluyendo la key que devuelve la recptcha
     // seria bueno meter todo esto en variables de entorno
-    emailjs.sendForm("service_a1kmgcs","contact_form",form.current,"user_2wnxcOTl5tX9IWJkRPZnv")
+    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID,"contact_form",form.current,process.env.REACT_APP_EMAILJS_USER_ID)
     .then((result) => {
-      console.log("salio bien!");
       setEnviado(true);
     }, (error) => {
-      console.log("Salio mal :c!");
+      console.log(error)
     });
   }
   // Estados formulario
@@ -49,11 +48,11 @@ const Form = () => {
             <input type="text" name="message" id="comment" required
             placeholder="Escriba su comentario" />
           </div>
-          {/* captcha de google que cambia de valor cuando es resolvida y ese valor se guarda en los valores del formualrio */}
+          {/* captcha de google que cambia de valor cuando es resolvida y ese valor se guarda en los valores del formulario */}
           {/* esta key tambien deberia ir en las variables de entorno */}
           <ReCAPTCHA
             ref={captcha}
-            sitekey='6Lf7WaoeAAAAAGggwAtkN889OMf-z2sYygpRc_nt'
+            sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
             onChange={captchaChange}/>
           {submitButton === true?<input type="submit" value="Enviar" id= "submit"
           className="btn"/>:null}
