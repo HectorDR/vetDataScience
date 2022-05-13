@@ -668,12 +668,12 @@ font-weight: 100
   color: #32a852;
 }
 
-.chapter_accordion__title:hover > h6{
+.chapter_accordion__title h6:hover{
   filter:  brightness(0) invert(1);
 }
 
 .chapter_accordion__img{
-  width: 1rem;
+  width: 1em;
   height: 1rem;
   align-self: center;
   transition: 700ms;
@@ -684,7 +684,7 @@ font-weight: 100
   transform: rotate(180deg);
 }
 
-.chapter_accordion__title:hover > .chapter_accordion__img{
+.chapter_accordion__title:hover .chapter_accordion__img:hover{
   filter:  brightness(0) invert(1);
 }
 
@@ -702,7 +702,7 @@ font-weight: 100
 }
 
 .chapter_accordion__subchapters li:hover{
-  color: #f5f5f5;
+  filter:  brightness(0) invert(1);
   cursor: pointer;
 }
 
