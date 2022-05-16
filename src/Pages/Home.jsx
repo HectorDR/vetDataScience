@@ -3,11 +3,13 @@ import Form from "Components/Form";
 import Chapters from "Components/Chapters";
 import Homehead from "Components/HomeHead";
 import cultivo from "Media/photos_web/cultivo.jpg";
-
+import home_video from "Media/videos/home_video.mp4"
+import HomeCover from "Components/HomeCover";
 const Home = () => {
  
   return (
     <div>
+      <HomeCover video={home_video}/>
           <Homehead background={cultivo} titulo={<><h1 style={{color:"yellow"}}>Análisis de Datos para el Campo </h1>,<br/>,
           <h2 style={{color:"yellow"}} >Una Introducción con herramientas aplicadas para entender el análisis de datos </h2></>}/>
           <section id ="introduccion" className = "container">
