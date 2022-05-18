@@ -16,9 +16,10 @@ const Home = () => {
           </section>
 
           <section id = "contents">
+            <h1 className="chapters_title">Capitulos</h1>
             <Chapters/>
           </section>
-          <section id = "contact" style={{margin : "2vh 0"}}>
+          <section id = "contact">
             <Form/>
           </section>
     </div>

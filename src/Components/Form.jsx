@@ -29,8 +29,8 @@ const Form = () => {
 
   return (
     
-    <div id= "contact" className="contact flex-columns flex-reverse">
-      {enviado==false?<div className="column-2 bg-light">
+    <div id= "contact" className="contact flex-columns ">
+      {enviado==false?<div className="form_card column-2">
         <h2>Si desea ponerse en contacto</h2>
         <form onSubmit={sendEmail} ref={form} className="callback-form">
           <div className="form-control">
