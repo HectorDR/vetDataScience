@@ -10,8 +10,8 @@ const Home = () => {
   return (
     <div>
       <HomeCover video={home_video}/>
-          <Homehead background={cultivo} titulo={<><h1 style={{color:"yellow"}}>Análisis de Datos para el Campo </h1>,<br/>,
-          <h2 style={{color:"yellow"}} >Una Introducción con herramientas aplicadas para entender el análisis de datos </h2></>}/>
+          {/* <Homehead background={cultivo} titulo={<><h1 style={{color:"yellow"}}>Análisis de Datos para el Campo </h1>,<br/>,
+          <h2 style={{color:"yellow"}} >Una Introducción con herramientas aplicadas para entender el análisis de datos </h2></>}/> */}
           <section id ="introduccion" className = "container">
            <center> <h1>Bienvenidos a esta Introducción al análisis de datos para Medicos Veterinarios y Zootecnistas</h1></center>
            <br />
