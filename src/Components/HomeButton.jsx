@@ -1,7 +1,8 @@
 import React from 'react'
+import { HashLink } from '@xzar90/react-router-hash-link'
 const HomeButton = (props) => {
   return (
-        <button className={`home_button`}>{props.texto}</button>
+    <HashLink smooth to={`#${props.link}`}><button className={`home_button`}>{props.texto}</button></HashLink>
   )
 }
 
