@@ -40,7 +40,6 @@ import { HashLink } from "@xzar90/react-router-hash-link";
 
 
 
-
 const Examples =()=>{
     return(
         <ChapterLayout chapter_title="2- Ejemplos prácticos para manejar los datos estructurados"

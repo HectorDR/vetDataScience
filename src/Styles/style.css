@@ -495,6 +495,7 @@ font-weight: 100
 }
 
 .main_layout{
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -883,6 +884,46 @@ font-weight: 100
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* responsive pantallas emdaianas y tablets */
+@media only screen and (max-width: 978px) {
+  .main_layout{
+    width: 100vh;
+  }
+  .home_options {
+    gap: 1vh;
+  }
+  .home_intro{
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+  }
+  .intro_card{
+    flex-direction: column !important;
+  }
+  .intro_card p{
+    padding-right: 0px !important;
+    margin-bottom: 2vh;
+  }
+  .intro_card img{
+    width: 60%;
+  }
+  .chapters{
+    margin-top: 2vh;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 20vh;
+  }
+  .chapter_card{
+    width: 60%;
+    height:53vh;
+  }
+  .chapter_card img{
+    height: 35vh;
+  }
+  .chapter_card h3{
+    font-size: 3vh;
+  }
 }
 .intro_card{
   display: flex;
