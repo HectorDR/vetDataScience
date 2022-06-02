@@ -9,7 +9,6 @@ const ChapterCard = (props) => {
         <img src={props.imagen} className="chapter_card__image"/>
         <div className='chapter_card__body'> 
             <h3>{props.titulo}</h3>
-            <p>{props.descripcion}</p>
         </div>
     </div>
   )
