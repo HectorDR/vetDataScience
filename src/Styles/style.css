@@ -125,6 +125,9 @@ img{
   width: 40%;
   font-size: xx-large;
 }
+.text-primary{
+  font-size: 100% !important;
+}
  /* responsive pantallas emdaianas y tablets */
 @media only screen and (max-width: 1284px) {
   [class*="navbar"] {
@@ -949,6 +952,9 @@ font-weight: 100
   }
   .chapter_card h3 {
     font-size: 80%;
+  }
+  .text-primary{
+    font-size: 90% !important;
   }
 }
 
