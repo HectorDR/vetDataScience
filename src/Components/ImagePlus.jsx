@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import DownloadButton from './DownloadButton';
 const ImagePlus = (props) => {
 
 const [modalTrigger,setModalTrigger] = useState(false);
@@ -8,7 +9,8 @@ const [modalTrigger,setModalTrigger] = useState(false);
         <img src={props.image} alt={props.alt}/>
         {modalTrigger === true?
         <div className='image_bottom_block'>
-            {props.texto}
+            <span>{props.texto}</span>
+            <DownloadButton/>
         </div>:null
         }
     </div>
