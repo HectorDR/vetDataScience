@@ -164,6 +164,7 @@ const Examples =()=>{
                 image = {fecha1}
                 max_zoom ={"70%"}
                 texto = "Selección de los criterios para la validación de los datos"
+                link = "https://raw.githubusercontent.com/HectorDR/vetDataScience/newHome/src/Media/images/brush.png"
                 />  
                 <br />
                 <center><h4>2.1.2- Alerta de error al tratar de digitar un dato diferente a una fecha</h4></center>

@@ -497,8 +497,13 @@ font-weight: 100
   align-items: center;
 }
 
-.image_bottom_block span{
-  padding: 10px;
+.image_bottom_block_lonely_description{
+  padding: 10px 0px;
+  margin: auto;
+}
+
+.image_bottom_block_description{
+  padding: 10px 0px;
   margin-left: auto;
 }
 

@@ -9,10 +9,8 @@ const [modalTrigger,setModalTrigger] = useState(false);
         <img src={props.image} alt={props.alt}/>
         {modalTrigger === true?
         <div className='image_bottom_block'>
-            <span>{props.texto}</span>
-            <DownloadButton/>
-        </div>:null
-        }
+            {props.link ? <><span className='image_bottom_block_description'>{props.texto}</span> <DownloadButton link={props.link}/></>: <span className='image_bottom_block_lonely_description'>{props.texto}</span>}
+        </div>:null}
     </div>
   )
 }
