@@ -23,10 +23,6 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 //importe todo lo nceesario a app los estilos, el router y las paginas
 function App() {
   return (
-    <Auth0Provider
-      domain={process.env.REACT_APP_AUTH0DOMAIN}
-      clientId={process.env.REACT_APP_AUTH0CLIENTID}
-      redirectUri={window.location.origin}>
       <HelmetProvider>   
       <BrowserRouter>
       <Helmet>
@@ -38,7 +34,7 @@ function App() {
           />
       </Helmet> 
         <Routes>
-          <Route path="/" element={<ProtectedRoute page={<MainLayout/>}/>}>
+          <Route path="/" element={<MainLayout/>}>
             <Route path="/" element={<Home/>}/>
             <Route path="Analisis" element={<Analisis/>}/>
             <Route path="Blog" element={<Blog/>}/>
@@ -58,7 +54,6 @@ function App() {
         </Routes>
       </BrowserRouter>
       </HelmetProvider>  
-      </Auth0Provider>
       )
   }
 export default App;
