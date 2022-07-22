@@ -5,7 +5,7 @@ const ContentsTable = (props) => {
   return (
     <>
         <section className="post">
-            <div id="menu" className=" bg-light">
+            <div id="menu" className=" bg-light" style={{padding: "1.5vh"}}>
                 <h2>Contenidos</h2>
                 <ul>
                     {props.contenidos.map(contenido => {
