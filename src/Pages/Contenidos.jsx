@@ -6,9 +6,7 @@ import perrito from "Media/photos_web/perrito.jpeg"
 
 const Contenidos =()=>{
     return(
-<div >
-
-<body id="home" >
+<div id="home" >
         <ChapterHead
           titulo="Tabla de Contenidos"
           background={perrito}
@@ -273,7 +271,6 @@ const Contenidos =()=>{
           </section>
  
 </main>
-</body>
 </div>
 
     );

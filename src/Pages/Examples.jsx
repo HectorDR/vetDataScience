@@ -38,14 +38,20 @@ import miss6 from "Media/examples/miss-6.png"
 import miss7 from "Media/examples/miss-7.png"
 import bajar from "Media/images/bajar.png"
 import { HashLink } from "@xzar90/react-router-hash-link";
-
+import {Helmet} from "react-helmet-async";
 
 
 const Examples =()=>{
     return(
-        <ChapterLayout chapter_title="2- Ejemplos prácticos para manejar los datos estructurados"
-        chapter_image={novillas}>
-<div>
+  <ChapterLayout chapter_title="2- Ejemplos prácticos para manejar los datos estructurados"
+  chapter_image={novillas}>
+      <div>
+      <Helmet>
+  <title>2- Ejemplos prácticos para manejar los datos estructurados</title>
+  <meta name="description" content="Qué es la ciencia de los datos"/>
+  <meta name='keywords'
+  content='Datos, Datos crudos, Clasificación de datos, Naturaleza de los datos'/>
+    </Helmet>
     <main>
     <section id = "tabla" className = "container">
           <ContentsTable

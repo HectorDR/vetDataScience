@@ -1,5 +1,4 @@
 import React from "react";
-import ChapterHead from "Components/ChapterHead";
 import ContentsTable from "Components/ContentsTable";
 import SubChapter from "Components/SubChapter";
 import Paragraph from "Components/Paragraph";
@@ -22,8 +21,7 @@ const Post = () =>{
   <title>1- Introducción a la Ciencia de los Datos</title>
   <meta name="description" content="Qué es la ciencia de los datos"/>
   <meta name='keywords'
-  content='Datos, Datos crudos, Clasificación de datos, Naturaleza de los datos'
-  />
+  content='Datos, Datos crudos, Clasificación de datos, Naturaleza de los datos'/>
  </Helmet>
     <ChapterLayout chapter_title="1- Introducción a la Ciencia de los Datos"
         chapter_image={hozando}>
