@@ -509,13 +509,61 @@ font-weight: 100
 
 .download_button{
   cursor: pointer;
-  position: relative;
-  right: 1vh;
-  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  width: 10vh;
+  align-self: center;
+  align-items: center;
 }
 
-.download_button:hover{
-  color: #23c483;
+.download_button__Arrow{
+  width: 30%;
+  padding-bottom: 2px;
+}
+
+.download_button__Folder{
+  width: 100%;
+}
+
+.download_button:hover > .download_button__Arrow{
+  filter: invert(68%) sepia(12%) saturate(6287%) hue-rotate(108deg) brightness(95%) contrast(77%);
+}
+.download_button:hover > .download_button__Folder{
+  filter: invert(46%) sepia(91%) saturate(387%) hue-rotate(82deg) brightness(96%) contrast(91%);
+  width: 120%;
+}
+
+.pulsate-bck {
+	-webkit-animation: pulsate-bck 0.5s ease-in-out infinite both;
+	        animation: pulsate-bck 0.5s ease-in-out infinite both;
+}
+@-webkit-keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .main_layout{

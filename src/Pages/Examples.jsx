@@ -39,7 +39,7 @@ import miss7 from "Media/examples/miss-7.png"
 import bajar from "Media/images/bajar.png"
 import { HashLink } from "@xzar90/react-router-hash-link";
 import {Helmet} from "react-helmet-async";
-
+import DownloadButton from "Components/DownloadButton";
 
 const Examples =()=>{
     return(
@@ -186,13 +186,7 @@ const Examples =()=>{
           id="petINsj_2wo"
           title="Creación de un campo de fecha para la construcción de un registro con Validación de datos "
         />
-           <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/2.1_Registro_basico_listas.xlsx?raw=true"
-                />  
+           <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/2.1_Registro_basico_listas.xlsx?raw=true"/> 
 
 
             </SubChapter>
