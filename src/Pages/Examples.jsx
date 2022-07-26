@@ -39,7 +39,7 @@ import miss7 from "Media/examples/miss-7.png"
 import bajar from "Media/images/bajar.png"
 import { HashLink } from "@xzar90/react-router-hash-link";
 import {Helmet} from "react-helmet-async";
-
+import DownloadButton from "Components/DownloadButton";
 
 const Examples =()=>{
     return(
@@ -48,10 +48,9 @@ const Examples =()=>{
       <div>
       <Helmet>
   <title>2- Ejemplos prácticos para manejar los datos estructurados</title>
-  <meta name="description" content="Ejemplos prácticos para manejar los datos estructurados"/>
+  <meta name="description" content="Qué es la ciencia de los datos"/>
   <meta name='keywords'
-  content='criterios de validacion, listas deplegables, datos cuantitativos, listas dependientes, datos importados,
-  inconsistencias, duplicados, datos faltantes'/>
+  content='Datos, Datos crudos, Clasificación de datos, Naturaleza de los datos'/>
     </Helmet>
     <main>
     <section id = "tabla" className = "container">
@@ -187,13 +186,7 @@ const Examples =()=>{
           id="petINsj_2wo"
           title="Creación de un campo de fecha para la construcción de un registro con Validación de datos "
         />
-           <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/2.1_Registro_basico_listas.xlsx?raw=true"
-                />  
+           <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/2.1_Registro_basico_listas.xlsx?raw=true"/> 
 
 
             </SubChapter>
@@ -324,15 +317,9 @@ const Examples =()=>{
           id="o-uELNf64Uw"
           title="Creación de listas dependientes de otra, relación madre-hija" />
 
-              <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/2.4_Lista_madre_hija.xlsx?raw=true"
-                />  
+             
 
-
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/2.4_Lista_madre_hija.xlsx?raw=true"/> 
 
          </SubChapter>
 
@@ -342,7 +329,7 @@ const Examples =()=>{
               fueron creados por nosotros o que fueron diseñados para otro propósito. Para ello lo ideal es que estos datos vengan de manera 
               tabular (estructurados) y sobre todo hay que conocer cuáles son las variables incluidas, cual es su
               <HashLink smooth to={"/Post#raw"}><u><b>naturaleza</b></u></HashLink> (categórico, ordinal, etc.), sus rangos y escalas (ejemplo: libras o kilos). 
-              Cuando estamos trabajando con pocos registros posiblemente solo visualizando los datos podremos identificar fácilmente la información contendia.  Sin embargo, cuando estamos trabajando con miles (o millones) de datos la situación se torna complicada y necesitaremos de varias
+              Cuando estamos trabajando con pocos registros posiblemente solo visualizando los datos podremos identificar facilmente la información contenida en el archivo.  Sin embargo, cuando estamos trabajando con miles (o millones) de datos la situación se torna complicada y necesitaremos de varias
               herramientas para facilitar este proceso. En este enlace de
               <a href="https://support.microsoft.com/en-us/office/top-ten-ways-to-clean-your-data-2844b620-677c-47a7-ac3e-c2e157d1db19" target="_blank" ><u><b>Microsoft®</b></u></a> podemos ver algunos de los puntos clave cuando estamos trabajando con datos estructurados.</p></>}/>
 
@@ -370,15 +357,9 @@ const Examples =()=>{
           id="4Lb7eBzr5a0"
           title="Uso del corrector ortográfico" />
 
-<ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/2.5.1_Inconsistencias_en_eventos.xlsx?raw=true"
-                />  
 
 
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/2.5.1_Inconsistencias_en_eventos.xlsx?raw=true"/> 
 
 
 
@@ -446,15 +427,9 @@ const Examples =()=>{
           id="S6Eisv7QL4Y"
           title="Selección y remoción de registros duplicados" />
 
-              <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/2.5.2_eventos_duplicados.xlsx?raw=true"
-                />  
+              
  
-
+ <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/2.5.2_eventos_duplicados.xlsx?raw=true"/> 
         </SubChapter>
 
 <SubChapter id = "missing">

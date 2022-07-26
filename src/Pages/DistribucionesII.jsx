@@ -26,6 +26,7 @@ import chi9 from "Media/photo_dist/cont_table4.png";
 import teo from "Media/photo_dist/teorema.png";
 import teo2 from "Media/photo_dist/teorema2.png";
 import {Helmet} from "react-helmet-async";
+import DownloadButton from "Components/DownloadButton";
 const DistribucionesII =()=>{
     return(
         <ChapterLayout chapter_title ="4- Cómo se distribuyen los datos y su utilidad"
@@ -131,7 +132,7 @@ const DistribucionesII =()=>{
              />  
     <Paragraph texto = "Como vemos la curva de la distribución se asemeja muchísimo a la curva de la gráfica que describe una distribución normal, con una media central, la forma de una campana y la mayoría de los datos ubicados hacia el centro.  Para esta muestra de producción de leche la media es de 30088 libras y la desviación estándar es de 4571 libras.  Entonces el 66% de los datos va a estar entre mas una y menos una desviaciones estándar, es decir el 68% de los animales tiene una producción por lactancia de entre 25517 y 34659 libras."/>
 
-    <h4>Cómo calcular una probabilidad de distribución normal en Excel</h4>
+    <h2>Cómo calcular una probabilidad de distribución normal en Excel</h2>
     <Paragraph texto = "Si conocemos la media y la desviación estandar podemos calcular probabilidades de los diferentes valores.  Por ejemplo, cual es la probabilidad de una producción igual o inferior a 38000 libras, sabemos que este valor está por encima de la media y también que es superior al valor de la media mas una desviación estándar, pero no sabemos exactamente que probabilidad hay de que y este por encima o por debajo, para ello podemos acudir a Excel de manera similar a como hicimos con las distribuciones de Poisson y Binomial. "
     />
         
@@ -159,12 +160,14 @@ const DistribucionesII =()=>{
                 <Video
           id="7xQgAzFZTIU"
           title="La distribución Normal en Excel" /> 
+
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/4.4.1_Dist_normal.xlsx?raw=true"/>   
 </SubChapter>
 
 <SubChapter id = "normal-estandar">
-    <SubTitle title = "4.4.2- Distribución Normal Estándarizada"/>
+    <SubTitle title = "4.4.2- Distribución Normal Estandarizada"/>
     <Paragraph texto = {<><p>
-        Dado que la distribución normal no es una sola sino un grupo de distribuciones con una <a href="Analisis#central"><u>media</u></a> μ y una <a href="Analisis#dispersion"><u>desviación estándar σ</u> </a> diferentes y por ello podrían existir un numero variado de distribuciones normales.  La solución para ello es entonces estandarizar transformando cualquier distribución normal de manera que μ sea 0 y σ sea 1. Todas las distribuciones pueden convertirse a la estándar restando la media de cada observación y dividendo por la desviación estándar:"
+        Dado que la distribución normal no es una sola sino un grupo de distribuciones con una <a href="Analisis#central"><u>media</u></a> μ y una <a href="Analisis#dispersion"><u>desviación estándar σ</u> </a> diferentes y por ello podrían existir un numero variado de distribuciones normales.  La solución para ello es entonces estandarizar transformando cualquier distribución normal de manera que μ sea 0 y σ sea 1. Todas las distribuciones pueden convertirse a la estándar restando la media de cada observación y dividendo por la desviación estándar:
         </p></>}/>
     <h2><center>z= (y-μ)/σ</center></h2>
 
@@ -221,7 +224,7 @@ const DistribucionesII =()=>{
              texto = "Histograma T-Student  "
              /> 
     <Paragraph texto = "Esta distribución se utiliza básicamente para crear intervalos de confianza y probar hipótesis con poblaciones normalmente distribuidas cuando las poblaciones muéstrales son pequeñas. Es particularmente útil cuando no tenemos suficiente información o es muy costoso obtenerla. Por todo lo demás igual a la distribución Normal, la distribución t-Student tiene extremos mas gruesos y un pico mas bajo.  Esto es un reflejo del mayor nivel de incertidumbre, ocasionado por el pequeño tamaño de la muestra. "/>
-
+    <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/4.4.3_Dist_cont_t_student.xlsx?raw=true"/> 
 </SubChapter>
 
 <SubChapter id = "chi-cuadrado">
@@ -248,7 +251,7 @@ const DistribucionesII =()=>{
 <Paragraph texto = {<><p>
     Básicamente lo que hace X<sup>2</sup>  es mostrar la diferencia existente entre un valor observado y un valor esperado con un solo número si no hubiera ninguna relación en la población.  Un valor de X<sup>2</sup>  bajo significa una alta correlación entre los dos grupos de datos (observados y esperados).  El proceso para determinar si hay una diferencia significativa básicamente se hace de manera similar que con la distribución de t-student. Si el valor de X<sup>2</sup>, es mayor que el valor crítico entonces hay un valor significativo. Importante tener en cuenta que esta prueba  <b>solo puede ser usada con valores reales</b> no en porcentajes ni en proporciones.  Es importante anotar que esta es una fórmula si no dificil si es larga de calcular por la sumatoria de cada uno de los valores críticos de X<sup>2</sup>, sin embargo la tecnología existente nos facilita estos cálculos.  En este caso seguiremos utilizando la hoja electrónica Excel.
     </p></>}/>
-<h4>- Bondad del ajuste usando la prueba chi-cuadrado:</h4>
+<h2>4.4.4.1- Bondad del ajuste usando la prueba chi-cuadrado:</h2>
 <Paragraph texto = {<><p>
 Se usa para saber si la muestra se ajusta a los valores esperados.  Por ejemplo, si vamos a comprar un lote de 20 novillas al ojo y el vendedor nos asegura que los animales han sido todos inseminados. Basados en información previa se tiene estimada una tasa de preñez del 65% en esa finca, por lo cual podriamos esperar aproximadamente 13 novillas preñadas.  Sin embargo, al hacer la palpación encontramos que solo 9 de las 20 novillas resultaron preñadas.  El comprador desea estimar si fue engañado o puede ser normal teniendo en cuenta la tasa de preñez. Para ello vamos a comparar el valor obtenido con el valor esperado usando la distribucion chi-cuadrado con un 𝝰 del 5%.  Para este caso vemos que la variable X sigue una distribución binomial ya que están o vacías o preñadas (fracaso - éxito) y el valor calculado z<sup>2</sup> se aproxima a x<sup>2</sup>. La fórmula para calcular z<sup>2</sup> es:
 </p></>}/>
@@ -285,8 +288,10 @@ Se usa para saber si la muestra se ajusta a los valores esperados.  Por ejemplo,
           id="4iclAm951os"
           title="El ajuste Chi cuadrado" /> 
 
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/4.4.4_Dist_Continuas_X_sq_ajuste.xlsx?raw=true"/> 
 
-<h4>- Prueba de independencia usando la distribución X<sup>2</sup> </h4>
+<br />
+<h2>4.4.4.2- Prueba de independencia usando la distribución X<sup>2</sup> </h2>
 
 <Paragraph texto = "La manera mas sencilla de explicar si dos o mas variables cualitativas son independientes la una de la otra es con un ejemplo aplicado.  Para ello vamos a trabajar con un proyecto de tenencia responsable de mascotas. Se está realizando un proyecto de esterilización de mascotas en el sur de Cali (Colombia) y para poder diseñar la campaña de divulgación e información, queremos saber si existe alguna relación entre el nivel de educación de los tenedores responsables y la esterilización de sus mascotas, esto con el fin de saber a que audiencia nos debemos dirigir.  Para ello seleccionamos una muestra aleatoria entre los pacientes de varias clínicas veterinarias de la zona. La siguiente tabla de contingencia nos muestra como se dividen los datos de mascotas esterilizadas y no esterilizadas según el nivel educativo de sus tenedores. "/>
 
@@ -340,6 +345,8 @@ Se usa para saber si la muestra se ajusta a los valores esperados.  Por ejemplo,
 <Video
           id="B2Z6315SXgI"
           title="Prueba de independencia con Chi cuadrado" /> 
+
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/4.4.4_Dist_X_sq_prueba_independencia.xlsx?raw=true"/> 
 </SubChapter>
 
 <SubChapter id = "teorema">

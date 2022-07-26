@@ -35,6 +35,7 @@ import depen3 from "Media/analisis/dependientes3.png";
 import bajar from "Media/images/bajar.png"
 import { HashLink } from "@xzar90/react-router-hash-link";
 import {Helmet} from "react-helmet-async";
+import DownloadButton from "Components/DownloadButton";
 const Analisis = () => {
     return (
       <ChapterLayout
@@ -316,14 +317,8 @@ H<sub>0</sub> y H<sub>1</sub> donde:</p>
 
 <center><SubTitle title="Intervalo de confianza con varianza poblacional conocida" /></center>
         <Video id="qWcPOUR3LG4" title="Intervalo de confiaza, varianza conocida" />
-        <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/6.3.1_Inter_var_conocida.xlsx?raw=true"
-                /> 
-
+        
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/6.3.1_Inter_var_conocida.xlsx?raw=true"/> 
 </SubChapter>
 
 <SubChapter id = "intervalo2">
@@ -403,14 +398,8 @@ El intervalo de confianza asociado con un nivel de confianza de <b>100(1-𝝰)%<
 <center><SubTitle title="Intervalo de confianza con varianza poblacional desconocida" /></center>
         <Video id="0MHlgMjbMxc" title="Intervalo sin varianza poblacional conocida " />
 
-        <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/6.3.2_Inter_var_desconocida.xlsx?raw=true"
-                /> 
-
+       
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/6.3.2_Inter_var_desconocida.xlsx?raw=true"/> 
 </SubChapter>
 
 <SubChapter id = "intervalo3">
@@ -491,14 +480,7 @@ El intervalo de confianza asociado con un nivel de confianza de <b>100(1-𝝰)%<
 <center><SubTitle title="Intervalo de confianza para la diferencia de dos medias con varianza poblacional desconocida pero se asumen iguales" /></center>
         <Video id="He5qTcVbkXU" title="Intervalo sin varianza poblacional desconocida " />
 
-        <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/6.4.1_Var_desc_pero_iguales.xlsx?raw=true"
-                /> 
-
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/6.4.1_Var_desc_pero_iguales.xlsx?raw=true"/>
 
 <br/>
 <br/>
@@ -542,14 +524,8 @@ Definiendo los términos tenemos:</p><br/>
 <center><SubTitle title="Intervalo de confianza para la diferencia de dos medias con varianza poblacional desconocida y se asumen diferentes" /></center>
         <Video id="qETB6_m39bU" title="Intervalo  varianza poblacional desconocida y se asumen diferentes " />
 
-        <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/6.4.2_Invter_var_desc_diferentes.xlsx?raw=true"
-                />  
-
+        
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/6.4.2_Invter_var_desc_diferentes.xlsx?raw=true"/>
  </SubChapter>
 
 <SubChapter id = "intervalo4">
@@ -600,14 +576,8 @@ Definiendo los términos tenemos:</p><br/>
 </p></>}/>
 <center><SubTitle title="Intervalo de confianza para la diferencia de dos medias dependientes" /></center>
         <Video id="tZ449vQQ0VY" title="Intervalo  de confianza dos medias dependientes " />
-        <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/6.5_Intervalo_diferencia_medias_dependientes.xlsx?raw=true"
-                />  
-
+       
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/6.5_Intervalo_diferencia_medias_dependientes.xlsx?raw=true"/>
 </SubChapter>
 <ReferencesBlock
         references={[

@@ -26,6 +26,8 @@ import pois5 from "Media/photo_dist/pois_curve.png";
 import { HashLink } from "@xzar90/react-router-hash-link";
 import bajar from "Media/images/bajar.png";
 import {Helmet} from "react-helmet-async";
+import DownloadButton from "Components/DownloadButton";
+
 const Distribuciones =()=>{
     return(
         <ChapterLayout chapter_title ="4- Cómo se distribuyen los datos y su utilidad"
@@ -144,15 +146,8 @@ const Distribuciones =()=>{
                 texto = "Histograma de frecuencias dist. Uniforme "
                 />  
 
-            <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/4.3.1_Dist_Uniforme.xlsx?raw=true"
-                /> 
 
-
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/4.3.1_Dist_Uniforme.xlsx?raw=true"/> 
         </SubChapter>
 
         <SubChapter id ="bernoulli">
@@ -282,15 +277,8 @@ const Distribuciones =()=>{
                 <Video
           id="vy7RyQg3Rw0"
           title="La distribución Binomial en Excel" /> 
-
-<ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/4.3.3_Dist_Binomial.xlsx?raw=true"
-                />       
-
+  
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/4.3.3_Dist_Binomial.xlsx?raw=true"/> 
 </SubChapter>
 
 <SubChapter id = "poisson">
@@ -384,13 +372,8 @@ const Distribuciones =()=>{
           id="MvrOHryjtLA"
           title="La distribución de Poisson en Excel" /> 
 
-<ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/4.3.4_Dist_Poisson.xlsx?raw=true"
-                />   
+
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/4.3.4_Dist_Poisson.xlsx?raw=true"/>              
 
 </SubChapter>
 

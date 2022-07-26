@@ -25,6 +25,7 @@ import linr3 from "Media/anovas/linreg3.png";
 import bajar from "Media/images/bajar.png"
 import { HashLink } from "@xzar90/react-router-hash-link";
 import {Helmet} from "react-helmet-async";
+import DownloadButton from "Components/DownloadButton";
 const Anava = () => {
     return (
       <ChapterLayout
@@ -147,16 +148,9 @@ const Anava = () => {
       <center><SubTitle title = "ANAVA de un solo factor"/></center>
       
       <Video id="aIxkjIusJ3k" title="ANAVA de un solo factor" />
-      <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.2_Anava_un_factor.xlsx?raw=true"
-                />
+     
 
-
-
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.2_Anava_un_factor.xlsx?raw=true"/> 
 
       </SubChapter>
 
@@ -236,15 +230,8 @@ const Anava = () => {
      <center><SubTitle title = "ANAVA de dos factores"/></center>
       
       <Video id="75XDRGDV0qI" title="ANAVA de dos factores" />
-      <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.3_Anava_dos_facts.xlsx?raw=true"
-                />
-
-
+      
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.3_Anava_dos_facts.xlsx?raw=true"/> 
 
       </SubChapter>
 
@@ -330,15 +317,9 @@ const Anava = () => {
 
       <center><SubTitle title = "ANAVA de dos factores con replicación"/></center>
       <Video id="10M2gSQi5ac" title="ANAVA de dos factores" />
-      <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.4_Anava_dos_facts_replicacion.xlsx?raw=true"
-                />
+      
 
-
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.4_Anava_dos_facts_replicacion.xlsx?raw=true"/> 
       </SubChapter>
      
       <SubChapter id = "linearreg">

@@ -6,7 +6,7 @@ const ChapterCard = (props) => {
 
   return (
     <div className='chapter_card' onClick={() => navigate(`/${props.link}`)}>
-        <img src={props.imagen} className="chapter_card__image"/>
+        <img src={props.imagen} className="chapter_card__image" alt={props.titulo}/>
         <div className='chapter_card__body'> 
             <h3>{props.titulo}</h3>
         </div>

@@ -42,6 +42,7 @@ import ChapterLayout from "Layouts/ChapterLayout";
 import bajar from "Media/images/bajar.png"
 import { HashLink } from "@xzar90/react-router-hash-link";
 import {Helmet} from "react-helmet-async";
+import DownloadButton from "Components/DownloadButton";
 const Analisis = () => {
   return (
     <ChapterLayout
@@ -129,13 +130,10 @@ const Analisis = () => {
         <ImagePlus image={pareto} texto="Gráfica de Pareto" width = "35%" max_zoom="50%"/>
         <center><SubTitle title="Visualización de datos categóricos" /></center>
         <Video id="kdhWB_Px2oI" title="Información Categórica" />
-        <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/5.1_Categoricos_nominales.xlsx?raw=true"
-                /> 
+       
+
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/5.1_Categoricos_nominales.xlsx?raw=true"/> 
+   
       </SubChapter>
 
       {/* 5.2 Datos cuantitativos */}
@@ -188,14 +186,8 @@ const Analisis = () => {
         <ImagePlus image={histograma3} texto="Gráfica histograma" width="40%" max_zoom = "60%" />
        <center><SubTitle title="Visualización de datos cuantitativos" /></center> 
         <Video id="fxoOgwp_mFQ" title="Construcción de un histograma" />
-        <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/5.2_Cuantitativos.xlsx?raw=true"
-                /> 
-
+       
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/5.2_Cuantitativos.xlsx?raw=true"/> 
       </SubChapter>
 
       {/* 5.3 Visualización de variables cuantitativas y categóricas */}
@@ -391,15 +383,9 @@ const Analisis = () => {
           id="KICATP9ceMY"
           title="Explicación de las medidas de tendencia central"
         />
-        <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/5.4.1_Medidas_tend_central.xlsx"
-                />
+       
 
-
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/5.4.1_Medidas_tend_central.xlsx"/> 
       </SubChapter>
 
       {/* 5.6 Relaciones entre variables */}
@@ -478,14 +464,8 @@ const Analisis = () => {
         <center><SubTitle title="Cálculo de la covarianza muestral" /></center>
         <Video id="1OqX5A-1Pgo" title="Medidas de asociación en Excel" />
 
-        <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/5.6_cov_correl.xlsx?raw=true"
-                />
-
+        
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/5.6_cov_correl.xlsx?raw=true"/> 
 
       </SubChapter>
       <ReferencesBlock

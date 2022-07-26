@@ -26,17 +26,18 @@ import combIII from "Media/photos_probs/combIII.png"
 import bajar from "Media/images/bajar.png"
 import { HashLink } from "@xzar90/react-router-hash-link";
 import {Helmet} from "react-helmet-async";
+import DownloadButton from "Components/DownloadButton";
+
 const Probabilidades =()=>{
     return(
         <ChapterLayout chapter_title ="3- Principios generales de probabilidades"
         chapter_image= {bufalas}>
   <div>
-           <Helmet>
+   <Helmet>
   <title>3- Principios generales de probabilidades</title>
   <meta name="description" content="Principios generales de probabilidades"/>
   <meta name='keywords'
-  content='probabilidades, permutaciones, combinaciones, variaciones, probabilidad condicional,
-  probabilidad total, regla de la adicion, regla de la multiplicacion, teorema de bayes'/>
+  content='probabilidades, permutaciones, combinaciones, variaciones'/>
     </Helmet>
    <main>
                 <section id = "tabla" className = "container">
@@ -152,13 +153,9 @@ const Probabilidades =()=>{
                 />  
         <Paragraph texto ="Si contamos las celdas amarillas del cuadro, podemos deducir que La probabilidad de escoger un animal de cualquier color diferente al blanco en ambos corrales es de 9/16. Entonces para cada corral la probabilidad de no seleccionar blanco es 3/4, por tanto tendremos (3/4)*(3/4) = 9/16, es decir la probabilidad de A y B será de 9/16.  "/>
 
-        <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/3.3_Probs_Independientes.xlsx?raw=true"
-                />  
+         
+
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/3.3_Probs_Independientes.xlsx?raw=true"/> 
 
         </SubChapter>
         <SubChapter id = "dependientes">
@@ -172,13 +169,8 @@ const Probabilidades =()=>{
                 texto = "Probabilidad de seleccionar de un total de 10 novillas primero una novilla negra, seguida de una novilla blanca"
                 />  
              <p><center><b> Como vemos entonces al multiplicar la probabilidad de que salga una novilla negra de primera y luego una novilla blanca será del 26%.  </b></center></p>
-             <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/3.4_Probs_dependientes.xlsx?raw=true"
-                />  
+            
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/3.4_Probs_dependientes.xlsx?raw=true"/> 
 
         </SubChapter>
 
@@ -199,14 +191,8 @@ const Probabilidades =()=>{
                 />  
           <Paragraph texto ="Entonces, existen 120 posibles maneras de organizar los caballos en los establos. Es importante tener en cuenta que en las permutaciones todos los elementos están organizados en el mismo espacio  y que no existen repeticiones (no se puede acomodar el mismo animal en dos pesebreras al mismo tiempo). Entonces en la permutación estamos organizando un numero n de elementos en un determinado numero de espacios y ni los elementos, ni los espacios son repetibles. En las permutaciones se organizan todos los elementos que hay disponibles."/>
 
-          <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/3.5_Permutaciones.xlsx?raw=true"
-                /> 
 
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/3.5_Permutaciones.xlsx?raw=true"/>
         </SubChapter>
 
         <SubChapter id = "variaciones">

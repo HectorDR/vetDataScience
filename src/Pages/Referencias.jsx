@@ -3,7 +3,7 @@ import React from "react";
 import ChapterLayout from "Layouts/ChapterLayout";
 import ReferencesBlock from "Components/ReferencesBlock";
 import bienestar from "Media/images/bienestar.jpeg"
-
+import ImageAttributions from "Components/ImageAttributions";
 const Referencias = () => {
     return (
       <ChapterLayout
@@ -54,6 +54,15 @@ const Referencias = () => {
             />
 
        </section>
+       <ImageAttributions 
+       attributions={[{nombre: "Tarjeta Capitulo 1 imagen cortesia de Lukas", url: "https://www.pexels.com/photo/document-on-top-of-stationery-669619/"},
+       {nombre: "Tarjeta Capitulo 2 imagen cortesia de Lukas", url: "https://www.pexels.com/photo/close-up-photo-of-survey-spreadsheet-590022/"},
+       {nombre: "Tarjeta Capitulo 3 imagen cortesia de PixaBay", url: "https://www.pexels.com/photo/abstract-accuracy-accurate-aim-262438/"},
+       {nombre: "Tarjeta Capitulo 4 imagen cortesia de Fauxels", url: "https://www.pexels.com/photo/colleagues-looking-at-survey-sheet-3183153/"},
+       {nombre: "Tarjeta Capitulo 5 imagen cortesia de Christina Morillo", url: "https://www.pexels.com/photo/black-and-gray-laptop-computer-turned-on-doing-computer-codes-1181271/"},
+       {nombre: "Tarjeta Capitulo 6 imagen cortesia de Lukas", url: "https://www.pexels.com/photo/blue-retractable-pen-574070/"},
+       {nombre: "Tarjeta Capitulo 7 imagen cortesia de Burak The Weekender", url: "https://www.pexels.com/photo/black-blue-and-red-graph-illustration-186461/"},
+       {nombre: "Icono Vaca imagen cortesia de Freepik - Flaticon", url: "https://www.flaticon.com/free-icons/cow"}]} />
 
         </ChapterLayout>
 

@@ -2,7 +2,7 @@ import React from "react";
 import ChapterHead from "Components/ChapterHead";
 import ContentsTable from "Components/ContentsTable";
 import perrito from "Media/photos_web/perrito.jpeg"
-
+import { HashLink } from "@xzar90/react-router-hash-link";
 
 const Contenidos =()=>{
     return(
@@ -14,7 +14,8 @@ const Contenidos =()=>{
 
     <main>
       <section id = "Blog" className = "container bg-light">
-        <h1>Acerca de este proyecto</h1>
+      <HashLink smooth to={"/Blog"}><h1>Acerca de este proyecto</h1></HashLink>
+      
           <ContentsTable
             contenidos={[
               {
@@ -42,7 +43,8 @@ const Contenidos =()=>{
 
 </section>
 <section id = "Post" className = "container bg-light">
-<h1>1- Introducción al análisis de los datos</h1>
+<HashLink smooth to={"/Post"}><h1>1- Introducción al análisis de los datos</h1></HashLink> 
+
           <ContentsTable
             contenidos={[
               {
@@ -67,7 +69,8 @@ const Contenidos =()=>{
     
 
         <section id = "Examples" className = "container bg-light"> 
-        <h1>2- Ejemplos prácticos para manejar los datos estructurados</h1>
+        <HashLink smooth to={"/Examples"}><h1>2- Ejemplos prácticos para manejar los datos estructurados</h1></HashLink> 
+        
         <ContentsTable
             contenidos={[
               {
@@ -114,7 +117,8 @@ const Contenidos =()=>{
         </section>
 
         <section id = "Probabilidades" className ="container bg-light">
-        <h1>3- Principios generales de las probabilidades</h1>
+        <HashLink smooth to={"/Probabilidades"}><h1>3- Principios generales de las probabilidades</h1></HashLink> 
+     
         <ContentsTable contenidos ={[
                        { titulo:"3.1-¿Qué es una probabilidad y para que nos sirve?",
                         link: "Probabilidades#definicion"},
@@ -149,7 +153,8 @@ const Contenidos =()=>{
         </section>
 
         <section id = "distribuciones" className = "container bg-light">
-          <h1>4- Cómo se distribuyen los datos y cual es su utilidad</h1>
+        <HashLink smooth to={"/Distribuciones"}><h1>4- Cómo se distribuyen los datos y cual es su utilidad</h1></HashLink> 
+          
                     <ContentsTable contenidos ={[
                        { titulo:"4.1-¿Qué es la distribucion de una variable?",
                         link: "Distribuciones#definicion"},
@@ -186,7 +191,8 @@ const Contenidos =()=>{
 
 
         <section id = "Analisis" className="container bg-light">
-        <h1>5- Estadística descriptiva y análisis inicial de los datos</h1>
+        <HashLink smooth to={"/Analisis"}><h1>5- Estadística descriptiva y análisis inicial de los datos</h1></HashLink> 
+        
           <ContentsTable
             contenidos={[
               {titulo: "5.1- Presentación de datos categóricos nominales",
@@ -211,7 +217,8 @@ const Contenidos =()=>{
         </section >
 
         <section id = "AnalisisII" className = "container bg-light">
-        <h1>6- Pruebas de hipótesis e intervalos</h1>
+        <HashLink smooth to={"/AnalisisII"}><h1>6- Pruebas de hipótesis e intervalos</h1></HashLink> 
+        
     <ContentsTable
             contenidos={[
               {titulo: "6.1- Pruebas de hipótesis",
@@ -236,7 +243,8 @@ const Contenidos =()=>{
         </section>
 
         <section id = "Anava" className = "container bg-light">
-        <h1>7- Análisis de Varianza (ANAVA)</h1>
+        <HashLink smooth to={"/Anava"}><h1>7- Análisis de Varianza (ANAVA)</h1></HashLink> 
+      
     <ContentsTable
             contenidos={[
               {titulo: "7.1-Que es el análisis de varianza (ANAVA)",

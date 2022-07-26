@@ -29,7 +29,7 @@ import dummy3 from "Media/anovas_excel/dummy3.png";
 import bajar from "Media/images/bajar.png"
 import { HashLink } from "@xzar90/react-router-hash-link";
 import {Helmet} from "react-helmet-async";
-
+import DownloadButton from "Components/DownloadButton";
 
 const AnavaII = () => {
     return (
@@ -126,14 +126,8 @@ const AnavaII = () => {
       
       <Video id="WalnDYHmi5I" title="Regresión lineal simple en Excel" />
 
-      <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.6_Reg_lineal.xlsx?raw=true"
-                />
-
+     
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.6_Reg_lineal.xlsx?raw=true"/> 
       </SubChapter>
 
     <SubChapter id = "regmult">
@@ -180,14 +174,8 @@ const AnavaII = () => {
 
       
       <Video id="PtucNTB4-1w" title="Regresión con multiples variables independientes " />
-      <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.7_Reg_multiple.xlsx?raw=true"
-                />
-    
+      
+    <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.7_Reg_multiple.xlsx?raw=true"/> 
     </SubChapter>
 
     <SubChapter id = "regquad">
@@ -259,14 +247,8 @@ const AnavaII = () => {
       <center><SubTitle title = "Modelo de Regresión cuadrática"/></center>
       
       <Video id="QYZKsT9xTrg" title="Regresión cuadrática en Excel" />
-      <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.8_Reg_cuadratica.xlsx?raw=true"
-                />
-
+     
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.8_Reg_cuadratica.xlsx?raw=true"/> 
 
     </SubChapter>
 
@@ -318,14 +300,8 @@ const AnavaII = () => {
     <center><SubTitle title = "Regresión con interacción de dos variables independientes (factorial)"/></center>
       
       <Video id="Ma9TjV1kuFM" title="Regresión cuadrática en Excel" />
-      <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.9_Regresion_interaccion.xlsx?raw=true"
-                />
-
+      
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.9_Regresion_interaccion.xlsx?raw=true"/> 
       </SubChapter>
 
       <SubChapter id = "dummyvars">
@@ -376,14 +352,8 @@ const AnavaII = () => {
       
       <Video id="Wr4vK5yB4Bw" title="Construcción de variables tipo dummy en Excel" />
 
-      <ImagePlus 
-                image = {bajar}
-                width = "5%"
-                max_zoom ="15%"
-                texto = "Bajar el archivo de Excel"
-                link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.10_variables_dummy.xlsx?raw=true"
-                />
-
+      
+<DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.10_variables_dummy.xlsx?raw=true"/> 
       </SubChapter>
 
       <ReferencesBlock references = {[
