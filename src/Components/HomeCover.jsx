@@ -1,18 +1,17 @@
 import React from 'react'
-import home_logo from "Media/images/home_logo.svg"
 import HomeButton from './HomeButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
-
+import home_logo from "Media/images/logovetDataAnalisis.svg"
 
 const HomeCover = (props) => {
   return (
     <div className="home_cover">
-        <video autoPlay muted loop onPlay={(e) => e.target.playbackRate = 0.8}>
+        <video autoPlay muted loop>
           <source src={props.video} type="video/mp4"/>
         </video>
         <div className='home_container'>
-          <img src={home_logo}/>
+          <img src={home_logo} alt="Vet Analisis Datos Logo"/>
             <div className='home_options'>
                 <HomeButton  texto="Introducción" link="introduccion"/>
                 <HomeButton  texto="Capitulos" link="contents"/>
