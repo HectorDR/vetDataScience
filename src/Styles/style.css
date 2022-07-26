@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,700&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 /* Remove all the margins */
 *{
@@ -440,7 +441,20 @@ font-weight: 100
 
 
 /* -----------------------------------Estilos J---------------------------------- */
-
+.ChapterHead{
+  height: 30vh;
+  border-radius: 0 0 30% 30%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ChapterHead h1{
+  color: #f9f9f9 !important;
+  font-family:'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 10vh;
+}
 .Image_Carousel {
   transition: 1s;
   position: relative;
@@ -524,12 +538,18 @@ font-weight: 100
 .download_button__Folder{
   width: 100%;
 }
+.download_button__text{
+  text-align: center;
+  margin-right: 1vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: medium;
+}
 
 .download_button:hover > .download_button__Arrow{
-  filter: invert(68%) sepia(12%) saturate(6287%) hue-rotate(108deg) brightness(95%) contrast(77%);
+  filter: invert(55%) sepia(52%) saturate(5291%) hue-rotate(104deg) brightness(99%) contrast(69%);
 }
 .download_button:hover > .download_button__Folder{
-  filter: invert(46%) sepia(91%) saturate(387%) hue-rotate(82deg) brightness(96%) contrast(91%);
+  filter: invert(55%) sepia(52%) saturate(5291%) hue-rotate(104deg) brightness(99%) contrast(69%);
   width: 120%;
 }
 

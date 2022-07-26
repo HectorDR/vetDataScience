@@ -21,7 +21,7 @@ const ChapterHead = (props) => {
   },[scrollPosition,header])
 
   return (
-    <div id='chapterHeader' className="hero blog" style={{background: `url(${props.background}) no-repeat center center/cover`}}>
+    <div id='chapterHeader' className="ChapterHead" style={{background: `url(${props.background}) no-repeat center center/cover`}}>
       <div className='content'>
       <h1 style={{color: "yellow"}}>{props.titulo}</h1>
       </div>
