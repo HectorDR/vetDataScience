@@ -12,8 +12,8 @@ const Home = () => {
           <section id ="introduccion">
           <HomeIntro/>
           </section>
-          <section id = "contents" style={{paddingTop: "7.5vh"}}>
-            <h1 className="chapters_title">Capitulos</h1>
+          <section id = "contents" style={{paddingTop: "4.5vh"}}>
+            <h2 className="chapters_title">Capítulos</h2>
             <Chapters/>
           </section>
           <section id = "contact">
