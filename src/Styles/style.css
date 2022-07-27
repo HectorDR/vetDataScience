@@ -261,7 +261,8 @@ img{
 
 /* Callback form */
 .contact{
-  margin-top: 12vh;
+  margin-top: 4vh;
+  margin-left: 1vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -612,7 +613,7 @@ font-weight: 100
 .chapters_title{
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  font-size: 10vh;
+  font-size: 7vh;
   margin-bottom: 2vh;
 }
 
@@ -971,7 +972,7 @@ font-weight: 100
 
 .home_intro{
   width: 100%;
-  height: 100vh;
+  padding-top: 3vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
