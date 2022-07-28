@@ -37,7 +37,11 @@ const Contenidos =()=>{
                   "IV- Acerca del Autor",
                 link: "Blog#autor",
               },
-
+              {
+                titulo:
+                  "V- Agradecimientos",
+                link: "Blog#agradecimientos",
+              },
             ]}
           />
 
@@ -277,6 +281,12 @@ const Contenidos =()=>{
             
           />
           </section>
+
+          <section id = "Referencias" className = "container bg-light">
+        <HashLink smooth to={"/Referencias"}><h1>VI- Referencias y Créditos </h1></HashLink> 
+      
+          </section>
+
  
 </main>
 </div>
