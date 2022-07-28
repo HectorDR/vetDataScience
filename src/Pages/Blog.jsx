@@ -121,7 +121,7 @@ const Blog =()=>{
 <section id = "agradecimientos">
 <SubChapter>
 <SubTitle title="Agradecimientos" />
-<Paragraph texto = "Quiero agradecer especialmente a Victor Cabrera quien en gran medida me inspiró a desarrollar este trabajo y sobre todo creyó en mí. A Liliana Fadul por todas las horas en que me escuchó pacientemente hablar sobre este proyecto y por su tiempo ayudandome a revisarlo. A Roger Cue quien alguna vez me dijo 'Si usted quiere aprender, yo quiero enseñarle'. A César Serrano porque siempre me ha demostrado que es posible soñar y convertir los sueños en realidad.  A Johan Sebastian Mazo por las horas de trabajo desarrollando los componentes de React y finalmente a todos los estudiantes e investigadores de las ciencias agropecuarias por su esfuerzo y dedicación para que con sus aportes el campo se fortalezca y desarrolle cada día mas y mejor. "/>
+<Paragraph texto = "Quiero agradecer especialmente a Robert Davis porque sin su apoyo no hubiera podido desarrollar este proyecto. A Victor Cabrera quien en gran medida me inspiró a desarrollar este trabajo y sobre todo creyó en mí. A Liliana Fadul por todas las horas en que me escuchó pacientemente hablar sobre este proyecto y por su tiempo ayudandome a revisarlo. A Roger Cue quien alguna vez me dijo 'Si usted quiere aprender, yo quiero enseñarle'. A César Serrano porque siempre me ha demostrado que es posible soñar y convertir los sueños en realidad.  A Johan Sebastian Mazo por las horas de trabajo desarrollando los componentes de React y finalmente a todos los estudiantes e investigadores de las ciencias agropecuarias por su esfuerzo y dedicación para que con sus aportes el campo se fortalezca y desarrolle cada día mas y mejor. "/>
 
 </SubChapter>
 

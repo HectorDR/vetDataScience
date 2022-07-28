@@ -4,6 +4,7 @@ import Chapters from "Components/Chapters";
 import home_video_2 from "Media/videos/home_video_2.mp4"
 import HomeCover from "Components/HomeCover";
 import HomeIntro from "Components/HomeIntro";
+import Video from "Components/Video";
 const Home = () => {
  
   return (
@@ -12,6 +13,12 @@ const Home = () => {
           <section id ="introduccion">
           <HomeIntro/>
           </section>
+          
+          * <div >
+         <Video id="nPrPjzKx5gY" title="Bienvenidos" />
+
+
+         </div> *
           <section id = "contents">
             <h2 className="chapters_title">Capítulos</h2>
             <Chapters/>
