@@ -6,8 +6,8 @@ const Video = (props) => {
     <div className='videoPlayer'>
         <LiteYouTubeEmbed
             id={props.id}
-            title={props.title}/>
-            <br/>
+            title={props.title}
+            poster="maxresdefault"/>
     </div>
   )
 }

@@ -470,8 +470,27 @@ font-weight: 100
   width: 70%;
   position: relative;
   left: 15%;
+  margin-bottom: 2vh;
 }
 
+.videoPlayer button{
+  background-color: #23c483 !important;
+  border: none;
+  cursor: pointer;
+}
+
+.home_video{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow:  17px 17px 26px #d0d0d0,
+             -17px -17px 26px #ffffff;
+}
+
+.home_video .videoPlayer{
+  width: 100%;
+  left: 0;
+}
 .back_button {
   display: inline-flex;
   position: relative;
@@ -1083,3 +1102,4 @@ font-weight: 100
   font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
+

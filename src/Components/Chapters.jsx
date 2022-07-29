@@ -1,12 +1,12 @@
 import React from 'react'
 import ChapterCard from './ChapterCard'
-import data from "Media/images/data1.jpg"
-import dataprocess from "Media/images/data2.jpg"
-import probability from "Media/images/probability.jpg"
-import analisisgrafica from "Media/images/analisisgrafica.jpg"
-import datatools from "Media/images/datatools.jpg"
-import datatools2 from "Media/images/datatools2.jpg"
-import anava from "Media/images/anava.jpg"
+import data from "Media/images/data1.png"
+import dataprocess from "Media/images/data2.png"
+import probability from "Media/images/probability.png"
+import analisisgrafica from "Media/images/analisisgrafica.png"
+import datatools from "Media/images/datatools.png"
+import datatools2 from "Media/images/datatools2.png"
+import anava from "Media/images/anava.png"
 const Chapters = () => {
   return (
     <div className='chapters'>
