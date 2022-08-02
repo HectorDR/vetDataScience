@@ -10,7 +10,7 @@ const Form = () => {
     e.preventDefault()
     // se envia todo lo que necesita el servicio de emailjs incluyendo la key que devuelve la recptcha
     // seria bueno meter todo esto en variables de entorno
-    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID,"contact_form",form.current,process.env.REACT_APP_EMAILJS_USER_ID)
+    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID,"contact_form",form.current,process.env.REACT_APP_PUBLICKEY)
     .then((result) => {
       setEnviado(true);
     }, (error) => {
