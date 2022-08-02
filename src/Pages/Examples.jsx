@@ -106,17 +106,17 @@ const Examples =()=>{
               llevan los registros y la calidad en la recolección de datos.  Por ejemplo los pesajes de ganado bovino deben hacerse muy temprano en la mañana
                una vez al mes y la báscula debe estar adecuadamente calibrada.  Esto asegura datos que permitan ser procesados y analizados adecuadamente.</p></> }/>
             <Paragraph texto = "Una vez que tenemos recogidos los datos crudos y estamos listos para su procesamiento, podemos enfrentar diversos problemas, especialmente si los registros no han sido bien diseñados y las variables o los datos no son claros. Esto es porque cada quien va a utilizarlos como mejor le parece y vamos a encontrar muchas versiones de como registrar un evento. Supongamos que hay una vaca enferma con mastitis, sino existe un código para este evento, bajo la columna de 'Observaciones' el funcionario puede escribir Mast, Mastitis, M, Mgram+ o simplemente enferma. Cada entrada puede ser válida pero esto va a generar un dolor de cabeza a la hora de compilar y analizar los datos."/>
-            <Paragraph texto = "Una forma de solucionar esta situación es conocer claramente cuales son nuestras variables y el tipo de información con la cual vamos a alimentar los registros. Por ejemplo, para datos datos nominales como raza o problemas de salud, es adecuado de antemano delimitar la entrada de los datos.  Por ejemplo si vamos a registrar un caso de mastitis clínica, en el registo debería solo existir la opcion 'Mastitis' o cualquiera que sea el código asignado y podemos luego generar otra variable explicativa que dé un poco mas de detalle.  "/>
+            <Paragraph texto = "Una forma de solucionar esta situación es conocer claramente cuales son nuestras variables y el tipo de información con la cual vamos a alimentar los registros. Por ejemplo, para datos datos nominales como raza o problemas de salud, es adecuado de antemano delimitar la entrada de los datos.  Por ejemplo si vamos a registrar un caso de mastitis clínica, en el registo debería solo existir la opcion 'Mastitis' o cualquiera que sea el código asignado y podemos luego generar otra variable explicativa que perminta describir con mas de detalle.  "/>
             <Paragraph texto = {<><p>Finalmente podemos asegurar que unos datos adecuadamente procesados y analizados son fundamentales para una adecuada
-              <a href="https://www.guru99.com/business-intelligence-definition-example.html" target="_blank"><b><u>Inteligencia de negocios</u></b></a> que la podemos interpretar como la capacidad de transformar los datos crudos para convertirlos en información oportuna. Esta información es de utilidad para generar herramientas útiles en la gerencia de la finca y buscar integrar tantos aspectos como sea posible (nutrición, producción, costos, mercadeo, etc.) para asegurar la buena toma de decisiones y de paso la sostenibilidad y rentabilidad de la empresa. Con la Inteligencia de negocios podemos encontrar cuellos de botella en el sistema como por ejemplo:donde están los problemas que afectan mi rentabilidad. También se puede hacer evaluación de los recursos que existen dentro de la empresa y finalmente como se afecta la producción cuando generamos cambios en la empresa. Por ejemplo un ganadero que desea invertir en un nuevo equipo de ordeño, vale la pena realizar esa inversión o será mejor invertir esos recursos en mejorar la genética de sus animales?.</p></>}/>
+              <a href="https://www.guru99.com/business-intelligence-definition-example.html" target="_blank"><b><u>Inteligencia de negocios</u></b></a> que la podemos interpretar como la capacidad de transformar los datos crudos para convertirlos en información oportuna. Esta información es de utilidad para generar herramientas útiles en la gerencia de la finca y buscar integrar tantos aspectos como sea posible (nutrición, producción, costos, mercadeo, etc.) para asegurar la buena toma de decisiones y de paso la sostenibilidad y rentabilidad de la empresa. Con la Inteligencia de negocios podemos encontrar cuellos de botella en el sistema como encontrar los problemas que afectan la rentabilidad. También se puede hacer evaluación de los recursos que existen dentro de la empresa y finalmente como se afecta la producción cuando generamos cambios en la empresa. Por ejemplo un ganadero que desea invertir en un nuevo equipo de ordeño, será que vale la pena realizar esa inversión o será mejor invertir esos recursos en mejorar la genética de sus animales?.</p></>}/>
 
-              <p>Cuando estamos trabajando con datos y registros, debemos tener en cuenta varios puntos simples pero muy efectivos para que nos ayudaran a optimizar la colección y el manejo de los mismos (adaptado de Guerrero, 2010).  Los mas importantes son: </p>
+              <p>Cuando estamos trabajando con datos y registros, debemos tener en cuenta varios puntos simples pero muy efectivos que nos ayudaran a optimizar la recolección y el manejo de los mismos (adaptado de Guerrero, 2010).  Los mas importantes son: </p>
                 <br />
                 <ul>
                 <li>- No todos los datos son creados de la misma manera. Es importante primero analizar los datos, como se colectan y a que <HashLink smooth to={"/Post#raw"}><u><b>categoría</b></u></HashLink> pertenecen. Una vez hecho esto tener claridad sobre su necesidad y uso. </li>                                            
                 <li>- Mantenenga las tablas simples y de forma columnar para las variables y las filas para los eventos u observaciones. Tal como se mostró en la sección anterior con el registro de <HashLink smooth to={"/Post#datos"}><u><b>gallinas ponedoras</b></u></HashLink> </li>
                 <li>- No colecte mas datos de los que se necesitan, pero que tampoco menos. </li>
-                <li>- Haga comentarios sobre las variables y sus valores, trate de ser explicativo porque a lo mejor usted entiende, pero si alguien va a analizar los datos a lo mejor no va a entender. </li>
+                <li>- Haga comentarios sobre las variables y sus valores. Trate de ser explicativo porque a lo mejor usted entiende, pero si alguien va a analizar los datos a lo mejor no va a entender. </li>
                 <li>- Sea consistente con los títulos y los nombres de las variables. Si una variable se repite en varios registros, siempre llamela de la misma manera, esto ahorrará dolores de cabeza</li>
                 <li>- Sea consistente con la forma de los registros y la frecuencia para recoger los datos. De esta manera se facilitará la comparación, el análisis y por tanto la toma de decisiones</li>
                 </ul>
@@ -126,14 +126,14 @@ const Examples =()=>{
             <SubChapter id = "Definiciones">
                 <SubTitle title="II- Definiciones importantes"/>
 
-                <p> Revisemos algunas definiciones importantes (Chao, 1978) dentro del proceso del manejo de datos. </p>
+                <p> Revisemos algunas definiciones importantes dentro del proceso del manejo de datos (Chao, 1978). </p>
                 <br />
                    <ul>
                    <li> - <b>Variable</b>: Es toda característica que toma diferentes valores en distintas especies, lugares o cosas. Por ejemplo, peso, sexo, edad al 1er parto, raza etc.</li>
 
                     <li>- <b>Datos</b>: Son números o medidas que han sido recopilados como resultado de las observaciones. Los datos pueden provenir de recuentos tales como el total de aves que se encuentran en una granja de ponedoras o mediciones como el peso del ganado.</li>
 
-                    <li>- <b>Variable aleatoria</b>: Cuando los valores que asume la variable han sido antecedidos por una selección aleatoria de los objetos medios o son resultado de algún proceso al azar. </li>
+                    <li>- <b>Variable aleatoria</b>: Cuando los valores que asume la variable han sido antecedidos por una selección aleatoria de los objetos o son resultado de algún proceso al azar. </li>
 
                     <li>- <b>Variable continua</b>: Es aquella que teóricamente puede tomar cualquier valor dentro de un intervalo. Ejemplo, peso corporal, producción de leche.
                             </li>
@@ -203,14 +203,14 @@ const Examples =()=>{
                 max_zoom ={"70%"}
                 texto = "Creación de la lista de validación"
                 />  
-            <Paragraph texto = "El primer paso consiste en generar una lista para todas las razas, esta debe ir a manera de columna y un valor por celda. En este caso creamos una lista para razas en la columna B, y otra para para en la columna C. Es una buena práctica crear todas en una hoja aparte de donde se crean los registros."/>
+            <Paragraph texto = "El primer paso consiste en generar una lista para todas las razas, esta debe ir a manera de columna y un valor por celda. En este caso creamos una lista para razas en la columna B, y otra para para en la columna C. Es una buena práctica crear todas las listas en una hoja aparte de donde se van a crear los registros."/>
             <center><h4>2.2.2- Dar un nombre a lista creada</h4></center>
                  <ImagePlus 
                 image = {list2}
                 max_zoom ={"70%"}
                 texto = "Nombrar la lista recién creada"
                 />  
-            <Paragraph texto = "El segundo paso es seleccionar el rango donde escribimos los valores que toma la lista creada.  Una vez hecho esto nos ubicamos en la celda que se ubica en la parte superior izquierda de la pantalla, hacemos click y desde ahí le damos el nombre a la lista, en este caso “Razas”. Una vez cumplido este paso ya se puede utilizar en la creación de la tabla o el registro deseado."/>
+            <Paragraph texto = "El segundo paso es seleccionar el rango donde escribimos los diferentes valores que puede tomar la variable de la lista creada.  Una vez hecho esto nos ubicamos en la celda que se ubica en la parte superior izquierda de la pantalla, hacemos click y desde ahí le damos el nombre a la lista, en este caso “Razas”. Una vez cumplido este paso ya se puede utilizar en la creación de la tabla o el registro deseado."/>
              
             <center><h4>2.2.3- Utilización de la lista creada</h4></center>
                  <ImagePlus 
@@ -219,7 +219,7 @@ const Examples =()=>{
                 texto = "Utilizando la lista 'Razas'"
                 />  
 
-            <Paragraph  texto ="Para usar la lista, debe seleccionar la celda o el rango donde se desea incluir los datos dentro del registro, luego ir al menú datos (data) que se ubica en la parte superior de la hoja electrónica y seleccionar validación de datos (data validation), en el menú que se abre seleccionar la opción lista, y dar el nombre de la lista que acabamos de crear que para este caso seria =Razas. Es importante siempre predecer de paréntesis y tener cuidado con el uso de mayúsculas y minúsculas." />
+            <Paragraph  texto ="Para usar la lista, se debe seleccionar la celda o el rango de celdas donde se desean insertar los datos de la variable dentro del registro. Luego ir al menú datos (data) que se ubica en la parte superior de la hoja electrónica y seleccionar validación de datos (data validation), en el menú que se abre, seleccionar la opción 'lista', y dar el nombre de la lista que acabamos de crear que para este caso seria =Razas. Es importante siempre predecer de el símbolo igualdad (=) y tener cuidado con el uso de mayúsculas y minúsculas." />
 
             <center><h4>2.2.4- Comprobación del funcionamiento adecuado de la lista </h4></center>
                  <ImagePlus 
@@ -248,7 +248,7 @@ const Examples =()=>{
 
         <SubChapter id = "cuantitativas">
             <SubTitle title ="2.3- Manejo de la información cuantitativa "/>
-            <Paragraph texto = "Es frecuente cometer errores al digitar la información cuantitativa (numérica). Por ejemplo, es común incluir u omitir un cero cuando estamos trabajando con pesos vivos o volumenes de producción. De esta manera, es posible ver como una vaca llega a producir 200 kg de leche en un ordeño diario en vez de 20 kg.  Existen varias maneras para detectar estos valores atípicos, por ejmplo realizar histogramas de frecuencias para ver la distribución de los datos como lo veremos mas adelante. Sin embargo, el objetivo es evitar la inclusión de datos espurios desde la misma construcción de los registros.  Para ello podemos nuevamente en Excel acudir al menú de datos y a la sección 'Validación de Datos' o 'Data Validation'. "/>
+            <Paragraph texto = "Es frecuente cometer errores al digitar la información cuantitativa (numérica). Por ejemplo, es común incluir u omitir un cero cuando estamos trabajando con pesos vivos o volumenes de producción. Por ejemplo es posible ver como una vaca llega a producir 200 kg de leche en un ordeño diario en vez de 20 kg. Existen varias maneras para detectar estos valores atípicos, por ejmplo realizar histogramas de frecuencias para ver la distribución de los datos como lo veremos mas adelante. Sin embargo, el objetivo es evitar la inclusión de datos espurios desde la misma construcción de los registros.  Para ello podemos nuevamente en Excel acudir al menú de datos y a la sección 'Validación de Datos' o 'Data Validation' con el fin de limitar los rangos de la variable. "/>
             <Paragraph texto ="Vamos a continuar trabajando con el registro de nacimiento de terneros que comenzamos en la sección anterior.  Esta vez vamos a incluir el peso al nacimiento.  De antemano sabemos que un peso de un ternero al nacer puede oscilar entre los 20 y los 45 kg (dependiendo de la raza) por tanto 450 kg al nacer no es posible en un ternero.  Entonces, vamos a incluir un límite máximo de 55 kgs para los terneros al nacer, de manera tal que si se va un cero adicional al digitar el sistema no acepte el dato  y obligue a su revisión, Tal como se ve en lo recuadros 2.3.1 y 2.3.2 "/>
             <center><h4>2.3.1- Selección de los criterios para usar para la validación de datos numéricos</h4></center>
                  <ImagePlus 
@@ -276,7 +276,7 @@ const Examples =()=>{
 
         <SubChapter id ="madrehija">
             <SubTitle title ="2.4- Creación de una lista de variables que son dependientes de otra variable -Madre e hija-"/>
-            <Paragraph texto = "Es muy común encontrar en nuestros registros un campo para aclarar o ampliar información sobre un evento. Por ejemplo, si se realizón un tratamiento en un campo que por lo general se llama 'Observaciones' vamos a encontrar gran variedad de comentarios sobre el evento y a veces resulta imposible entender y sobre todo cuantificar.  Una alternativa para crear los eventos de manera sencilla para su tabulación y análisis es utilizar las listas de validación hijas dependientes de una lista madre. Por ejemplo, si en la actividad del día se registra una actividad reproductiva, lo ideal es crear una lista que se despliegue en la siguiente celda mostrandonos que tipo de actividad se realizó, por ejemplo, detección de calor, inseminación, palpación etc."/>
+            <Paragraph texto = "Es muy común encontrar en nuestros registros un campo para aclarar o ampliar información sobre un evento. Por ejemplo, si se realizó un tratamiento podemos en un campo que por lo general se llama 'Observaciones' encontrar gran variedad de comentarios sobre el evento y a veces resulta imposible entender y sobre todo cuantificar.  Una alternativa para crear los eventos de manera sencilla para su tabulación y análisis es utilizar las listas de validación hijas dependientes de una lista madre. Por ejemplo, si en la actividad del día se registra una actividad reproductiva, lo ideal es crear una lista que se despliegue en la siguiente celda mostrandonos que tipo de actividad se realizó, por ejemplo, detección de calor, inseminación, palpación etc."/>
             <Paragraph texto = {<><p>Es muy común  que cuando estamos creando un registro de actividades diarias que se realizan en una finca lechera,
               lo primero que vamos a hacer es clasificar las actividades según su naturaleza. Entonces creamos una lista de la misma manera como lo
               hicimos anteriormente con<HashLink smooth to={"#listas"}><u>raza y sexo</u></HashLink>. Para este caso, vamos a dividir las actividades en 4 principales
@@ -303,7 +303,7 @@ const Examples =()=>{
                 max_zoom ={"70%"}
                 texto = "Asignar la ubiciación de las lista hijas"
                 />  
-            <Paragraph texto="Una vez activada la lista madre en el registro y seleccionada una de las actividades (salud, reproducción, etc.) en uno de los campos, seleccionamos el rango donde queremos ubicar la lista hija y volvemos a validación de datos y seleccionamos lista.  En la misma hoja de diálogo vamos a seleccionar la función 'indirect' y asignamos la celda donde está ubicada la actividad en este caso la D4. Es importante asegurarse que se remuevan los signos $ que son automáticamente asignados. También es muy importante que las listas secundarias o hijas tengan exactamente el mismo nombre como aparecen en la lista principal, de lo contrario habrá un error. "/>
+            <Paragraph texto="Una vez activada la lista madre en el registro y seleccionada una de las actividades (salud, reproducción, etc.) en uno de los campos, seleccionamos el rango donde queremos ubicar la lista hija y volvemos a validación de datos y seleccionamos 'lista'.  En la misma hoja de diálogo vamos a seleccionar la función 'indirect' y asignamos la celda donde está ubicada la actividad en este caso corresponde las coordenadas serían 'D4'. Es importante asegurarse que se remuevan los signos $ que son automáticamente asignados ya que de lo contrario se fijarían las coordenadas y solo leeria la actividad de la celda fijada. También es muy importante que las listas secundarias o hijas tengan exactamente el mismo nombre como aparecen en la lista principal (al igual que mayúsculas y/o minúsculas), de lo contrario habrá un error. "/>
             <center><h4>2.4.4- Probar la relación condicional</h4></center>
                  <ImagePlus 
                 image = {val4}
@@ -325,7 +325,7 @@ const Examples =()=>{
 
         <SubChapter id = "importados">
             <SubTitle title ="2.5- Como solucionar problemas con los datos importados o secundarios" />
-            <Paragraph texto = {<><p>Es normal que a veces tengamos que trabajar con datos provenientes de otras fuentes es decir registros que no 
+            <Paragraph texto = {<><p>Es normal que a veces tengamos que trabajar con datos provenientes de otras fuentes, es decir, registros que no 
               fueron creados por nosotros o que fueron diseñados para otro propósito. Para ello lo ideal es que estos datos vengan de manera 
               tabular (estructurados) y sobre todo hay que conocer cuáles son las variables incluidas, cual es su
               <HashLink smooth to={"/Post#raw"}><u><b>naturaleza</b></u></HashLink> (categórico, ordinal, etc.), sus rangos y escalas (ejemplo: libras o kilos). 
@@ -334,7 +334,7 @@ const Examples =()=>{
               <a href="https://support.microsoft.com/en-us/office/top-ten-ways-to-clean-your-data-2844b620-677c-47a7-ac3e-c2e157d1db19" target="_blank" ><u><b>Microsoft®</b></u></a> podemos ver algunos de los puntos clave cuando estamos trabajando con datos estructurados.</p></>}/>
 
             <SubTitle title = "2.5.1- Manejo de inconsistencias en los términos para referirse a un evento "/>
-            <Paragraph texto = "Uno de los casos mas comunes es la heterogeneidad en los términos para referirnos a un mismo evento. Cuando estamos creando los registros podemos en gran medida evitar este problema con la validación de datos (sección 2.1), sin embargo cuando trabajamos con datos secundarios debemos obligatoriamente conocer que contiene cada variable. Una alternativa cuando no estamos trabajando con millones de datos es Excel, sin embargo, en caso de gran número de registros es mejor utilizar lenguajes de programación como SAS® o Python.  Vamos a explorar con el corrector ortográfico (Spelling) de Excel como solucionar este problema. Para ello vamos a revisar un registro simulado donde la actividad de inseminación ha sido digitada de multiples maneras (recuadros 2.5.1.1 y 2.5.1.2 )"/>
+            <Paragraph texto = "Uno de los casos mas comunes es la heterogeneidad en los términos para referirnos a un mismo evento. Cuando estamos creando los registros podemos en gran medida evitar este problema con la validación de datos (sección 2.1), sin embargo cuando trabajamos con datos secundarios debemos obligatoriamente conocer que contiene cada variable. Una alternativa cuando no estamos trabajando con millones de datos es Excel (hasta un millón de registros), sin embargo, en caso de gran número de registros es mejor utilizar lenguajes de programación como SAS® o Python.  Vamos a explorar con el corrector ortográfico (Spelling) de Excel nos ayuda a homogenizar los valores de las variables. Para ello vamos a revisar un registro simulado donde la actividad de inseminación ha sido digitada de multiples maneras (recuadros 2.5.1.1 y 2.5.1.2 )"/>
 
             <center><h4>2.5.1.1- Uso del corrector ortográfico</h4></center>
                  <ImagePlus 
@@ -342,7 +342,7 @@ const Examples =()=>{
                 max_zoom ={"70%"}
                 texto = "Selección del corrector para estandarizar los términos"
                 />  
-            <Paragraph texto="El primer paso es seleccionar en el menú que se encuentra en la parte superior la opción 'Revisar' (Review) y de ahí la opción 'Corrección de Ortografía' o 'Spelling' que se halla ubicado en la parte superior izquierda (normalmente la primera). Una vez hecho esto aparece una hoja de diálogo que permite permite editar cada uno de los términos de la(s) columna(s) seleccionada(s).  Por ejemplo, la hoja de diálogo muestra el contenido de la primera celda del rango que hemos seleccionado. En este caso es 'Insem'. Queremos reemplazar todas las celdas que digan 'Insem' por 'Inseminación'. Para ello, en el espacio 'cambiar a' o 'change to' escribimos 'Inseminación' y Excel automaticamente lo hará en todas las celdas donde se requiera, para ello se debe presionar sobre la opción 'change all' o 'cambiar todas'. En caso de querer solo cambiar los valores de esa celda específica unicamente seleccionar 'change' (cambiar)."/>
+            <Paragraph texto="El primer paso es seleccionar el rango de los datos que deseamos revisar.  Posteriormente en el menú que se encuentra en la parte superior la opción 'Revisar' (Review) y de ahí la opción 'Corrección de Ortografía' o 'Spelling' que se halla ubicado en la parte superior izquierda (normalmente la primera). Una vez hecho esto aparece una hoja de diálogo que permite permite editar cada uno de los términos de la(s) columna(s) seleccionada(s).  Por ejemplo, la hoja de diálogo muestra el contenido de la primera celda del rango que hemos seleccionado. En este caso es 'Insem'. Queremos reemplazar todas las celdas que digan 'Insem' por 'Inseminación'. Para ello, en el espacio 'cambiar a' o 'change to' escribimos 'Inseminación' y Excel automaticamente lo hará en todas las celdas donde se requiera, para ello se debe presionar sobre la opción 'change all' o 'cambiar todas'. En caso de querer solo cambiar los valores de esa celda específica unicamente seleccionar 'change' (cambiar)."/>
 
             <center><h4>2.5.1.2- Revisar que los datos fueron adecuadamente cambiados y guardados</h4></center>
                  <ImagePlus 
