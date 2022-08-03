@@ -77,7 +77,7 @@ const Distribuciones =()=>{
 
          <SubChapter id = "definicion" >
                     <SubTitle title = "4.1- ¿Qué es la distribución de una variable?" />
-                    <Paragraph texto = "La distribución de una variable es la manera de describir a través de un histograma de frecuencias  el patrón o comportamiento de los datos. También es una función matemática que muestra los posibles valores que toma una variable (peso corporal, producción de leche, alimento consumido) y la frecuencia con que estas variables ocurren dentro de un experimento o dentro de una muestra poblacional. Siempre es muy importante visualizar los datos con los que estamos trabajando para tener idea de como se distribuyen. Por ejemplo, si tomamos el peso de 1000 novillos de 24 meses y con los resultados graficamos un histograma de frecuencias tendremos la siguiente distribución."/>
+                    <Paragraph texto = {<><p>Ya revisamos un poco el tema de las <HashLink smooth  to={"/Probabilidades"}><u>Probabilidades</u></HashLink> para poder continuar con las distribuciones. La distribución de una variable es la manera de describir a través de un histograma de frecuencias el patrón o comportamiento de los datos. También es una función matemática que muestra los posibles valores que toma una variable (peso corporal, producción de leche, alimento consumido) y la frecuencia con que estas variables ocurren dentro de un experimento o dentro de una muestra poblacional. Siempre es muy importante visualizar los datos con los que estamos trabajando para tener idea de como se distribuyen. Por ejemplo, si tomamos el peso de 1000 novillos de 24 meses y construimos 19 intervalos iguales donde se <b>distribuyan</b> desde el mínimo hasta el máximo peso y con los resultados graficamos un histograma de frecuencias tendremos la siguiente distribución. Entonces conociendo las distribuciones de los eventos podemos calcular la probabilidad de que un evento suceda. </p></>}/>
                     
                     <ImagePlus 
                 width = "40%"
@@ -86,7 +86,7 @@ const Distribuciones =()=>{
                 texto = "Histográma de frecuencias para pesos de 1000 novillos "
                 />  
                 
-            <Paragraph texto ="El histograma representa de manera gráfica como se distribuyen los datos. Se observa como la mayoría de los datos están concentrados al medio con mas de cien animales por intervalo (eje Y), mientras que los extremos (valores mínimos y máximos) obedecen a unos pocos animales con menos de 20 animales por intervalo.  Esto nos podría indicar que el peso de los novillos obedece al parámetro de una curva de distribución normal como lo veremos mas adelante. Las distribuciones las utilizamos para conocer los valores aleatorios que una variable puede tomar en un experimento o en una muestra y la frecuencia con la que ellas ocurren. Del ejemplo anterior podríamos deducir que es muy probable que un animal que escojamos al azar de esa muestra, su peso va a estar mas hacia los intervalos del medio que hacia los extremos."/>
+            <Paragraph texto ="El histograma representa de manera gráfica como se distribuyen los datos. En el gráfico superior se observa como la mayoría de los datos están concentrados al medio con mas de cien animales por intervalo (eje Y), mientras que los extremos (valores mínimos y máximos) obedecen a unos pocos animales con menos de 20 animales por intervalo.  Esto nos podría indicar que el peso de los novillos obedece al parámetro de una curva de distribución normal como lo veremos mas adelante. Las distribuciones las utilizamos para conocer los valores aleatorios que una variable puede tomar en un experimento o en una muestra y la frecuencia con la que ellas ocurren. Del ejemplo anterior podríamos deducir que es muy probable que un animal que escojamos al azar de esa muestra, su peso va a estar mas hacia los intervalos del medio que hacia los extremos."/>
 
 
         </SubChapter>
@@ -95,7 +95,7 @@ const Distribuciones =()=>{
         <SubTitle title="4.2- Repasemos algunas definiciones"/>
         <Paragraph texto = {<>
         <ul>
-            <li><b>- Frecuencia</b>: es el número de veces en que un valor determinado o un resultado se repite durante el experimento o aparece en el espacio muestral.  Normalmente se representa por medio de un histograma. </li>
+            <li><b>- Frecuencia</b>: es el número de veces en que un valor determinado o un resultado se repite durante el experimento o aparece en el <HashLink smooth  to={"/Probabilidades#glosario"}><u>espacio muestral</u></HashLink>.  Normalmente se representa por medio de un histograma. </li>
             <li><b>- Probabilidad de una distribución de frecuencia</b>: es una colección de las probabilidades de los posibles resultados de un evento. </li>
             <li><b>- Función de la probabilidad</b>: es una función que asigna una probabilidad a cada distinto resultado en el espacio muestral.  Donde: Y = resultado actual,  y = es uno de los posibles resultados de Y o sea uno de los valores dentro de la distribución. Entonces, <center><h4>P(Y = y) = p(y)</h4></center>  </li>
             <li><b>- Población</b>: es el conjunto formado  por todos los valores posibles que puede asumir la variable objeto de estudio.  Ejemplo: la producción de leche de todas las vacas de la región lechera de un país. </li>
@@ -202,7 +202,7 @@ const Distribuciones =()=>{
                 image = {bin2}
                 texto = " "
                 /> 
-        <Paragraph texto = {<><p>Ejemplo, En una finca porcicola la actividad reproductiva se realiza por inseminación artificial. Actualmente 
+        <Paragraph texto = {<><p>Ejemplo, En una finca porcícola la actividad reproductiva se realiza por inseminación artificial. Actualmente 
             La tasa de preñez es del 65%. Si tenemos un lote de 6 cerdas para inseminar. ¿Cuál es la probabilidad de que 4 de estas cerdas queden
              preñadas? Entonces:</p> <br/> <b>
         <ul>
@@ -240,7 +240,7 @@ const Distribuciones =()=>{
 </SubChapter>
 <SubChapter id = "binexcel">
     <SubTitle title = "4.3.3.1- Distribucion Binomial en Excel"/>
-    <Paragraph texto ="A pesar de que las fórmulas para calcular las probabilidades de la distribución binomial son relativamente sencillas, la realidad es que realizar estos cálculos en una calculadora normal toman tiempo.  Afortunadamente, podemos hacerlo de manera sencilla y rápida en Excel. Para ello lo primero que debemos tener son los datos en una tabla  divididos en fracasos y errores. Por ejemplo retomando nuestro ejemplo de las preñeces de las sección anterior, si construimos una tabla para  6 animales, si las 6 estan preñadas (éxitos), en la siguiente columna de vacias pues tendremos 0 fracasos, en la siguiente fila, si hay 5 preñadas, entonces habrá 1 vacía (fracaso) y así sucesivamente hasta las 6 vacías y 0 preñadas.  Tambien debemos incluir el numero de experimentos n, en este caso son 6 cerdas para escoger. También sabemos por el histórico que la probabilidad p es del 65%, que es el porcentaje de preñeces en el lote y finalmente los éxitos esperados (de 6 hasta 0). Tal como se observa en la tabla inferior"/>
+    <Paragraph texto ="A pesar de que las fórmulas para calcular las probabilidades de la distribución binomial son relativamente sencillas, la realidad es que realizar estos cálculos en una calculadora normal toman tiempo.  Afortunadamente, podemos hacerlo de manera sencilla y rápida en Excel. Para ello lo primero que debemos tener son los datos en una tabla  divididos en éxitos y fracaso. Por ejemplo retomando nuestro ejemplo de las preñeces de las sección anterior, si construimos una tabla para  6 animales, si las 6 estan preñadas (éxitos), en la siguiente columna de vacias pues tendremos 0 fracasos, en la siguiente fila, si hay 5 preñadas, entonces habrá 1 vacía (fracaso) y así sucesivamente hasta las 6 vacías y 0 preñadas.  Tambien debemos incluir el numero de experimentos n, en este caso son 6 cerdas para escoger. También sabemos por el histórico que la probabilidad p es del 65%, que es el porcentaje de preñeces en el lote y finalmente los éxitos esperados (de 6 hasta 0). Tal como se observa en la tabla inferior"/>
 
     <ImagePlus 
                 width = "25%"

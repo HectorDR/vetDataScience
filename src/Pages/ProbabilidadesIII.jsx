@@ -106,7 +106,7 @@ const ProbabilidadesIII =()=>{
                 image = {synd}
                 texto = "Cuadro de Punnet para Ss y Ss"
                 />  
-            <Paragraph texto = "Entonces revisando el cuadro de Punnet la probabilidad de nacimientos  homocigotos (SS) es del = 1/4 = 25%. La probabilidad de animales portadores (Ss) = 2/4 = 50%. La probabilidad de animales homocigotos recesivos (condición sindactilia ss) = 1/4 = 25%.  Teniendo en cuenta que el porcentaje de hembras portadoras del gen recesivo para sindactilia en el hato es del 12% entonces la probabilidad del total de las crias que pueden expresar la condición sindactilia en el hato es igual a 0.12 * 0.25 = 0.03 = 3%. Entonces existe un 3% de probabilidad de que si usamos ese toro en esa población de vacas, las crias van a expresar el gen."/>
+            <Paragraph texto = "Entonces revisando el cuadro de Punnet la probabilidad de nacimientos  homocigotos (SS) es del = 1/4 = 25%. La probabilidad de animales portadores (Ss) = 2/4 = 50%. La probabilidad de animales homocigotos recesivos (condición sindactilia ss) = 1/4 = 25%.  Teniendo en cuenta que el porcentaje de hembras portadoras del gen recesivo para sindactilia en el hato es del 12% entonces la probabilidad del total de las crias que pueden expresar la condición sindactilia en el hato es igual a 0.12 * 0.25 = 0.03 = 3%. Entonces existe un 3% de probabilidad de que si usamos ese toro en esa población de vacas las crias van a expresar el gen."/>
 
             <h4> <center>Toro heterecigoto Ss x vaca homocigota SS</center> </h4>
 

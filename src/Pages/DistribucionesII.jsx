@@ -74,7 +74,7 @@ const DistribucionesII =()=>{
                 </section>
         <SubChapter id = "continuas">
             <SubTitle title = "4.4 Distribuciones continuas"/>
-            <Paragraph texto = { <><p>"En este tipo de distribuciones los valores posibles que una variable aleatoria puede tomar son una secuencia de muchos valores infinitamente consecutivos. Es decir no hay pausa entre uno y otro. Por ejemplo: peso corporal de los animales, el consumo de alimento (en kgs, lbs etc), los tiempos laborales de los operarios (horas, minutos, segundos)."</p></>}/>
+            <Paragraph texto = { <><p>En este tipo de distribuciones los valores posibles que una variable aleatoria puede tomar son una secuencia de muchos valores infinitamente consecutivos. Es decir no hay pausa entre uno y otro. Por ejemplo: peso corporal de los animales, el consumo de alimento (toneladas, kg, gramos, miligramos etc), los tiempos laborales de los operarios (horas, minutos, segundos)."</p></>}/>
 
             <Paragraph texto = {[
                 "Las principales características de las distribuciones continuas son:",
@@ -104,9 +104,9 @@ const DistribucionesII =()=>{
         <Paragraph texto = "Es la distribución mas común dentro de los eventos naturales y se caracteriza por que los datos se distribuyen en forma acampanada (campana de Gauss), la función de la distribución es:"/>
         <center><h2>Y ~ N (μ,σ)</h2></center>
          
-        <Paragraph texto ={<><p> <center> Donde la variable aleatoria Y toma valores aproximados  a una distribución normal. Los parámetros de la distribución son,  <HashLink smooth to = {"/Analisis#central"}><u>la media o valor central (μ)</u> </HashLink> y la   <HashLink smooth to = {"/Analisis#dispersion"}><u>la desviación típica o estandar (σ).</u> </HashLink> </center> </p></>} />
+        <Paragraph texto ={<><p> <center> Donde la variable aleatoria <b>Y</b> toma valores aproximados  a una distribución normal. Los parámetros de la distribución son,  <HashLink smooth to = {"/Analisis#central"}><u>la media o valor central (μ)</u> </HashLink> y la   <HashLink smooth to = {"/Analisis#dispersion"}><u>la desviación típica o estándar (σ).</u> </HashLink> </center> </p></>} />
         
-        <Paragraph texto = "La distribución normal adapta una variable aleatoria a una función que depende de la media y la distribución estándar. Una variable aleatoria continua puede tomar cualquier número real. La distribución normal es simétrica es decir el valor de la mediana, la media y la moda coinciden matemáticamente.  La distribución normal tiene forma de campana y los valores que están alrededor de la media son los que tienen mayor probabilidad de aparecer. El 68% de los valores deberían estar dentro del intervalo: "/>
+        <Paragraph texto = "La distribución normal adapta una variable aleatoria a una función que depende de la media y la distribución estándar. Una variable aleatoria continua puede tomar cualquier número real. La distribución normal es simétrica es decir el valor de la mediana, la media y la moda coinciden matemáticamente.  La distribución normal tiene forma de campana y los valores que están alrededor de la media son los que tienen mayor probabilidad de aparecer. El 68% de los valores deberían estar dentro del intervalo sombreado que se muestra en la gráfica inferior, esto es repartidos entre mas una y menos una distribuciones estándar: "/>
         <h1><center>μ-σ y μ+σ</center> </h1>
         <br/>
         <h4><center> Curva de la distribución normal, indicando la media y +1 y -1 Desviación Estándar </center></h4>
@@ -130,10 +130,10 @@ const DistribucionesII =()=>{
              image = {mastitis}
              texto = "Curva distribución normal producción lechera "
              />  
-    <Paragraph texto = "Como vemos la curva de la distribución se asemeja muchísimo a la curva de la gráfica que describe una distribución normal, con una media central, la forma de una campana y la mayoría de los datos ubicados hacia el centro.  Para esta muestra de producción de leche la media es de 30088 libras y la desviación estándar es de 4571 libras.  Entonces el 66% de los datos va a estar entre mas una y menos una desviaciones estándar, es decir el 68% de los animales tiene una producción por lactancia de entre 25517 y 34659 libras."/>
+    <Paragraph texto = "Como vemos la curva de la distribución se asemeja muchísimo a la curva de la gráfica que describe una distribución normal, con una media central, la forma de una campana y la mayoría de los datos ubicados hacia el centro.  Para esta muestra de producción de leche la media es de 30088 libras y la desviación estándar es de 4571 libras.  Entonces el 68% de los datos va a estar entre mas una y menos una desviaciones estándar, es decir el 68% de los animales tiene una producción por lactancia de entre 25517 y 34659 libras."/>
 
     <h2>Cómo calcular una probabilidad de distribución normal en Excel</h2>
-    <Paragraph texto = "Si conocemos la media y la desviación estandar podemos calcular probabilidades de los diferentes valores.  Por ejemplo, cual es la probabilidad de una producción igual o inferior a 38000 libras, sabemos que este valor está por encima de la media y también que es superior al valor de la media mas una desviación estándar, pero no sabemos exactamente que probabilidad hay de que y este por encima o por debajo, para ello podemos acudir a Excel de manera similar a como hicimos con las distribuciones de Poisson y Binomial. "
+    <Paragraph texto = "Si conocemos la media y la desviación estandar podemos calcular probabilidades de los diferentes valores.  Por ejemplo, cual es la probabilidad de una producción igual o inferior a 38000 libras, sabemos que este valor está por encima de la media y también que es superior al valor de la media en mas una desviación estándar, pero no sabemos exactamente que probabilidad hay de que y este por encima o por debajo, para ello podemos acudir a Excel de manera similar a como hicimos con las distribuciones de Poisson y Binomial. "
     />
         
             <ImagePlus 
@@ -143,7 +143,7 @@ const DistribucionesII =()=>{
              texto = "Cálculo de la distribución Normal en Excel  "
              /> 
 
-    <Paragraph texto = {<><p>La función para calcular la distribución Normal en Excel es <b>=DISTR.NORM o =NORM.DIST en inglés</b>. Primero se debe incluir el valor x o sea el valor en el cual estamos interesados en conocer su ubicación, la media que ya conocemos, la distribución estándar que también conocemos y finalmente la función cumulativa a los cual escribimos verdadero o true si estamos trabajando con un Excel en inglés.</p></>} />
+    <Paragraph texto = {<><p>La función para calcular la distribución Normal en Excel es <b>=DISTR.NORM o =NORM.DIST en inglés</b>. Primero se debe incluir el valor <b>x</b>  o sea el valor ubicación en la distribución normal estamos interesasdos en conocer, la media que ya conocemos, la distribución estándar que también conocemos y finalmente la función acumulativa para la cual escribimos verdadero o true si estamos trabajando con un Excel en inglés.</p></>} />
 
             <ImagePlus 
             width = "30%"
@@ -167,7 +167,7 @@ const DistribucionesII =()=>{
 <SubChapter id = "normal-estandar">
     <SubTitle title = "4.4.2- Distribución Normal Estandarizada"/>
     <Paragraph texto = {<><p>
-        Dado que la distribución normal no es una sola sino un grupo de distribuciones con una <a href="Analisis#central"><u>media</u></a> μ y una <a href="Analisis#dispersion"><u>desviación estándar σ</u> </a> diferentes y por ello podrían existir un numero variado de distribuciones normales.  La solución para ello es entonces estandarizar transformando cualquier distribución normal de manera que μ sea 0 y σ sea 1. Todas las distribuciones pueden convertirse a la estándar restando la media de cada observación y dividendo por la desviación estándar:
+        Dado que la distribución normal no es una sola sino un grupo de distribuciones con una <a href="Analisis#central"><u>media</u></a> μ y una <a href="Analisis#dispersion"><u>desviación estándar σ</u> </a> diferentes y por ello podrían existir un numero variado de distribuciones normales y esto dificulta hacer comparaciones.  La solución para ello es entonces estandarizar transformando cualquier distribución normal de manera que μ sea 0 y σ sea 1. Todas las distribuciones pueden convertirse a la estándar restando la media de cada observación y dividendo por la desviación estándar:
         </p></>}/>
     <h2><center>z= (y-μ)/σ</center></h2>
 
@@ -214,8 +214,8 @@ const DistribucionesII =()=>{
 
     <h2> <center> Y∼t(k) </center></h2>
     <br />
-    <Paragraph texto = "La distribución t sigue el modelo de una gráfica con forma de campana (similar al de la distribución estándar), pero los extremos son mas gruesos que la distribución normal. Se utiliza comunmente cuando se examina una pequeña muestra de datos que sigue una distribución normal. Especialmente menor a 30. Un ejemplo de la utilidad de la distribución t-Student es si queremos comparar si hay diferencia significativa en el pesajde de bovinos que se han alimentado con diferentes dietas. No debemos olvidar que esta distribución la usamos cuando tenemos solo unos pocos datos especialmente en experimentos donde la cantidad de muestras son limitadas."/>
-    <Paragraph texto = "Por ejemplo de la totalidad de lactancias que utilizamos para trabajar con la distribución normal (n= 18640), seleccionamos completamente al azar 29 muestras de la variable aleatoria Y (lactación en lb) que sigue la distribución t-student con 28 grados de libertad. Los grados de libertad se calculan restando 1 del tamaño de la muestra (29 – 1 = 28).  El gráfico muestra el histograma de frecuencias de las 29 muestras. Como vemos similar a la distribución normal las observaciones con mayores frecuencias están hacia el centro, al contrario de los que tienen menos frecuencias que se encuentran hacia los extremos. "/>
+    <Paragraph texto = "La distribución t sigue el modelo de una gráfica con forma de campana (similar al de la distribución estándar), pero los extremos son mas gruesos que la distribución normal. Se utiliza comunmente cuando se examina una pequeña muestra de datos (menos de 30) que sigue una distribución normal. Como ejemplo de la utilidad de la distribución t-Student podemos comparar si hay diferencia significativa en el pesaje de grupos de bovinos que se han alimentado con diferentes dietas. No debemos olvidar que esta distribución la usamos cuando tenemos solo unos pocos datos especialmente en experimentos donde la cantidad de muestras son limitadas."/>
+    <Paragraph texto = "Por ejemplo de la totalidad de lactancias que utilizamos para trabajar con la distribución normal (n= 18640), seleccionamos completamente al azar 29 muestras de la variable aleatoria Y (lactación en lb) que sigue la distribución t-student con 28 grados de libertad. Los grados de libertad se calculan restando 1 del tamaño de la muestra (29 – 1 = 28).  El gráfico muestra el histograma de frecuencias de las 29 muestras. Como vemos similar a la distribución normal las frecuencias con mayores observaciones están hacia el centro, al contrario de los que tienen menos observaciones que se encuentran hacia los extremos. "/>
 
             <ImagePlus 
             width = "30%"
@@ -223,13 +223,13 @@ const DistribucionesII =()=>{
              image = {student}
              texto = "Histograma T-Student  "
              /> 
-    <Paragraph texto = "Esta distribución se utiliza básicamente para crear intervalos de confianza y probar hipótesis con poblaciones normalmente distribuidas cuando las poblaciones muéstrales son pequeñas. Es particularmente útil cuando no tenemos suficiente información o es muy costoso obtenerla. Por todo lo demás igual a la distribución Normal, la distribución t-Student tiene extremos mas gruesos y un pico mas bajo.  Esto es un reflejo del mayor nivel de incertidumbre, ocasionado por el pequeño tamaño de la muestra. "/>
+    <Paragraph texto = "Esta distribución se utiliza básicamente para crear intervalos de confianza y probar hipótesis con poblaciones normalmente distribuidas cuando las poblaciones muéstrales son pequeñas. Es particularmente útil cuando no tenemos suficiente información o es muy costoso obtenerla. Por todo lo demás es igual a la distribución Normal. "/>
     <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/4.4.3_Dist_cont_t_student.xlsx?raw=true"/> 
 </SubChapter>
 
 <SubChapter id = "chi-cuadrado">
     <SubTitle title = "4.4.4- Continuas-Distribución Chi-Cuadrado "/>
-    <Paragraph texto = {<><p> La distribución X<sup>2</sup> se usa para dos tipos de pruebas: primero para determinar si los datos de la muestra se ajustan a los de la población. Segundo, se usa la prueba de independencia Chi cuadrado  cuando se comparan dos variables categóricas en una tabla de contingencia para ver si están relacionadas o no. La distribución de X<sup>2</sup> al igual que la distribución t-student depende del tamaño de la muestra. Cuanto mas grande sea el tamaño de la muestra mas se asemejara a la distribución normal.  Sin embargo esta curva se caracteriza por ser asimétrica y sesgada hacia un lado (izquierda o derecha).  Los valores tabulados de la distribución chi-cuadrado se basan en los grados de libertad (df = n-1), tal como se hace con la distribución de valores de la tabla t-student.
+    <Paragraph texto = {<><p> La distribución X<sup>2</sup> (Chi cuadrado) se usa para dos tipos de pruebas: primero para determinar si los datos de la muestra se ajustan a los de la población. Segundo, se usa la prueba de independencia Chi cuadrado cuando se comparan dos variables categóricas en una tabla de contingencia para ver si están relacionadas o no. La distribución de X<sup>2</sup> al igual que la distribución t-student depende del tamaño de la muestra. Cuanto mas grande sea el tamaño de la muestra mas se asemejara a la distribución normal.  Sin embargo esta curva se caracteriza por ser asimétrica y sesgada hacia un lado (izquierda o derecha).  Los valores tabulados de la distribución chi-cuadrado se basan en los grados de libertad (df = n-1), tal como se hace con la distribución de valores de la tabla t-student.
     Los valores de Y siguen aproximadamente la distribución Chi-cuadrado χ<sup>2</sup> con k grados de libertad.
     </p></>}/>
     
