@@ -26,6 +26,7 @@ const Form = () => {
         });
     }, (error) => {
       setLoading(false)
+      console.log(error)
       toast.error('El mensaje no se pudo enviar', {
         position: "bottom-right",
         autoClose: 5000,
