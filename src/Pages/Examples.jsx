@@ -350,7 +350,7 @@ const Examples =()=>{
                 max_zoom ={"70%"}
                 texto = "Los datos han sido adecuadamente cambiados y ahora los términos son homogeneos"
                 />  
-            <Paragraph texto="Con esta opción se estandariza los datos como se muestra en el recuadro. Tanto las actividades como las observaciones ya tienen una mejor cara y será mas fácil realizar los respectivos análisis. Sin embargo, aun no está perfecto, por ejemplo en las observaciones aparece Mastitis y Mastitis g+.  Posteriormente veremos como se pueden manejar estos problemas."/>
+            <Paragraph texto="Con esta opción se estandarizan los datos como se muestra en el recuadro. Tanto las actividades como las observaciones ya tienen una mejor cara y será mas fácil realizar los respectivos análisis. Sin embargo, aun no está perfecto, por ejemplo en las observaciones aparece Mastitis y Mastitis g+. "/>
 
             <center><h4>Manejando las inconsistencias de los datos con el corrector ortográfico</h4></center>
                 <Video
@@ -403,7 +403,7 @@ const Examples =()=>{
                 max_zoom ={"70%"}
                 texto = "Cuantos campos del registro estan duplicados?"
                 />  
-            <Paragraph texto="En la tabla se resaltan todos los registros que están duplicados ya sea aquellos que tienen tan solo uno o mas datos duplicados, asi como aquellos que estan completamente duplicados (toda la información aparece en rojo).  Para este caso nos interesa remover solo aquellos en los que el registro completo está duplicado. En este caso hay dos, los de los animales 154424 y 155539 están totalmente repetidos así que podemos removerlos una vez estamos seguros de lo que estamos haciendo.  Para realizarlovamos al menú 'Datos' (Data) y seleccionamos la opción 'Remover duplicados' (remove duplicates).  "/>
+            <Paragraph texto="En la tabla se resaltan todos los registros que están duplicados ya sea aquellos que tienen tan solo uno o mas datos duplicados, asi como aquellos que estan completamente duplicados (toda la información aparece en rojo).  Para este caso nos interesa remover solo aquellos en los que el registro completo está duplicado. En este caso hay dos, los de los animales 154424 y 155539 están totalmente repetidos así que podemos removerlos una vez estamos seguros de lo que estamos haciendo.  Para realizarlo vamos al menú 'Datos' (Data) y seleccionamos la opción 'Remover duplicados' (remove duplicates).  "/>
 
             <center><h4>2.5.2.5- Ubicar los registros que están duplicados</h4></center>
                  <ImagePlus 
@@ -434,9 +434,9 @@ const Examples =()=>{
 
 <SubChapter id = "missing">
 <SubTitle title ="2.5.3-	Que hacer cuando hacen falta datos (missing values)"/>
-<Paragraph texto = "Este es uno de las situaciones mas comunes que se presentan cuando se trabaja con datos secundarios. Al momento de procesar la información vamos a encontrar que no todos los registros tienen todos los datos completos y aquí hay que tomar decisiones al respecto para ellos es importante saber que hacer y cuando vale la pena salvar el registro o por el contrario desecharlo. También es importante saber que tan crucial son los datos faltantes y si hay posibilidad de hallarlos en otra fuente. "/>
+<Paragraph texto = "Esta es una de las situaciones mas comunes que se presentan cuando se trabaja con datos secundarios. Al momento de procesar la información vamos a encontrar que no todos los registros tienen todos los datos completos y aquí hay que tomar decisiones al respecto. Para ello es importante saber que hacer y si vale la pena salvar el registro o por el contrario es mejor desecharlo. También es importante saber que tan crucial son los datos faltantes y si hay posibilidad de hallarlos en otra fuente. "/>
 
-<Paragraph texto = "Una vez que identificamos que hay datos faltantes, primero debemos contar cuantos valores que hacen falta, y que porcentaje del total de la población representan, ya que no es igual que haga falta el 0.5% de los datos de pesaje de novillos en un año, a que nos haga falta el 25% de los datos en un pesaje.  Es importante saber por que faltan los datos y si algo se puede hacer para remediarlo. Vamos a trabajar con un ejemplo de registro de pesos para un grupo de novillos que se encuentran entre los 8 y 10 meses de edad. " />
+<Paragraph texto = "Una vez que identificamos que hay datos faltantes, primero debemos contar cuantos valores hacen falta, y que porcentaje del total de la población representan, ya que no es igual que haga falta el 0.5% de los datos de pesaje de novillos en un año, a que nos haga falta el 25% de los datos en un pesaje.  Es importante saber por que faltan los datos y si algo se puede hacer para remediarlo. Vamos a trabajar con un ejemplo de registro de pesos para un grupo de novillos que se encuentran entre los 8 y 10 meses de edad. " />
 
             <center><h4>2.5.3.1- Opción contar el total de los registros</h4></center>
                  <ImagePlus 
@@ -444,7 +444,7 @@ const Examples =()=>{
                 max_zoom = {"70%"}
                 texto = "Utilizar la función =count"
                 />  
-            <Paragraph texto="Lo primero que vamos a hacer es contar el numero de animales.  En este caso podemos usar la función de Excel “contar” o “count”. Para ellos nos ubicamos donde queremos tener el dato, llamamos la función y seleccionamos el rango de la tabla como se muestra en la ilustración. En es ste caso hay 40 observaciones en total.  "/>
+            <Paragraph texto="Lo primero que vamos a hacer es contar el número de animales.  En este caso podemos usar la función de Excel “contar” o “count”. Para ellos nos ubicamos en la celda donde queremos tener esta cuenta y escribimos la función (=count) y seleccionamos el rango de la tabla como se muestra en la ilustración. En es este caso hay 40 observaciones en total.  "/>
       
             <center><h4>2.5.3.2- Contar los valores faltantes</h4></center>
                  <ImagePlus 
@@ -452,7 +452,7 @@ const Examples =()=>{
                 max_zoom ={"70%"}
                 texto = "Identificar cuantos valores faltantes existen en la tabla"
                 />  
-            <Paragraph texto="Ahora para identificar el número de observaciones faltantes podemos utilizar la función “contar.blanco” o “countblank” en Excel, simplemente llamamos la función en la celda donde queremos tener el dato y  seleccionamos el rango como se hizo en el caso anterior. "/>
+            <Paragraph texto="Ahora para identificar el número de observaciones faltantes (missing values) podemos utilizar la función “contar.blanco” o “countblank” en Excel. Parea ello escribimos la función en la celda donde queremos tener el dato y  seleccionamos el rango como se hizo en el caso anterior. "/>
 
             <center><h4>2.5.3.3- Determine la proporción de valores faltantes</h4></center>
                  <ImagePlus 
@@ -460,9 +460,9 @@ const Examples =()=>{
                 max_zoom ={"70%"}
                 texto = "Calcule la proporción de valores faltantes"
                 />  
-            <Paragraph texto="En el ejemplo en total faltan tres registros,  es decir el 7.5% de los pesos  no aparecen. Ahora bien hay que tomar decisiones.  Una puede ser descartar lo registros o asignarle a los datos faltantes el valor de la media poblacional. En caso de no querer descartar los registros pensando que en el futuro cuando el animal salga a la venta se puede tener una idea aproximada de la ganancia de peso para ese periodo de tiempo, podemos incluir el promedio del peso en el es campo faltante basados en el lote como control. "/>
+            <Paragraph texto="En el ejemplo en total faltan tres registros, es decir el 7.5% de los pesos  no aparecen. Ahora bien hay que tomar decisiones.  Una puede ser descartar lo registros o asignarle a los datos faltantes el valor de la media poblacional. En caso de no querer descartar los registros pensando que en el futuro cuando el animal salga a la venta se puede tener una idea aproximada de la ganancia de peso para ese periodo de tiempo, podemos incluir la media del peso en el es campo faltante basados en el peso medio del lote como control. "/>
 
-            <Paragraph texto = "La manera de incluir el promedio del lote en los registros sin datos es la siguiente: lo primero es obtener la media de los pesos sin los registros que estan en blanco para ello utilizamos la función “averageif” o en español “promedio.si” como se muestra en la barra de fórmulas de las imagen número 2.5.3.3. Es decir se calcula el promedio del lote, excluyendo aquellos que estan en blanco" />
+            <Paragraph texto = "La manera de incluir el promedio del lote en los registros sin datos es la siguiente: lo primero es obtener la media de los pesos sin los registros que estan en blanco para ello utilizamos la función 'averageif o en español 'promedio.si' como se muestra en la barra de fórmulas de las imagen número 2.5.3.3. Es decir se calcula el promedio del lote, excluyendo aquellos que estan en blanco" />
 
             <center><h4>2.5.3.4- Calcular la media para incluir en los valores faltantes</h4></center>
                  <ImagePlus 
@@ -470,7 +470,7 @@ const Examples =()=>{
                 max_zoom ={"70%"}
                 texto = "Calcule la media"
                 />  
-            <Paragraph texto="El valor que vamos a 'insertar' en las celdas en blanco es la media que obtuvimos sin los valores en blanco, este valor tiene que copiarse en una celda aparte de donde hicimos el cálculo ya que de lo contrario entraremos en un error de referencia circular. Una vez hecho esto, desde el menú inicio ir a buscar (find) y seleccionar 'ir a especial' o 'go to special' "/>
+            <Paragraph texto="El valor que vamos a 'insertar' en las celdas en blanco es la media que obtuvimos en el paso anterior, este valor tiene que copiarse en una celda aparte de donde hicimos el cálculo (sin la fórmula) ya que de lo contrario entraremos en un error de referencia circular. Una vez hecho esto, desde el menú inicio seleccionamos buscar (find) y de ahi seleccionar 'ir a especial' o 'go to special' "/>
             
             <center><h4>2.5.3.5- Seleccionar los espacios en blanco </h4></center>
                  <ImagePlus 
@@ -486,7 +486,7 @@ const Examples =()=>{
                 max_zoom = {"70%"}
                 texto = "Seleccionar el valor a insertar"
                 />  
-            <Paragraph texto="Una vez seleccionados los campos en blanco, en la primera celda resaltada deberemos copiar la coordendada donde se encuentra el valor que deseamos incluir. Finalizado este paso presionar al tiempo control + enter (windows) o command + enter (si es un mac) y los valores se copiaran automáticamente. "/>
+            <Paragraph texto="Una vez seleccionados los campos en blanco, en la primera celda resaltada deberemos copiar la coordendada donde se encuentra el valor que deseamos incluir en este caso = I9, sin embargo debemos tener cuidado de fijar la coordenadas con el signo $, es decir =$I$9.  Una vez hecho esto presionar al tiempo control + enter (windows) o command + enter (si es un mac) y los valores se copiaran automáticamente. "/>
 
             <center><h4>2.5.3.7- Revisar que el dato fue adecuadamente copiado en todas las celdas </h4></center>
                  <ImagePlus 
@@ -494,7 +494,7 @@ const Examples =()=>{
                 max_zoom = {"70%"}
                 texto = "Insertar el valor en los campos y revisar"
                 />  
-            <Paragraph texto="Finalmente se puede observar que ya no existen valores faltantes, sino que han sido reemplazados con la media y de esta manera no vamos a afectar este resultado. Solo se recomienda hacer esto cuando no hagan falta muchos datos y por alguna razon es mejor no borrar los registros. También es importante no incluir estos registros si hacen parte de otro análisis ya que esto tendría alguna incidencia sobre los resultados. "/>
+            <Paragraph texto="Finalmente se puede observar que ya no existen valores faltantes, sino que han sido reemplazados con la media y de esta manera no vamos a afectar este resultado de la media del lote. Solo se recomienda hacer esto cuando no hagan falta muchos datos y por alguna razon es mejor no borrar los registros. También es importante no incluir estos registros si hacen parte de otro análisis ya que esto tendría alguna incidencia sobre los resultados. "/>
 
             <center><h4>Como trabajar cuando hay datos faltantes</h4></center>
                 <Video
