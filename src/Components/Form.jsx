@@ -1,26 +1,45 @@
+import 'react-toastify/dist/ReactToastify.css';
 import React from 'react'
-import emailjs from "emailjs-com"
+import emailjs from "@emailjs/browser"
 import { useRef, useState} from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
+import ContactLoader from './ContactLoader'
+import { ToastContainer, toast, Flip } from 'react-toastify';
 const Form = () => {
 
   // manejo del formulario y uso de emailjs
   const form = useRef(null)
   const sendEmail = (e) => {
     e.preventDefault()
+    setLoading(true)
     // se envia todo lo que necesita el servicio de emailjs incluyendo la key que devuelve la recptcha
-    // seria bueno meter todo esto en variables de entorno
-    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID,"contact_form",form.current,process.env.REACT_APP_PUBLICKEY)
+    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, "contact_form", form.current, process.env.REACT_APP_EMAILJS_PUBLICKEY)
     .then((result) => {
-      setEnviado(true);
+      setLoading(false)
+      toast.success('Mensaje enviado', {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true
+        });
     }, (error) => {
-      console.log(error)
+      setLoading(false)
+      toast.error('El mensaje no se pudo enviar', {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true
+        });
     });
   }
   // Estados formulario
-  const [enviado,setEnviado] = useState(false);
+  const [Loading,setLoading] = useState(false);
   const [submitButton,setSubmitButton] = useState(false);
-  const captcha = useRef()
+  // const captcha = useRef()
   // manejo del captcha
   const captchaChange = () => {
     setSubmitButton(!submitButton)
@@ -30,7 +49,7 @@ const Form = () => {
   return (
     
     <div id= "contact" className="contact flex-columns ">
-      {enviado==false?<div className="form_card column-2">
+      <div className="form_card column-2">
         <h2>Si desea ponerse en contacto</h2>
         <form onSubmit={sendEmail} ref={form} className="callback-form">
           <div className="form-control">
@@ -45,21 +64,31 @@ const Form = () => {
           </div>
           <div className="form-control">
             <label htmlFor="comment"></label>
-            <input type="text" name="message" id="comment" required
-            placeholder="Escriba su comentario" />
+            <textarea name="message" id="comment" required rows="4" cols="39" placeholder='Escriba su comentario'>
+            </textarea>
           </div>
           {/* captcha de google que cambia de valor cuando es resolvida y ese valor se guarda en los valores del formulario */}
-          {/* esta key tambien deberia ir en las variables de entorno */}
           <ReCAPTCHA
-            ref={captcha}
             sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
             onChange={captchaChange}/>
           {submitButton === true?<input type="submit" value="Enviar" id= "submit"
           className="btn"/>:null}
         </form>
-      </div>:<div className="column-2 bg-light">
-        <h2>Mensaje enviado!</h2>
-        </div>}
+      {Loading ? <ContactLoader/> : null}
+      </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme='colored'
+        transition={Flip}
+      />
     </div>
   )
 }
