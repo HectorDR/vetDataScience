@@ -270,6 +270,7 @@ img{
 }
 
 .form_card{
+  position: relative;
   margin: 5vh;
   border-radius: 50px;
   background: #ffffff;
@@ -294,6 +295,7 @@ img{
   padding:4px;
   height: 40px;
   border: none;
+  font-size: 0.9em;
 }
 .form-control input{
   border-bottom: solid #23c483;
@@ -302,11 +304,64 @@ img{
 .callback-form input:focus{
   outline-color: #23c483
 }
-
+.form-control textarea{
+  border: none;
+  border-bottom: solid #23c483;
+  border-radius: 1vh;
+  padding: 1vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.9em;
+}
+.callback-form textarea:focus{
+  outline-color: #23c483
+}
 .callback-form .btn{
   padding: 12px;
   margin-top: 20px;  
 }
+
+.contact_loading{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(59, 57, 57, 0.2);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact_loading__loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #FFF;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.contact_loading__loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-bottom: 4px solid #28a745;
+  border-left: 4px solid transparent;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
 
 /* TEAM  */
 .team img{
