@@ -14,6 +14,7 @@ import Video from "Components/Video";
 import formulatest from "Media/images/formula_test.png";
 import intervalo2 from "Media/analisis/intervalo2.png";
 import intervalo3 from "Media/analisis/intervalo3.png";
+import intervalo4 from "Media/analisis/intervalos4.png";
 import histograma from "Media/analisis/histograma.png";
 import histograma2 from "Media/analisis/histogram2.png";
 import histograma3 from "Media/analisis/histogram3.png";
@@ -98,10 +99,10 @@ const Analisis = () => {
       <SubChapter id="categoricos">
         <Paragraph texto={<><p>Tal como se ha hablado anteriormente los datos que se recogen en la finca o en cualquier otro tipo de actividad que los genere, tienen diferente<HashLink smooth to={"/Post#raw"}><u>naturaleza</u></HashLink>. En esta sección vamos a revisar como  visualizar estos datos para poder entenderlos mejor y saber que nos dicen y también veremos como podemos realizar una aproximación a la estadística descriptiva utilizando herramientas sencillas en la hoja de cálculo Excel.</p></>} />
         <SubTitle title="5.1 Datos categóricos nominales" />
-        <Paragraph texto="Los datos categóricos son datos que se dividen en grupos como por ejemplo sexo (masculino, femenino) o raza (holstein, pardo suizo, normando). Veamos como podemos mostrar y resumir los datos categóricos con un ejemplo práctico. Por ejemplo, de una clínica veterinaria obtenemos una lista de historias clínicas de perros (n= 89). Queremos clasificar los animales por su tamaño, entonces, para ellos los hemos dividimos en tres categorias: grande, mediano y pequeño. De esta manera ya podremos cuantificar cuantos animales pertenecen a cada categoría y comenzar a entender por ejemplo que tipo de paciente es el que mas viene a la clínica."/>
+        <Paragraph texto="Los datos categóricos son datos que se dividen en grupos, como por ejemplo, sexo (masculino, femenino) o raza (holstein, pardo suizo, normando). Veamos como podemos mostrar y resumir los datos categóricos con un ejemplo práctico. Por ejemplo, de una clínica veterinaria obtenemos una lista de historias clínicas de perros (n= 89). Queremos clasificar los animales por su tamaño, entonces, para ello los hemos dividimos en tres categorias: grande, mediano y pequeño. De esta manera ya podremos cuantificar el número de animales que pertenecen a cada categoría y comenzar a entender por ejemplo, que pacientes son los que mas atiende la clínica de acuerdo con su tamaño."/>
 
-        <Paragraph texto={<><p>Para cuantificar en Excel podemos utilizar varias alternativas, una son las tablas pivotantes (pivot tables) estas 
-          tablas son una herramienta muy practica y flexible para resumir información y nos dan la opción de contar y visualizar elementos. Otro recurso útil es trabajar con funciones.  En este caso la primero que deseamos conocer es el número de animales para cada una de las categorias de la variable 'Tamaño'. Para utilizamos la función  <b>=CONTAR.SI o =COUNTIF</b> en inglés. Como siempre que vamos a usar una función primero nos ubicamos en la celda donde queremos 
+        <Paragraph texto={<><p>Para cuantificar en Excel podemos utilizar varias alternativas, una de ellas son las tablas pivotantes (pivot tables). Estas 
+          tablas son una herramienta muy práctica y flexible para resumir información y nos dan la opción de cuantificar y visualizar las variables incluidas. Otro recurso útil es trabajar con las funciones creadas por Excel.  En este caso la primera que podemos explorar para contar el número de animales para cada una de las categorias de la variable 'Tamaño' es la función  <b>=CONTAR.SI o =COUNTIF</b> en inglés. Como siempre que vamos a usar una función primero nos ubicamos en la celda donde queremos 
           la información, luego digitamos la función (=CONTAR.SI), y seleccionamos el rango donde están nuestros datos, separamos con una coma (,) y posteriormete seleccionamos el criterio por el cual deseamos 
           clasficar.  Es decir escribimos la condición, que para este caso sería celdas que en el rango que estamos buscando contengan la <b>G</b> o sea animales de tamaño grande tal como se muestra el cuadro inferior.</p></>}/>
         <ImagePlus
@@ -110,18 +111,18 @@ const Analisis = () => {
           texto="Uso de la función =CONTAR.SI"
           max_zoom="50%"
         />
-        <Paragraph texto="Completamos la información para cada una de las categorias y de esta manera obtenemos la tabla que resume el numero de animales por categoría." />
+        <Paragraph texto="Completamos la información para cada una de las categorias y de esta manera obtenemos la tabla que resume el número de animales por categoría." />
         <ImagePlus image={categoricos2} 
         texto="Tabla Completa"
         width = "30%"
         max_zoom = "50%" />
        <h2>Diagrama de Barras</h2> 
-        <Paragraph texto="Es uno de las mas comunes para la visualización de datos categóricos ya que permite visualizar la información de manera  sencilla. Como se observa en el diagrama inferior este gráfico es una representación  de la tabla presentada en el cuadro superior.  Cada barra representa una categoría y en el eje vertical se presenta la distribución absoluta (conteo).  Para hacerlo en Excel simplemente seleccione sus datos, ubíquese en el menú Insertar y de ahí seleccione las gráficas de la opción (columnas), el menú de opciones es amplio por lo que hay mucha flexibilidad en el diseño." />
+        <Paragraph texto="Es una de las gráficas mas comunes para la visualización de datos categóricos ya que permite visualizar la información de manera  sencilla. Como se observa en el diagrama inferior este gráfico es una representación  de la tabla presentada en el cuadro superior.  Cada barra representa una categoría y en el eje vertical se presenta la distribución absoluta (conteo).  Para hacerlo en Excel simplemente seleccionamos los datos, y desde el menú 'Insertar' que se encuentra en la parte superior y se escoge las gráfica deseada (en la barra superior se selecciona por los íconos que las represatan).  En este caso seleccionamos la opción (columnas), el menú de opciones es amplio por lo que hay mucha flexibilidad en el diseño." />
 
         <ImagePlus image={barras} texto="Gráfica de Columnas" width = "35%" max_zoom="50%" />
 
         <h2>Gráfico de torta</h2>
-        <Paragraph texto="Se utiliza para mostrar que porcentaje del total (100%) ocupan las diferentes categorias.  De la totalidad de animales de la muestra en que porcentaje están representados los grandes (G), los medianos (M) y los pequeños (M).  En Excel la forma de obtener este gráfico es similar al anterior. Seleccione los datos, insertar, gráficos y finalmente escoja la torta que mas se ajuste a sus necesidades pues hay en 2D o en 3D y la puede ajustar a su gusto." />
+        <Paragraph texto="Se utiliza para mostrar que porcentaje del total (100%) ocupan las diferentes categorias.  De la totalidad de animales de la muestra en que porcentaje están representados los grandes (G), los medianos (M) y los pequeños (M).  En Excel la forma de obtener este gráfico es similar al anterior. Seleccione los datos, de ahi ir a 'Insertar', y finalmente seleccionar el ícono de la torta que mas se ajuste a sus necesidades pues hay en 2D o en 3D y la puede ajustar a su gusto." />
         <ImagePlus image={torta} texto="Gráfica de Torta" width = "35%" max_zoom="50%"/>
         <SubTitle title="Diagrama de Pareto" />
         <Paragraph texto="Los datos nominales también se pueden presentar con un diagrama de Pareto. Este presenta las barras verticales que muestran la frecuencia absoluta de unidades por valor que toma la variable (cantidad de perros G, M o S) y simultáneamente en un eje vertical secundario (a la derecha va indicando la frecuencia acumulada relativa (porcentaje) con que cada valor contribuye hasta lograr el 100% (línea naranja). De igual manera es posible realizar el diagrama de Pareto en Excel seleccionando la opción en el menú de gráficos." />
@@ -137,13 +138,13 @@ const Analisis = () => {
       {/* 5.2 Datos cuantitativos */}
       <SubChapter id="cuantitativos">
         <SubTitle title="5.2 Datos cuantitativos" />
-        <Paragraph texto={<><p>Los datos cuantitavos son aquellos que podemos expresar de forma númerica. Con estos  <HashLink smooth to="/Post#raw"><u>datos</u></HashLink> hay mas posibilidades y flexibilidad en la manera como podemos
+        <Paragraph texto={<><p>Los datos cuantitavos son aquellos que podemos expresar de forma numerica. Con estos  <HashLink smooth to="/Post#raw"><u>datos</u></HashLink> hay mas posibilidades y flexibilidad en la manera como podemos
            presentarlos y la vez entenderlos. Una manera frecuente de presentar los datos cuantitativos es la utilización de tablas de distribución de frecuencias o histogramas. A diferencia de los nominales
            donde para crear el diagrama de barras básicamente cada valor que toma la variable (Caso anterior G, M, S) representa una columna, cuando
            trabajamos con información cuantitativa creamos intervalos del mismo tamaño que nos sirven para agrupar el conjunto de los datos basados en los valores que toma la variable. Esto nos permite presentar de manera
            resumida la información. En la tabla se aconseja no solo presentar la frecuencia total sino también la frecuencia relativa (porcentajes). Por ejemplo,
            vamos a presentar una tabla que resuma la producción de leche ajustada a 305 días por lactancia de una finca lechera. Lo primero que 
-           debemos hacer es decidir el número de intervalos y calcular la amplitud del intervalo con la siguiente fórmula:</p></>} />
+           debemos hacer es conocer el valor mínimo y el valor máximo (12150 y 47820 respectivamente), luego decidir el número de intervalos y ahi podremos calcular la amplitud del intervalo con la siguiente fórmula:</p></>} />
         <ImagePlus
           image={formulatest}
           texto="Formula amplitud de intervalos"
@@ -151,22 +152,28 @@ const Analisis = () => {
           max_zoom = "70%"
         />
         <Paragraph texto={<><p>Si estamos trabajando con una tabla con muchos datos, encontrar los valores máximo y mínimo puede ser asunto complicado.
-           Afortunadamente Excel lo hace fácil para ello en Excel utilizamos las funciones <b> =MIN() y =MAX()</b> entre paréntesis seleccionamos
-            el rango de valores de la variable, para este caso producción de leche. Reemplazando la fórmula tenemos:</p></>}/>
+           Podemos encontrar estos valore con funciones de Excel para ello utilizamos las funciones <b> =MIN() y =MAX()</b> respectivamente. Dentro de la función seleccionamos la ubicación del rango de valores que toma la variable en la tabla. Una vez encontrados estos valores reemplazando la fórmula tenemos:</p></>}/>
         <ImagePlus
           image={intervalo2}
           texto="Formula de amplitud de intervalo resuelta"
           width="50%"
           max_zoom = "70%"
         />
-        <Paragraph texto="Esto quiere decir que vamos a construir una tabla con 10 intervalos con una amplitud de 3567 libras cada uno, comenzando con el inferior que será de 12150 + 3567, así que el primer el primer intervalo será desde 12150 hasta 15717 y así sucesivamente hasta el último mayor a 44253 hasta 47820. Excel tiene una herramienta muy práctica para la construcción del histograma de frecuencias. Para ello asegúrese de tener instalado la herramienta de análisis de datos en el menú Datos." />
+        <Paragraph texto={ <> <p> Esto quiere decir que vamos a construir una tabla con 10 intervalos con una amplitud de 3567 libras cada uno, comenzando con el inferior que será desde el valor mínimo  12150 libras + 3567 libras, así que el primer el primer intervalo será desde 12150 hasta 15717 y así sucesivamente hasta el último rango que será desde 44253 hasta 47820 (valor máximo). Excel tiene una herramienta muy práctica para la construcción del histograma de frecuencias. Para ello asegúrese de tener instalado la herramienta de <a href="https://support.microsoft.com/en-us/office/load-the-analysis-toolpak-in-excel-6a63e598-cd6d-42e3-9317-6b40ba1a66b4#OfficeVersion=Windows" target="_blank"><u>'Análisis de Datos' o 'Data Analysis'</u></a>  en el menú 'Datos' o 'Data' que se halla ubicado en la parte superior de la pantalla. </p></>}/>
         <ImagePlus
           image={intervalo3}
           texto="Opción de analisis de datos"
           width="60%"
           max_zoom = "80%"
         />
-        <Paragraph texto="Una vez que hemos definido los intervalos y sabemos la amplitud de estos hacemos una columna con ellos como se muestra en el gráfico, teniendo presente que incluimos los valores máximos de cada intervalo. Es decir, para el primero que sería de 12150 a 15717, solo digitamos el 15717, sigue 19284 y así hasta el último. Posteriomente vamos al menu datos, seleccionamos data analysis y finalmente histogram." />
+        <Paragraph texto="Una vez que hemos definido los intervalos y sabemos la amplitud de estos hacemos una columna con ellos como se muestra en la tabla que se muestra a conticuación, teniendo presente que incluimos los valores máximos de cada intervalo. Es decir, para el primero que sería de 12150 a 15717, solo digitamos el 15717, sigue 19284 y así hasta el último. Posteriomente vamos al menu datos, seleccionamos data analysis y finalmente histogram." />
+        <ImagePlus
+          image={intervalo4}
+          texto="Lista de valores para crear los intervalos "
+          width="10%"
+          max_zoom = "15%"
+        />
+
         <ImagePlus
           image={histograma}
           texto="Opción de histograma"
@@ -204,20 +211,21 @@ const Analisis = () => {
           max_zoom = "70%"
         />
         <Paragraph texto='Como se observa en el gráfico parece que existe una tendencia lineal entre la producción de grasa en leche y el volumen total de leche (a mayor leche mayor cantidad de grasa), sin embargo este es solo un primer ejercicio para tratar de entender los datos de que disponemos. Luego tendremos que confirmar con fórmulas de asociación como correlaciones o covarianzas. Para realizar el gráfico en Excel, necesitamos seleccionar los rangos donde se encuentran los datos y luego del menú insertar gráficos seleccionar "scatter" o dispersión.' />
+
         <SubTitle title="5.3.2- Variables Categóricas" />
         <Paragraph texto={<><p>Las tablas cruzadas o tablas de contingencia son ideales para resumir y visualizar los datos de las variables categóricas.
-          En la tabla cruzada un grupo de categorías va en el eje horizontal (X) y otro grupo en el eje vertical (Y). Un ejemplo lo podemos tomar por 
-          ejemplo si utilizamos una base de datos de un albergue de datos (datos obtenidos de<a href="https://www.kaggle.com" target="_blank"><u>Kaggle</u></a>)
-          y seleccionamos las dos variables categóricas disponibles que son  animales esterilizados, cuyas categorias (si, no) ubicamos en el eje horizontal y para la variable sexo, ubicamos sus categorias (Macho, Hembra) en el eje vertical.
+          En la tabla cruzada un grupo de categorías va en el eje horizontal (X) y otro grupo en el eje vertical (Y). Por 
+          ejemplo, si utilizamos una base de datos de un albergue de datos (datos obtenidos de<a href="https://www.kaggle.com" target="_blank"><u>Kaggle</u></a>)
+          y seleccionamos las dos variables categóricas disponibles que son animales esterilizados cuyas categorias (si, no) ubicamos en el eje horizontal y para la variable sexo, ubicamos sus categorias (Macho, Hembra) en el eje vertical.
           También es importante incluir los totales. Para este tipo de tabla es muy útil utilizar  <a href="https://support.microsoft.com/es-es/office/crear-una-tabla-dinámica-para-analizar-datos-de-una-hoja-de-cálculo-a9a84538-bfe9-40a9-a8e9-f99134456576" target="_blank"><b><u>las tablas dinámicas de Excel</u></b></a>  que nos permiten no
           solo realizar la tabla, sino también visualizar el gráfico.</p></>} />
         <ImagePlus image={dinamica} texto="Tabla cruzada" width="35%" max_zoom = "60%" />
-        <Paragraph texto="Siguiendo la metodología descrita en el enlace de como crear una tabla dinámica cruzamos los datos de sexo y esterilización. En este caso decidimos mostrar la información por totales sin embargo podemos mostrar tambien sus valores relativos. Es una de las ventajas de Excel que es muy flexible para la creación de estas tablas, ajustándolas a las necesidades del analista. De igual manera podemos seleccionar la opción de visualizar los datos en una gráfica dinámica." />
+        <Paragraph texto="Siguiendo la metodología descrita en el enlace de como crear una tabla dinámica cruzamos los datos de sexo y esterilización. En este caso decidimos mostrar la información por totales sin embargo podemos mostrar tambien sus valores relativos. De igual manera podemos seleccionar la opción de visualizar los datos en una gráfica dinámica." />
         <ImagePlus
           image={dinamica2}
           width="40%"
           max_zoom = "60%"
-          alt="Grafica de tabla dinamica"
+          alt="Gráfica de tabla dinamica"
           texto="Total de animales recibidos en el albergue clasificados por sexo (macho o hembra) y esterilización (si o no). Fuente: www.kaggle.com"
         />
        <center> <SubTitle title="Construcción de tablas de contingencia para cuantificar variables categóricas" /></center>
@@ -257,7 +265,7 @@ const Analisis = () => {
           width="10%"
           max_zoom ="20%"
           alt="Formula Mediana"
-          texto="Formula matematica para la mediana de datos"
+          texto="Formula matemática para la mediana de datos"
         />
         <SubTitle title="- Moda" />
         <Paragraph texto= {<><p>Moda es el dato que mas se repite o se da con mayor frecuencia dentro de una sucesión de datos. La moda se halla
@@ -275,7 +283,7 @@ const Analisis = () => {
       <SubChapter id="dispersion">
         <SubTitle title="5.4.2 Medidas de dispersión o variabilidad" />
         <Paragraph
-          texto="Para el análisis de datos no basta con encontrar las medidas de posición central, ya que varias muestras pueden presentar las mismas medias, sin embargo, la dispersión de los datos puede darnos claros ejemplos de el comportamiento de los mismos. Las medidas de variabilidad nos indican el grado de dispersión en un conjunto de datos. Si este valor es pequeño entonces hay uniformidad en los datos. Por el contrario habrá poca uniformidad. Si es cero, entonces todos los datos son iguales. Por ejemplo, no es igual tener un lote de pollos de engorde con una media de 2.2 kg y una desviación estándar 0.3 kg, que un lote de pollos de engorde con una media de 2.2 kg y una desviación estándar de 0.6kg. A pesar de que las medias son iguales los datos del segundo lote estan mucho mas dispersos, por tanto la uniformidad estaría mas comprometida. Las medidas de dispersión de mas frecuente uso son:"
+          texto="Para el análisis de datos no basta con encontrar las medidas de posición central, ya que varias muestras pueden presentar las mismas medias, sin embargo, la dispersión de los datos puede darnos claros ejemplos de el comportamiento de los mismos. Las medidas de variabilidad nos indican el grado de dispersión en un conjunto de datos. Si este valor es pequeño entonces hay uniformidad en los datos. Por el contrario habrá poca uniformidad. Si es cero, entonces todos los datos son iguales. Por ejemplo, no es igual tener un lote de pollos de engorde con una media de 2.2 kg y una desviación estándar de 0.3 kg, que un lote de pollos de engorde con una media de 2.2 kg y una desviación estándar de 0.6kg. A pesar de que las medias son iguales los datos del segundo lote estan mucho mas dispersos, por tanto la uniformidad estaría mas comprometida lo cual puede representar pérdidas económicas. Las medidas de dispersión de mas frecuente uso son:"
         />
         <SubTitle title="- Varianza y desviación estándar" />
         <Paragraph
@@ -348,10 +356,10 @@ const Analisis = () => {
         <Paragraph
           texto={<><p>Los valores máximos y mínimos los calculamos con las funciones <b>=MAX() y =MIN()</b>. Para el sesgo utilizamos la función
           <b> =SKEW</b> o en español <b>=COEFICIENTE.ASIMETRIA.P</b>. La función de la varianza es <b> =VAR.P o =VAR.S</b> ya sea para
-          una población o para una muestra respectivamente. Para Excel en español <b>=VAR</b> para una muestra y <b>=VARP</b> para la
+          una población o para una muestra respectivamente. Para Excel en español <b>=VARS</b> para una muestra y <b>=VARP</b> para la
           población. La desviación estándar de igual manera <b>=STDEV.P o STDEV.S</b> para población o muestra respectivamente, si Excel ha sido
           configrado en inglés (como en mi caso) o si es en español entonces las funciones son <b>=DESVESTP</b> para población y <b> =DESVEST</b>
-          para la muestra. Con todas estas variables podemos crear nuestro reporte en una tabla:</p></>}
+          para la muestra en caso de dudas sobre como escriben las funciones se puede consultar este <a href="https://functiontranslator.com/es/" target="_blank"><u>enlace</u></a>. Con todas estas variables podemos crear nuestro reporte en una tabla:</p></>}
         />
         <ImagePlus 
         width = "40%"
@@ -359,8 +367,8 @@ const Analisis = () => {
         image={desc_c} 
         texto="Reporte" />
         <Paragraph
-          texto="Excel tiene incorporada una herramienta para hacer análisis descriptivo de manera rápida, para ello debemos instalar la herramienta de análisis de datos. Una vez instalada seleccionamos la opción estadística descriptiva o “descriptive statistics”, inmediatamente se abre una hoja de dialogo donde debemos seleccionar el rango de datos que deseamos incluir y aclarar si los datos están por columnas como en este caso y si las columnas tienen etiquetas (labels). Seleccionamos además la ubicación del informe
-         y finalmente que tipo de análisis estadístico deseamos ver, en este caso nos quedamos con el resumen estadístico (summary statistics)."
+          texto= {<><p> Excel tiene incorporada una herramienta para hacer análisis descriptivo de manera rápida, para ello debemos instalar la herramienta de <a href="https://support.microsoft.com/en-us/office/load-the-analysis-toolpak-in-excel-6a63e598-cd6d-42e3-9317-6b40ba1a66b4" target = "_blank"><u>análisis de datos</u></a>. Una vez instalada seleccionamos la opción estadística descriptiva o “descriptive statistics”, inmediatamente se abre una hoja de dialogo donde debemos seleccionar el rango de datos que deseamos incluir y aclarar si los datos están por columnas como en este caso y si las columnas tienen etiquetas (labels). Seleccionamos además la ubicación del informe
+         y finalmente que tipo de análisis estadístico deseamos ver, en este caso nos quedamos con el resumen estadístico (summary statistics).</p></>}
         />
         <ImagePlus
           image={summary}
@@ -403,7 +411,7 @@ const Analisis = () => {
         texto="Covarianza muestral" />
          
       <Paragraph
-          texto={<><p>Para la covarianza muestral tenemos que X es la media de la variable X, x <sub>i</sub> es la "iesima" posición de esta variable, mientras que Y representa la media de la variable Y, y<sub>i</sub> representa la "iesima" posición de la variable y. Finalmente n representa el número total de observaciones (suma de observaciones de X y Y).</p></>}
+          texto={<><p>Para la covarianza muestral tenemos que X es la media de la variable X, x <sub>i</sub> es la "iésima" posición de esta variable, mientras que Y representa la media de la variable Y, y<sub>i</sub> representa la "iésima" posición de la variable y. Finalmente n representa el número total de observaciones (suma de observaciones de X y Y).</p></>}
         />
 
 
@@ -428,7 +436,7 @@ const Analisis = () => {
         texto="Correlación" />
 
 <Paragraph
-          texto={<><p> Donde  S<sub>xy</sub>  representa la covarianza entre las variables X y Y (ver fórmula anterior), σ<sub>x</sub> es la desviación típica de X y σ<sub>y</sub> es la desviación típica de Y.</p></>}
+          texto={<><p> Donde  S<sub>xy</sub>  representa la covarianza entre las variables X y Y (ver fórmula anterior), S<sub>x</sub> es la desviación típica de X y S<sub>y</sub> es la desviación típica de Y.</p></>}
         />
       
          <SubTitle title="Ejemplo en Excel" />
