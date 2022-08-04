@@ -54,7 +54,8 @@ const Anava = () => {
               { titulo: "7.4- El ANAVA de dos factores con replicación", link: "#twoanovarep" },
               { titulo: "7.5- La regresión lineal",
                 link: "#linearreg", },
-              { titulo: "7.6- La regresión lineal simple en Excel", link: "#AnavaII#reglinex", },
+              { titulo: "7.6- La regresión lineal simple en Excel", 
+              link: "AnavaII#reglinex", },
               {titulo: "7.7- La regresión múltiple en Excel ",
                 link: "AnavaII#regmult",
               },
@@ -75,21 +76,18 @@ const Anava = () => {
       <SubTitle title = "7.1- El análisis de varianza"/>
       <Paragraph texto = {<><p>
         Cuando estamos interesados en identificar si existen diferencias que se puedan atribuir a variaciones en el comportamiento de una variable 
-        independiente o <b>variable predictiva categórica utilizamos el análisis de varianza o ANAVA </b> (ANOVA por sus siglas en inglés). 
+        independiente o variable predictiva categórica utilizamos el<b> análisis de varianza o ANAVA </b> (ANOVA por sus siglas en inglés). 
         El ANAVA es una herramienta estadística que permite la comparación de los efectos de uno o múltiples factores independientes sobre un resultado. 
-        Por ejemplo, podemos estudiar si existen variaciones en la producción de leche de una región que se puedan atribuir al año de lactancia. 
+        Por ejemplo, podemos estudiar si existen variaciones en la producción de leche de una región que se puedan atribuir a los pastos de región, al régimen de lluvias o al sistema de ordeño. 
         Cada uno de los factores a incluir en el análisis pueden contener diferentes niveles de la variable de interés (ejemplo: razas, regiones, año de 
         producción). En síntesis el análisis de varianza nos sirve para conocer cuales son los efectos principales y las interacciones entre
         <HashLink smooth to={"/Post#raw"}><u>variables categóricas</u></HashLink> que sean independientes en un intervalo (rango de resultados) 
         de una variable dependiente.<br/><br/>
         En esta última sección, veremos como con una herramienta de Excel (Análisis de Datos) y sin conocimientos previos de programación, podemos utilizar el 
-        analisis de varianza y algunas regresiones que son armas poderosas a la hora de tomar decisiones. Podremos explorar y construir alternativas 
-        útiles que nos permitan analizar los datos que se generan en una empresa pecuaria de la manera mas sencilla y efectiva posible posible. 
-        Excel permite realizar varios tipos de ANAVAS, sin embargo, para realizarlo es necesario activar la aplicación <b>Data Analysis o Análisis de Datos</b> que 
+        analisis de varianza. También veremos algunos tipos de regresiones que son armas poderosas a la hora de hacer análisis y tomar decisiones. 
+        Excel permite realizar varios tipos de ANAVAS, sin embargo, para realizarlo una vez mas es necesario activar la aplicación <a href="https://support.microsoft.com/es-es/office/cargar-herramientas-de-análisis-en-excel-6a63e598-cd6d-42e3-9317-6b40ba1a66b4" target ="_blank"><u><b>Data Analysis o Análisis de Datos</b></u></a>  que 
         viene incorporada con el software. Esta aplicacion permite realizar análisis de varianza de un solo factor, de doble factor, sin replicación y 
-        dos factores con replicación. Para saber como activar la herramienta en su software Excel revisar el siguiente enlace:
-        <a href="https://support.microsoft.com/es-es/office/cargar-herramientas-de-análisis-en-excel-6a63e598-cd6d-42e3-9317-6b40ba1a66b4" target = "_blank">
-        <u>cargar herramienta de análisis en Excel</u>.</a>
+        dos factores con replicación. 
       </p></>}/>
       
 
@@ -99,7 +97,7 @@ const Anava = () => {
       <SubTitle title = "7.2- ANAVA de un solo factor"/>
       <Paragraph texto = {<>
         <p>El ANAVA de un solo factor se realiza de manera similar a la<HashLink smooth to={"/AnalisisII#intervalo3"}>
-          <u>prueba T-student</u></HashLink>. Sin embargo, La prueba de hipótesis del ANAVA permite comprobar la igualdad de tres o mas medias
+          <u>prueba T-student</u></HashLink>. Sin embargo, la prueba de hipótesis del ANAVA permite comprobar la igualdad de tres o mas medias
         muéstrales a diferencia de la prueba T que solo permite dos.<br/>Por ejemplo: un zootecnista desea conocer si existen variaciones en la 
         producción de leche entre las fincas que están a su cargo. Para ello ha tomado las producciones ajustadas de leche a 305 días de 
         39 animales en cada una de las 4 granjas. Nuestra variable independiente son las fincas y la variable dependiente es la producción de leche.  Entonces se establecen entonces las hipótesis  de la siguiente manera:</p><br/>
@@ -108,7 +106,7 @@ const Anava = () => {
          <li>- H<sub>1</sub>: Existe una variación significativa en la producción promedio de leche entre las granjas.</li>
         </ul>
         <br />
-        <p>Entonces para saber si existen variaciones en la producción en este caso es una variable categórica (granja A,B,C,D), vamos en Excel a la 
+        <p>Entonces para saber si existen variaciones en la producción que puedan ser atribuidas a una variable categórica (granja A,B,C,D), vamos en Excel a la 
           opción Datos y seleccionamos del menú Data Análisis la opción ANOVA Single Factor (un solo factor), tal como lo muestra el recuadro inferior.</p>
       </>}/>
         <ImagePlus
@@ -119,10 +117,10 @@ const Anava = () => {
         />
       <Paragraph texto = {<>
         <center><h4>Seleccionar de Data Analysis la opcion Anova factor único o single factor</h4></center><br/>
-        <p>Lo primero que se debe hacer tan pronto se abre la hoja de diálogo es seleccionar los datos de interés, para este caso los datos de las cuatro granjas, en este caso los datos están agrupados por columnas y tienen encabezados
-          (headings) por lo tanto seleccionamos estas opciones. Posteriormente seleccionar el 𝛼 para comparar con el p-value, en este caso es del 0.05.
-          A diferencia de la prueba t donde se calcula un t estadístico para rechazo o aceptación de la Hipótesis nula, en el ANAVA se calcula un F 
-          estadístico y se compara con valor F critico. Por tanto tener en cuenta que a pesar de que la tabla estadística es diferente el procedimiento 
+        <p>Lo primero que se debe hacer tan pronto se abre la hoja de diálogo es seleccionar el rango donde se encuentran los datos de interés, para este caso los datos de las cuatro granjas que están agrupados por columnas y tienen encabezados
+          (headings) por lo tanto seleccionamos esta opcione. Posteriormente seleccionar el 𝛼 para comparar con el p-value, en este caso es del 0.05.
+          A diferencia de <HashLink smooth to={"/AnalisisII#intervalo3"}><u>la prueba t</u></HashLink> donde se calcula un t estadístico para rechazo o aceptación de la Hipótesis nula, en el ANAVA se calcula un F 
+          estadístico y se compara con valor F critico. Por tanto tener en cuenta que a pesar de que la tabla estadística es diferente, el procedimiento 
           es similar. Finalmente debemos seleccionar donde deseamos ubicar el reporte si en una celda especifica o en una hoja aparte. También podemos 
           darle un nombre al reporte.</p>
       </>}/>
@@ -135,7 +133,7 @@ const Anava = () => {
 
         <Paragraph texto = {<>
          <center><h4>Seleccionar el rango donde se encuentran los datos, el nível de confianza y el espacio para generar el reporte</h4></center>
-         <br/><br/><p>Una vez que damos OK en menú, se genera un reporte con dos tablas como el que se ve a continuacion:</p></>}/>
+         <br/><br/><p>Una vez que damos OK en el menú, se genera un reporte con dos tablas como el que se ve a continuacion:</p></>}/>
 
         <ImagePlus
           image={single3}
@@ -144,7 +142,7 @@ const Anava = () => {
           max_zoom = "60%"
         />
 
-      <Paragraph texto ="Como se observa, el reporte de Excel genera dos tablas, la tabla superior corresponde a la estadistica descriptiva para cada uno de los grupos e incluye la media y la varianza.  En la segunda tabla  ubicada en la parte inferior se presenta el análisis de varianza como tal. En este caso hay dos cosas importantes que revisar para determinar si existe o no diferencia significativa. Lo primero es el F estadístico. Para rechazar la Hipótesis nula este valor debe ser superior al F crítico. Para este caso el F estadístico es 0.65 siendo inferior que el F critico (2.66). De igual manera el valor P que en este caso es 0.58 y es superior al 𝛼 escogido de 0.05, por tanto no hay razón para rechazar la Hipótesis nula y podemos decir con un 95% de confianza que no hubo variación en la producción de leche ajustada a 305 dias."/>
+      <Paragraph texto ="Como se observa, el reporte de Excel genera dos tablas, la tabla superior corresponde a la estadistica descriptiva para cada uno de los grupos e incluye la media y la varianza.  En la segunda tabla ubicada en la parte inferior se presenta el análisis de varianza como tal. En este caso hay dos cosas importantes que revisar para determinar si existe o no diferencia significativa. Lo primero es el F estadístico. Para rechazar la Hipótesis nula este valor debe ser superior al F crítico. Para este caso el F estadístico es 0.65 siendo inferior que el F critico (2.66). De igual manera el valor P que en este caso es 0.58 y es superior al 𝛼 escogido de 0.05, por tanto no hay razón para rechazar la Hipótesis nula y podemos decir con un 95% de confianza que no hubo variación en la producción de leche ajustada a 305 dias entre las cuatro fincas."/>
       <center><SubTitle title = "ANAVA de un solo factor"/></center>
       
       <Video id="aIxkjIusJ3k" title="ANAVA de un solo factor" />
@@ -159,7 +157,7 @@ const Anava = () => {
       <Paragraph texto = {<>
       <p>Podemos utilizar El ANAVA de dos factores cuando  
           tenemos una variable dependiente medible (cuantitativa) y dos variables nominales independientes (factores o efectos principales) que se hallan en todas las posibles combinaciones. Es decir podemos cuantificar la variable cuantitativa en función de las variables nominales (Macdonald 2009).<br/> Por ejemplo, en un una granja avícola existen dos sistemas de encasetamiento (jaula y piso) y se trabaja con tres líneas de ponedoras (Hy-line, Babcock y Lohman), entonces podemos comparar la producción de huevos por la raza de las aves y por el sistema de alojamiento en que se encuentran encasetadas. <br/>Este ANAVA comprueba dos H<sub>0</sub>:<br/> <b> 1- Que las medias de las variables medidas son iguales
-        para los diferentes valores de la primera variable nominal;<br/> 2- Que las medias son iguales para los diferentes valores de la segunda variable. </b><br/>
+        para los diferentes valores de la primera variable nominal.<br/> 2- Que las medias son iguales para los diferentes valores de la segunda variable. </b><br/>
         Es decir, se busca comprobar que las medias de las observaciones agrupadas por el factor A son nulas, y que las medias agrupadas por el
         factor B son nulas.  Cuando no hay replicación no es posible probar la interacción (AxB). Para ello son necesarias las repeticiones lo cual
         veremos mas adelante. <br/>
@@ -254,7 +252,7 @@ const Anava = () => {
           de prueba en  Excel la herramienta Análisis de Datos (Data Analysis) lo permite siempre y cuando el diseño esté balanceado (no pueden faltar datos).<br />
          Por ejemplo, en una región de producción lechera en Colombia se ha establecido un plan de mejoramiento de calidad e higiene de hatos lecheros 
          durante  cuatro años y nos interesa ver si los planes de control e higiene en establo han generado algún progreso entre los años 2013 al 2016.
-         Para ello en cuatro subregiones lecheras (variable independiente 1) contamos con los promedio logarítmico de células somáticas (SCC/ml) de 6 hatos de representativos de cada de cada subregion (variable cuantitativa dependiete) en donde se realizaron las actividades de educación y control durante los cuatro años en mención (variable dependiente 2). Entonces, 
+         Para ello en cuatro subregiones lecheras (variable independiente 1) contamos con los promedio logarítmico de células somáticas (SCC/ml) de 6 hatos de representativos de cada de cada subregion (variable cuantitativa dependiente) en donde se realizaron las actividades de educación y control durante los cuatro años en mención (variable dependiente 2). Entonces, 
          una vez construida nuestra tabla, procedemos al análisis con la <b>ANAVA doble factorial con replicación</b>. Para ello tenemos todos 
          los resultados de los 6 hatos por cada región o sea 24 datos por año durante 4 años, para un total de 96 registros (ojo no puede faltr ningungo).</p>
       </>}/>
@@ -267,7 +265,7 @@ const Anava = () => {
       <Paragraph texto = {<>
         <center> <h4>Tabla con los recuentos logarítmicos de células somáticas para 4 subregiones lecheras durante 4 años.</h4> </center><br/>
         <p>La tabla superior presenta el promedio logarítmico de SCC para cada uno de los hatos distribuidos por región para cada año en cuestión. 
-          La tabla debe estar ordenada y adecuadamente balanceada (las mismas observaciones por variable) en este caso 6 por cada subregion, durante 4 años para cada una de las 4 subregiones para un total de 96 registros.  
+          La tabla debe estar ordenada y adecuadamente balanceada (las mismas observaciones por variable) en este caso 6 por cada subregión, durante 4 años para cada una de las 4 subregiones para un total de 96 registros.  
           Una vez tenemos nuestros datos limpios y organizados, del menú Data Analysis seleccionamos la opción ANOVA dos factores con replicación 
           (ANOVA: two-factor with replication).</p>
       </>}/>
