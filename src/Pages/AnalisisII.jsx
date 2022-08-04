@@ -77,11 +77,11 @@ const Analisis = () => {
 
         <SubChapter id = "hipotesis">
         <SubTitle title = "6.1- Pruebas de hipótesis" />
-        <Paragraph texto = {<><p>Cuando nuestros datos están limpios y listos para ser explorados, el principal objetivo entonces es transformarlos en información útil, pero para ellos debemos formularnos preguntas que nos den las pautas de acción. Entonces es conveniente recordar algunos términos estadísticos. Una vez que nos hemos hecho una pregunta clave, debemos formular una <b>hipótesis</b> que nos ayude a responder la pregunta. Entonces la hipótesis es una suposición o una 
+        <Paragraph texto = {<><p>Una vez que los datos están limpios y listos para ser explorados, el principal objetivo es transformarlos en información útil y para ellos debemos formularnos preguntas que nos den las pautas de acción. Entonces, es conveniente recordar algunos términos estadísticos. Una vez que nos hemos hecho una pregunta clave, debemos formular una <b>hipótesis</b> que nos ayude a responder la pregunta. Entonces podemos decir que la hipótesis es una suposición o una 
           explicación propuesta hecha sobre la base de evidencia limitada como punto de partida para posterior investigación 
-          (Pfaffenberger, R.C. and Patterson, J.H., 1977). Es decir, no sabemos aún el resultado  o la respuesta final pero con la hipótesis buscamos dar los primeros pasos para la respuesta. <br/>
+          (Pfaffenberger, R.C. and Patterson, J.H., 1977). Es decir, no sabemos aún el resultado  o la respuesta final pero con la hipótesis buscamos dar los primeros pasos para encontrar la respuesta. <br/>
           Para poder hablar de las hipótesis primero 
-          debemos recordar el método científico.  Este consiste en la observación sistemática, medición, experimentación y la formulación, prueba y 
+          debemos recordar el método científico. Este consiste en la observación sistemática, medición, experimentación y la formulación, prueba y 
           modificación de una Hipótesis. En este caso vamos a utilizar los datos recogidos dentro y fuera de la finca para poder comprobar hipótesis y 
           tomar decisiones.<br/><br/>
           Los pasos en el proceso de comprobación de una Hipótesis son:(<a href="https://support.minitab.com/es-mx/minitab/20/help-and-how-to/statistics/basic-statistics/supporting-topics/basics/example-of-a-hypothesis-test/" target = "_blank"><u>Minitab® software estadístico</u></a>):</p><br/>
@@ -103,7 +103,7 @@ const Analisis = () => {
     </>}/>
     <SubTitle title = "Ejemplos de Hipótesis:"/>
     <Paragraph texto = {<><p>En una granja avícola (pollo de engorde), el nutricionista nos propone la utilización de un probiótico en la dieta de inicio
-      y levante de los animales asegurándonos que los pollos tendrán una conversión superior frente a los que no usan probiótico. Si decidimos hacer un 
+      y levante de los animales asegurándonos que los pollos tendrán una conversión alimenticia superior frente a los que no usan probiótico. Si decidimos hacer un 
       ensayo nuestra hipótesis nula será:<br/>
      H<sub>0</sub>: La conversión alimenticia durante las primeras tres semanas de vida no varía por el uso de los probióticos en pollos de engorde.<br/>
      H<sub>1</sub>: El suministro de probioticos en pollo de engorde generan una variacion positiva en la conversión alimenticia  durante las primeras tres semanas de vida.<br/></p></>}/>
@@ -111,7 +111,7 @@ const Analisis = () => {
   <SubTitle title = "Decisiones para tomar: "/>
 
   <Paragraph texto = {<><p>- Aceptar la hipótesis nula, significa que no existe suficiente evidencia para aceptar el cambio propuesto por la hipótesis
-     alterna.<br/>- Rechazar la hipótesis nula significa lo contrario existe suficiente evidencia estadística para entender que la hipótesis nula
+     alterna.<br/>- Rechazar la hipótesis nula significa lo contrario, que existe suficiente evidencia estadística para entender que la hipótesis nula
     no soporta la verdad.</p></>}/>
   <SubTitle title = "Errores en que se incurre al tomar las decisiones (Alterman,2020):"/>
   <Paragraph texto = {<><p><b>Tipo I</b>: Sucede cuando se rechaza la hipótesis nula y no se debería haber hecho. Eje: Un palpador que declare preñez en un novillo (ha sucedido). También el error tipo I puede ser un falso positivo. 
@@ -124,7 +124,7 @@ const Analisis = () => {
 <b>Nivel de significancia (𝛼)</b>: es la probabilidad de rechazar una hipótesis nula que es verdadera; la probabilidad de cometer este error. 
 Los niveles de significancia mas comunes son: 0.10, 0.05, 0.01. Por ejemplo se elige un nivel de significancia del 0.05 ó 5% al diseñar un ensayo de 
 hipótesis, entonces hay aproximadamente 5 ocasiones en 100 en que se rechazaría la hipótesis nula cuando debería ser aceptada, es decir, se está con un 95%
-de confianza de que se toma la decisión adecuada. En tal caso se dice que la hipótesis ha sido rechazada al nivel de significación del 0.05,lo que
+de confianza de que se toma la decisión adecuada. En tal caso se dice que la hipótesis ha sido rechazada al nivel de significancia del 0.05,lo que
 significa que se puede cometer error con una probabilidad de 0.05.
 <a href="http://cidecame.uaeh.edu.mx/lcc/mapa/PROYECTO/libro19/71de_una_o_dos_colas.html" target = "_blank">(<u>Benitez Morales A</u>)</a>.
 <br/>
@@ -135,14 +135,14 @@ Valores de significancia notables <b>(P-Values)</b>: cuando estamos comprobando 
  </p></>}/>
 <SubTitle title = "Estimadores "/>
 <Paragraph texto ={<><p>Un estimador es una función matemática que aproxima un parámetro poblacional a partir de una población muestral 
-  (estadística inferencial). Según Chao (1978) es probable que el resultado obtenido a partir de la muestra por ejemplo la media difiera del resultado
-  de la población total, la diferencia entre estos resultados es lo que se llama el error de estimación o error muestral.<br/>
+  (estadística inferencial). Según Chao (1978) es probable que el resultado obtenido a partir de la muestra, por ejemplo la media, difiera del resultado
+  de la población total. La diferencia entre estos resultados es lo que se llama el error de estimación o error muestral.<br/>
   Si a partir de las observaciones de una muestra se calcula un solo valor como estimación de un parámetro de la población desconocido, estamos hablando
   de una <b>estimación puntual</b>. Si por el contrario queremos determinar dos números dentro de los cuales se halla el parámetro objetivo,
   estamos hablando de la <b>estimación por intervalos</b>. El intervalo de confianza es mucho mas preciso que los estimados únicos. Por eso se
   prefieren al hacer inferencias.</p></>}/>
 <SubTitle title = "Error Estándar de la Media: "/>
-<Paragraph texto = {<><p>Cuantifica las oscilaciones de la media muestral alrededor de la media poblacional, es decir cuando tomamos varias muestras de
+<Paragraph texto = {<><p>Cuantifica las oscilaciones de la media muestral alrededor de la media poblacional, es decir, cuando tomamos varias muestras de
   la misma población, seguramente tendremos diferentes resultados para el estimador que estamos tratando de calcular. El error estándar cuantifica la
   variabilidad del estimador frente al parámetro que se trata de estimar. El error estándar se mide en términos de la desviación estándar del estimador.
   <br/>
@@ -161,10 +161,10 @@ Valores de significancia notables <b>(P-Values)</b>: cuando estamos comprobando 
     <SubTitle title = "6.2.1- Ensayo de dos colas "/>
     <Paragraph texto = {<><p>Cuando tenemos una hipótesis y la distribución muestral de los datos tiene  distribución normal y media 𝛍 y desviación 𝛔 
       entonces estos valores podemos<HashLink smooth to={"/DistribucionesII#normal-estandar"}><u>normalizarlos</u></HashLink> como vimos anteriormente y obtener una
-      normal con media 0 y varianza 1. Basados en la curva de distribución normal estandarizada podemos asegurar con el 95% de confianza si la hipótesis
-      es cierta que el valor normalizado (z) obtenido de una muestra real se encontrara entre +1.96 y -1.96 desviaciones estandar ya que el área bajo la curva normal entre
+      normal con media 0 y varianza 1 o sea el valor equivalente <b>z</b>. Basados en la curva de distribución normal estandarizada podemos asegurar con el 95% de confianza si la hipótesis
+      es cierta, que el valor normalizado (z) obtenido de una muestra real se encontrara entre +1.96 y -1.96 desviaciones estandar ya que el área bajo la curva normal entre
       estos valores es 0.95. Si estandarizamos los valores con los cuales obtuvimos la<HashLink smooth to="/DistribucionesII#normal"><u>curva normal para la
-      producción de leche ajustada a 305 días</u></HashLink>, vamos a poder entender mejor cuál es el área de confianza (Benitez Morales) como se observa en el siguiente gráfico.  Entonces en el ensayo de dos colas la H<sub>0</sub> estará dada por una igualdad  (no hay diferencia entre A y B) y tenemos que tener en cuenta ambos extremos de la distribución de los datos para poder responder la pregunta.</p></>}/>
+      producción de leche ajustada a 305 días</u></HashLink>, vamos a poder entender mejor cuál es el área de confianza como se observa en el siguiente gráfico.  Entonces en el ensayo de dos colas la H<sub>0</sub> estará dado por una igualdad  (no hay diferencia entre A y B) y tenemos que tener en cuenta ambos extremos de la distribución de los datos para poder responder la pregunta.</p></>}/>
     <ImagePlus
           image={normal}
           texto="Curva distribución"
@@ -172,16 +172,16 @@ Valores de significancia notables <b>(P-Values)</b>: cuando estamos comprobando 
           max_zoom = "60%"
         />
 
-    <Paragraph texto = {"Si el valor z (valor normal estandarizado) elegido aleatoriamente de la muestra está por fuera del rango -1.96 a1.96 significa que esta z difiere significativamente de la que cabría esperar bajo esta hipótesis y se estaría inclinado a rechazar la hipótesis.  Entonces el conjunto de las z que se encuentran entre -1.96 y 1.96 desviaciones se conoce como el área de aceptación de la hipótesis o región de no significación.  Si por el contrario la z obtenida para el estadístico s es mayor a 1.96 o menor -1.96 entonces el estadístico muestral observado es significativo al nivel del 0.05, entonces se rechaza la hipótesis al nivel de significación del 0.05.  Gráficamente las colas de la distribución muestran cuando se rechaza la hipótesis nula.  Todo lo que permanece en la región de la mitad es tomado como la región de aceptación. "
+    <Paragraph texto = {"Si el valor z (valor normal estandarizado) elegido aleatoriamente de la muestra está por fuera del rango -1.96 a 1.96 significa que este valor z difiere significativamente de lo que cabría esperar bajo esta hipótesis y se estaría inclinado a rechazar la hipótesis.  Entonces el conjunto de las z que se encuentran entre -1.96 y 1.96 desviaciones se conoce como el área de aceptación de la hipótesis o región de no significación.  Si por el contrario la z obtenida para el estadístico s es mayor a 1.96 o menor -1.96 entonces el estadístico muestral observado es significativo al nivel del 0.05, entonces se rechaza la hipótesis al nivel de significación del 0.05.  Gráficamente las colas de la distribución muestran cuando se rechaza la hipótesis nula.  Todo lo que permanece entre las líneas rojas es tomado como la región de aceptación. "
     }/>
 
     <SubTitle title = "6.2.2- Ensayo de una cola"/>
     <Paragraph texto = {<><p>A diferencia de la prueba de dos colas que busca probar si un valor se ubica dentro de la distribución (igualdad), 
-    la prueba de una cola es usada cuando la hipótesis nula no contiene signos de igualdad o desigualdad sino busca identificar si el dato en cuestion es
+    la prueba de una cola es usada cuando la hipótesis nula no contiene signos de igualdad sino busca identificar si el dato en cuestion es
     mayor o menor. El test de una sola cola se usa cuando solo se necesita conocer los resultados de un solo extremo (desigualdad es decir, en una cola
     de la distribución).<br/>
-    Por ejemplo este test es útil para saber la probabilidad de que la producción de leche sea mayor o igual a 30000 lbs por lactancia,
-    o para ver una  conversión alimenticia mayor o igual a 2 kg de peso por kg de alimento en cerdos de ceba. Estos ensayos se llaman ensayos de una 
+    Por ejemplo este test es útil para saber la probabilidad de que la producción de leche sea mayor  a 30000 lbs por lactancia,
+    o para ver determinar que un nuevo alimento para cerdos garantiza una conversión alimenticia mayor a 1 kg de peso corporal por cada 2 kg de alimento. Estos ensayos se llaman ensayos de una 
     cola o ensayos unilaterales. En tales casos, la región crítica es una región a un lado de la distribución, con área igual al nivel de significancia.
     </p></>}/>
     <ImagePlus
@@ -262,6 +262,12 @@ Valores de significancia notables <b>(P-Values)</b>: cuando estamos comprobando 
 </p></>}/>
 <br />
 <h4><center>Error Estándar Muestral = 35/√30 = 3.29</center></h4>
+<br/>
+
+<Paragraph texto = {<><p>
+ <center>Donde 35 es el valor de la desviación estándar conocida y 30 corresponde la valor de muestras obtenidas.</center> 
+ <br />
+ Para facilitar el manejo de la información podemos construir una pequeña tabla en Excel tal como se muestra en la tabla inferior a la derecha. </p></>}/>
 
 <ImagePlus
           image={eggs}
@@ -346,9 +352,9 @@ El intervalo de confianza asociado con un nivel de confianza de <b>100(1-𝝰)%<
 <Paragraph texto = {<><p> <center>
   Donde t<sub>α/2</sub>, n-1 es el punto de la distribución t Student con n-1 grados de libertad.</center><br/>
   Ejemplo, en una finca ganadera del departamento del Cesar en Colombia, se busca determinar el peso promedio de los novillos vendidos en pie. 
-  Para ello se tomaron al azar y se pesaron 25 novillos antes de embarcarlos al camión.  Este intervalo se puede calcular fácilmente por medio de la
-  función en Excel =INTERVALO.CONFIANZA.T o =CONFIDENCE.T<br/>Para ello nos ubicamos en la celda donde deseamos insertar la función y 
-  seleccionamos el 𝝰, la desviación estándar de la muestra y el tamaño de la muestra. Como se ve en la tabla siguiente y de esta manera obtendremos el
+  Para ello se tomaron al azar y se pesaron 25 novillos antes de embarcarlos al camión.  Este intervalo se puede calcular por medio de la
+  función en Excel =INTERVALO.CONFIANZA.T o =CONFIDENCE.T<br/>Para ello nos ubicamos en la celda donde deseamos insertar la función, la escribimos y entre los paréntesis incluimos los siguientes datos en orden:  
+  seleccionamos el 𝝰, la desviación estándar de la muestra y el tamaño de la muestra. Como se ve en la tabla inferior y de esta manera obtendremos el
   intervalo.
 </p></>}/>
 <ImagePlus
@@ -367,8 +373,8 @@ El intervalo de confianza asociado con un nivel de confianza de <b>100(1-𝝰)%<
         />
 
 <Paragraph texto = {<><p>
-  Otra manera sencilla de obtener el intervalo es con el modulo de estadística descriptiva que se ubica en la 
-  herramienta <b>Análisis de Datos o Data Analysis</b> de Excel. Una vez seleccionada esta herramienta seleccionamos el rango de los datos, 
+  Otra manera sencilla de obtener el intervalo es con el módulo de estadística descriptiva que se ubica en la 
+  herramienta <b>Análisis de Datos o Data Analysis</b> de Excel y que revisamos en el capítulo<HashLink smooth to={"/Analisis#ejemplo"}><u>quinto</u></HashLink>. Una vez seleccionada esta herramienta seleccionamos el rango de los datos, 
   marcamos que están agrupados por columnas (columns) si están en una fila (desaconsejable) seleccionar filas o rows. Seleccionamos la celda o la hoja 
   donde queremos ubicar el informe, incluimos la opción <b>summary statistics (resumen estadístico)</b> y finalmente, seleccionamos la opción nivel
   de confianza para la media, en este caso 95% tal como se muestra en el cuadro.</p></>}/>
@@ -387,7 +393,7 @@ El intervalo de confianza asociado con un nivel de confianza de <b>100(1-𝝰)%<
           max_zoom = "60%"
         />
 <Paragraph texto = {<><p>
-  Si observamos la ultima fila, el valor de confianza (confidence) es igual al que obtuvimos con la función <b>=INTERVALO.CONFIANZA.T</b>
+  Si observamos la última fila, el valor de confianza (confidence) es igual al que obtuvimos con la función <b>=INTERVALO.CONFIANZA.T</b>
   <br /><br />Ahora que ya tenemos el valor solo tendremos que sumar y restar de la media asi:
   514.92 ± 42.72 , entonces el intervalo de la media de peso para los novillos en pie para esta finca, con un 95% de confianza está entre 472.2 y 
   557.64 kg. Podemos deducir que este es un intervalo mas amplio al que obtendriamos si conocieramos la desviación estandar poblacional pero dado que no 
@@ -507,7 +513,7 @@ Definiendo los términos tenemos:</p><br/>
   <li>Y = peso (kg) ganado Brahman</li>
 </ul>
 <br />
-<p>Los resultados obtenidos con el analizador de datos de Excel para prueba T cuando la varianza no se conoce fueron:</p>
+<p>Una vez tenemos los datos listos en la tabla podemos acudir a la herramienta de Análisis de Datos de Excel cuyo funcionamiento ya hemos visto y también se explica en el video que se encuentra anexo a esta sección y de ahí seleccionamos la opción t-Test: Two Samples Assuming Unequal Variances' o prueba T dos muestras asumiendo varianzas diferentes. Los resultados obtenidos con el analizador de datos de Excel para prueba T cuando la varianza no se conoce fueron:</p>
 </>}/>
 
 <ImagePlus
@@ -519,7 +525,7 @@ Definiendo los términos tenemos:</p><br/>
 <Paragraph texto = {<><p>
   La condición de que las medias son iguales se traduce por la condición <b>(𝛍x – 𝛍y) = 0</b>. En este caso Excel no nos devuelve el intervalo, 
   sin embargo el P calculado para dos colas es muy inferior al nivel de confianza (P= 0.05), por tanto podemos decir que no hay igualdad entre los dos
-   grupos, por lo tanto con un 95% de confianza podemos decir que las medias poblacionales son diferentes, por tanto aceptamos la hipótesis alterna.
+   grupos, por lo tanto con un 95% de confianza podemos decir que las medias poblacionales son diferentes, por tanto aceptamos la hipótesis alterna, es decir hay una diferencia signficativa entre los pesos de ambos grupos. 
    </p></>}/>
 <center><SubTitle title="Intervalo de confianza para la diferencia de dos medias con varianza poblacional desconocida y se asumen diferentes" /></center>
         <Video id="qETB6_m39bU" title="Intervalo  varianza poblacional desconocida y se asumen diferentes " />
@@ -531,9 +537,9 @@ Definiendo los términos tenemos:</p><br/>
 <SubChapter id = "intervalo4">
 <SubTitle title = "6.5- Intervalo de confianza para la diferencia de dos medias dependientes"/>
 <Paragraph  texto = {<><p>
-  Las muestras dependientes ocurren en múltiples situaciones, por ejemplo, cuando estamos mirando variaciones de la misma variable en el tiempo 
+  Las muestras dependientes ocurren en múltiples situaciones, por ejemplo, cuando estamos mirando variaciones de la misma variable en el mismo individuo en el tiempo 
   (antes y después). La varianza que se utiliza es la varianza de la diferencia entre el antes y el después. Se asume que la distribución de los datos
-  sigue una curva normal.<br/><br/>La formula para calcular el intervalo de la diferencia ese el siguiente:
+  sigue una curva normal.<br/><br/>La fórmula para calcular el intervalo de la diferencia ese el siguiente:
   </p></>}/>
 
 <ImagePlus
@@ -548,7 +554,7 @@ Definiendo los términos tenemos:</p><br/>
   de la diferencia entre el <b>antes</b> y el <b>después</b> que es la "d" y sumamos o restamos el valor obtenido en la tabla t para n-1 y 𝛼/2 multiplicado por el error estandar. Por ejemplo, queremos evaluar el efecto de un nuevo programa de higiene
   y control preventivos contra la mástitis clínica. Tomamos 13 vacas al azar a las cuales previamente hemos hecho el recuento de céluas somaticas
   (scc 000/ml) y volvemos a medir 30 días después para comprobar si hay alguna diferencia.  Como podemos ver las variables son dependientes porque
-  son las mismas vacas las que estamos muestreando tanto antes como después.  De igual manera con otras medidas que se pueden tomar en la finca.
+  son las mismas vacas las que estamos muestreando tanto antes como después.  
   </p></>}/>
 
 <ImagePlus
@@ -572,7 +578,7 @@ Definiendo los términos tenemos:</p><br/>
   anteriormente. Finalmente reemplazamos los valores de la fórmula para obtener nuestros rangos superior e inferior.<br/><br/>
   Teniendo en cuenta que ambos valores del intervalo están por debajo del 0, y viendo que el promedio de scc/ml es inferior después de aplicar 
   las medidas podemos asegurar que si hubo un cambio positivo en la implementación de las medidas ya que el conteo dismunuyó y no hay igualdad dentro 
-  del intervalo. 
+  del intervalo. También podemos utilizar la herramienta de Análisis de Datos de Excel y seleccionar la opción 't-test: Paired Two Samples per Mean' o prueba-t: Dos muestras emparejadas por media como se explica en el video incluido en esta sección. 
 </p></>}/>
 <center><SubTitle title="Intervalo de confianza para la diferencia de dos medias dependientes" /></center>
         <Video id="tZ449vQQ0VY" title="Intervalo  de confianza dos medias dependientes " />
