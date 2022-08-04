@@ -11,7 +11,7 @@ const Footer = () => {
             
           <a target="_blank" href="https://www.youtube.com/channel/UCcVhlN8B5LDXCg5chyqePtg" ><FontAwesomeIcon icon={faYoutube} size="2x" className="social_icon"/> </a>
           <a target="_blank" href="https://www.linkedin.com/in/hector-delgado-9860b1246/" ><FontAwesomeIcon icon={faLinkedin} size="2x" className="social_icon"/> </a>
-          <a target="_blank" href="mailto:hector@example.com" ><FontAwesomeIcon icon={faEnvelope} size="2x" className="social_icon"/> </a>
+          <a target="_blank" href="mailto:hdelgado@vetanalisisdatos.com" ><FontAwesomeIcon icon={faEnvelope} size="2x" className="social_icon"/> </a>
           </div>
           <p> Introducción al Análisis de Datos para MVZ </p>
           </footer>
