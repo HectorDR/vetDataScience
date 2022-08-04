@@ -1,16 +1,16 @@
 import 'Styles/style.css';
 import "Styles/utilities.css";
 import {BrowserRouter} from "react-router-dom";
-import { Auth0Provider} from '@auth0/auth0-react';
+// import { Auth0Provider} from '@auth0/auth0-react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import WebRoutes from 'Components/WebRoutes';
 //importe todo lo nceesario a app los estilos, el router y las paginas
 function App() {
   return (
-    <Auth0Provider
-      domain={process.env.REACT_APP_AUTH0DOMAIN}
-      clientId={process.env.REACT_APP_AUTH0CLIENTID}
-      redirectUri={window.location.origin}>
+    // <Auth0Provider
+    //   domain={process.env.REACT_APP_AUTH0DOMAIN}
+    //   clientId={process.env.REACT_APP_AUTH0CLIENTID}
+    //   redirectUri={window.location.origin}>
       <HelmetProvider>   
       <Helmet>
           <title>VetDataScience</title>
@@ -24,7 +24,7 @@ function App() {
         <WebRoutes/>
       </BrowserRouter>
       </HelmetProvider>  
-      </Auth0Provider>
+      // </Auth0Provider>
       )
   }
 export default App;
