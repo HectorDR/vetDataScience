@@ -865,11 +865,13 @@ font-weight: 100
 
 .chapter_accordion__title h6{
   font-size: small;
-  color: #32a852;
+  color: darkgreen;
 }
 
 .chapter_accordion__title h6:hover{
-  filter:  brightness(0) invert(1);
+
+  /* filter:  brightness(0) invert(1); */
+  filter: brightness(0) grayscale(1);
 }
 
 .chapter_accordion__img{
@@ -891,7 +893,7 @@ font-weight: 100
 
 
 .chapter_accordion__subchapters{
-  color: #28a745;
+  color:darkgreen;
   font-size: small;
 }
 
@@ -902,7 +904,7 @@ font-weight: 100
 }
 
 .chapter_accordion__subchapters li:hover{
-  filter:  brightness(0) invert(1);
+  filter:  brightness(0) grayscale(100%);
   cursor: pointer;
 }
 
