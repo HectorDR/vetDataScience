@@ -152,7 +152,7 @@ const ProbabilidadesII =()=>{
             <Paragraph texto = "Entonces, La probabilidad de seleccionar una novilla Holstein que haya sido inseminada dentro de la totalidad de las 100 novillas es del 26%. "/>
         </SubChapter>
 
-        <SubChapter id = "bayes">
+        {/* <SubChapter id = "bayes">
         <SubTitle title ="3.12- El teorema de Bayes"/>
            <Paragraph texto = {<><p>El teorema de Bayes es utilizado para calcular la probabilidad de un suceso, teniendo información que de antemano se conoce sobre ese suceso <a href="https://economipedia.com/definiciones/teorema-de-bayes.html" target = "_blank"><u>(Lopez,2018)</u></a>. Es de mucha utilidad para ayudarnos a encontrar una relación causal entre dos eventos, es decir nos ayuda a buscar argumentos mas razonables acerca de que evento puede causar el otro.</p></>}/>
            <br />
@@ -179,7 +179,7 @@ const ProbabilidadesII =()=>{
                 texto = "Probabilidad de que sea de alta producción dado que tiene alta resistencia a MC "
                 />  
             <Paragraph texto = "Entonces la probabilidad de que un animal sea de alta producción dado que genotipicamente es de alta resistencia a mastitis es del 82%. Es un punto muy interesante para hacer selección de ganado, ya que la mayoría de productores siempre se enfocan solo en producción y no dan mucha importancia a la selección de caracteres por salud.  Pero eso es otro curso :)"/>
-            </SubChapter>
+            </SubChapter> */}
 
             <ReferencesBlock 
          references={[
