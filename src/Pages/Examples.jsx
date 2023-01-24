@@ -354,7 +354,7 @@ const Examples =()=>{
 
             <center><h4>Manejando las inconsistencias de los datos con el corrector ortográfico</h4></center>
                 <Video
-          id="4Lb7eBzr5a0"
+          id="CTjAqZ-5Bds"
           title="Uso del corrector ortográfico" />
 
 
