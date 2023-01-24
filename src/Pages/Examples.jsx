@@ -268,7 +268,7 @@ const Examples =()=>{
 
             <center><h4>Video para la validación de información cuantitativa</h4></center>
                 <Video
-          id="1KhfePxHc_o"
+          id="5_lrX1SK3fM"
           title="validación de datos para pesos al nacimiento en un registro"
         />
 
