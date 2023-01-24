@@ -424,7 +424,7 @@ const Examples =()=>{
 
             <center><h4> Manejo de registros duplicados</h4></center>
                 <Video
-          id="S6Eisv7QL4Y"
+          id="WlYoiQ4p5D4"
           title="Selección y remoción de registros duplicados" />
 
               
