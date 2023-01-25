@@ -128,7 +128,7 @@ const Analisis = () => {
         <Paragraph texto="Los datos nominales también se pueden presentar con un diagrama de Pareto. Este presenta las barras verticales que muestran la frecuencia absoluta de unidades por valor que toma la variable (cantidad de perros G, M o S) y simultáneamente en un eje vertical secundario (a la derecha va indicando la frecuencia acumulada relativa (porcentaje) con que cada valor contribuye hasta lograr el 100% (línea naranja). De igual manera es posible realizar el diagrama de Pareto en Excel seleccionando la opción en el menú de gráficos." />
         <ImagePlus image={pareto} texto="Gráfica de Pareto" width = "35%" max_zoom="50%"/>
         <center><SubTitle title="Visualización de datos categóricos" /></center>
-        <Video id="kdhWB_Px2oI" title="Información Categórica" />
+        <Video id="bNEqEjt8NPQ" title="Información Categórica" />
        
 
 <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/5.1_Categoricos_nominales.xlsx?raw=true"/> 
