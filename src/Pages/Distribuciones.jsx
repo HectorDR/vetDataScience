@@ -275,7 +275,7 @@ const Distribuciones =()=>{
     <center><h2>Ejemplo de una distribución binomial en Excel</h2></center>
     <br />
                 <Video
-          id="vy7RyQg3Rw0"
+          id="MqyP0Bm2p4A"
           title="La distribución Binomial en Excel" /> 
   
 <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/4.3.3_Dist_Binomial.xlsx?raw=true"/> 
