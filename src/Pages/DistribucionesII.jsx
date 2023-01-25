@@ -285,7 +285,7 @@ Se usa para saber si la muestra se ajusta a los valores esperados.  Por ejemplo,
 <h2> <center>Explicación de la bondad del ajuste X<sup>2</sup></center></h2>
 <br />
                 <Video
-          id="4iclAm951os"
+          id="r7Ajett-b-c"
           title="El ajuste Chi cuadrado" /> 
 
 <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/4.4.4_Dist_Continuas_X_sq_ajuste.xlsx?raw=true"/> 
