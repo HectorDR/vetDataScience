@@ -369,7 +369,7 @@ const Distribuciones =()=>{
         <center><h2>Ejemplo de una distribución de Poisson en Excel</h2></center>
         <br />
                 <Video
-          id="MvrOHryjtLA"
+          id="PCDCsterSY4"
           title="La distribución de Poisson en Excel" /> 
 
 
