@@ -233,7 +233,7 @@ const Distribuciones =()=>{
 <center><h2>Que es la la distribución Binomial</h2></center>
 <br></br>
                 <Video
-          id="oTurHd9qiRM"
+          id="X4OMdHx6rUk"
           title="Explicación de la distribución Binomial" />
 
 
