@@ -202,7 +202,7 @@ const DistribucionesII =()=>{
     <center><h2>La distribución Normal estandarizada</h2></center>
     <br />
                 <Video
-          id="MyvvLCVVeuc"
+          id="AVclE0yVXeY"
           title="La distribución Normal estandarizada" /> 
 
 </SubChapter>
