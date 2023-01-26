@@ -468,7 +468,7 @@ const Analisis = () => {
          entonces acudimos a la correlación, para ello tambien podemos correr la formula o simplemente utilizar la función = CORREL de Excel como se muestra en la tabla superior."
         />
         <center><SubTitle title="Cálculo de la covarianza muestral" /></center>
-        <Video id="1OqX5A-1Pgo" title="Medidas de asociación en Excel" />
+        <Video id="k26KkoujszI" title="Medidas de asociación en Excel" />
 
         
 <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/5.6_cov_correl.xlsx?raw=true"/> 
