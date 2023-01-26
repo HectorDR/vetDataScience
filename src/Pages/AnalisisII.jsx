@@ -581,7 +581,7 @@ Definiendo los términos tenemos:</p><br/>
   del intervalo. También podemos utilizar la herramienta de Análisis de Datos de Excel y seleccionar la opción 't-test: Paired Two Samples per Mean' o prueba-t: Dos muestras emparejadas por media como se explica en el video incluido en esta sección. 
 </p></>}/>
 <center><SubTitle title="Intervalo de confianza para la diferencia de dos medias dependientes" /></center>
-        <Video id="tZ449vQQ0VY" title="Intervalo  de confianza dos medias dependientes " />
+        <Video id="D49pJ2crPaQ" title="Intervalo  de confianza dos medias dependientes " />
        
 <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/6.5_Intervalo_diferencia_medias_dependientes.xlsx?raw=true"/>
 </SubChapter>
