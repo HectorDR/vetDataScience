@@ -528,7 +528,7 @@ Definiendo los términos tenemos:</p><br/>
    grupos, por lo tanto con un 95% de confianza podemos decir que las medias poblacionales son diferentes, por tanto aceptamos la hipótesis alterna, es decir hay una diferencia signficativa entre los pesos de ambos grupos. 
    </p></>}/>
 <center><SubTitle title="Intervalo de confianza para la diferencia de dos medias con varianza poblacional desconocida y se asumen diferentes" /></center>
-        <Video id="qETB6_m39bU" title="Intervalo  varianza poblacional desconocida y se asumen diferentes " />
+        <Video id="58keMH22Qdk" title="Intervalo  varianza poblacional desconocida y se asumen diferentes " />
 
         
 <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/6.4.2_Invter_var_desc_diferentes.xlsx?raw=true"/>
