@@ -193,7 +193,7 @@ Valores de significancia notables <b>(P-Values)</b>: cuando estamos comprobando 
   <Paragraph texto = "Como se ve en la gráfica a diferencia del test de dos colas, el test de una cola se enfoca solo en un extremo en este caso la zona de corte para el 95% de confianza no es 1.96 en ambos lados sino 1.65 desviaciones en un solo extremo de la curva estandarizada, en este caso -1.65. Este significa que cualquier número por debajo de este valor esta por fuera de la zona de confianza del 95% y por lo tanto es sujeto a rechazo."/>
 
   <center><SubTitle title="Pruebas de una o dos colas" /></center>
-  <Video id="Kz8mHuVt_Gw" title="Pruebas de una o dos colas" />
+  <Video id="lFbFKk7TTIo" title="Pruebas de una o dos colas" />
 
         
 
