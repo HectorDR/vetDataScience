@@ -124,7 +124,7 @@ const AnavaII = () => {
 
         <center><SubTitle title = "Regresión lineal simple en Excel"/></center>
       
-      <Video id="WalnDYHmi5I" title="Regresión lineal simple en Excel" />
+      <Video id="6uQ31l1ApbY" title="Regresión lineal simple en Excel" />
 
      
 <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.6_Reg_lineal.xlsx?raw=true"/> 
