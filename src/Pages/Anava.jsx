@@ -145,7 +145,7 @@ const Anava = () => {
       <Paragraph texto ="Como se observa, el reporte de Excel genera dos tablas, la tabla superior corresponde a la estadistica descriptiva para cada uno de los grupos e incluye la media y la varianza.  En la segunda tabla ubicada en la parte inferior se presenta el análisis de varianza como tal. En este caso hay dos cosas importantes que revisar para determinar si existe o no diferencia significativa. Lo primero es el F estadístico. Para rechazar la Hipótesis nula este valor debe ser superior al F crítico. Para este caso el F estadístico es 0.65 siendo inferior que el F critico (2.66). De igual manera el valor P que en este caso es 0.58 y es superior al 𝛼 escogido de 0.05, por tanto no hay razón para rechazar la Hipótesis nula y podemos decir con un 95% de confianza que no hubo variación en la producción de leche ajustada a 305 dias entre las cuatro fincas."/>
       <center><SubTitle title = "ANAVA de un solo factor"/></center>
       
-      <Video id="aIxkjIusJ3k" title="ANAVA de un solo factor" />
+      <Video id="jl6dJxWOFhg" title="ANAVA de un solo factor" />
      
 
 <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.2_Anava_un_factor.xlsx?raw=true"/> 
