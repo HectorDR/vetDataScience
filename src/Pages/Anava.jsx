@@ -225,7 +225,7 @@ const Anava = () => {
             H<sub>0</sub>.</p>
         </>}/>
 
-     <center><SubTitle title = "ANAVA de dos factores"/></center>
+     <center><SubTitle title = "ANAVA de dos factores sin replicación"/></center>
       
       <Video id="1zANjYNGNos" title="ANAVA de dos factores sin replicación" />
       
@@ -313,8 +313,8 @@ const Anava = () => {
         interacción (Año x Región) donde al igual que para los resultados por año tampoco hay un efecto significativo.</p>
       </>}/>
 
-      <center><SubTitle title = "ANAVA de dos factores con replicación"/></center>
-      <Video id="10M2gSQi5ac" title="ANAVA de dos factores" />
+      <center><SubTitle title = "ANAVA de dos factores con replicación (factorial)"/></center>
+      <Video id="81wfAdDMIvE" title="ANAVA factorial" />
       
 
 <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.4_Anava_dos_facts_replicacion.xlsx?raw=true"/> 
