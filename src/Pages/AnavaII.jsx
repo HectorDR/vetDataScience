@@ -248,7 +248,7 @@ const AnavaII = () => {
 
       <center><SubTitle title = "Modelo de Regresión cuadrática"/></center>
       
-      <Video id="QYZKsT9xTrg" title="Regresión cuadrática en Excel" />
+      <Video id="IBCJODDlbxo" title="Regresión cuadrática en Excel" />
      
 <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.8_Reg_cuadratica.xlsx?raw=true"/> 
 
