@@ -173,7 +173,7 @@ const AnavaII = () => {
         </p></>}/>
 
       
-      <Video id="PtucNTB4-1w" title="Regresión con multiples variables independientes " />
+      <Video id="kfvoGd_BVJo" title="Regresión con multiples variables independientes " />
       
     <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.7_Reg_multiple.xlsx?raw=true"/> 
     </SubChapter>
