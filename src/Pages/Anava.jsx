@@ -227,7 +227,7 @@ const Anava = () => {
 
      <center><SubTitle title = "ANAVA de dos factores"/></center>
       
-      <Video id="75XDRGDV0qI" title="ANAVA de dos factores" />
+      <Video id="1zANjYNGNos" title="ANAVA de dos factores sin replicación" />
       
 <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/7.3_Anava_dos_facts.xlsx?raw=true"/> 
 
