@@ -117,7 +117,7 @@ const ProbabilidadesII =()=>{
                 <SubTitle title ="3.10- Regla de la adición de las probabilidades"/>
                 <Paragraph texto = "Esta regla calcula la probabilidad de la unión de un evento A y un evento B y está basada en la probabilidad de los conjuntos individuales, calculando el tamaño de la unión y descontando el tamaño de la intersección."/>
 
-            <Paragraph texto ={[ <br/>, <h3> <center>P(A∪B) =P(A) +P(B) -P(A∩B)</center></h3>, <br/>, <center> <b> Donde P(A∪B) = Probabilidad de la Unión y P(A∩B) = Probabilidad de la Intersección.</b></center>]}/>
+            <Paragraph texto ={[ <br/>, <h3> <center>P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</center></h3>, <br/>, <center> <b> Donde P(A∪B) = Probabilidad de la Unión y P(A∩B) = Probabilidad de la Intersección.</b></center>]}/>
             <br />
             <Paragraph texto = {["Ejemplo, en un análisis de casos en una clínica veterinaria se encontró que el 15% de los pacientes caninos que atendieron consulta el año anterior eran hipertensos. El 6% de los pacientes fueron pacientes con fallo renal y el 3% de los casos atendidos presentaron ambas situacion (hipertensión y falla renal).  ¿Que probabilidad existe de que se seleccione un paciente que sea hipertenso o con fallo renal?", <b/>, <ul>
                 <center><li>P(Hipertenso ∪ Fallo Renal) = 0.15 + 0.06 – 0.03</li></center>
@@ -130,7 +130,7 @@ const ProbabilidadesII =()=>{
            <Paragraph texto = "Esta regla nos permite encontrar la probabilidad de que ocurra el evento A y el evento B.  Para la regla de la multiplicación existen dos casos, el primero se da si los eventos son dependientes y el segundo cuando los eventos son independientes.  Veamos entonces como se diferencian:"/>
            <SubTitle title ="3.11.1- Eventos dependientes"/>
 
-           <Paragraph texto ={[ "La regla de la multiplicación para eventos dependientes se da cuando los eventos están relacionados entre sí. La fórmula esta definida de la siguiente manera:", <h3> <center> P(A∩B)=P(A|B)*P(B)</center></h3>, <br/>, "Donde la probabilidad esta dada por la probabilidad de A dado que B ocurrió y multiplicado por la probabilidad de B.", <br/>,"Por ejemplo, si voy a sacar dos novillas de un corral donde hay 4 blancas, 5 pardas y 2 negras, cual es la probabilidad de que la segunda novilla sea negra sabiendo que la primera también fue negra (no hay reemplazos dentro del corral).", <br/>, "El espacio muestral en este caso sería de: 4 novillas blancas + 5 novillas pardas +2 novillas negras = 11 novillas, entonces,"]}/>
+           <Paragraph texto ={[ "La regla de la multiplicación para eventos dependientes se da cuando los eventos están relacionados entre sí. La fórmula esta definida de la siguiente manera:", <h3> <center> P(A ∩ B) = P(B) *  P(A|B)  </center></h3>, <br/>, "Donde la probabilidad esta dada por la probabilidad de A dado que B ocurrió y multiplicado por la probabilidad de B.", <br/>,"Por ejemplo, si voy a sacar dos novillas de un corral donde hay 4 blancas, 5 pardas y 2 negras, cual es la probabilidad de que la segunda novilla sea negra sabiendo que la primera también fue negra (no hay reemplazos dentro del corral).", <br/>, "El espacio muestral en este caso sería de: 4 novillas blancas + 5 novillas pardas +2 novillas negras = 11 novillas, entonces,"]}/>
            <br />
            <ImagePlus 
                 width = "30%"
@@ -141,7 +141,7 @@ const ProbabilidadesII =()=>{
             <Paragraph texto = "En la primera sacada hay dos novillas negras de un total de 11 novillas.  En la segunda hay una de un total de 10 novillas, entonces, la posibilidad de que salgan los dos animales negros en primer y segundo lugar es apenas del 1.8%. "/>
 
             <SubTitle title = "3.11.2- Eventos independientes"/>
-            <Paragraph texto = {["En el segundo caso de la regla de la multiplicación, los eventos son independientes cuando la ocurrencia de uno de ellos no afecta la ocurrencia del otro. la fórmula se expresa de la siguiente manera:", <br/>, <h3><center>P(A∪B)=P(A)*P(B)</center></h3>,<b/>, <br/>, <center><b>Donde la Probabilidad está dada por la probabilidad de A multiplicada por la probabilidad de B</b></center> ,<br/>,"Por ejemplo, en una finca hay 100 novillas de las cuales 35 son Holstein. De las 100 novillas 75 han sido inseminadas por primera vez. El hecho de que la novilla sea Holstein no tiene nada que ver con que la novilla haya sido inseminada o no. Ahora nos interesa saber,cuál es la probabilidad que una de las novillas Holstein haya sido inseminada?"]}/>
+            <Paragraph texto = {["En el segundo caso de la regla de la multiplicación, los eventos son independientes cuando la ocurrencia de uno de ellos no afecta la ocurrencia del otro. la fórmula se expresa de la siguiente manera:", <br/>, <h3><center>P(A ∪ B) = P(A) * P(B)</center></h3>,<b/>, <br/>, <center><b>Donde la Probabilidad está dada por la probabilidad de A multiplicada por la probabilidad de B</b></center> ,<br/>,"Por ejemplo, en una finca hay 100 novillas de las cuales 35 son Holstein. De las 100 novillas 75 han sido inseminadas por primera vez. El hecho de que la novilla sea Holstein no tiene nada que ver con que la novilla haya sido inseminada o no. Ahora nos interesa saber,cuál es la probabilidad que una de las novillas Holstein haya sido inseminada?"]}/>
 
             <ImagePlus 
                 width = "30%"
@@ -152,9 +152,9 @@ const ProbabilidadesII =()=>{
             <Paragraph texto = "Entonces, La probabilidad de seleccionar una novilla Holstein que haya sido inseminada dentro de la totalidad de las 100 novillas es del 26%. "/>
         </SubChapter>
 
-        {/* <SubChapter id = "bayes">
+        { <SubChapter id = "bayes">
         <SubTitle title ="3.12- El teorema de Bayes"/>
-           <Paragraph texto = {<><p>El teorema de Bayes es utilizado para calcular la probabilidad de un suceso, teniendo información que de antemano se conoce sobre ese suceso <a href="https://economipedia.com/definiciones/teorema-de-bayes.html" target = "_blank"><u>(Lopez,2018)</u></a>. Es de mucha utilidad para ayudarnos a encontrar una relación causal entre dos eventos, es decir nos ayuda a buscar argumentos mas razonables acerca de que evento puede causar el otro.</p></>}/>
+           <Paragraph texto = {<><p>El teorema de Bayes es utilizado para calcular la probabilidad de un suceso, teniendo información que de antemano se conoce sobre ese suceso <a href="https://economipedia.com/definiciones/teorema-de-bayes.html" target = "_blank"><u>(Lopez,2018)</u></a>. Entre las muchas aplicaciones del teorema de Bayes es de mucha utilidad para ayudarnos a encontrar una relación causal entre dos eventos, es decir nos ayuda a buscar argumentos mas razonables acerca de que evento puede causar el otro. Por ejemplo nos ayuda a establecer una enfermedad a partir de una serie de síntomas. También es muy útil a la hora de determinar la probabilidad de que un paciente padezca realmente una enfermedad cuando tenga un test positivo. </p></>}/>
            <br />
            <center><h4>Forma simple del teorema de Bayes</h4></center>
            <ImagePlus 
@@ -165,21 +165,26 @@ const ProbabilidadesII =()=>{
                 />  
             <p><center><b>Donde A y B son eventos y B ≠ 0. P(A│B) es la probabilidad de A dado que ha ocurrido el evento B y P(B|A) es la probabilidad de B dado que ha ocurrido el evento A. </b></center></p>  
             <br />
-            <Paragraph texto = "Por ejemplo, tenemos una finca lechera de alta producción donde todos los animales han sido genotipificados.  Revisando los genotipos encontramos que el 68% de los animales son de alta producción y dentro de este grupo de alta producción el 26% tienen alta resistencia a Mastitis.  De igual manera revisamos los genotipos para alta resistencia a mastitis y encontramos que el 22% del total de los animales de la finca lechera cumplen con esta característica.  Quisieramos saber, de los animales con alta resistencia a mastitis en que porcentaje tambien son de alta producción? "/>
-            <Paragraph texto ={[ "Entonces tenemos que: ", <ul> <b>
-                <li>A: animales de alta producción= 68% </li>
-              <li>B: animales de alta resistencia a mastitis= 22%</li>
-               <li>(B|A): animales de alta resistencia a mastitis dado que son de alta producción: 26%</li>
-               <li>(A|B): animales de alta producción dado que son resistentes a mastitis: ?</li></b>
+            <Paragraph texto = "Por ejemplo, en una región lechera en Colombia la prevalencia histórica de la leucosis bovina es del 10%.  
+            En esta misma región se va a ensayar una nueva prueba diagnóstica PCR y se sabe que su sensibilidad (animales enfermos con un test positivo) es del 95%, mientras que su especificidad (animales negativos con un test negativo) es del 50%. Para esta región si un animal
+            da positivo en la prueba, cuál es la probabilidad de que el animal sea realmente positivo a leucosis viral bovina? "/>
+            <Paragraph texto ={[ "Entonces tenemos que: ",<br/> ,<ul> <b>
+                <li>P(A) = 0.1 (prevalencia de animales enfermos en la región) </li>
+                <li>P(S) = 0.9 (animales sanos o libres de leucosis viral bovina)</li>
+              <li> P(B|A) = 0.95 (animales positivos al test que padecen la enfermedad -sensibilidad-)</li>
+               <li>(B|S) = 0.05 (animales positivos al tes que estan sanos)</li>
+               <li>(B) =  P(B|A) * P(P|A) + P(B|S) * P(S)</li>
+               <li>(B) = 0.95 * 0.1 + 0.05 * 0.9 = 0.1405</li>
+               <li>P(A|B) = ?</li>
+               </b>
             </ul>]}/>
-            <ImagePlus 
-                width = "30%"
-                max_zoom = "70%"
-                image = {bayesII}
-                texto = "Probabilidad de que sea de alta producción dado que tiene alta resistencia a MC "
-                />  
-            <Paragraph texto = "Entonces la probabilidad de que un animal sea de alta producción dado que genotipicamente es de alta resistencia a mastitis es del 82%. Es un punto muy interesante para hacer selección de ganado, ya que la mayoría de productores siempre se enfocan solo en producción y no dan mucha importancia a la selección de caracteres por salud.  Pero eso es otro curso :)"/>
-            </SubChapter> */}
+            <Paragraph texto ={<><p>
+                <h3><center><b> P(A|B) = (0.95 * 0.10) / 0.1405  = 67.61% </b></center></h3>
+                </p></>}
+            
+            />
+            <Paragraph texto = "Entonces la probabilidad de que un animal positivo a la prueba PCR sea portador del virus de la leucosis bovina es del 67.61%. Esto nos da una idea de la importancia de poner los resultados en contexto, ya que el 95% de sensibilidad de la prueba, no da un margen de error y hay que tenerlo en cuenta, así como la prevalencia o la incidencia de la enfermedad en la región. "/>
+            </SubChapter> }
 
             <ReferencesBlock 
          references={[
