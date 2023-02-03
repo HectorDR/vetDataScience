@@ -168,15 +168,15 @@ const ProbabilidadesII =()=>{
             <Paragraph texto = "Por ejemplo, en una región lechera en Colombia la prevalencia histórica de la leucosis bovina es del 10%.  
             En esta misma región se va a ensayar una nueva prueba diagnóstica PCR y se sabe que su sensibilidad (animales enfermos con un test positivo) es del 95%, mientras que su especificidad (animales negativos con un test negativo) es del 50%. Para esta región si un animal
             da positivo en la prueba, cuál es la probabilidad de que el animal sea realmente positivo a leucosis viral bovina? "/>
-            <Paragraph texto ={[ "Entonces tenemos que: ",<br/> ,<ul> <b>
+            <Paragraph texto ={[ "Entonces tenemos que: ",<br/> ,<ul> <center> <b>
                 <li>P(A) = 0.1 (prevalencia de animales enfermos en la región) </li>
                 <li>P(S) = 0.9 (animales sanos o libres de leucosis viral bovina)</li>
               <li> P(B|A) = 0.95 (animales positivos al test que padecen la enfermedad -sensibilidad-)</li>
-               <li>(B|S) = 0.05 (animales positivos al tes que estan sanos)</li>
-               <li>(B) =  P(B|A) * P(P|A) + P(B|S) * P(S)</li>
+               <li>(B|S) = 0.05 (animales positivos al test que estan sanos)</li>
+               <li>(B) =  P(B|A) * P(A) + P(B|S) * P(S)</li>
                <li>(B) = 0.95 * 0.1 + 0.05 * 0.9 = 0.1405</li>
-               <li>P(A|B) = ?</li>
-               </b>
+               <li>P(A|B) = ?</li> 
+               </b> </center>
             </ul>]}/>
             <Paragraph texto ={<><p>
                 <h3><center><b> P(A|B) = (0.95 * 0.10) / 0.1405  = 67.61% </b></center></h3>
