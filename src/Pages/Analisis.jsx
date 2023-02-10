@@ -319,6 +319,22 @@ const Analisis = () => {
         />
       </SubChapter>
 
+{/* Como utilizar el analisisd de datos tool pack  */}
+<SubChapter  id = "toolpack">
+  <SubTitle title= "Como instalar y utilizar el paquete de herramientas de análisis de datos de Excel"/> 
+<Paragraph texto =" Para continuar con la introducción al análisis de los datos vamos a trabajar con el paquete de herramientas de análisis de datos de Excel. 
+Este paquete se instala de manera muy sencilla y nos permite realizar varios tipos de análisis desde estadística descriptiva hasta analisis de varianza y regresiones múltiples.  Para entender su instalación y su funcionamiento por favor revise el video que se encuentra a continuación. 
+"/>
+<center> <SubTitle title="Utilización del Analysis Tool Pack de Excel" /></center> 
+        <Video
+          id="yAnBz3GeYz0"
+          title="Excel Analysis Tool Pack "
+        />
+
+  </SubChapter>
+
+
+
       {/* 5.5 Ejemplo de estadística descriptiva */}
       <SubChapter id="ejemplo">
         <SubTitle title="5.5 Ejemplo de estadística descriptiva" />
