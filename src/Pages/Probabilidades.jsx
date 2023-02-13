@@ -169,7 +169,7 @@ const Probabilidades =()=>{
                 image = {probdep}
                 texto = "Probabilidad de seleccionar de un total de 10 novillas primero una novilla negra, seguida de una novilla blanca"
                 />  
-<center> <SubTitle title="Resume de probabilidades independientes y dependientes" /></center> 
+<center> <SubTitle title="Resumen de probabilidades independientes y dependientes" /></center> 
         <Video
           id="WGQX4u1fvIE"
           title="Probabilidades independientes y dependientes "
@@ -202,6 +202,11 @@ const Probabilidades =()=>{
                 />  
           <Paragraph texto ="Entonces, existen 120 posibles maneras de organizar los caballos en los establos. Es importante tener en cuenta que en las permutaciones todos los elementos están organizados en el mismo espacio  y que no existen repeticiones (no se puede acomodar el mismo animal en dos pesebreras al mismo tiempo). Entonces en la permutación estamos organizando un numero n de elementos en un determinado numero de espacios y ni los elementos, ni los espacios son repetibles. En las permutaciones se organizan todos los elementos que hay disponibles."/>
 
+          <center> <SubTitle title="Las Permutaciones" /></center> 
+        <Video
+          id="m0Qubab1Lo0"
+          title="permutaciones "
+        />
 
 <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/3.5_Permutaciones.xlsx?raw=true"/>
         </SubChapter>
