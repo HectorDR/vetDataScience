@@ -5,6 +5,7 @@ import Paragraph from "Components/Paragraph";
 import SubTitle from "Components/SubTitle";
 import ImageCorousel from "Components/ImageCorousel";
 import ImagePlus from "Components/ImagePlus";
+import Video from "Components/Video";
 import ChapterLayout from "Layouts/ChapterLayout";
 import ReferencesBlock from "Components/ReferencesBlock";
 import bufalas from "Media/photos_web/bufalosII.JPG";
@@ -168,6 +169,16 @@ const Probabilidades =()=>{
                 image = {probdep}
                 texto = "Probabilidad de seleccionar de un total de 10 novillas primero una novilla negra, seguida de una novilla blanca"
                 />  
+<center> <SubTitle title="Resume de probabilidades independientes y dependientes" /></center> 
+        <Video
+          id="WGQX4u1fvIE"
+          title="Probabilidades independientes y dependientes "
+        />
+
+<center><h2>Ejemplo de una distribución de Poisson en Excel</h2></center>
+       
+
+
              <p><center><b> Como vemos entonces al multiplicar la probabilidad de que salga una novilla negra de primera y luego una novilla blanca será del 26%.  </b></center></p>
             
 <DownloadButton link = "https://github.com/HectorDR/vetDataScience/blob/hojas_excel/3.4_Probs_dependientes.xlsx?raw=true"/> 
