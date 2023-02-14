@@ -202,9 +202,9 @@ const Probabilidades =()=>{
                 />  
           <Paragraph texto ="Entonces, existen 120 posibles maneras de organizar los caballos en los establos. Es importante tener en cuenta que en las permutaciones todos los elementos están organizados en el mismo espacio  y que no existen repeticiones (no se puede acomodar el mismo animal en dos pesebreras al mismo tiempo). Entonces en la permutación estamos organizando un numero n de elementos en un determinado numero de espacios y ni los elementos, ni los espacios son repetibles. En las permutaciones se organizan todos los elementos que hay disponibles."/>
 
-          <center> <SubTitle title="Las Permutaciones" /></center> 
+         <center> <SubTitle title="Las Permutaciones" /></center> 
         <Video
-          id="m0Qubab1Lo0"
+          id ="m0Qubab1Lo0"
           title="permutaciones "
         />
 
@@ -262,6 +262,14 @@ const Probabilidades =()=>{
                 Entonces tendremos 10<sup>6</sup> = 1'000.000 de variaciones. Para el efecto de los registros no importa que los números se repitan, 
                 es decir podemos tener un registro 111111 y es perfectamente válido por eso utilizamos la formula con repetición, mientras que con 
                 animales por ejemplo, no podemos utilizar la repetición como en el ejemplo anterior.</p></>}/>
+        
+        
+                <center> <SubTitle title="Que son las variaciones" /></center> 
+        <Video
+          id ="sP67wgldLhw"
+          title="variaciones "
+        />
+        
         </SubChapter>
 
         <SubChapter id = "combinaciones">
