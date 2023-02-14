@@ -297,6 +297,15 @@ const Probabilidades =()=>{
 
          <SubTitle title="3.7.1- Combinaciones con espacios muestrales diferentes"/>
         <Paragraph texto = "Este tipo de combinaciones representa el numero de diferentes posibles combinaciones en que podemos escoger un determinado numero de elementos de dos o mas espacios muestrales. Ejemplo, si continuamos con nuestro ejemplo de los registros, donde encontramos 1'000.000 de posibles variaciones, que pasa si decidimos agregar 3 letras seleccionadas entre la A hasta la J (10 letras)?."/>
+        
+        <center> <SubTitle title="Que son las combinaciones" /></center> 
+        <Video
+          id ="kp811csXWlM"
+          title="Combinaciones "
+        />
+       
+       
+       
         <center><h4>Fórmula para combinaciones con espacios muestrales diferentes</h4></center>
         <ImagePlus 
                 image = {combIII}
