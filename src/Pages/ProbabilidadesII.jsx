@@ -118,6 +118,12 @@ const ProbabilidadesII =()=>{
                     <center>Entonces, hay una probabilidad del 22% de que el un animal seleccionado dentro de los 100 hatos de la muetra esté afectado con mastitis clínica.</center>
                    
                 ]}/>
+
+<center> <SubTitle title="Regla de la probabilidad total" /></center> 
+        <Video
+          id ="QTes7OOeXls"
+          title="Probabilidad total "
+        />
             </SubChapter>
 
             <SubChapter id = "adicion">
