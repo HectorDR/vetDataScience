@@ -204,7 +204,13 @@ const ProbabilidadesII =()=>{
             
             />
             <Paragraph texto = "Entonces la probabilidad de que un animal positivo a la prueba PCR sea portador del virus de la leucosis bovina es del 67.61%. Esto nos da una idea de la importancia de poner los resultados en contexto, ya que el 95% de sensibilidad de la prueba, no da un margen de error y hay que tenerlo en cuenta, así como la prevalencia o la incidencia de la enfermedad en la región. "/>
-            </SubChapter> }
+            <center> <SubTitle title="El Teorema de Bayes" /></center> 
+        <Video
+          id ="vui05N25KXY"
+          title="Teorema de Bayes "
+        />
+           
+           </SubChapter> }
 
             <ReferencesBlock 
          references={[
