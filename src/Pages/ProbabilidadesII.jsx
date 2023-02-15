@@ -136,6 +136,12 @@ const ProbabilidadesII =()=>{
                 <center><li>P(Hipertenso ∪ Fallo Renal) = 0.15 + 0.06 – 0.03</li></center>
                 <center><li><b>P(Hipertenso ∪ Fallo Renal) = 0.18%</b></li></center> </ul>, <br/>,"Entonces la probabilidad de encontrar un paciente ya sea hipertenso o con fallo renal en análisis es del 18%."
            ]}/>
+<center> <SubTitle title="Regla de la adición de las probabilidades" /></center> 
+        <Video
+          id ="6bU9MlYJY8I"
+          title="Adición de las probabilidades "
+        />
+
 
             </SubChapter>
         <SubChapter id = "multiplicacion">
