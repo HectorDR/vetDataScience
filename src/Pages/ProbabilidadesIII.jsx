@@ -2,6 +2,7 @@ import React from "react";
 import ContentsTable from "Components/ContentsTable";
 import SubChapter from "Components/SubChapter";
 import Paragraph from "Components/Paragraph";
+import Video from "Components/Video";
 import SubTitle from "Components/SubTitle";
 import ImagePlus from "Components/ImagePlus";
 import ChapterLayout from "Layouts/ChapterLayout";
@@ -60,10 +61,10 @@ const ProbabilidadesIII =()=>{
                 </section>
             
                 <SubChapter id = "general">
-                    <SubTitle title = "Probabilidades en genética cualitativa"/>
-                    <Paragraph texto = {<><p>Este proyecto no pretende de ninguna manera convertirse en un curso de genética, ni epidmología ni ninguna otra rama de la MVZ.  Lo que se busca es mirar la aplicabilidad de las diferentes herramientas que tenemos a nuestro alcance para tomar decisiones, para este caso estamos revisando como podriamos utilizar las probabilidades.  En este último capítulo de probabilidades vamos a revisar un poquito de genética cualitativa. El material ha sido adaptado de el artículo,<a href="http://www.holsteinfoundation.org/pdf_doc/workbooks/Gen_Sire_WKBK.pdf" targe = "_blank"><u>Understanding Genetics and the Sire Summaries.</u></a> de los manuales de la fundación Holstein."
+                    <SubTitle title = "3.13 Probabilidades en genética cualitativa"/>
+                    <Paragraph texto = {<><p>Este proyecto no pretende de ninguna manera convertirse en un curso de genética, ni epidemología ni ninguna otra rama de la MVZ.  Lo que se busca es mirar la aplicabilidad de las diferentes herramientas que tenemos a nuestro alcance para tomar decisiones, para este caso estamos revisando como podriamos utilizar las probabilidades.  En este último capítulo de probabilidades vamos a revisar un poquito de genética cualitativa. El material ha sido adaptado de el artículo,<a href="http://www.holsteinfoundation.org/pdf_doc/workbooks/Gen_Sire_WKBK.pdf" targe = "_blank"><u>Understanding Genetics and the Sire Summaries.</u></a> de los manuales de la fundación Holstein."
                     </p></>}/>
-                <Paragraph texto= {<><p>Recordemos que los genes <b>cualitativos</b> son aquellos que son controlados por un par de genes donde un genotipo determinado resultará en el mismo fenotipo cada vez. Como ejemplo de ellos en ganado tenemos el sexo, el color del manto y la expresión de los cuernos. Ahora, los <b>alelos</b> son las variantes del gene que se heredan  y van a determinar el fenotipo. En los cualitativos se hereda un alelo por cada padre. En los casos cualitativos (cuernos, manto), los alelos son etiquetados como dominantes o recesivos. Los caracteres dominantes serán expresados cuando al menos una versión del alelo dominante está presente.<b> Recordemos que los alelos dominantes se expresan siempre en mayúscula y los recesivos en minúscula.</b> Los animales heterocigotos para genes recesivos suelen ser llamados 'portadores' porque aunque no manifiestan el gen, sí lo portan y pueden transmitirlo a su camada. <br/>Entonces cuando se emparejan los alelos en un genotipo podemos tener:</p></>}/>
+                <Paragraph texto= {<><p>Recordemos que los genes <b>cualitativos</b> son aquellos que son controlados por un par de genes. Como ejemplo de ellos en ganado tenemos el sexo, el color del manto y la expresión de los cuernos. Los <b>alelos</b> son las variantes del gene que se heredan  y van a determinar el fenotipo. En los cualitativos se hereda un alelo por cada padre. En los casos cualitativos (cuernos, manto), los alelos son etiquetados como dominantes o recesivos. Los caracteres dominantes serán expresados cuando al menos una versión del alelo dominante está presente.<b> Recordemos que los alelos dominantes se expresan siempre en mayúscula y los recesivos en minúscula.</b> Los animales heterocigotos para genes recesivos suelen ser llamados 'portadores' porque aunque no manifiestan el gen, sí lo portan y pueden transmitirlo a su camada. <br/>Entonces cuando se emparejan los alelos en un genotipo podemos tener:</p></>}/>
 
                 <Paragraph texto = {[ <ul>
                     <center><li><h4>Homocigoto dominante: ambos alelos fueron heredados en su forma dominante "AA".</h4></li></center>
@@ -117,7 +118,11 @@ const ProbabilidadesIII =()=>{
                 texto = "Cuadro de Punnet para Ss y SS"
                 />  
             <Paragraph texto = "La probabilidad de animales homocigotos dominantes (no portadores) seria de 2/4 = 50%. La probabilidad de animales heterocigotos (portadores) 2/4 = 50%. "/>
-    
+            <center> <SubTitle title="Probabilidades en genética cualitatitiva" /></center> 
+        <Video
+          id ="LZ-gyxVie84"
+          title="Probabilidades en genética cualitativa "
+        />
             </SubChapter>
             <ReferencesBlock 
          references={[
