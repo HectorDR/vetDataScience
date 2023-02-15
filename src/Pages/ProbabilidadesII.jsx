@@ -3,6 +3,7 @@ import ContentsTable from "Components/ContentsTable";
 import SubChapter from "Components/SubChapter";
 import Paragraph from "Components/Paragraph";
 import SubTitle from "Components/SubTitle";
+import Video from "Components/Video";
 import { HashLink } from "@xzar90/react-router-hash-link"; 
 import ImagePlus from "Components/ImagePlus";
 import ChapterLayout from "Layouts/ChapterLayout";
@@ -69,7 +70,7 @@ const ProbabilidadesII =()=>{
                 width = "20%"
                 max_zoom = "40%"
                 image = {probcond}
-                texto = "Probabilidad condicional"
+                texto = "Regla de la probabilidad condicional"
                 />  
                 <Paragraph texto ="Donde P(A│B) representa la probabilidad de A dado que B ha ocurrido. P(A∩B) Representa la probabilidad de la intersección y P(B) Representa la probabilidad del evento B.  "/>
                 <Paragraph texto = {<><p> <b>Solo es de interés el resultado si se cumple B y la P(B) debe ser mayor que 0</b>. Únicamente los elementos de la intersección podrían hacer que se cumpla B, por tanto deben haber elementos en común. Ojo aquí el orden es importante, la P(A|B) no es igual que la P(B|A) <a href="https://definicion.de/probabilidad-condicional/" target="_blank"> <u>(Porto y Gardey, 2019)</u></a>. Es importante aclarar que en la probabilidad condicional no necesariamente puede haber una relación temporal o causal entre los dos componentes, esto quiere decir que A puede producirse antes que B, después o al mismo tiempo y que A puede ser el origen de B o viceversa o no tener ningún tipo de relación." </p></>} />
@@ -83,6 +84,12 @@ const ProbabilidadesII =()=>{
                     <center><li><b>P(A|B)= 0.45/0.80 = 56%</b> </li></center>
                 </ul>, <br /> ]}/>
                 <p><center><b>Entonces el investigador tiene  un 56% de probabilidades de seleccionar una finca ganadera que también tenga orientación reforestadora.</b></center></p>
+
+                <center> <SubTitle title="Regla de la probabilidad condicional" /></center> 
+        <Video
+          id ="9nD7iWffrLA"
+          title="Probabilidad Condicional "
+        />
 
             </SubChapter>
             <SubChapter id ="total">
